@@ -1,0 +1,907 @@
+<section class="chapter" id="k5" data-short="Mensch &amp; Typisierung">
+  <h2><span class="chap-no">Kapitel 5</span>Mensch und Typisierung von Informationssystemen</h2>
+  <p class="lead">Vorlesung 05 verbindet zwei Blöcke: „Kapitel 9 – Mensch“ (V05 F.3–54) betrachtet das Strukturelement Mensch im MAT-System – Nutzertypen, Nutzerschnittstelle, Gestaltungsprinzipien, Gestaltgesetze, Normen (ISO 9241), Nutzerarbeitsplatz und Nutzermitwirkung. „Kapitel 10 – Typisierung von Informationssystemen“ (V05 F.55–96) ordnet IS nach Mensch, Aufgabe, Technik und den Phasen im Informationsverhalten. In den Altklausuren kam das Kapitel selten direkt dran (Ausnahme 2022: aufgabenorientiertes IS, horizontale/vertikale Integration) – die Probeklausur 2026 fragt aber ausdrücklich nach Nutzerrollen (Klinik-Fall) und nach digitalem Stress durch einen KI-Assistenten. Genau diese Begriffe musst du auf einen Fall anwenden können.</p>
+  <div class="goals"><b>Lernziele (V05 F.4 und F.56)</b><ul>
+    <li>Die Rollen des Menschen bei Entwicklung, Einführung, Nutzung und Management von IS, Informationsinfrastruktur und Informationsfunktion erklären.</li>
+    <li>Die wechselseitigen Beziehungen zwischen Mensch, Aufgabe und Technik begründen.</li>
+    <li>Gestaltungsprinzipien der Nutzerschnittstelle (Norman) und Gesetze der Gestaltpsychologie nennen und an einer Oberfläche anwenden.</li>
+    <li>Die Normen ISO 9241 Teil 10, 11 und 210 kennen; Gebrauchstauglichkeit und Nutzererlebnis definieren und abgrenzen.</li>
+    <li>Den Nutzerarbeitsplatz als Erklärungs- und Gestaltungsobjekt beschreiben; Nutzermitwirkung (konsensorientiert vs. gewerkschaftlich, Dimensionen, Key User) erläutern.</li>
+    <li>IS nach Mensch (Nutzertypen, Rollen, Persona, Nutzungskontext), Aufgabe (Phase, Typ, Reichweite), Technik (Hard-/Software) und Phasen im Informationsverhalten typisieren – und das an einem konkreten System (ChatGPT, Klinik-System, IKEA-App) vorführen.</li>
+  </ul></div>
+
+  <!-- ===================== 5.1 Mensch im MAT ===================== -->
+  <h3 id="k5-mat">5.1 Der Mensch in MAT-Systemen</h3>
+  <p>Ein Informationssystem besteht aus den Strukturelementen Mensch, Aufgabe und Technik (MAT-System). V05 rückt das Element Mensch in den Mittelpunkt. Die Wirtschaftsinformatik interessiert sich dabei vor allem für eine bestimmte Rolle des Menschen: die <b>Nutzerin</b> (synonym Benutzerin). Daneben gibt es den unschärferen Begriff <b>Anwenderin</b>.</p>
+  <div class="box def"><div class="box-h">Definition · Nutzerin vs. Anwenderin</div>
+    <p><b>Nutzerinnen</b> (synonym: Benutzerinnen) sind „Menschen, die zur Erfüllung betrieblicher Aufgaben IuK-Technik als Sachmittel verwenden“ – Bsp.: eine Kassiererin, die eine Kasse verwendet.</p>
+    <p>Beim Begriff <b>Anwenderin</b> „bleibt die konkrete Rolle oder Aufgabe des Menschen unbestimmt“ – Anwenderinnen in einem Supermarkt können neben der Kassiererin auch Lagermitarbeiterinnen oder Marktverantwortliche sein.</p>
+    <p>Kernaussage: „Der Mensch als Strukturelement in MAT-Systemen spielt eine zentrale Rolle bei der Entwicklung, Einführung, Nutzung sowie beim Management von Informationssystemen.“</p>
+    <p class="src">V05 F.5</p></div>
+  <p>Die Untersuchung des Menschen ist typisch interdisziplinär: Betriebswirtschaftliche, technische, soziologische, psychologische und andere Erkenntnisse werden verknüpft (V05 F.6). Die „Durchdringung des Strukturelements Mensch im MAT-System und die Erklärung seines Verhaltens zwecks menschengerechter Gestaltung von Informationssystemen und -infrastrukturen hat immer größere Bedeutung gewonnen“ (V05 F.6).</p>
+  <p>Früher sprach man von <b>Nutzerforschung</b>, häufig auch von <b>Usability Engineering</b>, um die Ziele <i>Benutzbarkeit und Akzeptanz</i> in der Entwicklung soziotechnischer Systeme zu betonen. Eng verwandt sind Psychologie, Informatik (Mensch-Computer-Interaktion, MCI) und Arbeitswissenschaften (<b>Ergonomie</b>). „Im Fokus der Ergonomie steht die Analyse und Gestaltung der Aufgaben, der Arbeitsumgebung und der Interaktion von Menschen und Maschinen“ (V05 F.7). Für die WI gilt: „Das Erkennen und Ausschöpfen ergonomischer Potenziale im Entwicklungsprozess von Informationssystemen steht im Mittelpunkt des Interesses der Wirtschaftsinformatik, insbesondere bei der Gestaltung von Nutzungsschnittstellen“ (V05 F.7).</p>
+  <div class="box ex"><div class="box-h">Beispiel · Klinik-System (Probeklausur 2026)</div>
+    <p>Im Notaufnahme-System sind Ärztin, Pflegekraft und Verwaltungskraft <i>Nutzerinnen</i>: Sie verwenden das System (Tablets, Stationsrechner) als Sachmittel, um eine betriebliche Aufgabe zu erfüllen (Medikation festlegen, Vitalwerte dokumentieren, abrechnen). Spricht die Klinikleitung pauschal von den „Anwenderinnen“, bleibt offen, welche Aufgabe und welche Rechte gemeint sind – genau deshalb braucht man für die Gestaltung präzisere Konzepte wie Nutzertypen und Nutzerrollen.</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus</div>
+    <p>Bei „Ist X ein Informationssystem?“ (Kapitel 1) gehört der Mensch als Nutzerin ausdrücklich dazu: Ohne Menschen, die mit IuK-Technik betriebliche Aufgaben erfüllen, liegt kein MAT-System vor, sondern nur ein Techniksystem. In V05-Fallfragen bringt der Satz „Der Mensch spielt eine zentrale Rolle bei Entwicklung, Einführung, Nutzung und Management von IS“ (F.5) sichere Punkte, wenn du ihn auf die Rollen im Fall herunterbrichst (Entwicklerin, Key User, Nutzerin, Datenschutzbeauftragter, Geschäftsleitung).</p></div>
+
+  <!-- ===================== 5.2 Nutzertypen ===================== -->
+  <h3 id="k5-nutzertypen">5.2 Nutzertypen</h3>
+  <p>Die Forschung kommt zu einer ernüchternden, aber zentralen Erkenntnis: „Es gibt die Nutzerin nicht, […] jede Nutzerin [kann sich] prinzipiell anders verhalten“ (V05 F.8). Es ist daher keine Erklärung oder Vorhersage des tatsächlichen Handelns einzelner Nutzerinnen bezüglich Aufgabenerfüllung und Leistung möglich, und eine Standardisierung des erwarteten Handelns jeder einzelnen Nutzerin ist kaum möglich. Die Antwort darauf ist die Typenbildung.</p>
+  <div class="box def"><div class="box-h">Definition · Nutzertypen</div>
+    <p>„Mit der Bildung von Nutzertypen wird versucht, das Handeln einer Menge von Nutzerinnen, die sich bezüglich der Ausprägung wesentlicher Merkmale nicht oder nur unwesentlich unterscheiden, zu erklären und zu prognostizieren, um die Gestaltung von Informationssystemen daran auszurichten.“</p>
+    <p class="src">V05 F.8</p></div>
+  <p>Ein klassisches Beispiel betrifft die <b>persönlichen Fähigkeiten im Umgang mit IuK-Technik</b> (V05 F.9). Unterschieden werden die <b>geübte Nutzerin (Expertin)</b>, die <b>gelegentliche</b> und die <b>naive Nutzerin</b>. Eine Nutzerin wird als „naiv“ bezeichnet, „wenn sie wegen der unregelmäßigen Nutzung die für die Aufgabenerfüllung notwendigen Handhabungsdetails vergisst, was die Aufgabenerfüllung beeinträchtigt“ (F.9). Achtung: „naiv“ heißt hier nicht „dumm“, sondern beschreibt das Vergessen durch seltene Nutzung.</p>
+  <p>F.10 zeigt eine empirische <b>Klassifikation von Nutzertypen</b> der Initiative D21 (Digital Index 2019/2020, vgl. Literatur F.98) mit Anteil, Durchschnittsalter, Geschlecht und Schulabschluss:</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Nutzerinnentyp</th><th>Anteil</th><th>Ø Alter</th><th>Geschlecht</th><th>Schulabschluss (häufigster)</th></tr></thead><tbody>
+    <tr><td>Offlinerinnen</td><td>14 %</td><td>71</td><td>67 % Frauen</td><td>71 % Hauptschule</td></tr>
+    <tr><td>Minimal-Offlinerinnen</td><td>4 %</td><td>60</td><td>51 % Frauen</td><td>38 % Hauptschule</td></tr>
+    <tr><td>Konservative Gelegenheitsnutzerinnen</td><td>30 %</td><td>55</td><td>59 % Frauen</td><td>47 % Realschule</td></tr>
+    <tr><td>Vorsichtige Pragmatikerinnen</td><td>8 %</td><td>42</td><td>50 % Frauen</td><td>42 % Realschule</td></tr>
+    <tr><td>Reflektierte Profis</td><td>27 %</td><td>43</td><td>55 % Männer</td><td>43 % Abitur</td></tr>
+    <tr><td>Progressive Anwenderinnen</td><td>12 %</td><td>35</td><td>60 % Männer</td><td>53 % Abitur</td></tr>
+    <tr><td>Technik-Enthusiastinnen</td><td>5 %</td><td>36</td><td>70 % Männer</td><td>38 % Abitur</td></tr>
+  </tbody></table></div>
+  <p>Die Tabelle zeigt, warum Nutzertypen gestaltungsrelevant sind: Ein Patientenportal einer Klinik wird zu einem großen Teil von älteren „Konservativen Gelegenheitsnutzerinnen“ oder sogar „Offlinerinnen“ (über Angehörige) genutzt – eine Gestaltung allein für „Technik-Enthusiastinnen“ würde den Großteil der Zielgruppe verfehlen.</p>
+  <div class="box ex"><div class="box-h">Beispiel · Nutzertypen bei ChatGPT</div>
+    <p>Eine Studentin, die täglich mit Prompts arbeitet, ist geübte Nutzerin (Expertin); ihr Vater, der ChatGPT zweimal im Jahr für einen Brief nutzt, ist gelegentlicher bzw. – wenn er jedes Mal vergisst, wo der Chatverlauf zu finden ist – „naiver“ Nutzer im Sinne von F.9. Gestaltungsfolge: Vorschlags-Prompts und einfache Startseite für Gelegenheitsnutzer, Tastenkürzel und benutzerdefinierte Anweisungen für Expertinnen (→ differenzielles Gestalten, F.18).</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div>
+    <p>Nutzertypen sind <i>keine</i> Vorhersage für die einzelne Person. Sie erklären und prognostizieren das Handeln einer <i>Menge</i> ähnlicher Nutzerinnen. Wer schreibt „Mit Nutzertypen kann man das Verhalten jeder Nutzerin vorhersagen“, widerspricht F.8.</p></div>
+
+  <!-- ===================== 5.3 Nutzerschnittstelle ===================== -->
+  <h3 id="k5-schnittstelle">5.3 Nutzerschnittstelle</h3>
+  <div class="box def"><div class="box-h">Definition · Nutzerschnittstelle</div>
+    <p>„Die Nutzerschnittstelle (engl. user interface) stellt die Hard- und Software eines Informationssystems dar, mit der ein Mensch in Interaktion treten und Handlungen auslösen kann.“</p>
+    <p class="src">V05 F.11</p></div>
+  <p>„Die vom Informationssystem ausgegebenen Daten werden zu Informationen, die weitere Aktionen bei der Nutzerin auslösen können“ (F.11) – hier schließt sich der Kreis zu Kapitel 4 (Daten werden durch Zweckbezug zur Information). Aus Sicht der Hardware kommen heute viele Technologien zum Einsatz: Personal Computer (Laptop, Smartphone, Tablet, Smartwatch), interaktive Bildschirme (z. B. Microsoft Surface Hub), intelligente Lautsprecher (z. B. Amazon Alexa), Wearables und intelligente Brillen (F.11).</p>
+  <p>Aktuelle Nutzerschnittstellen unterstützen verschiedenste Ein- und Ausgabearten. Die <b>Modalität</b> „bezieht sich dabei auf die Art des Kommunikationskanals, der verwendet wird, um Daten aus- bzw. einzugeben“ (F.12). „Unterschiedliche Ein- und Ausgabearten ermöglichen es den Nutzerinnen, Daten über ihre Sinne zu erfassen, über Effektoren weiterzuleiten und im Gehirn zu verarbeiten“ (F.12). F.13 ordnet Hardware und Modalitäten zu:</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Hardware</th><th>Eingabemodalitäten (Auswahl)</th><th>Ausgabemodalitäten</th></tr></thead><tbody>
+    <tr><td>Personal Computer (Desktop/Laptop)</td><td>Tippen, Zeigen, Berühren, Sprechen, Gestikulieren, Sehen</td><td>visuell, Audio, haptisch</td></tr>
+    <tr><td>Smartphone &amp; Tablets</td><td>Tippen, Zeigen, <b>Berühren</b>, Sprechen, Gestikulieren</td><td>visuell, Audio, haptisch</td></tr>
+    <tr><td>Interaktive Bildschirme</td><td>Tippen, Zeigen, Berühren, Sprechen</td><td>visuell, Audio</td></tr>
+    <tr><td>Intelligente Lautsprecher</td><td>nur Sprechen</td><td>nur Audio</td></tr>
+    <tr><td>Wearables</td><td>Berühren, Sprechen</td><td>visuell, haptisch</td></tr>
+    <tr><td>Intelligente Brillen (Augmented Reality)</td><td>Sprechen, Gestikulieren, Sehen</td><td>visuell, Audio</td></tr>
+    <tr><td>Virtual-Reality-Brillen</td><td>Zeigen, Sprechen, Gestikulieren</td><td>visuell, Audio, haptisch</td></tr>
+  </tbody></table></div>
+  <p>Die zweite, für die WI wichtigere Sicht ist die <b>aufgabenbezogene</b>: Die Nutzerschnittstelle ist „der Übergang zwischen der systemunterstützten Sachaufgabe und anderen Sachaufgaben des Aufgabensystems“ (F.14). Die Nutzerin übernimmt dabei zwei Rollen – die <b>Rolle der Sachbearbeiterin</b> (sie führt die Sachaufgabe durch) und die <b>Rolle der Nutzerin eines Techniksystems</b> (sie führt die Interaktionsaufgabe durch).</p>
+  <div class="box def"><div class="box-h">Definition · Interaktionsaufgabe</div>
+    <p>„Mit der Nutzerschnittstelle wird die Interaktionsaufgabe abgebildet, die dann entsteht, wenn eine Sachaufgabe mit Hilfe von IuK-Technik unterstützt werden soll und die Bearbeitung im Dialog erfolgt.“ – „Sachaufgabe kann nur erfüllt werden, wenn die Interaktionsaufgabe bewältigt wird.“ – „Die Gestaltung der Nutzerschnittstelle impliziert das Gestalten von Arbeitsabläufen.“</p>
+    <p class="src">V05 F.14</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250" role="img" aria-label="Die Nutzerin übernimmt zwei Rollen; die Interaktionsaufgabe läuft über die Nutzerschnittstelle zum Techniksystem">
+      <defs><marker id="k5a-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="10" y="15" width="205" height="180" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="112" y="37" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor" font-family="inherit">Nutzerin (Mensch)</text>
+      <rect x="22" y="50" width="181" height="60" rx="6" fill="none" stroke="currentColor"/>
+      <text x="112" y="74" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Rolle: Sachbearbeiterin</text>
+      <text x="112" y="94" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">führt Sachaufgabe durch</text>
+      <rect x="22" y="122" width="181" height="60" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="112" y="146" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Rolle: Techniknutzerin</text>
+      <text x="112" y="166" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">→ Interaktionsaufgabe</text>
+      <rect x="250" y="70" width="140" height="100" rx="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="320" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Nutzer-</text>
+      <text x="320" y="122" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">schnittstelle</text>
+      <text x="320" y="144" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">(Hard- + Software)</text>
+      <rect x="460" y="70" width="170" height="100" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="545" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Techniksystem</text>
+      <text x="545" y="125" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">IuK-Technik als</text>
+      <text x="545" y="142" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Sachmittel</text>
+      <line x1="203" y1="152" x2="248" y2="140" stroke="currentColor" stroke-width="1.5" marker-start="url(#k5a-arr)" marker-end="url(#k5a-arr)"/>
+      <text x="228" y="168" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Dialog</text>
+      <line x1="390" y1="100" x2="458" y2="100" stroke="currentColor" stroke-width="1.5" marker-end="url(#k5a-arr)"/>
+      <text x="424" y="92" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Eingabe</text>
+      <line x1="458" y1="140" x2="390" y2="140" stroke="currentColor" stroke-width="1.5" marker-end="url(#k5a-arr)"/>
+      <text x="424" y="158" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Ausgabe</text>
+      <text x="320" y="222" text-anchor="middle" font-size="13" style="fill:var(--accent)" font-family="inherit">Sachaufgabe nur erfüllbar, wenn die Interaktionsaufgabe bewältigt wird (F.14)</text>
+    </svg>
+    <figcaption>Die Nutzerin ist zugleich Sachbearbeiterin und Techniknutzerin. Die Interaktionsaufgabe (Eingabe/Ausgabe im Dialog) ist Voraussetzung für die Sachaufgabe – schlechte Schnittstellen verhindern also die eigentliche Arbeit.</figcaption>
+  </figure>
+  <div class="box ex"><div class="box-h">Beispiel · Sach- vs. Interaktionsaufgabe in der Notaufnahme</div>
+    <p>Sachaufgabe von Dr. Yilmaz: „Geeignetes Medikament für den bewusstlosen Patienten auswählen.“ Interaktionsaufgabe: „Sich am Tablet anmelden, Patientenakte öffnen, aus 200 Laborbefunden die relevanten filtern, Allergien im Arztbrief finden.“ Fordert der Datenschutzbeauftragte bei jedem Zugriff eine Zusatzanmeldung, wird die Interaktionsaufgabe länger – und weil die Sachaufgabe nur erfüllt werden kann, wenn die Interaktionsaufgabe bewältigt ist (F.14), leidet unter Zeitdruck die medizinische Entscheidung. Das ist der Kern des Zielkonflikts Usability vs. Sicherheit.</p></div>
+  <p>Wie soll die Schnittstelle gestaltet werden? „Ziel ist es, Erklärungen zu liefern, die die Gestaltung der Nutzerschnittstelle so ermöglichen, dass sie am Nutzerverhalten ausgerichtet ist, d.h. am tatsächlichen oder erwarteten Denken und Handeln“ (F.15). Ausgangslage: Denken und Handeln orientieren sich an <b>mentalen Zielen</b>. Erfassung der Umwelt und Gedanken sind durch die <b>kognitive Struktur</b> des Menschen geprägt. <i>Kognitiv</i> bezeichnet die Bereiche Wahrnehmen, Denken und Vorstellen; davon abgegrenzt sind <i>affektive</i> Zustände (Gemütsregungen, Stimmungen, Gefühle, Emotionen) (F.15). Bausteine dieser auch als <b>semantisches Gedächtnis</b> bezeichneten Struktur sind Begriffe und Begriffssysteme; jede kognitiv verarbeitete Information durchläuft sie als zentrale Instanz (F.16).</p>
+  <div class="box def"><div class="box-h">Gestaltungsforderung · mentale Modelle</div>
+    <p>„Die Nutzerschnittstelle soll so gestaltet werden, dass sie den Vorstellungen entspricht, die sich Benutzerinnen mental („im Kopf“) entwickelt haben oder während des Dialogs entwickeln.“ Die Forschung zu mentalen Modellen wird vor allem von der Kognitionspsychologie beeinflusst.</p>
+    <p class="src">V05 F.16</p></div>
+  <div class="box ex"><div class="box-h">Beispiel · mentales Modell</div>
+    <p>Nutzerinnen haben das mentale Modell „Papierkorb = gelöschte Dateien lassen sich wiederherstellen“. Eine App, die beim Wischen nach links Mails sofort endgültig löscht, widerspricht diesem Modell. Ein IKEA-App-Warenkorb, der wie ein echter Einkaufswagen funktioniert (hineinlegen, ansehen, wieder herausnehmen), entspricht ihm.</p></div>
+
+  <!-- ===================== 5.4 Gestaltungsprinzipien ===================== -->
+  <h3 id="k5-prinzipien">5.4 Prinzipien zur Gestaltung von Nutzerschnittstellen (Norman)</h3>
+  <div class="box def"><div class="box-h">Definition · Gestaltungsprinzipien</div>
+    <p>„Prinzipien stellen grundsätzliche Regeln zur Gestaltung von Nutzerschnittstellen auf der Basis ergonomischer Erkenntnisse bereit.“ Sechs grundlegende Gestaltungsprinzipien nach Norman: <b>Ermöglichung, Sichtbarkeit, Einschränkungen, Rückkoppelung, Abbildungen, Durchgängigkeit</b>.</p>
+    <p class="src">V05 F.17 (Quelle: Norman 2013, The Design of Everyday Things, F.98)</p></div>
+  <p>Die Folie nennt nur die Namen. Die Erklärungen in der folgenden Tabelle stammen aus Normans Original (englische Begriffe in Klammern) und sind als <b>Vertiefung</b> zu verstehen – in der Klausur genügen die Namen plus ein sinnvolles Fallbeispiel.</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Prinzip (F.17)</th><th>Bedeutung (Vertiefung nach Norman)</th><th>Beispiel</th></tr></thead><tbody>
+    <tr><td><b>Ermöglichung</b> (affordance)</td><td>Ein Element legt durch seine Gestalt nahe, was man damit tun kann.</td><td>Button mit Schatten „lädt zum Drücken ein“; Schieberegler zum Ziehen.</td></tr>
+    <tr><td><b>Sichtbarkeit</b> (visibility)</td><td>Relevante Funktionen und der Systemzustand sind sichtbar, nicht versteckt.</td><td>„Neue Medikation“ als sichtbarer Button statt im Untermenü.</td></tr>
+    <tr><td><b>Einschränkungen</b> (constraints)</td><td>Unzulässige Handlungen werden von vornherein verhindert.</td><td>Datumsfeld lässt nur gültige Daten zu; ausgegraute Buttons.</td></tr>
+    <tr><td><b>Rückkoppelung</b> (feedback)</td><td>Jede Handlung erhält eine unmittelbare, verständliche Rückmeldung.</td><td>Ladebalken, „Bestellung gespeichert“-Hinweis, Vibration.</td></tr>
+    <tr><td><b>Abbildungen</b> (mapping)</td><td>Natürliche Zuordnung zwischen Bedienelement und Wirkung.</td><td>Lautstärkeregler nach oben = lauter; Herdknöpfe räumlich wie die Platten angeordnet.</td></tr>
+    <tr><td><b>Durchgängigkeit</b> (consistency)</td><td>Gleiche Dinge sehen gleich aus und funktionieren überall gleich.</td><td>„Speichern“ immer oben rechts, immer gleiche Farbe.</td></tr>
+  </tbody></table></div>
+  <p>Die Vorlesung betont vor allem die <b>Grenzen</b> solcher Prinzipien – das ist prüfungsrelevant, weil es eine typische „Beurteilen Sie“-Frage hergibt:</p>
+  <ul>
+    <li><b>Vagheit wegen Unterschieden zwischen Nutzerinnen</b> (F.18): Aus den Prinzipien „können nur vage konkrete Gestaltungsregeln abgeleitet werden“. Nutzerinnen unterscheiden sich in Kenntnissen, Fähigkeiten, Fertigkeiten und Gewohnheiten und verändern ihr eigenes Verhalten. Diese Unterschiede „begründen die Forderung nach einem <b>differenziell-dynamischen Gestalten</b> der Nutzerschnittstelle“: <i>Differenzielles</i> Gestalten heißt, auf die Unterschiede <i>zwischen</i> Nutzerinnen einzugehen; <i>dynamisches</i> Gestalten heißt, auf unterschiedliches Verhalten <i>jeder einzelnen</i> Nutzerin im Zeitablauf einzugehen.</li>
+    <li><b>Vagheit wegen Unterschieden zwischen Sachaufgaben</b> (F.19): Für grundlegend andere Sachaufgaben gelten möglicherweise andere Prinzipien. Für kollaborative Software (<b>Groupware</b>) gelten andere Prinzipien als für Einzelanwendungen, weil sich die Sachaufgabe im kooperativen Arbeiten grundlegend von der bei Einzelanwendungen unterscheidet.</li>
+    <li><b>Beispiel virtuelle Zusammenarbeit</b> (F.20): Kooperation ist „ein sozialer Prozess zwischen mehreren Aufgabenträgerinnen zur Erreichung gemeinsamer Ziele und Arbeitsergebnisse“. Bei hoher Übereinstimmung der Ziele ist gemeinsame Zielerreichung besser möglich – daher die „besondere Hervorhebung der <b>Zielidentität</b>“ in der Nutzerschnittstelle (z. B. gemeinsames Ziel/Board in Teams oder Miro sichtbar machen).</li>
+    <li><b>Grundsätzliche Unvollständigkeit</b> (F.21): Gestaltungsprinzipien können nur für Vorhandenes oder Absehbares entwickelt werden; sie geben an, wie etwas funktionieren <i>könnte</i>, nicht wie es funktionieren <i>muss</i>. Normen können daher nur berücksichtigen, wie etwas (besser) funktionieren könnte. „Letztendlich können aus Prinzipien abgeleitete Gestaltungsregeln nie vollständig sein, da sich die technischen Möglichkeiten weiterentwickeln.“</li>
+  </ul>
+  <div class="box ex"><div class="box-h">Beispiel · differenziell-dynamisch beim KI-Assistenten</div>
+    <p><i>Differenziell:</i> Neue Mitarbeiterinnen erhalten ausführliche Hinweise, erfahrene einen reduzierten Modus. <i>Dynamisch:</i> Der Assistent merkt, dass eine Nutzerin Hinweise seit Wochen wegklickt, und reduziert sie für genau diese Person automatisch. Beides adressiert direkt die Klage „ständige Hinweise unterbrechen mich“ aus der Probeklausur.</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div>
+    <p>Die sechs Norman-Prinzipien (F.17) nicht mit den sieben Grundsätzen der ISO 9241-110 (F.27) verwechseln. Norman = Ermöglichung, Sichtbarkeit, Einschränkungen, Rückkoppelung, Abbildungen, Durchgängigkeit. ISO = Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Steuerbarkeit, Erwartungskonformität, Fehlertoleranz, Individualisierbarkeit, Lernförderlichkeit.</p></div>
+
+  <!-- ===================== 5.5 Gestaltpsychologie ===================== -->
+  <h3 id="k5-gestalt">5.5 Gesetze der Gestaltpsychologie</h3>
+  <div class="box def"><div class="box-h">Definition · Gestaltpsychologie</div>
+    <p>„Als Gestaltpsychologie wird ein Teil der Psychologie bezeichnet, die die menschliche Wahrnehmung als Fähigkeit beschreibt, Strukturen und Ordnungsprinzipien in Sinneseindrücken auszumachen.“</p>
+    <p>Sie „orientiert sich an der Erkenntnis, dass die Wahrnehmung Qualitäten enthält, die sich nicht aus der Anordnung einfacher Sinnesqualitäten ergeben“. <b>Sinnesqualitäten</b> beschreiben die verschiedenen Empfindungen innerhalb einer Sinnesmodalität – z. B. in der Modalität „Sehen“ Helligkeit, Farbe, Form und Bewegung; Farbe wiederum in die Farbqualitäten Blau, Gelb, Rot, Grün.</p>
+    <p class="src">V05 F.22 (Quelle: von Ehrenfels 1890; Metzger 1999)</p></div>
+  <p>Kurz gesagt: Das Ganze ist mehr als die Summe seiner Teile. „Visuelle Objekte werden vom Menschen typischerweise nicht als eine Menge von Einzelobjekten wahrgenommen, sondern nach bestimmten Prinzipien zu Figuren zusammengesetzt erlebt“ (F.23). Unter Ausnutzung der strukturell <b>informationstragenden Figurenelemente</b> können redundante Figuren weggelassen werden. Die informationstragenden Figuren bestimmen das Objekt so weit, dass man sich ein vollständiges Bild davon machen kann – <i>Voraussetzung</i>: Die Figur hebt sich deutlich vom Hintergrund ab und ist nicht zu komplex (F.23).</p>
+  <p>Die <b>wichtigsten Gestaltgesetze</b> betreffen laut F.23 die <b>Nähe</b>, die <b>Symmetrie</b> und die <b>Gleichartigkeit</b>. F.24 zeigt sie aufeinander aufbauend:</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 275" role="img" aria-label="Drei Panels: Nähe bildet Blöcke, Symmetrie verstärkt sie, Gleichartigkeit ergibt prägnante Figuren">
+      <rect x="15" y="10" width="190" height="200" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="225" y="10" width="190" height="200" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="435" y="10" width="190" height="200" rx="4" fill="none" stroke="currentColor"/>
+      <!-- a: Naehe -->
+      <circle cx="55" cy="50" r="7" fill="currentColor"/><circle cx="80" cy="40" r="7" fill="none" stroke="currentColor"/><circle cx="100" cy="58" r="7" fill="currentColor"/><circle cx="48" cy="72" r="7" fill="currentColor"/><circle cx="74" cy="66" r="7" fill="currentColor"/><circle cx="96" cy="82" r="7" fill="none" stroke="currentColor"/><circle cx="62" cy="92" r="7" fill="none" stroke="currentColor"/><circle cx="84" cy="98" r="7" fill="currentColor"/>
+      <circle cx="120" cy="150" r="7" fill="currentColor"/><circle cx="148" cy="140" r="7" fill="none" stroke="currentColor"/><circle cx="172" cy="128" r="7" fill="none" stroke="currentColor"/><circle cx="135" cy="172" r="7" fill="none" stroke="currentColor"/><circle cx="160" cy="165" r="7" fill="currentColor"/><circle cx="182" cy="158" r="7" fill="currentColor"/><circle cx="150" cy="190" r="7" fill="none" stroke="currentColor"/><circle cx="176" cy="186" r="7" fill="none" stroke="currentColor"/>
+      <!-- b: Naehe + Symmetrie -->
+      <circle cx="255" cy="40" r="7" fill="none" stroke="currentColor"/><circle cx="279" cy="40" r="7" fill="currentColor"/><circle cx="303" cy="40" r="7" fill="currentColor"/>
+      <circle cx="255" cy="64" r="7" fill="none" stroke="currentColor"/><circle cx="279" cy="64" r="7" fill="currentColor"/><circle cx="303" cy="64" r="7" fill="none" stroke="currentColor"/>
+      <circle cx="255" cy="88" r="7" fill="currentColor"/><circle cx="279" cy="88" r="7" fill="none" stroke="currentColor"/><circle cx="303" cy="88" r="7" fill="currentColor"/>
+      <circle cx="350" cy="122" r="7" fill="none" stroke="currentColor"/><circle cx="376" cy="133" r="7" fill="none" stroke="currentColor"/><circle cx="387" cy="158" r="7" fill="none" stroke="currentColor"/><circle cx="376" cy="183" r="7" fill="currentColor"/><circle cx="350" cy="194" r="7" fill="none" stroke="currentColor"/><circle cx="324" cy="183" r="7" fill="currentColor"/><circle cx="313" cy="158" r="7" fill="none" stroke="currentColor"/><circle cx="324" cy="133" r="7" fill="currentColor"/>
+      <!-- c: + Gleichartigkeit -->
+      <circle cx="465" cy="40" r="7" fill="none" stroke="currentColor"/><circle cx="489" cy="40" r="7" fill="none" stroke="currentColor"/><circle cx="513" cy="40" r="7" fill="none" stroke="currentColor"/>
+      <circle cx="465" cy="64" r="7" fill="none" stroke="currentColor"/><circle cx="489" cy="64" r="7" fill="none" stroke="currentColor"/><circle cx="513" cy="64" r="7" fill="none" stroke="currentColor"/>
+      <circle cx="465" cy="88" r="7" fill="none" stroke="currentColor"/><circle cx="489" cy="88" r="7" fill="none" stroke="currentColor"/><circle cx="513" cy="88" r="7" fill="none" stroke="currentColor"/>
+      <circle cx="560" cy="122" r="7" fill="currentColor"/><circle cx="586" cy="133" r="7" fill="currentColor"/><circle cx="597" cy="158" r="7" fill="currentColor"/><circle cx="586" cy="183" r="7" fill="currentColor"/><circle cx="560" cy="194" r="7" fill="currentColor"/><circle cx="534" cy="183" r="7" fill="currentColor"/><circle cx="523" cy="158" r="7" fill="currentColor"/><circle cx="534" cy="133" r="7" fill="currentColor"/>
+      <text x="110" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">a · Nähe</text>
+      <text x="110" y="250" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Nahes wird als Block</text>
+      <text x="110" y="266" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">empfunden</text>
+      <text x="320" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">b · Nähe + Symmetrie</text>
+      <text x="320" y="250" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Symmetrie verstärkt</text>
+      <text x="320" y="266" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">die Blockbildung</text>
+      <text x="530" y="232" text-anchor="middle" font-size="13" font-weight="bold" style="fill:var(--accent)" font-family="inherit">c · + Gleichartigkeit</text>
+      <text x="530" y="250" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">gleichartige Elemente</text>
+      <text x="530" y="266" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">→ „prägnante Figuren“</text>
+    </svg>
+    <figcaption>Nachbau von V05 F.24: (a) Elemente, die nahe beieinander liegen, werden als Block empfunden; (b) symmetrische Anordnung (Raster, Kreis) verstärkt die Blockbildung; (c) sind die Elemente eines Blocks zusätzlich gleichartig, entstehen „prägnante Figuren“ (Quadrat, Kreis).</figcaption>
+  </figure>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Gestaltgesetz</th><th>Aussage (F.24)</th><th>Gestaltungsregel für Oberflächen (F.25)</th></tr></thead><tbody>
+    <tr><td><b>Nähe</b></td><td>Figurenelemente, die nahe beieinander angeordnet sind, werden als Block empfunden.</td><td>Zusammengehörige Informationen sollten nahe beieinander liegen (Label direkt am Eingabefeld; Abstand zwischen Gruppen).</td></tr>
+    <tr><td><b>Symmetrie</b></td><td>Blockbildung wird durch symmetrisch angeordnete Figurenelemente verstärkt.</td><td>Zusammengehörige Informationen sollen eine symmetrische Figur bilden (Raster, bündige Spalten).</td></tr>
+    <tr><td><b>Gleichartigkeit</b></td><td>Symmetrische Blöcke bilden durch gleichartige Elemente „prägnante Figuren“.</td><td>Innerhalb einer symmetrischen Figur sollten möglichst ähnlich aussehende Informationen vorkommen (gleiche Buttons für gleiche Funktionsart).</td></tr>
+  </tbody></table></div>
+  <p>Begründung der Vorlesung: „Die Berücksichtigung der Gestaltgesetze führt zu übersichtlichen, gut strukturierten Benutzungsschnittstellen, deren Informationen vom Menschen einfach aufgenommen werden können“ (F.25).</p>
+  <div class="box deep"><div class="box-h">Vertiefung · weitere Gestaltgesetze (nicht auf den Folien)</div>
+    <p>Die Gestaltpsychologie (Wertheimer, Metzger) kennt weitere Gesetze, die du in einer App-Analyse ergänzend nutzen kannst – kennzeichne sie dann als ergänzend: <b>Gesetz der Geschlossenheit</b> (unvollständige Formen werden zu geschlossenen ergänzt; eingerahmte Bereiche wirken zusammengehörig), <b>Gesetz der guten Fortsetzung / Kontinuität</b> (Elemente auf einer Linie oder Kurve werden als zusammengehörig gesehen), <b>Figur-Grund-Prinzip</b> (wir trennen eine Figur vom Hintergrund – auf F.23 als „Voraussetzung, dass sich die Figur deutlich vom Hintergrund abhebt“ angedeutet), <b>Gesetz des gemeinsamen Schicksals</b> (sich gleich bewegende Elemente gehören zusammen) und das übergeordnete <b>Gesetz der Prägnanz bzw. guten Gestalt</b> (wir sehen bevorzugt einfache, einprägsame Figuren – F.24 spricht von „prägnanten Figuren“). „Gleichartigkeit“ (F.23) wird in der Literatur meist „Ähnlichkeit“ genannt.</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 240" role="img" aria-label="Vier ergänzende Gestaltgesetze: Geschlossenheit, Kontinuität, Figur-Grund, gemeinsames Schicksal">
+      <defs><marker id="k5c-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="10" y="10" width="145" height="160" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="170" y="10" width="145" height="160" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="330" y="10" width="145" height="160" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="490" y="10" width="140" height="160" rx="4" fill="none" stroke="currentColor"/>
+      <!-- Geschlossenheit: Kreis mit Luecken, Quadrat ohne Ecken -->
+      <circle cx="82" cy="65" r="32" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="40 10"/>
+      <path d="M50 115 L50 150 M60 160 L105 160 M115 150 L115 115 M105 105 L60 105" fill="none" stroke="currentColor" stroke-width="3"/>
+      <!-- Kontinuitaet: zwei sich kreuzende Linien aus Punkten -->
+      <circle cx="190" cy="40" r="4" fill="currentColor"/><circle cx="208" cy="55" r="4" fill="currentColor"/><circle cx="226" cy="70" r="4" fill="currentColor"/><circle cx="244" cy="85" r="4" fill="currentColor"/><circle cx="262" cy="100" r="4" fill="currentColor"/><circle cx="280" cy="115" r="4" fill="currentColor"/><circle cx="298" cy="130" r="4" fill="currentColor"/>
+      <circle cx="190" cy="130" r="4" style="fill:var(--accent)"/><circle cx="208" cy="115" r="4" style="fill:var(--accent)"/><circle cx="226" cy="100" r="4" style="fill:var(--accent)"/><circle cx="262" cy="70" r="4" style="fill:var(--accent)"/><circle cx="280" cy="55" r="4" style="fill:var(--accent)"/><circle cx="298" cy="40" r="4" style="fill:var(--accent)"/>
+      <!-- Figur-Grund: Dialog vor Hintergrund -->
+      <rect x="342" y="25" width="121" height="132" style="fill:var(--surface-2)" stroke="none"/>
+      <line x1="350" y1="40" x2="455" y2="40" style="stroke:var(--muted)" stroke-width="4"/>
+      <line x1="350" y1="55" x2="440" y2="55" style="stroke:var(--muted)" stroke-width="4"/>
+      <line x1="350" y1="130" x2="450" y2="130" style="stroke:var(--muted)" stroke-width="4"/>
+      <line x1="350" y1="145" x2="430" y2="145" style="stroke:var(--muted)" stroke-width="4"/>
+      <rect x="360" y="68" width="85" height="50" rx="5" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+      <text x="402" y="98" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Dialog</text>
+      <!-- Gemeinsames Schicksal -->
+      <circle cx="515" cy="45" r="7" fill="currentColor"/><circle cx="560" cy="80" r="7" fill="currentColor"/><circle cx="530" cy="120" r="7" fill="currentColor"/>
+      <circle cx="585" cy="45" r="7" fill="none" stroke="currentColor"/><circle cx="520" cy="85" r="7" fill="none" stroke="currentColor"/><circle cx="600" cy="120" r="7" fill="none" stroke="currentColor"/>
+      <line x1="515" y1="36" x2="515" y2="20" stroke="currentColor" marker-end="url(#k5c-arr)"/><line x1="560" y1="71" x2="560" y2="55" stroke="currentColor" marker-end="url(#k5c-arr)"/><line x1="530" y1="111" x2="530" y2="95" stroke="currentColor" marker-end="url(#k5c-arr)"/>
+      <text x="82" y="192" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Geschlossenheit</text>
+      <text x="82" y="210" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Lücken werden zur</text>
+      <text x="82" y="226" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Form ergänzt</text>
+      <text x="242" y="192" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Kontinuität</text>
+      <text x="242" y="210" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">wir sehen zwei Linien,</text>
+      <text x="242" y="226" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">kein „V“ und „Λ“</text>
+      <text x="402" y="192" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Figur-Grund</text>
+      <text x="402" y="210" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Figur hebt sich vom</text>
+      <text x="402" y="226" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Hintergrund ab (F.23)</text>
+      <text x="560" y="192" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Gem. Schicksal</text>
+      <text x="560" y="210" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">gleich Bewegtes</text>
+      <text x="560" y="226" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">gehört zusammen</text>
+    </svg>
+    <figcaption>Vertiefung (über F.23–24 hinaus): Geschlossenheit, Kontinuität, Figur-Grund und gemeinsames Schicksal. Nur Figur-Grund ist auf F.23 als Voraussetzung angedeutet; die übrigen als „ergänzend“ kennzeichnen.</figcaption>
+  </figure>
+  <p><b>Farben</b> (F.26): „Der falsche oder übertriebene Einsatz von Farben kann die Wahrnehmung von Benutzerinnen stören, sogar dazu führen, dass eine Benutzbarkeit von Programmen nahezu unmöglich wird.“ Daraus folgen drei Regeln:</p>
+  <ol>
+    <li><b>Farbe nicht als einzigen Informationsträger einsetzen</b> – 4 % aller Menschen sind in ihrer Farbwahrnehmung beeinträchtigt; bei Verknüpfung von Farben mit Bedeutung können sich viele nicht mehr als <b>vier Bedeutungskombinationen</b> merken.</li>
+    <li>Farben für Text- und Hintergrunddarstellung sollten ein ausreichend großes <b>Kontrastbildungspotenzial</b> haben.</li>
+    <li>Die Einfärbung von Interaktionselementen sollte sich an <b>bekannte Farbcodes</b> halten (rot = Gefahr/Löschen, grün = OK).</li>
+  </ol>
+  <figure class="fig">
+    <svg viewBox="0 0 640 330" role="img" aria-label="Annotierte App-Maske: Wo Nähe, Symmetrie, Gleichartigkeit, Geschlossenheit und Farbregeln wirken">
+      <defs><marker id="k5d-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="30" y="10" width="220" height="310" rx="18" fill="none" stroke="currentColor" stroke-width="2"/>
+      <text x="140" y="38" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor" font-family="inherit">Termin buchen</text>
+      <line x1="45" y1="48" x2="235" y2="48" style="stroke:var(--muted)"/>
+      <text x="50" y="68" font-size="12" fill="currentColor" font-family="inherit">Datum</text>
+      <rect x="50" y="73" width="180" height="22" rx="4" fill="none" stroke="currentColor"/>
+      <text x="50" y="112" font-size="12" fill="currentColor" font-family="inherit">Uhrzeit</text>
+      <rect x="50" y="117" width="180" height="22" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="50" y="160" width="54" height="22" rx="11" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="113" y="160" width="54" height="22" rx="11" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="176" y="160" width="54" height="22" rx="11" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="77" y="175" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Haus</text>
+      <text x="140" y="175" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Labor</text>
+      <text x="203" y="175" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Röntgen</text>
+      <rect x="50" y="198" width="180" height="58" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="62" y="218" font-size="12" font-weight="bold" fill="currentColor" font-family="inherit">⚠ Hinweis</text>
+      <text x="62" y="236" font-size="11" fill="currentColor" font-family="inherit">Bitte nüchtern erscheinen</text>
+      <rect x="50" y="272" width="84" height="28" rx="5" fill="none" stroke="currentColor"/>
+      <rect x="146" y="272" width="84" height="28" rx="5" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+      <text x="92" y="290" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Abbrechen</text>
+      <text x="188" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" font-family="inherit">✓ Buchen</text>
+      <line x1="285" y1="95" x2="236" y2="95" stroke="currentColor" marker-end="url(#k5d-arr)"/>
+      <text x="292" y="90" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Nähe</text>
+      <text x="292" y="107" font-size="12" fill="currentColor" font-family="inherit">Label direkt am Feld, Abstand zwischen Gruppen</text>
+      <line x1="285" y1="171" x2="236" y2="171" stroke="currentColor" marker-end="url(#k5d-arr)"/>
+      <text x="292" y="166" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Gleichartigkeit + Symmetrie</text>
+      <text x="292" y="183" font-size="12" fill="currentColor" font-family="inherit">gleiche Chips = gleiche Funktion, im Raster</text>
+      <line x1="285" y1="227" x2="236" y2="227" stroke="currentColor" marker-end="url(#k5d-arr)"/>
+      <text x="292" y="222" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Geschlossenheit / Figur-Grund</text>
+      <text x="292" y="239" font-size="12" fill="currentColor" font-family="inherit">Rahmen + Fläche heben den Hinweis ab</text>
+      <line x1="285" y1="286" x2="236" y2="286" stroke="currentColor" marker-end="url(#k5d-arr)"/>
+      <text x="292" y="281" font-size="13" font-weight="bold" style="fill:var(--accent)" font-family="inherit">Farbe nie allein (F.26)</text>
+      <text x="292" y="298" font-size="12" fill="currentColor" font-family="inherit">Primärbutton: Farbe + Symbol ✓ + Text</text>
+    </svg>
+    <figcaption>Anwendung auf eine App-Maske: Nähe, Symmetrie und Gleichartigkeit (F.24–25) strukturieren die Oberfläche; die Farbregeln (F.26) verlangen, dass Bedeutung nie nur über Farbe transportiert wird. Geschlossenheit/Figur-Grund sind ergänzende Gesetze.</figcaption>
+  </figure>
+  <div class="box exam"><div class="box-h">Klausurfokus · „Wenden Sie Gestaltgesetze auf die App an“</div>
+    <p>Punkte gibt es für (1) die Definition der Gestaltpsychologie (F.22), (2) die Nennung der drei Gesetze Nähe, Symmetrie, Gleichartigkeit mit Aussage (F.24), (3) je eine <i>konkrete</i> Stelle in der App, an der das Gesetz gilt oder verletzt wird, und (4) eine Verbesserung. Dazu passt die Begründung von F.25 („übersichtliche, gut strukturierte Benutzungsschnittstellen“) und die Farbregeln von F.26. Ergänzende Gesetze (Geschlossenheit usw.) als „Vertiefung“ kennzeichnen.</p></div>
+
+  <!-- ===================== 5.6 Normen ISO 9241-110 ===================== -->
+  <h3 id="k5-normen">5.6 Normen: ISO 9241 Teil 10 – Grundsätze der Dialoggestaltung</h3>
+  <div class="box def"><div class="box-h">Definition · Normen</div>
+    <p>„Normen (von lat. norma = Regel) beschreiben Handlungsanweisungen.“ Eine einschlägige Norm für die Gestaltung von Nutzerschnittstellen ist <b>ISO 9241 Teil 10</b> mit sieben Grundsätzen: Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Steuerbarkeit, Erwartungskonformität, Fehlertoleranz, Individualisierbarkeit, Lernförderlichkeit.</p>
+    <p class="src">V05 F.27 (Normenreihe DIN EN ISO 9241 „Ergonomie der Mensch-System-Interaktion“, F.97)</p></div>
+  <p>Die Folie zählt nur die Namen auf. Die folgenden Erläuterungen sind gängige Lesarten der Norm (Vertiefung); sie helfen dir, im Fall eine Verletzung oder Erfüllung präzise zu begründen. Merkhilfe für die Reihenfolge der Folie: „<b>A</b>lle <b>S</b>ieben <b>S</b>ind <b>E</b>rgonomisch <b>F</b>ast <b>I</b>mmer <b>L</b>ernbar“ (A-S-S-E-F-I-L).</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Grundsatz (F.27)</th><th>Kernidee (Vertiefung)</th><th>Erfüllt / verletzt – Beispiel</th></tr></thead><tbody>
+    <tr><td><b>Aufgabenangemessenheit</b></td><td>Das System unterstützt die Erledigung der Arbeitsaufgabe effektiv und effizient, ohne unnötige Schritte.</td><td>Notaufnahme zeigt zuerst Allergien und aktuelle Medikation (erfüllt) statt 200 alte Laborbefunde unsortiert (verletzt).</td></tr>
+    <tr><td><b>Selbstbeschreibungsfähigkeit</b></td><td>Jeder Dialogschritt ist unmittelbar verständlich oder wird auf Anfrage erklärt; die Nutzerin weiß, wo sie ist und was als Nächstes möglich ist.</td><td>Fortschrittsanzeige „Schritt 2 von 4“ im IKEA-Checkout; KI-Assistent zeigt Quelle seiner Antwort.</td></tr>
+    <tr><td><b>Steuerbarkeit</b></td><td>Die Nutzerin kann Richtung und Geschwindigkeit des Dialogs beeinflussen (unterbrechen, abbrechen, zurück).</td><td>KI-Assistent, dessen Hinweise man nicht pausieren kann, verletzt Steuerbarkeit (Probeklausur-Fall).</td></tr>
+    <tr><td><b>Erwartungskonformität</b></td><td>Das System verhält sich konsistent und entspricht Konventionen und Erfahrungen der Nutzerin.</td><td>Warenkorb-Symbol oben rechts; „Zurück“ führt wirklich einen Schritt zurück.</td></tr>
+    <tr><td><b>Fehlertoleranz</b></td><td>Trotz fehlerhafter Eingaben wird das Arbeitsergebnis mit keinem oder minimalem Korrekturaufwand erreicht; Fehler werden verhindert oder erklärt.</td><td>Plausibilitätsprüfung „Dosis ungewöhnlich hoch – bitte bestätigen“; Rückgängig-Funktion.</td></tr>
+    <tr><td><b>Individualisierbarkeit</b></td><td>Das System lässt sich an Fähigkeiten und Vorlieben der Nutzerin anpassen.</td><td>Schriftgröße, Dark Mode, eigene Schnellzugriffe, Häufigkeit der KI-Hinweise einstellbar.</td></tr>
+    <tr><td><b>Lernförderlichkeit</b></td><td>Das System unterstützt und leitet die Nutzerin beim Erlernen an.</td><td>Onboarding-Tour, kontextbezogene Tipps, die mit zunehmender Erfahrung verschwinden.</td></tr>
+  </tbody></table></div>
+  <p><b>Konflikte</b> zwischen den Grundsätzen (F.28): „Das gleichzeitige Verfolgen dieser Grundsätze kann zu Konflikten führen.“ Die Folie nennt zwei Beispiele: „Maßnahmen zur Verbesserung der <b>Steuerbarkeit</b> haben zumeist negative Auswirkungen auf die <b>Selbstbeschreibungsfähigkeit</b>“ – je mehr Optionen und Abkürzungen, desto schwerer ist das System auf einen Blick zu verstehen. Und: „Je mehr eine Benutzerin das System ihren Bedürfnissen anpassen kann [Individualisierbarkeit], desto uneinheitlicher und unübersichtlicher wird es.“ Einige Konflikte lassen sich vermeiden oder verringern, z. B. „durch ausgefeilte Hilfesysteme, die sowohl einen <b>Laienmodus</b> als auch einen <b>Expertenmodus</b> zulassen und damit auf den Nutzertyp Rücksicht nehmen“ (F.28) – Brücke zu den Nutzertypen (F.9) und zum differenziellen Gestalten (F.18).</p>
+  <div class="box ex"><div class="box-h">Beispiel · KI-Assistent und digitaler Stress (Probeklausur 2026, Aufgabe 1)</div>
+    <p>Die drei Klagen der Beschäftigten lassen sich den ISO-Grundsätzen zuordnen: <i>„Ständige Hinweise unterbrechen mich“</i> → mangelnde <b>Steuerbarkeit</b> und <b>Aufgabenangemessenheit</b> (Unterbrechungen behindern die Arbeitsaufgabe). <i>„Fehlerhafte Antworten, die ich mühsam prüfen muss“</i> → mangelnde <b>Fehlertoleranz</b> und <b>Selbstbeschreibungsfähigkeit</b> (keine Quellen, keine Unsicherheitsangabe). <i>„Ich kann mit der Technik nicht Schritt halten“</i> → mangelnde <b>Lernförderlichkeit</b> und fehlende Rücksicht auf den Nutzertyp. Lösungsartefakte: Hinweis-Frequenz individualisierbar machen (Individualisierbarkeit), „Fokusmodus“ (Steuerbarkeit), Quellenangabe und Konfidenzanzeige (Selbstbeschreibungsfähigkeit), Schulung/Key User (Nutzermitwirkung, F.46–47).</p></div>
+  <div class="box deep"><div class="box-h">Vertiefung · Neufassung ISO 9241-110:2020</div>
+    <p>Die Folie verwendet die klassischen Bezeichnungen (Fassung 2006). In der Neufassung von 2020 („Interaktionsprinzipien“) wurden drei Grundsätze umbenannt: <i>Lernförderlichkeit</i> → „Erlernbarkeit“, <i>Fehlertoleranz</i> → „Robustheit gegen Benutzungsfehler“, <i>Individualisierbarkeit</i> → „Benutzerbindung“ (engl. user engagement) mit etwas anderem Inhalt. In der Klausur die Folienbegriffe verwenden. Die Folie nennt die Norm „ISO 9241 Teil 10“; heute heißt der Teil „ISO 9241-110“.</p></div>
+
+  <!-- ===================== 5.7 Usability & UX ===================== -->
+  <h3 id="k5-usability">5.7 Gebrauchstauglichkeit (ISO 9241-11) und Nutzererlebnis (ISO 9241-210)</h3>
+  <div class="box def"><div class="box-h">Definition · Gebrauchstauglichkeit (Usability)</div>
+    <p>„Die Gebrauchstauglichkeit (engl. usability) bezeichnet das Ausmaß, in dem ein System, ein Produkt oder eine Dienstleistung durch bestimmte Nutzerinnen in einem bestimmten Nutzungskontext genutzt werden kann, um bestimmte Ziele effektiv, effizient und zufriedenstellend zu erreichen.“</p>
+    <p>ISO 9241 Teil 11 formuliert drei Anforderungen: <b>Effektivität</b> zur Lösung einer Aufgabe, <b>Effizienz</b> der Handhabung des Systems bei der Aufgabendurchführung, <b>Zufriedenheit</b> der Kundin. Die Norm „hat auch definitorischen Charakter“ – sie etablierte eine weit verbreitete Definition von Usability.</p>
+    <p class="src">V05 F.29</p></div>
+  <p>Wichtig sind die drei „bestimmten“ in der Definition: Usability ist <b>keine Eigenschaft des Systems an sich</b>, sondern immer relativ zu <i>bestimmten Nutzerinnen</i>, einem <i>bestimmten Nutzungskontext</i> und <i>bestimmten Zielen</i>. Dasselbe Klinik-Tablet kann für die Pflegekraft im Stationszimmer gebrauchstauglich und für die Notärztin unter Zeitdruck nachts ungeeignet sein. Effektivität fragt „Wird das Ziel überhaupt (vollständig, korrekt) erreicht?“, Effizienz „Mit welchem Aufwand (Zeit, Klicks, kognitive Last)?“, Zufriedenheit „Wie wird die Nutzung subjektiv erlebt?“. Effektivität und Effizienz kennst du schon aus Kapitel 4 (Formalziele) – hier werden sie auf die Nutzung eines Systems angewendet.</p>
+  <div class="box def"><div class="box-h">Definition · Nutzererlebnis (User Experience)</div>
+    <p>„Das Nutzererlebnis (engl. user experience) beschreibt die Wahrnehmungen und Reaktionen einer Person, die sich bei der Nutzung oder der erwarteten Verwendung eines Produktes ergeben.“ (vgl. ISO 9241 Teil 210)</p>
+    <p>„Während bei der Gebrauchstauglichkeit die <b>Vermeidung negativer Erlebnisse</b> während der Nutzung im Fokus steht, liegt der Schwerpunkt bei den Nutzererlebnissen auf der <b>Gestaltung positiver Effekte</b>.“</p>
+    <p class="src">V05 F.30</p></div>
+  <p>Den Zusammenhang zeigt F.31–32 entlang dreier Phasen: <b>vor</b>, <b>während</b> und <b>nach</b> der Nutzung. „Während die Gebrauchstauglichkeit einen Fokus auf die Nutzung hat und sich in einem bestimmten Nutzungskontext auf die Aufgabendurchführung durch eine bestimmte Nutzerin fokussiert, beschreibt das Nutzererlebnis ganzheitliche Wahrnehmungen und Reaktionen von Nutzerinnen aller drei Phasen“ (F.31). Positive Nutzererlebnisse sind wünschenswert, weil sie u. a. Nutzerinnen an Produkte und Dienstleistungen binden und die Marke stärken (F.31).</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250" role="img" aria-label="Usability umfasst nur die Phase während der Nutzung, User Experience alle drei Phasen">
+      <defs><marker id="k5e-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="20" y="15" width="180" height="105" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="230" y="15" width="180" height="105" rx="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <rect x="440" y="15" width="180" height="105" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <line x1="200" y1="45" x2="228" y2="45" stroke="currentColor" stroke-width="1.5" marker-end="url(#k5e-arr)"/>
+      <line x1="410" y1="45" x2="438" y2="45" stroke="currentColor" stroke-width="1.5" marker-end="url(#k5e-arr)"/>
+      <text x="110" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor" font-family="inherit">Vor der Nutzung</text>
+      <text x="110" y="68" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Vorstellungen über</text>
+      <text x="110" y="85" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">die Nutzung</text>
+      <text x="320" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor" font-family="inherit">Während der Nutzung</text>
+      <text x="320" y="64" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">effektive und effiziente</text>
+      <text x="320" y="80" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Aufgabendurchführung;</text>
+      <text x="320" y="96" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Zufriedenheit damit</text>
+      <text x="530" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor" font-family="inherit">Nach der Nutzung</text>
+      <text x="530" y="64" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Verarbeitung der erlebten</text>
+      <text x="530" y="80" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Nutzung, Aufbau einer</text>
+      <text x="530" y="96" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">emotionalen Bindung</text>
+      <path d="M232 132 L232 142 L408 142 L408 132" fill="none" style="stroke:var(--accent)" stroke-width="2"/>
+      <text x="320" y="162" text-anchor="middle" font-size="13" font-weight="bold" style="fill:var(--accent)" font-family="inherit">ISO 9241-11 · Gebrauchstauglichkeit</text>
+      <text x="320" y="178" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Fokus: negative Erlebnisse vermeiden</text>
+      <path d="M22 192 L22 202 L618 202 L618 192" fill="none" stroke="currentColor" stroke-width="2"/>
+      <text x="320" y="222" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">ISO 9241-210 · Nutzererlebnis (alle drei Phasen)</text>
+      <text x="320" y="240" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Fokus: positive Effekte gestalten → Bindung, Markenstärkung</text>
+    </svg>
+    <figcaption>Nachbau von V05 F.32: Gebrauchstauglichkeit deckt nur die Phase „während der Nutzung“ ab; das Nutzererlebnis umfasst auch Erwartungen davor und die emotionale Verarbeitung danach.</figcaption>
+  </figure>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Kriterium</th><th>Gebrauchstauglichkeit (Usability)</th><th>Nutzererlebnis (UX)</th></tr></thead><tbody>
+    <tr><td>Norm</td><td>ISO 9241 Teil 11 (F.29)</td><td>ISO 9241 Teil 210 (F.30)</td></tr>
+    <tr><td>Phasen</td><td>während der Nutzung</td><td>vor, während, nach der Nutzung (ganzheitlich)</td></tr>
+    <tr><td>Fokus</td><td>Vermeidung negativer Erlebnisse; Aufgabendurchführung einer bestimmten Nutzerin im bestimmten Nutzungskontext</td><td>Gestaltung positiver Effekte; Wahrnehmungen und Reaktionen, auch bei <i>erwarteter</i> Verwendung</td></tr>
+    <tr><td>Kriterien</td><td>Effektivität, Effizienz, Zufriedenheit</td><td>Erwartungen, Emotionen, Bindung, Markenwirkung</td></tr>
+    <tr><td>Verhältnis</td><td colspan="2">Usability ist Teilaspekt des Nutzererlebnisses (die mittlere Phase); gute Usability ist notwendig, aber nicht hinreichend für gute UX.</td></tr>
+  </tbody></table></div>
+  <div class="box ex"><div class="box-h">Beispiel · IKEA-App</div>
+    <p><i>Vor der Nutzung:</i> Werbung verspricht „Möbel per AR im eigenen Wohnzimmer platzieren“ – Erwartungen entstehen. <i>Während:</i> Findet die Nutzerin das Sofa, platziert es und bestellt fehlerfrei (Effektivität), mit wenigen Schritten (Effizienz), und fühlt sich wohl dabei (Zufriedenheit)? Das ist Usability. <i>Nach:</i> Freude über das passende Sofa, Teilen eines Screenshots, Wiederkehr zur App – emotionale Bindung und Markenstärkung, also UX.</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div>
+    <p>„Zufriedenheit“ ist bereits Teil der Usability-Definition – UX ist deshalb nicht einfach „Usability + Zufriedenheit“. Der Unterschied liegt im <b>Zeitraum</b> (alle drei Phasen) und in der <b>Ausrichtung</b> (positive Effekte gestalten statt negative vermeiden).</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · Usability vs. Sicherheit (Klinik-Fall)</div>
+    <p>Die Forderung des Datenschutzbeauftragten (Zusatzanmeldung bei <i>jedem</i> Zugriff) senkt vor allem die <b>Effizienz</b> (mehr Zeit pro Zugriff) und unter Zeitdruck möglicherweise die <b>Effektivität</b> (relevante Information wird nicht rechtzeitig gefunden) und die <b>Zufriedenheit</b>. Sie erhöht aber Vertraulichkeit/Datenschutz. Ein ausgewogener Lösungsvorschlag nutzt <b>Nutzerrollen</b> (F.61): Die Rolle bestimmt <i>einmalig</i>, welche Daten sichtbar sind; eine Zusatzanmeldung nur bei besonders sensiblen Datenkategorien oder beim Zugriff außerhalb der Rolle („Notfallzugriff mit Protokollierung“). So wird der konfliktäre Zielbezug (Kapitel 4) abgemildert.</p></div>
+
+  <!-- ===================== 5.8 Nutzerarbeitsplatz ===================== -->
+  <h3 id="k5-arbeitsplatz">5.8 Nutzerarbeitsplatz und Arbeitsplatzergonomie</h3>
+  <p>Neben der Schnittstelle ist der physische <b>Nutzerarbeitsplatz</b> ein weiteres Erklärungs- und Gestaltungsobjekt der WI (Lernziel F.4). Ziel ist die <b>Erleichterung der Aufgabenerfüllung</b> und die Steigerung von persönlichem <b>Wohlbefinden</b> der Nutzerin, <b>Motivation</b>, <b>Produktivität</b> und <b>Wirtschaftlichkeit</b> (F.33).</p>
+  <div class="box def"><div class="box-h">Definition · Arbeitsplatzergonomie</div>
+    <p>„Ziel der als Arbeitsplatzergonomie bezeichneten Forschung ist es, Erklärungen zu liefern, die eine optimale Abstimmung der Bedingungen des Arbeitsplatzes mit den Benutzeranforderungen aufzeigen.“</p>
+    <p class="src">V05 F.33</p></div>
+  <p><b>Gegenstände</b> der Arbeitsplatzergonomie (F.34): die <i>Arbeitsplatzausstattung</i> (Tisch und Ablageflächen, Arbeitsstuhl, Arbeitsgeräte wie Tastatur, Bildschirm, Drucker, Telefon) und die <i>Arbeitsplatzumgebung</i> (visuelle, akustische, thermische Umgebung).</p>
+  <div class="box def"><div class="box-h">Prozess der Arbeitsplatzgestaltung</div>
+    <p>„Der Prozess der Arbeitsplatzgestaltung beginnt mit einer <b>Aufgabenanalyse</b> und endet mit dem Bestimmen des <b>Technikbedarfs</b> für den Arbeitsplatz.“ Bei der Aufgabenanalyse werden die aufgabenspezifischen Benutzeranforderungen erfasst. Lösungen, die sich an den <b>statistischen Durchschnittswerten</b> der menschlichen Physiognomie orientieren, sind meist unbefriedigend; erforderlich ist, die <b>breite Streuung der physiognomischen Merkmale</b> (v. a. Größenunterschiede der Körpermaße) zu berücksichtigen.</p>
+    <p class="src">V05 F.35</p></div>
+  <p>Körperliches Unbehagen und Ermüdung entstehen vorwiegend durch (F.36): ungünstige Blickwinkel; große Kontrastunterschiede zwischen wesentlichen Wahrnehmungsobjekten; ungeeignete Tastatur-, Tisch- und Stuhlhöhen; fehlende Bewegungsmöglichkeit; mangelnde Anpassungsfähigkeit des Arbeitsplatzes an unterschiedliche physiognomische Bedingungen.</p>
+  <p><b>Anordnung</b> (F.37): „Beim Entwickeln der Arbeitsorganisation wird auch festgelegt, welche Sachmittel mit welcher Nutzungshäufigkeit an einem Arbeitsplatz verwendet werden sollen.“ Regel: Die am häufigsten benutzten Sachmittel sollen innerhalb der Reichweite der Nutzerin liegen; die <b>optimale Reichweite</b> umfasst zwei sich vor dem Körper überschneidende Halbkreise. Für die <b>optimale Sehentfernung</b> gibt es keine allgemeingültige Richtlinie – sie hängt von der Zeichengröße ab.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 260" role="img" aria-label="Optimale und maximale Reichweite als überlappende Halbkreise vor dem Körper">
+      <rect x="120" y="190" width="400" height="22" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <path d="M170 200 A120 120 0 0 1 410 200" fill="none" stroke="currentColor" stroke-dasharray="5 4"/>
+      <path d="M230 200 A120 120 0 0 1 470 200" fill="none" stroke="currentColor" stroke-dasharray="5 4"/>
+      <path d="M215 200 A75 75 0 0 1 365 200" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2" fill-opacity="0.6"/>
+      <path d="M275 200 A75 75 0 0 1 425 200" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2" fill-opacity="0.6"/>
+      <circle cx="320" cy="232" r="18" fill="currentColor"/>
+      <text x="320" y="152" text-anchor="middle" font-size="13" font-weight="bold" style="fill:var(--accent)" font-family="inherit">optimal</text>
+      <text x="320" y="170" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">≈ 35–40 cm</text>
+      <text x="470" y="95" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">maximale Reichweite</text>
+      <text x="470" y="112" font-size="12" fill="currentColor" font-family="inherit">≈ 55–65 cm</text>
+      <line x1="468" y1="108" x2="430" y2="125" stroke="currentColor"/>
+      <text x="20" y="95" font-size="12" fill="currentColor" font-family="inherit">häufig benutzte</text>
+      <text x="20" y="111" font-size="12" fill="currentColor" font-family="inherit">Sachmittel →</text>
+      <text x="20" y="127" font-size="12" fill="currentColor" font-family="inherit">in den optimalen</text>
+      <text x="20" y="143" font-size="12" fill="currentColor" font-family="inherit">Bereich (F.37)</text>
+      <text x="320" y="20" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="inherit">Draufsicht Arbeitstisch (schematisch nach V05 F.38)</text>
+    </svg>
+    <figcaption>Schematisch nach V05 F.38: Pro Hand ein Halbkreis; die beiden optimalen Bereiche überschneiden sich vor dem Körper. Häufig genutzte Sachmittel (Tastatur, Maus) gehören in die Schnittmenge, seltene (Drucker, Ablage) in den maximalen Bereich.</figcaption>
+  </figure>
+  <div class="box ex"><div class="box-h">Beispiel · Kurzzeitgedächtnis und Mehrbildschirm-Arbeitsplatz (F.39)</div>
+    <p>Die Kapazität des Kurzzeitgedächtnisses beträgt <b>7 ± 2 Objekte</b>, an die man sich ohne Auffrischung nur etwa <b>20 Sekunden</b> erinnern kann. Das erschwert die Arbeit am Computer (z. B. Wechseln zwischen Fenstern und Merken von Zahlen). Zwei oder mehr Bildschirme können die negativen Auswirkungen abschwächen; <b>Wertpapierhändlerinnen</b> verwenden mehrere Bildschirme, um mit weniger Zeitaufwand viele Informationen zu verarbeiten – in der Regel mit gesteigerter Produktivität. Übertragung: Eine Notaufnahme-Oberfläche sollte Allergien und aktuelle Medikation <i>gleichzeitig</i> sichtbar machen, statt die Ärztin zwischen Reitern wechseln und Werte im Kopf behalten zu lassen.</p></div>
+  <p><b>Arbeitsplatzumgebung</b> (F.40): Unterschieden werden die visuelle (vor allem Beleuchtung), thermische (vor allem Temperatur und Luftfeuchtigkeit), akustische (vor allem Geräusche) Umgebung sowie sonstige Umgebungseinflüsse (verursacht durch neue, in ihren Auswirkungen noch teilweise unbekannte Technologien). „Für die ergonomische Gestaltung von weiteren Sachmitteln wie Arbeitstisch, Bildschirm, Tastatur, Zeigeinstrument und Drucker gelten allgemein anerkannte Kriterien, die bei Auswahl und Beschaffung zu berücksichtigen sind“ (F.40).</p>
+  <div class="box exam"><div class="box-h">Klausurfokus · Tutorium-Wahr/Falsch (T05 F.8–9)</div>
+    <p>„Die Erfassung von Benutzeranforderungen dient der Steigerung der Benutzerzufriedenheit.“ → <b>Wahr</b> laut Tutorium: Arbeitsplatzergonomie zielt auf die optimale Abstimmung der Arbeitsplatzbedingungen mit den Benutzeranforderungen; Ziele sind u. a. die Steigerung des persönlichen <b>Wohlbefindens</b> der Nutzerin (plus Motivation, Produktivität, Wirtschaftlichkeit). Gute Antwort: „Wahr, aber nicht nur – auch Motivation, Produktivität und Wirtschaftlichkeit (F.33).“</p></div>
+
+  <!-- ===================== 5.9 Nutzermitwirkung ===================== -->
+  <h3 id="k5-mitwirkung">5.9 Nutzermitwirkung (Partizipation)</h3>
+  <div class="box def"><div class="box-h">Grundgedanke · Nutzermitwirkung</div>
+    <p>„Die Entwicklung und Einführung von Informationssystemen ist ein Prozess, in dem professionelle Entwicklerinnen und potenzielle Nutzerinnen zusammenwirken.“ Wie Nutzermitwirkung grundsätzlich gestaltet werden kann, beschreiben zwei Ansätze: der <b>konsensorientierte Ansatz</b> und der <b>gewerkschaftliche Gegenmachtansatz</b>.</p>
+    <p class="src">V05 F.41</p></div>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Merkmal</th><th>Konsensorientierter Ansatz (F.42)</th><th>Gewerkschaftlicher (Gegenmacht-)Ansatz (F.43)</th></tr></thead><tbody>
+    <tr><td>Grundannahme</td><td>Systemgestaltung kann nicht nur nach technischen Zielen erfolgen; das System muss auch nach seiner Funktionsweise im Zusammenhang mit einer bestimmten Verwendung durch bestimmte Nutzerinnen beurteilt werden.</td><td>Konstatiert einen <b>Interessensgegensatz</b> zwischen technischen und betriebswirtschaftlichen sowie sozialen Zielen.</td></tr>
+    <tr><td>Ziel / Mittel</td><td>Durch <b>Motivationsstrategien und akzeptanzfördernde Maßnahmen</b> die Bedingungen für Entwicklung, Einführung und Nutzung von IS verbessern.</td><td>Verbesserung der Arbeitsorganisation; Verwirklichung „<b>wirtschaftlicher Demokratie</b>“; Planung „arbeitnehmerbezogener IS“.</td></tr>
+    <tr><td>Rolle der Entwicklerinnen</td><td>Verstehen sich primär als <b>Beraterinnen und Vermittlerinnen</b>, weniger als Interessensvertreterinnen.</td><td>Sollen eine primär an technischen und betriebswirtschaftlichen Zielen orientierte Position aufgeben; halten sich <b>unterstützend im Hintergrund</b>.</td></tr>
+    <tr><td>Rolle der Nutzerinnen</td><td>Werden beteiligt, gehört, als Pilotnutzerinnen eingesetzt.</td><td><b>Arbeitnehmerinnen definieren Planungsziele und betreiben die Systementwicklung.</b></td></tr>
+    <tr><td>Machtverhältnisse</td><td>Führt zu einer <b>Perspektivenerweiterung, akzeptiert jedoch die herrschenden Machtverhältnisse</b> im Unternehmen.</td><td>Will Gegenmacht aufbauen, stellt Machtverhältnisse in Frage.</td></tr>
+    <tr><td>Bewertung der Vorlesung</td><td>praxisüblich</td><td>„<b>Keine realitätsnahe Vorstellung</b>“</td></tr>
+  </tbody></table></div>
+  <p>Nutzermitwirkung wird zudem „anhand folgender verschiedener <b>Dimensionen</b> betrachtet, deren unterschiedliche Merkmale die Formulierung von Methoden der Partizipation von Menschen erlauben“ (F.44):</p>
+  <ul>
+    <li><b>Ausprägung</b>: reicht von der bloßen <i>Information</i> der Nutzerinnen bis zur <i>Entwicklung und Einführung durch die Nutzerinnen</i>.</li>
+    <li><b>Ebene</b>: reicht vom einzelnen <i>Arbeitsplatz</i> über die <i>Arbeitsgruppe</i> und die <i>Abteilung</i> bis zum <i>Unternehmen als Ganzes</i>.</li>
+    <li><b>Form</b>: <i>direkt</i> (persönliche Beteiligung der betroffenen Nutzerinnen) oder <i>indirekt</i> (Beteiligung ausgewählter Vertreterinnen der Nutzerinnen).</li>
+    <li><b>Phase</b>: legt fest, in welcher Phase der Entwicklung bzw. Einführung Nutzermitwirkung stattfindet.</li>
+  </ul>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230" role="img" aria-label="Ausprägung der Nutzermitwirkung als Spektrum; konsensorientierter Ansatz in der Mitte, gewerkschaftlicher am rechten Ende">
+      <defs><marker id="k5g-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <text x="320" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Dimension „Ausprägung“ der Nutzermitwirkung (F.44)</text>
+      <line x1="30" y1="60" x2="610" y2="60" stroke="currentColor" stroke-width="2" marker-end="url(#k5g-arr)"/>
+      <circle cx="40" cy="60" r="5" fill="currentColor"/>
+      <text x="30" y="45" font-size="12" fill="currentColor" font-family="inherit">bloße Information</text>
+      <text x="610" y="45" text-anchor="end" font-size="12" fill="currentColor" font-family="inherit">Entwicklung + Einführung durch Nutzerinnen</text>
+      <rect x="170" y="85" width="230" height="125" rx="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="285" y="106" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Konsensorientiert (F.42)</text>
+      <text x="285" y="126" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Akzeptanz + Motivation</text>
+      <text x="285" y="143" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Entwickler = Berater/Vermittler</text>
+      <text x="285" y="160" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Machtverhältnisse akzeptiert</text>
+      <text x="285" y="184" text-anchor="middle" font-size="12" font-style="italic" fill="currentColor" font-family="inherit">z. B. Pilotnutzer, Feedback</text>
+      <line x1="285" y1="85" x2="285" y2="62" style="stroke:var(--accent)" stroke-dasharray="3 3"/>
+      <rect x="420" y="85" width="200" height="125" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="520" y="106" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Gewerkschaftlich (F.43)</text>
+      <text x="520" y="126" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Interessensgegensatz</text>
+      <text x="520" y="143" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">„wirtschaftl. Demokratie“</text>
+      <text x="520" y="160" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">AN entwickeln selbst</text>
+      <text x="520" y="184" text-anchor="middle" font-size="12" font-style="italic" fill="currentColor" font-family="inherit">„nicht realitätsnah“</text>
+      <line x1="560" y1="85" x2="560" y2="62" stroke="currentColor" stroke-dasharray="3 3"/>
+      <text x="20" y="110" font-size="12" fill="currentColor" font-family="inherit">weitere</text>
+      <text x="20" y="126" font-size="12" fill="currentColor" font-family="inherit">Dimensionen:</text>
+      <text x="20" y="146" font-size="12" fill="currentColor" font-family="inherit">Ebene · Form</text>
+      <text x="20" y="162" font-size="12" fill="currentColor" font-family="inherit">(direkt/indirekt)</text>
+      <text x="20" y="178" font-size="12" fill="currentColor" font-family="inherit">· Phase</text>
+    </svg>
+    <figcaption>Einordnung (Interpretation): Beide Ansätze liegen auf dem Spektrum der Ausprägung. Der konsensorientierte Ansatz beteiligt die Nutzerinnen, lässt die Entscheidung aber beim Management; der gewerkschaftliche verlagert Zielsetzung und Entwicklung zu den Arbeitnehmerinnen.</figcaption>
+  </figure>
+  <p><b>Einbettung</b> (F.45): Grundsätzliche Aussagen zur Nutzermitwirkung werden bereits in der <b>IT-Strategie</b> festgelegt; detaillierte Anweisungen sind typischerweise in ein <b>Vorgehensmodell</b> eingebettet (Brücke zu Kapitel 3: Vorgehensmodelle wie Scrum mit „Input from End-Users“, F.50). Exemplarische Instrumente: <b>Fokusgruppen, Prototyping, Nutzerevaluation</b>. „Aussagen über Wirkungen der Nutzerpartizipation, die von der Wirtschaftsinformatik geliefert werden, dienen der Praxis zur zielgerichteten Gestaltung der Nutzermitwirkung“ (F.45).</p>
+  <p><b>Vorbereitung</b> (F.46): „Um Nutzermitwirkung zu realisieren, müssen die beteiligten Mitarbeiterinnen in geeigneter Weise auf ihre Rolle im Prozess vorbereitet werden.“ Mitwirkung betrifft nicht nur fachliche Mitwirkung, sondern auch das Abgeben und Begründen von Beurteilungen, das Anstellen von Vergleichen und das Erkennen und Beschreiben von Nutzungsproblemen. Dafür ist <b>Qualifizierung durch Schulungsmaßnahmen</b> erforderlich. Hilfsmittel: <b>Referenzsysteme</b> zum Vergleichen, <b>Prototypen</b> zum Erproben, <b>Fragebögen</b>, <b>Checklisten</b> zum Überprüfen und Beschreiben. Eine <b>Mediatorin</b> kann hilfreich sein.</p>
+  <div class="box def"><div class="box-h">Definition · Schlüsselnutzerin (Key User)</div>
+    <p>„In der Praxis wird häufig das Konzept der Schlüsselnutzerin (engl. key user) verwendet.“ Erfahrene, der IuK-Technik zugewandte Mitarbeiterinnen in den Fachabteilungen bekommen eine <b>Brückenfunktion zwischen Systementwicklerinnen und Nutzerinnen</b> zugewiesen. Sie wirken intensiv mit bei Konstruktion von IS, Prototyping und Evaluation; bei der Einführung und während der Nutzung übernehmen sie <b>Schulungs- und Betreuungsaufgaben</b>.</p>
+    <p class="src">V05 F.47</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 170" role="img" aria-label="Key User als Brücke zwischen Entwicklerinnen und Nutzerinnen">
+      <defs><marker id="k5h-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="20" y="45" width="160" height="70" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="100" y="77" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Systementwick-</text>
+      <text x="100" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">lerinnen</text>
+      <rect x="240" y="35" width="160" height="90" rx="8" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+      <text x="320" y="65" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor" font-family="inherit">Key User</text>
+      <text x="320" y="85" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">erfahren, IuK-affin,</text>
+      <text x="320" y="101" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">aus der Fachabteilung</text>
+      <rect x="460" y="45" width="160" height="70" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="540" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Nutzerinnen</text>
+      <line x1="182" y1="80" x2="238" y2="80" stroke="currentColor" stroke-width="1.5" marker-start="url(#k5h-arr)" marker-end="url(#k5h-arr)"/>
+      <line x1="402" y1="80" x2="458" y2="80" stroke="currentColor" stroke-width="1.5" marker-start="url(#k5h-arr)" marker-end="url(#k5h-arr)"/>
+      <text x="210" y="150" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Konstruktion · Prototyping · Evaluation</text>
+      <text x="470" y="150" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Schulung · Betreuung</text>
+      <text x="210" y="20" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="inherit">Entwicklung</text>
+      <text x="470" y="20" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="inherit">Einführung + Nutzung</text>
+    </svg>
+    <figcaption>V05 F.47: Der Key User übersetzt in beide Richtungen – fachliche Anforderungen an die Entwicklung, Systemwissen an die Kolleginnen.</figcaption>
+  </figure>
+  <div class="box ex"><div class="box-h">Beispiel · Konsensorientierter Ansatz (Tutorium T05 F.28)</div>
+    <p>Die Geschäftsleitung lässt ein neues Intranet mit besseren Antwortzeiten und erstmals einer Smartphone-App entwickeln. Weil vor allem Mitarbeiterinnen das Intranet nutzen, werden zufällig ausgewählte Mitarbeiterinnen aus verschiedenen Abteilungen eingeweiht, ihre Meinung gehört und sie als Pilotnutzerinnen eingesetzt. Aus Gesprächen und Pilotphase werden entscheidende Verbesserungen umgesetzt; das Feedback nach dem Release fällt positiv aus. → Konsensorientiert, weil die GL entscheidet (Machtverhältnisse bleiben), die Entwickler vermitteln und Akzeptanz das Ziel ist. Dimensionen: Ausprägung = Beratung/Erprobung; Ebene = mehrere Abteilungen; Form = indirekt (ausgewählte Vertreterinnen); Phase = Entwicklung und Pilotierung.</p></div>
+  <div class="box ex"><div class="box-h">Beispiel · Nutzermitwirkung bei der Einführung des Klinik-Systems</div>
+    <p>Pro Berufsgruppe (Ärzte, Pflege, Verwaltung) wird ein <b>Key User</b> benannt, der in Fokusgruppen Anforderungen einbringt und Prototypen der Notaufnahme-Maske testet (Phase: Konzeption und Prototyping; Form: indirekt). Mithilfe einer Checkliste (ISO-9241-110-Grundsätze) und eines Referenzsystems (Lösung einer anderen Klinik) beurteilen sie die Entwürfe. Nach dem Go-live schulen sie ihre Kolleginnen. Ein gewerkschaftlicher Ansatz läge vor, wenn Personalrat und Beschäftigte selbst Planungsziele (z. B. „keine Leistungskontrolle über Zugriffsprotokolle“) festlegen und die Entwicklung betreiben – laut Vorlesung „keine realitätsnahe Vorstellung“ (F.43).</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div>
+    <p>Den konsensorientierten Ansatz als „Nutzer entscheiden mit“ darstellen. Der Ansatz <i>akzeptiert die herrschenden Machtverhältnisse</i> – die Nutzerinnen werden beteiligt, um Akzeptanz zu schaffen, die Entscheidung bleibt beim Management. Umgekehrt beim gewerkschaftlichen Ansatz: Hier definieren die Arbeitnehmerinnen die Planungsziele, die Entwickler halten sich im Hintergrund.</p></div>
+
+  <!-- ===================== 5.10 Forschungsbeispiele ===================== -->
+  <h3 id="k5-forschung">5.10 Exkurs: Beispiele aus Praxis und Forschung (F.48–54)</h3>
+  <p>Am Ende des Mensch-Teils stehen Beispielfolien ohne neue Definitionen, die den Menschen in der Systementwicklung zeigen: das <b>Wasserfallmodell</b> (F.48: Requirement Analysis → System Design → Implementation → Testing → Deployment → Maintenance), <b>Scrum</b> (F.49–50: Product Owner pflegt das Product Backlog mit „Input from End-Users, Customers, Team and Other Stakeholders“, Sprint 1–4 Wochen, Daily Scrum, Review, Retrospective, „Potentially Shippable Product Increment“) und das <b>Feature-Team</b> (F.51: langlebig, cross-funktional – Developer, Tester, Analyst, Architect, Interaction Designer, Customer Doc). Die Forschungsbeispiele zeigen Teams als „Menschen im MAT-System“: F.52 ein Modell, in dem agile Techniken (Test-driven Development, Pair Programming, Peer Code Review, Continuous Refactoring) über Backup-Verhalten und geteilte mentale Modelle (Shared Mental Models) die Teamleistung erhöhen (H1–H3, Moderatoren Task Complexity und Team Size); F.53–54 einen umgekehrt U-förmigen Zusammenhang zwischen Team Relationship Quality und Software Quality (Nutzen steigt linear, Kosten steigen konvex – „benefits minus costs“), moderiert durch Agile Quality Assurance. Diese Modelle gehören inhaltlich zu Kapitel 2 (Variablen, Hypothesen) und Kapitel 3 (agile Vorgehensmodelle) – hier illustrieren sie, dass auch die <i>Entwicklerinnen</i> Menschen im MAT-System sind und dass Interaction Designer die Nutzerperspektive ins Team holen.</p>
+
+  <!-- ===================== 5.11 Digitaler Stress ===================== -->
+  <h3 id="k5-stress">5.11 Querbezug: digitaler Stress (Technostress)</h3>
+  <p>V05 enthält keine eigene Folie zu digitalem Stress, das Thema zieht sich aber durch die Vorlesung und ist der Fall der Probeklausur 2026 (Aufgabe 1, KI-Assistent). Fundstellen: V01 F.48 (Prämisse „Arbeiten mit unzuverlässigen generativen KI-Systemen geht mit erhöhten Werten bei Stresshormonen einher“), V02 F.65–66 (Online-Befragung: digitaler Stress als unabhängige Variable, Konsequenzen reduzierte Benutzerzufriedenheit, Arbeitszufriedenheit, mentale Gesundheit; Fragebogen von Riedl et al. mit zehn Dimensionen à fünf Items), V02 F.68 (Laborexperiment Computerabsturz → Stress als latentes Konstrukt) sowie V06 F.69 und F.91 (Technostress als negative Konsequenz der Digitalisierung bzw. digitalen Transformation).</p>
+  <p>Für V05 ist digitaler Stress die <b>Folge mangelhafter menschengerechter Gestaltung</b>: Die Interaktionsaufgabe (F.14) wird zur Belastung, die Grundsätze der ISO 9241-110 werden verletzt, die Gebrauchstauglichkeit (Effizienz, Zufriedenheit) sinkt, der Nutzertyp wird ignoriert. Gegenmaßnahmen kommen aus genau diesem Kapitel: differenziell-dynamische Gestaltung, Laien-/Expertenmodus, Ergonomie, Nutzermitwirkung mit Schulung und Key Usern, kontextbasierte Systeme, die Müdigkeit oder Gemütszustand erkennen (F.71).</p>
+  <div class="box deep"><div class="box-h">Vertiefung · Technostress-Auslöser (Tarafdar et al. 2007; Riedl 2013)</div>
+    <p>Die Forschung unterscheidet fünf „Technostress Creators“: <b>Techno-Overload</b> (zu viel, zu schnell – ständige Hinweise), <b>Techno-Invasion</b> (ständige Erreichbarkeit, Eindringen in Freizeit), <b>Techno-Complexity</b> (Gefühl, die Technik nicht zu beherrschen), <b>Techno-Insecurity</b> (Angst, durch Technik oder technikaffinere Kollegen ersetzt zu werden), <b>Techno-Uncertainty</b> (ständige Änderungen, man kann nicht „Schritt halten“). Die drei Klagen der Probeklausur lassen sich Overload, Complexity und Uncertainty zuordnen; „fehlerhafte Antworten“ entsprechen der Unzuverlässigkeit aus V01 F.48. Nicht Folienstoff – als Vertiefung kennzeichnen.</p></div>
+
+  <!-- ===================== 5.12 Typisierungsansaetze ===================== -->
+  <h3 id="k5-typisierung">5.12 Typisierung von Informationssystemen – Ansätze</h3>
+  <p>„Nach herrschender Meinung sind IS in Wirtschaft und Gesellschaft das zentrale Erkenntnisobjekt der Wirtschaftsinformatik“ – und: „Informationssysteme sind nicht nur Erkenntnisobjekt, sondern auch Gestaltungsobjekt“ (V05 F.57). Gemäß ihrer Struktur mit den Elementen Mensch, Aufgabe und Technik werden IS als MAT-Systeme bezeichnet; das gilt auch für die Informationsinfrastruktur und die Informationsfunktion. Eine Typisierung von IS wurde „bisher nur in Ansätzen und nicht systematisch und erschöpfend vorgenommen“ (F.57). Die Vorlesung typisiert deshalb entlang der <b>drei Strukturelemente</b> – Typisierungsmerkmal Mensch, Aufgabe, Technik (F.58) – und ergänzt eine Typisierung nach den <b>Phasen im Informationsverhalten</b> (F.90).</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 280" role="img" aria-label="Vier Typisierungsansätze: Mensch, Aufgabe, Technik und Phasen im Informationsverhalten">
+      <rect x="200" y="10" width="240" height="40" rx="8" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+      <text x="320" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="currentColor" font-family="inherit">Informationssystem</text>
+      <line x1="320" y1="50" x2="320" y2="68" stroke="currentColor"/>
+      <line x1="80" y1="68" x2="560" y2="68" stroke="currentColor"/>
+      <line x1="80" y1="68" x2="80" y2="95" stroke="currentColor"/><line x1="240" y1="68" x2="240" y2="95" stroke="currentColor"/><line x1="400" y1="68" x2="400" y2="95" stroke="currentColor"/><line x1="560" y1="68" x2="560" y2="95" stroke="currentColor" stroke-dasharray="4 3"/>
+      <rect x="10" y="95" width="140" height="150" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="170" y="95" width="140" height="150" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="330" y="95" width="140" height="150" rx="8" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="490" y="95" width="140" height="150" rx="8" fill="none" stroke="currentColor" stroke-dasharray="5 3"/>
+      <text x="80" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Mensch</text>
+      <text x="80" y="131" text-anchor="middle" font-size="11" style="fill:var(--muted)" font-family="inherit">F.59–71</text>
+      <text x="20" y="152" font-size="12" fill="currentColor" font-family="inherit">Nutzertypen (EIS)</text>
+      <text x="20" y="170" font-size="12" fill="currentColor" font-family="inherit">Nutzerrollen</text>
+      <text x="20" y="188" font-size="12" fill="currentColor" font-family="inherit">Persona</text>
+      <text x="20" y="206" font-size="12" fill="currentColor" font-family="inherit">Nutzungskontext</text>
+      <text x="20" y="224" font-size="12" fill="currentColor" font-family="inherit">kontextbasierte IS</text>
+      <text x="240" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Aufgabe</text>
+      <text x="240" y="131" text-anchor="middle" font-size="11" style="fill:var(--muted)" font-family="inherit">F.72–86</text>
+      <text x="180" y="152" font-size="12" fill="currentColor" font-family="inherit">Aufgabenphase</text>
+      <text x="180" y="170" font-size="12" fill="currentColor" font-family="inherit">Aufgabentyp</text>
+      <text x="180" y="188" font-size="12" fill="currentColor" font-family="inherit">Aufgabenreichweite:</text>
+      <text x="180" y="206" font-size="12" fill="currentColor" font-family="inherit">personell, funkt.,</text>
+      <text x="180" y="224" font-size="12" fill="currentColor" font-family="inherit">organis., sektoral …</text>
+      <text x="400" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Technik</text>
+      <text x="400" y="131" text-anchor="middle" font-size="11" style="fill:var(--muted)" font-family="inherit">F.87–89</text>
+      <text x="340" y="152" font-size="12" fill="currentColor" font-family="inherit">Hardware:</text>
+      <text x="340" y="170" font-size="12" fill="currentColor" font-family="inherit">Computer, Netzwerk</text>
+      <text x="340" y="188" font-size="12" fill="currentColor" font-family="inherit">Software:</text>
+      <text x="340" y="206" font-size="12" fill="currentColor" font-family="inherit">System, Anwendung</text>
+      <text x="560" y="116" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Info.-verhalten</text>
+      <text x="560" y="131" text-anchor="middle" font-size="11" style="fill:var(--muted)" font-family="inherit">F.90–95</text>
+      <text x="500" y="152" font-size="12" fill="currentColor" font-family="inherit">Wahrnehmung</text>
+      <text x="500" y="170" font-size="12" fill="currentColor" font-family="inherit">Sammlung</text>
+      <text x="500" y="188" font-size="12" fill="currentColor" font-family="inherit">Strukturierung</text>
+      <text x="500" y="206" font-size="12" fill="currentColor" font-family="inherit">Suche</text>
+      <text x="500" y="224" font-size="12" fill="currentColor" font-family="inherit">Pflege</text>
+      <path d="M12 250 L12 256 L468 256 L468 250" fill="none" style="stroke:var(--accent)"/>
+      <text x="240" y="272" text-anchor="middle" font-size="11" style="fill:var(--accent)" font-family="inherit">drei Strukturelemente (MAT, F.58)</text>
+      <text x="560" y="272" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">ergänzend</text>
+    </svg>
+    <figcaption>Gesamtlandkarte der Typisierung: drei Merkmale entlang der MAT-Strukturelemente plus die Typisierung nach den Phasen im Informationsverhalten der Nutzerinnen (vgl. T05 F.7).</figcaption>
+  </figure>
+  <div class="box exam"><div class="box-h">Klausurfokus · Tutorium-Wahr/Falsch (T05 F.6–7)</div>
+    <p>„Typisierungsmerkmale für IS lassen sich ausschließlich aus betrieblichen Aufgabeneigenschaften ableiten.“ → <b>Falsch</b>: Neben der Aufgabe wird nach Mensch und Technik (F.58) sowie nach den Phasen im Informationsverhalten (F.90) typisiert.</p></div>
+
+  <!-- ===================== 5.13 Typisierungsmerkmal Mensch ===================== -->
+  <h3 id="k5-typ-mensch">5.13 Typisierungsmerkmal Mensch</h3>
+  <h4 id="k5-nutzergruppen">Typisierung nach Nutzerinnen bzw. Nutzertypen (F.59–60)</h4>
+  <p>In dieser Kategorie „tragen die Systemtypen die Nutzergruppen im Namen“ (F.59). Hauptbeispiel: <b>Executive Information Systems (EIS)</b>, IS zur Unterstützung von Führungskräften bei der Erkennung von Chancen und Risiken. Verwandt sind <b>Früherkennungssysteme (FES)</b> bzw. <b>Frühwarnsysteme (FWS)</b> zur Erkennung von Planabweichungen und zur Erreichung von Sach- und Formalzielen. Typische Techniken: festgelegte Ziel- und Leistungsindikatoren (<b>KPI</b>, Key Performance Indicators) werden mit Ist-Daten verglichen; Daten werden durch <b>Drill Down</b> zerlegt, aufgeschlüsselt bzw. disaggregiert.</p>
+  <p>Weitere Typbeispiele (F.60): IS für Kinder, Jugendliche und Senioren; Websites mit Produktangeboten, die für Menschen mit Sehbehinderung anders gestaltet werden; IS für sogenannte Computerlaien. <b>Kontextmerkmale</b> sind Nutzungshäufigkeit, Nutzungsdauer und Nutzungsort – daraus ergeben sich IS für gelegentliche Benutzerinnen und IS, die auf <b>ortsbezogenen Diensten</b> basieren. Bemerkenswert: „Dass eine allgemein akzeptierte Systematik für nutzerzentrierte Informationssysteme in der Wirtschaftsinformatik noch nicht entwickelt wurde, deutet darauf hin, dass im Hinblick auf die Nutzerzentrierung noch viel Forschungspotenzial existiert“ (F.60).</p>
+  <div class="box ex"><div class="box-h">Beispiel · EIS mit Drill Down</div>
+    <p>Die Klinikleitung sieht im Dashboard den KPI „durchschnittliche Wartezeit Notaufnahme: 94 min (Ziel: 60 min)“ rot markiert (Soll-Ist-Vergleich = Frühwarnung). Per Drill Down zerlegt sie den Wert nach Wochentag, Uhrzeit und Schicht und erkennt, dass die Überschreitung nachts auftritt. Das System trägt den Nutzertyp „Executive“ im Namen.</p></div>
+
+  <h4 id="k5-rollen">Nutzerrollen (F.61–62)</h4>
+  <div class="box def"><div class="box-h">Definition · Nutzerrolle</div>
+    <p>„Ein Ansatz der Typisierung liegt in den Eigenschaften der Nutzerinnen. Ein wichtiges Konzept stellt dabei die Definition von Nutzerrollen oder kurz Rollen dar.“ – „Rollen definieren <b>Aufgaben, Eigenschaften und Rechte</b> einer Nutzerin in einem Informationssystem.“</p>
+    <ul>
+      <li>Verwendung von Nutzerrollen, um die Merkmale der Aufgaben, Eigenschaften und Rechte <b>nicht für jede Nutzerin einzeln festlegen</b> zu müssen.</li>
+      <li>Dies <b>erleichtert die Funktions- und Rechteverwaltung</b> des Softwaresystems – im Falle einer Änderung müssen nur die Rechte der Rolle angepasst werden.</li>
+      <li>Eine Nutzerin kann <b>mehrere Rollen</b> haben.</li>
+    </ul>
+    <p class="src">V05 F.61</p></div>
+  <p>F.62 zeigt das Beispiel einer <b>Personalabteilung</b>: In der Rolle der Sachbearbeiterin darf eine Mitarbeiterin im Personalinformationssystem nur die Stammdaten von Beschäftigten mit einem Einkommen bis 5000 € einsehen. Zugriff auf Stammdaten über 5000 € haben lediglich Mitarbeiterinnen in der Rolle der Leiterin oder stellvertretenden Leiterin – diese sehen jedoch nicht den gesamten Personalstammsatz einschließlich Sozialversicherungsdaten, sondern nur Angaben zur Person, bisherige Arbeitsplätze im Unternehmen und Beurteilungen der Vorgesetzten. Die Lehre daraus: Rollen regeln sowohl <i>welche Datensätze</i> (Zeilen) als auch <i>welche Datenfelder</i> (Spalten) sichtbar sind, und eine „höhere“ Rolle sieht nicht automatisch alles.</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Nutzerrollen – Vorteile</th><th>Nutzerrollen – Nachteile / Grenzen</th></tr></thead><tbody>
+    <tr><td>Rechte müssen nicht für jede Nutzerin einzeln festgelegt werden (F.61; T05 F.23).</td><td>Um IS oder Oberfläche an Eigenschaften bestimmter Rollentypen anzupassen, müssen diese <b>im Voraus festgelegt</b> und bei der Systementwicklung berücksichtigt werden (F.63; T05 F.23) – Aufwand und Gefahr, dass reale Arbeitsweisen nicht abgebildet sind.</td></tr>
+    <tr><td>Erleichtert Funktions- und Rechteverwaltung; Änderung nur an der Rolle (F.61).</td><td>Starre Rollen passen schlecht zu Ausnahmesituationen (Notfall: Pflegekraft braucht kurzfristig ärztliche Information) – Interpretation.</td></tr>
+    <tr><td>Eine Nutzerin kann mehrere Rollen haben – flexible Kombination (F.61).</td><td>Viele Rollen und Mehrfachrollen werden unübersichtlich („Rollenwildwuchs“); Gefahr zu weit gefasster Rechte – Interpretation.</td></tr>
+    <tr><td>Oberfläche zeigt nur rollenrelevante Daten → weniger Informationsüberlastung, bessere Aufgabenangemessenheit (Transfer zu F.27).</td><td>Rolle ist ein Typ, kein Individuum – individuelle Unterschiede (F.8, F.18) werden nicht erfasst.</td></tr>
+  </tbody></table></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · Probeklausur 2026, A2a (Klinik-System)</div>
+    <p><b>Wie helfen Nutzerrollen bei der Gestaltung?</b> Definition (F.61: Rollen definieren Aufgaben, Eigenschaften und Rechte) → Anwendung: Rollen „Ärztin“, „Pflegekraft“, „Verwaltung“ legen fest, dass die Ärztin Befunde, Medikationspläne und Vorerkrankungen sieht und Medikation anordnen darf, die Pflege Medikationspläne und Vitalwerte sieht und dokumentiert, die Verwaltung nur Stamm- und Abrechnungsdaten sieht. Damit wird die Fallanforderung „Jede Berufsgruppe soll nur die Daten sehen, die sie für ihre Arbeit braucht“ umgesetzt (Datenschutz/Need-to-know), und die Oberfläche wird je Rolle auf die relevanten Informationen reduziert (Aufgabenangemessenheit, weniger Informationsüberschuss – vgl. die 200 Laborbefunde). Neue Mitarbeiterinnen erhalten einfach die passende Rolle; eine Oberärztin mit Lehrauftrag kann zusätzlich die Rolle „Ausbilderin“ haben. <b>Vorteil:</b> Rechte nicht für jede Person einzeln festlegen; Änderung nur an der Rolle (F.61). <b>Nachteil:</b> Rollen müssen im Voraus festgelegt werden (F.63) – unvorhergesehene Situationen wie der nächtliche Notfall, in dem eine Pflegekraft sofort die Allergieinformation braucht, sind schwer abbildbar; Lösung: Notfallzugriff („Break-the-Glass“, mit Protokollierung). Abgrenzung zur Forderung des Datenschutzbeauftragten: Rollen sichern Datenschutz <i>strukturell</i>, eine Zusatzanmeldung bei jedem Zugriff kostet Effizienz (Usability, F.29).</p></div>
+
+  <h4 id="k5-nutzermodelle">Nutzermodelle und Nutzereigenschaften (F.63)</h4>
+  <p>Nutzermodelle orientieren sich an <b>Nutzerberechtigungen</b> und an <b>Nutzereigenschaften</b>. Die bei der Entwicklung zu beachtenden und zu modellierenden Personen zeichnen sich durch folgende Eigenschaften aus: <b>Motive, Präferenzen, Nutzungsgewohnheiten, Wissen, Kenntnisse und/oder Fähigkeiten</b> (Merkhilfe „MPN-WK“). „Um Informationssysteme an die Eigenschaften bestimmter Typen von Nutzerrollen anzupassen, müssen diese im Voraus festgelegt und bei der Systementwicklung berücksichtigt werden“ (F.63).</p>
+
+  <h4 id="k5-persona">Persona (F.64–67)</h4>
+  <div class="box def"><div class="box-h">Definition · Persona</div>
+    <p>„Im Bereich der Mensch-Computer-Interaktion wird ein bei der Systementwicklung zugrunde gelegtes Nutzermodell mit dem Begriff Persona beschrieben.“ Mit einer Persona wird versucht, „einen angenommenen Typ von Nutzerinnen abstrakt zu repräsentieren“. „Eine Persona ist ein <b>imaginäres Modell einer Person mit konkreten Eigenschaften oder konkretem Nutzungsverhalten</b>.“ Personae werden insbesondere bei der Entwicklung nutzerzentrierter IS geschaffen und verwendet.</p>
+    <p class="src">V05 F.64</p></div>
+  <p><b>Ablauf der Entwicklung mit Personae</b> (F.65):</p>
+  <ol>
+    <li>Unter Berücksichtigung des <b>Zwecks</b> des IS überlegen, welcher <b>Nutzerkreis</b> das System verwenden wird.</li>
+    <li><b>Drei bis zehn fiktive Personen</b> erdenken, die stellvertretend für den größten Teil der späteren Nutzerinnen stehen – eng verbunden mit der <b>Anforderungsanalyse</b>.</li>
+    <li>Planung und Realisierung des Systems: Die Entwickler greifen die Vorstellungen bzw. Bedürfnisse der fiktiven Personen auf und erwägen unterschiedliche <b>Bedienungs- und Verstehensszenarien</b>.</li>
+  </ol>
+  <p><b>Beispiel der Vorlesung</b> (F.66): Abonnementsystem für Verkehrsbetriebe, mit dem Schulämter chipkartenbasierte Monatstickets mit Passbildern ausgeben und versenden. Personae: <b>Resi (17)</b>, Lehrling zur Verwaltungskauffrau, fortgeschrittene Computerbenutzerin, versiert mit Spezialperipherie; <b>Egbert (63)</b>, Beamter mit sehr eingeschränkten Computerkenntnissen, will bei Resis Abwesenheit trotzdem Chipkarten drucken und weiterleiten; <b>Berthold (37)</b>, IT-Spezialist, versteht wenig von Verkehrsbetrieben, muss aber die Spezialperipherie einrichten und warten. Die drei decken unterschiedliche Kompetenzniveaus (Expertin – naiver Nutzer – Techniker ohne Fachwissen) und Aufgaben (Ausführung, Vertretung, Wartung) ab.</p>
+  <p><b>Herausforderungen</b> (F.67): „Festlegung eines präzisen und erschöpfenden Nutzerkreises [ist] nicht einfach.“ Es ist schwierig, einen <b>repräsentativen Querschnitt</b> der potenziellen Nutzerinnen gemäß Persönlichkeitsmerkmalen und Nutzungskontexten zu finden. Die Entwickler müssen prüfen, ob die einzelnen Personae ihre Aufgaben erfolgreich erfüllen können. <b>Problem: Es handelt sich um angenommene, aber nicht reale Nutzerinnen.</b> Bei komplexen Nutzeranforderungen kann es vorteilhaft sein, reale potenzielle Nutzerinnen in den Entwicklungsprozess zu integrieren (→ Nutzermitwirkung, F.41 ff.). Das Tutorium ergänzt als Nachteil: Häufige Prüfung der Personae erfordert signifikanten Mehraufwand (T05 F.24).</p>
+  <div class="box ex"><div class="box-h">Beispiel · Personae für das Klinik-System</div>
+    <p><b>Dr. Aylin Yilmaz (38)</b>, Notärztin, Nachtdienst, geübte Nutzerin, Motiv: in Minuten sichere Entscheidungen; braucht Allergien, aktuelle Medikation und relevante Laborwerte auf einen Blick; hasst Mehrfachanmeldungen. <b>Peter Brandt (59)</b>, Pflegekraft, gelegentlicher Tablet-Nutzer (Gewohnheit Papier), wechselt zwischen Stationsrechnern verschiedener Stationen (nomadisierend), braucht große Bedienelemente und eindeutige Rückmeldung. <b>Sabine Koch (45)</b>, Verwaltung, arbeitet am Desktop, Präferenz Tastaturkürzel, braucht nur Stamm- und Abrechnungsdaten. Szenario-Test: „Kann Peter nachts in unter einer Minute eine Medikamentengabe dokumentieren?“</p></div>
+
+  <h4 id="k5-kontext">Nutzungskontext und nomadisierende Nutzerinnen (F.68–70)</h4>
+  <div class="box def"><div class="box-h">Definition · Nutzungskontext</div>
+    <p>„Der sogenannte Nutzungskontext stellt einen alternativen Ansatz zur Typisierung dar.“ Kontextmerkmale: die <b>Örtlichkeit</b> (Büro, Produktion, außerhalb des Unternehmens), die verfügbare <b>IT-Infrastruktur</b> (Hardware, Betriebssysteme, Bildschirmgröße und -auflösung), die zu erfüllenden <b>Arbeitsaufgaben</b> (u. a. Ausführungs-, Führungs- und Entwicklungsaufgaben) und der <b>situative Kontext</b> des Menschen (kognitive und affektive Zustände).</p>
+    <p class="src">V05 F.68</p></div>
+  <p>Zur Örtlichkeit und IT-Infrastruktur (F.69): Die technischen Möglichkeiten sind gestiegen, sodass vereinzelt die Begriffe <b>nomadisierende Nutzerinnen</b> oder <b>streunende Nutzerinnen</b> anzutreffen sind. Gemeint sind Menschen, die ihre Aufgaben in IS erfüllen, die <b>an unterschiedlichen Orten zur Verfügung stehen</b> – z. B. Bankmitarbeitende in mehreren Filialen oder Produktionsmitarbeitende in verschiedenen Abschnitten des Produktionssystems. <b>Davon zu unterscheiden</b> sind Nutzer, die ihre Aufgaben <b>mobil</b> erfüllen: Sie verfügen über eine <b>eigene mobile Infrastruktur, die mit ihnen auf Reisen geht</b>.</p>
+  <div class="box pit"><div class="box-h">Typischer Fehler · nomadisierend ≠ mobil</div>
+    <p>Die nomadisierende Nutzerin nutzt die <i>vor Ort vorhandene</i> Infrastruktur an wechselnden Orten (Pflegekraft meldet sich an Stationsrechnern verschiedener Stationen an). Die mobile Nutzerin bringt <i>ihre eigene</i> Infrastruktur mit (Außendienstler mit Laptop, Ärztin mit eigenem Tablet). Im Klinik-Fall kommen beide vor: Stationsrechner (nomadisierend) und Tablets (mobil).</p></div>
+  <p><b>Arbeitsaufgaben</b> (F.70): „Arbeitsaufgaben können Ausführungs-, Führungs- oder Entwicklungsaufgaben darstellen.“ Ausführungsaufgaben sind in der Regel <b>strukturiert</b>; Führungs- oder Entwicklungsaufgaben sind oftmals <b>semi- bzw. unstrukturiert und veränderlich</b>. Führungskräfte oder Entwicklungsingenieurinnen haben daher einen anderen Unterstützungsbedarf als Sachbearbeiterinnen. „Beide Nutzergruppen werden aufgrund ihres umfassenden Informations- bzw. Wissensbedarfs auch als <b>Informations- oder Wissensarbeiterinnen</b> bezeichnet“ (F.70).</p>
+
+  <h4 id="k5-kontextbasiert">Kontextbasierte Systeme (F.71)</h4>
+  <div class="box def"><div class="box-h">Definition · kontextbasierte Systeme</div>
+    <p>„Kontextbasierte Systeme versuchen, die individuellen Eigenschaften sowie kognitive und affektive Zustände von Nutzerinnen wie Erfahrung, Lernfähigkeit, Gemütszustand oder Müdigkeit zu berücksichtigen.“ Eigenschaften und Zustände lassen sich in <b>Echtzeit</b> erfassen; die resultierenden Modelle finden Eingang in die Gestaltung der Nutzungsoberfläche. <b>Kognitive Modelle</b> erfassen Merkmale, die auf die Kognition (im weitesten Sinne den menschlichen Verstand) zurückgeführt werden können; <b>affektive Modelle</b> erfassen die Emotionen von Menschen.</p>
+    <p class="src">V05 F.71</p></div>
+  <div class="box ex"><div class="box-h">Beispiel · stress-sensitiver KI-Assistent</div>
+    <p>Der KI-Assistent erkennt über Tippverhalten, Fehlerhäufigkeit und Uhrzeit Ermüdung bzw. Stress (affektives Modell) und eine geringe Erfahrung der Nutzerin (kognitives Modell). Er unterdrückt dann nicht dringende Hinweise, bietet einfachere Erklärungen und schlägt eine Pause vor. Das ist ein konkretes Artefakt für die Probeklausur-Teilaufgabe „Lösung, die digitalen Stress verringert“ – und verbindet F.71 mit dem dynamischen Gestalten (F.18).</p></div>
+
+  <!-- ===================== 5.14 Typisierungsmerkmal Aufgabe ===================== -->
+  <h3 id="k5-typ-aufgabe">5.14 Typisierungsmerkmal Aufgabe</h3>
+  <div class="box def"><div class="box-h">Definition · aufgabenbezogene Typisierung</div>
+    <p>„Werden Informationssysteme anhand betrieblicher Aufgabeneigenschaften typisiert, lassen sich – analog zu existierenden Typisierungen, die in der Betriebswirtschaftslehre verwendet werden – die Merkmale <b>Aufgabenphase, Aufgabentyp und Aufgabenreichweite</b> unterscheiden.“</p>
+    <p class="src">V05 F.72</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 275" role="img" aria-label="Drei Ebenen: Aufgabenreichweiten verbinden sich mit Aufgabentypen, diese mit Aufgabenphasen">
+      <rect x="5" y="5" width="630" height="80" style="fill:var(--surface-2)"/>
+      <rect x="5" y="105" width="630" height="65" style="fill:var(--surface-2)"/>
+      <rect x="5" y="195" width="630" height="70" style="fill:var(--surface-2)"/>
+      <text x="12" y="40" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Aufgaben-</text>
+      <text x="12" y="57" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">reichweiten</text>
+      <text x="12" y="135" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Aufgaben-</text>
+      <text x="12" y="152" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">typen</text>
+      <text x="12" y="225" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Aufgaben-</text>
+      <text x="12" y="242" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">phasen</text>
+      <g font-size="11" fill="currentColor" font-family="inherit" text-anchor="middle">
+        <rect x="112" y="15" width="98" height="62" rx="4" fill="none" stroke="currentColor"/>
+        <text x="161" y="35">Einzel- vs.</text><text x="161" y="50">gesamtwirt-</text><text x="161" y="65">schaftlich</text>
+        <rect x="216" y="15" width="98" height="62" rx="4" fill="none" stroke="currentColor"/>
+        <text x="265" y="35">Sektoren-</text><text x="265" y="50">spezifisch vs.</text><text x="265" y="65">-übergreifend</text>
+        <rect x="320" y="15" width="98" height="62" rx="4" fill="none" stroke="currentColor"/>
+        <text x="369" y="35">Intra- vs.</text><text x="369" y="50">interorgani-</text><text x="369" y="65">satorisch</text>
+        <rect x="424" y="15" width="98" height="62" rx="4" fill="none" stroke="currentColor"/>
+        <text x="473" y="35">Funktions-</text><text x="473" y="50">bezogen vs.</text><text x="473" y="65">-übergreifend</text>
+        <rect x="528" y="15" width="98" height="62" rx="4" fill="none" stroke="currentColor"/>
+        <text x="577" y="35">Individual-</text><text x="577" y="50">vs. Gruppen-</text><text x="577" y="65">aufgaben</text>
+      </g>
+      <g stroke="currentColor" stroke-width="0.8">
+        <line x1="161" y1="77" x2="270" y2="115"/><line x1="161" y1="77" x2="490" y2="115"/>
+        <line x1="265" y1="77" x2="270" y2="115"/><line x1="265" y1="77" x2="490" y2="115"/>
+        <line x1="369" y1="77" x2="270" y2="115"/><line x1="369" y1="77" x2="490" y2="115"/>
+        <line x1="473" y1="77" x2="270" y2="115"/><line x1="473" y1="77" x2="490" y2="115"/>
+        <line x1="577" y1="77" x2="270" y2="115"/><line x1="577" y1="77" x2="490" y2="115"/>
+      </g>
+      <rect x="195" y="115" width="150" height="45" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="270" y="142" text-anchor="middle" font-size="13" fill="currentColor" font-family="inherit">Ausführungsaufgaben</text>
+      <rect x="415" y="115" width="150" height="45" rx="4" fill="none" stroke="currentColor"/>
+      <text x="490" y="142" text-anchor="middle" font-size="13" fill="currentColor" font-family="inherit">Führungsaufgaben</text>
+      <line x1="270" y1="160" x2="270" y2="205" style="stroke:var(--accent)" stroke-width="2.5"/>
+      <line x1="280" y1="160" x2="480" y2="205" stroke="currentColor"/>
+      <line x1="490" y1="160" x2="490" y2="205" stroke="currentColor"/>
+      <rect x="195" y="205" width="150" height="45" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="270" y="232" text-anchor="middle" font-size="13" fill="currentColor" font-family="inherit">Entwicklungsaufgaben</text>
+      <rect x="415" y="205" width="150" height="45" rx="4" fill="none" stroke="currentColor"/>
+      <text x="490" y="232" text-anchor="middle" font-size="13" fill="currentColor" font-family="inherit">Nutzungsaufgaben</text>
+    </svg>
+    <figcaption>Nachbau von V05 F.73: Entwicklungsaufgaben sind nur mit Ausführungsaufgaben verbunden („stets Ausführungsaufgaben“, F.74); Nutzungsaufgaben können Ausführungs- oder Führungsaufgaben sein (F.75). Jeder Aufgabentyp lässt sich nach allen fünf Reichweiten weiter einordnen.</figcaption>
+  </figure>
+
+  <h4 id="k5-aufgabenphase">Aufgabenphase: Entwicklungs- vs. Nutzungsaufgaben (F.74–75)</h4>
+  <p><b>Entwicklungsaufgaben</b>: „Im Rahmen der Entwicklungsaufgabe können einzelne Aufgaben der Systementwicklung als Gliederungsmerkmal verwendet werden“; die Ableitung erfolgt auf Basis eines allgemeinen Phasenmodells des Entwicklungsprozesses (F.74). Beispiele: IS zur Erhebung, Validierung und Priorisierung von Anforderungen; IS zur Modellierung der Systemobjekte; IS zur Fehlererkennung und -verfolgung; IS zur Generierung von Testdaten zwecks automatisierten Testens. Merksatz: „<b>Entwicklungsaufgaben sind stets Ausführungsaufgaben</b>“ (F.74; T05 F.4–5: wahr).</p>
+  <p><b>Nutzungsaufgaben</b>: „Im Rahmen der Nutzungsaufgabe steht der Systemeinsatz im Vordergrund.“ „Die Nutzungsaufgaben konkretisieren sogenannte Ausführungs- und Führungsaufgaben, die als unterschiedliche Aufgabentypen aufgefasst werden können“ (F.75).</p>
+  <div class="box ex"><div class="box-h">Beispiel</div>
+    <p>Jira (Fehlerverfolgung) oder GitHub Copilot (Testdaten/Code generieren) sind IS für <i>Entwicklungsaufgaben</i>. Das Klinik-System im Betrieb, Ilias oder die IKEA-App unterstützen <i>Nutzungsaufgaben</i>.</p></div>
+
+  <h4 id="k5-aufgabentyp">Aufgabentyp: Ausführungs- vs. Führungsaufgaben (F.76–77)</h4>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th>Ausführungsaufgaben (F.76)</th><th>Führungsaufgaben = Managementaufgaben (F.77)</th></tr></thead><tbody>
+    <tr><td>Unterscheidung</td><td>IS werden „nach den administrativen und dispositiven Aufgaben in den betrieblichen Funktionsbereichen unterschieden“.</td><td>„Insbesondere Planungs- und Kontrollsysteme“.</td></tr>
+    <tr><td>Systemtypen</td><td><b>Administrationssysteme</b>: manuelle und zeitintensive Aufgaben werden mithilfe von IS erfüllt.<br><b>Dispositionssysteme</b>: Treffen operativer Dispositionsentscheidungen; Auslösen nachfolgender Geschäftsprozesse.</td><td><b>Planungssysteme</b>: aperiodische Aktivitäten von taktischer und strategischer Bedeutung; vorausschauend; reduzieren Unsicherheit bei Zukunftsaufgaben (Budgetplanung, Topologieplanung von Zuliefernetzwerken).<br><b>Kontrollsysteme</b>: rückschauend; Planabweichungen erkennen, Gegenmaßnahmen identifizieren (Projektfortschrittskontrolle, Budgetkontrolle); schwieriger strukturier- und automatisierbar.</td></tr>
+    <tr><td>Struktur (F.70)</td><td>in der Regel strukturiert</td><td>oft semi-/unstrukturiert, veränderlich</td></tr>
+    <tr><td>Funktionsbereiche / Begriffe</td><td>FuE, Beschaffung, Produktion, Marketing und Vertrieb, Logistik, Personalwesen, Finanz- und Rechnungswesen</td><td>„Business Intelligence“ und „Business Analytics“ als Begriffe für IS, die Planungs- und Kontrollaufgaben unterstützen</td></tr>
+    <tr><td>Beispiel</td><td>Administration: Erfassung einer Bestellung, Lohnabrechnung. Disposition: automatische Nachbestellung bei Unterschreiten des Meldebestands (löst Beschaffungsprozess aus).</td><td>Planung: Budget 2027 im BI-Tool simulieren. Kontrolle: Soll-Ist-Vergleich Wartezeit im Klinik-Dashboard.</td></tr>
+  </tbody></table></div>
+
+  <h4 id="k5-reichweite">Aufgabenreichweite (F.78–86)</h4>
+  <p>„Zu den genannten Systemtypen lassen sich unterschiedliche Aufgabenreichweiten anführen“ (F.78) – zunächst die <b>personelle</b> und die <b>funktionale Reichweite</b>, dann die organisationale, sektorale und gesamtwirtschaftliche (F.73).</p>
+  <ul>
+    <li><b>Personelle Reichweite</b> (F.79): Individualaufgaben vs. Gruppenaufgaben. Typische Systeme für Individualaufgaben: Textverarbeitungssysteme. Für Gruppenaufgaben: Kollaborationssysteme für die verteilte Zusammenarbeit in Gruppen (Groupware – vgl. andere Gestaltungsprinzipien, F.19–20).</li>
+    <li><b>Funktionale Reichweite</b> (F.80): „Nach ihrer funktionalen Reichweite können Informationssysteme als <b>funktionsbezogene</b> Systeme oder <b>funktionsübergreifende</b> Systeme kategorisiert werden.“ Eine <b>Funktion</b> ist eine aufgabenbezogene Verrichtung oder Tätigkeit einer Aufgabenträgerin. Eine Aufgabenträgerin ist <b>Funktionsträgerin</b>, wenn sie die aus der Aufgabe resultierende Funktion ausübt; Funktionsträgerinnen können Individuen oder Gruppen sein. Funktionen haben einen <b>arbeitsteiligen Gliedcharakter</b>; Arbeitsteilung erfolgt zur Nutzung von Spezialisierungsgewinn und Produktivitätssteigerung.</li>
+  </ul>
+  <p><b>Funktionsmodell</b> (F.81, nach Mertens, vgl. Literatur F.99): Die Pyramide ordnet die Funktionsbereiche in zwei Ebenen. Unten die <b>operativen Systeme</b> (Administrations- und Dispositionssysteme) mit den Funktionen 3.1 Forschung sowie Produkt- und Prozessentwicklung, 3.2 Vertrieb, 3.3 Beschaffung, 3.4 Lagerhaltung, 3.5 Produktion, 3.6 Versand, 3.7 Kundendienst sowie 3.8 Finanzen, 3.9 Rechnungswesen, 3.10 Personal, 3.11 Anlagenmanagement. Darüber – getrennt durch das <b>Data Warehouse</b> – die <b>Planungs- und Kontrollsysteme</b> (4.1–4.11 analog) und an der Spitze die <b>Unternehmensgesamtplanung</b>. Die Basis bildet „Wertschöpfung/Auftragsdurchlauf“. Symbole markieren Geschäftsprozesse (Einkauf, Auftragsdurchlauf, Führungsinformation, Kundendienst), die die Funktionen durchlaufen. An den Rändern stehen die Achsen <b>horizontale Integration</b> (unten) und <b>vertikale Integration</b> (rechts).</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 310" role="img" aria-label="Funktionspyramide: horizontale Integration entlang der Wertschöpfung, vertikale Integration von operativen zu Planungs- und Kontrollsystemen">
+      <defs><marker id="k5k-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <polygon points="260,20 460,250 60,250" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+      <polygon points="260,20 347,120 173,120" style="fill:var(--accent-soft)" stroke="none"/>
+      <polygon points="260,20 460,250 60,250" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="173" y1="120" x2="347" y2="120" stroke="currentColor"/>
+      <line x1="121" y1="180" x2="399" y2="180" stroke="currentColor"/>
+      <line x1="99" y1="205" x2="421" y2="205" stroke="currentColor" stroke-dasharray="5 3"/>
+      <text x="260" y="92" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Unternehmens-</text>
+      <text x="260" y="108" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">gesamtplanung</text>
+      <text x="260" y="148" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" font-family="inherit">Planungs- und</text>
+      <text x="260" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" font-family="inherit">Kontrollsysteme</text>
+      <text x="260" y="197" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Data Warehouse</text>
+      <text x="260" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" font-family="inherit">Operative Systeme (Administration + Disposition)</text>
+      <text x="260" y="241" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">FuE · Vertrieb · Beschaffung · Produktion · Versand</text>
+      <line x1="70" y1="270" x2="450" y2="270" stroke="currentColor" stroke-width="2" marker-start="url(#k5k-arr)" marker-end="url(#k5k-arr)"/>
+      <text x="260" y="292" text-anchor="middle" font-size="13" font-weight="bold" style="fill:var(--accent)" font-family="inherit">Horizontale Integration: entlang Wertschöpfung / Auftragsdurchlauf</text>
+      <line x1="490" y1="245" x2="490" y2="30" stroke="currentColor" stroke-width="2" marker-start="url(#k5k-arr)" marker-end="url(#k5k-arr)"/>
+      <text x="505" y="110" font-size="13" font-weight="bold" style="fill:var(--accent)" font-family="inherit">Vertikale</text>
+      <text x="505" y="127" font-size="13" font-weight="bold" style="fill:var(--accent)" font-family="inherit">Integration</text>
+      <text x="505" y="147" font-size="12" fill="currentColor" font-family="inherit">operative Daten</text>
+      <text x="505" y="163" font-size="12" fill="currentColor" font-family="inherit">→ verdichtet zur</text>
+      <text x="505" y="179" font-size="12" fill="currentColor" font-family="inherit">Führungsinformation</text>
+      <text x="505" y="199" font-size="12" fill="currentColor" font-family="inherit">(Drill Down zurück)</text>
+    </svg>
+    <figcaption>Vereinfacht nach V05 F.81 (Funktionsmodell nach Mertens). Querschnittsfunktionen (Finanzen, Rechnungswesen, Personal, Anlagenmanagement) sind im Original als eigener Block innerhalb der operativen Ebene dargestellt.</figcaption>
+  </figure>
+  <div class="box def"><div class="box-h">Horizontale vs. vertikale Integration (Interpretation von F.81)</div>
+    <p><b>Horizontale Integration</b> verbindet die Teilsysteme <i>einer Ebene</i> entlang der Wertschöpfungskette bzw. des Auftragsdurchlaufs (Vertrieb → Beschaffung/Lager → Produktion → Versand), sodass Daten ohne Medienbruch weitergereicht werden. <b>Vertikale Integration</b> verbindet die operativen Systeme mit den Planungs- und Kontrollsystemen <i>über die Ebenen</i> hinweg: Operative Daten werden (z. B. über das Data Warehouse) verdichtet und als Führungsinformation bereitgestellt; umgekehrt werden Planvorgaben nach unten weitergegeben. Die Folie selbst enthält nur die beiden Achsenbeschriftungen; die Erläuterung entspricht der gängigen Lesart nach Mertens.</p>
+    <p class="src">V05 F.81 (Achsen „Horizontale Integration“, „Vertikale Integration“, Data Warehouse)</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · Altklausur 2022, Aufgabe 3 „Aufgabenorientiertes Informationssystem“</div>
+    <p>Gefragt waren u. a.: (a) Unterschied operative Systeme vs. Planungs- und Kontrollsysteme (Ausführungs- vs. Führungsaufgaben, F.76–77; operativ = Routine/strukturiert, Planung/Kontrolle = aperiodisch bzw. rückschauend, nutzen verdichtete Daten); (b) Basis- bzw. Grundfunktionen (direkt an der Wertschöpfung beteiligt: FuE, Vertrieb, Beschaffung, Produktion, Versand, Kundendienst) vs. <b>Querschnittsfunktionen</b> (unterstützen alle Grundfunktionen: Finanzen, Rechnungswesen, Personal, Anlagenmanagement); (c) Vorteile horizontaler Integration (Überwindung von Insellösungen der Arbeitsteilung, durchgängige Prozesse, keine Mehrfacherfassung, kürzere Durchlaufzeiten, konsistente Daten); (d) Werkzeuge: horizontal <b>ERP-System</b> (Kundenauftrag im Vertriebsmodul prüft automatisch Lagerbestand und löst Produktionsauftrag aus), vertikal <b>Data Warehouse</b> (verdichtet Verkaufszahlen für die Unternehmensgesamtplanung); (e) die Pyramide zeigt <b>innerbetriebliche</b> (intraorganisationale) Prozesse; (f) Beispiele: ERP (intra) und SCM (inter). Die Begriffe Basis-/Querschnittsfunktion stammen aus der Musterlösung (Mertens), nicht wörtlich aus V05.</p></div>
+
+  <h4 id="k5-ios">Organisationale Reichweite: intra- vs. interorganisationale Systeme (F.82–83)</h4>
+  <p>Die bisher genannten Systeme heißen <b>intraorganisationale Systeme</b>. „Reichen die Aufgaben von Informationssystemen über die Unternehmensgrenzen hinaus, werden sie <b>interorganisationale Systeme (IOS)</b> genannt“ (F.82). In Ergänzung zu den Funktionsbereichen werden funktionsbereich- und prozessübergreifende <b>Integrationskomplexe bzw. -cluster</b> beschrieben: Produktlebenszyklussysteme (PLM), Kundenbeziehungsmanagementsysteme (CRM), Lieferkettenmanagementsysteme (SCM).</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 260" role="img" aria-label="ERP deckt das Unternehmen ab; SCM, E-Procurement und CRM reichen zu Lieferanten und Kunden">
+      <defs><marker id="k5l-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="180" y="8" width="200" height="30" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="280" y="28" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Supply Chain Mgmt (SCM)</text>
+      <rect x="95" y="55" width="140" height="28" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="165" y="74" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" font-family="inherit">E-Procurement</text>
+      <rect x="400" y="55" width="150" height="28" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="475" y="74" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" font-family="inherit">CRM (Kundenbez.)</text>
+      <rect x="130" y="100" width="380" height="95" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text x="320" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Unternehmen</text>
+      <rect x="145" y="135" width="105" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="197" y="157" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Beschaffung</text>
+      <rect x="268" y="135" width="105" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="320" y="157" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Produktion</text>
+      <rect x="391" y="135" width="105" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="443" y="157" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Vertrieb</text>
+      <rect x="10" y="135" width="95" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="57" y="157" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Lieferant</text>
+      <rect x="540" y="135" width="90" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="585" y="157" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Kunde</text>
+      <line x1="105" y1="152" x2="143" y2="152" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <line x1="250" y1="152" x2="266" y2="152" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <line x1="373" y1="152" x2="389" y2="152" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <line x1="496" y1="152" x2="538" y2="152" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <polyline points="180,23 57,23 57,133" fill="none" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <line x1="280" y1="38" x2="280" y2="98" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <line x1="200" y1="83" x2="200" y2="98" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <line x1="440" y1="83" x2="440" y2="98" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <polyline points="550,69 585,69 585,133" fill="none" stroke="currentColor" marker-end="url(#k5l-arr)"/>
+      <rect x="130" y="212" width="380" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+      <text x="320" y="234" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">ERP – Enterprise Resource Planning</text>
+      <text x="20" y="234" font-size="12" style="fill:var(--muted)" font-family="inherit">intraorganisational</text>
+      <text x="20" y="95" font-size="12" style="fill:var(--muted)" font-family="inherit">inter-</text>
+      <text x="20" y="110" font-size="12" style="fill:var(--muted)" font-family="inherit">organisational</text>
+    </svg>
+    <figcaption>Nachbau von V05 F.83: ERP integriert die Funktionen innerhalb des Unternehmens (intraorganisational); SCM, E-Procurement und CRM reichen über die Unternehmensgrenze zu Lieferanten und Kunden (interorganisational).</figcaption>
+  </figure>
+
+  <h4 id="k5-sektoral">Sektorale Reichweite und Handelsinformationssysteme (F.84–85)</h4>
+  <p>„Wird die sektorale Reichweite berücksichtigt, lassen sich <b>sektorenspezifische</b> und <b>sektorenneutrale</b> Systeme unterscheiden“ (F.84). Sektorenspezifische Beispiele: Bankinformationssysteme, Verkehrsinformationssysteme, Handelsinformationssysteme. Sektorenneutral wären z. B. Textverarbeitung oder ein Standard-Lohnabrechnungsmodul (Beispiel ergänzt).</p>
+  <div class="box def"><div class="box-h">Definition · Handelsinformationssystem</div>
+    <p>„Handelsinformationssysteme stellen das immaterielle Abbild der dispositiven, logistischen, abrechnungs- und auswertungsbezogenen Prozesse eines Handelsunternehmens zur Unterstützung der Geschäftsprozesse <b>Lagergeschäft, Strecken-, Zentralregulierungs-, Aktions- und Dienstleistungsgeschäft</b> dar.“</p>
+    <p class="src">V05 F.84 (Becker/Schütte 2004, F.99)</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 375" role="img" aria-label="Handels-H-Modell: Dach Planung/Controlling, linker H-Schenkel Beschaffung, rechter Schenkel Distribution, Lager in der Mitte, Sockel betriebswirtschaftliche Administration">
+      <polygon points="160,85 320,10 480,85" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+      <text x="320" y="44" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">U.-Planung</text>
+      <text x="320" y="62" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Business Intelligence</text>
+      <text x="320" y="79" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Controlling</text>
+      <path d="M170 95 L290 95 L290 165 L350 165 L350 95 L470 95 L470 290 L350 290 L350 225 L290 225 L290 290 L170 290 Z" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+      <g font-size="11" fill="currentColor" font-family="inherit" text-anchor="middle">
+        <text x="230" y="118">Einkauf</text><text x="230" y="143">Disposition</text><text x="230" y="168">Wareneingang</text><text x="230" y="193">Rechnungs-</text><text x="230" y="207">prüfung</text><text x="230" y="240">Kreditoren-</text><text x="230" y="254">buchhaltung</text>
+        <text x="410" y="118">Marketing</text><text x="410" y="143">Verkauf</text><text x="410" y="168">Warenausgang</text><text x="410" y="193">Fakturierung</text><text x="410" y="240">Debitoren-</text><text x="410" y="254">buchhaltung</text>
+        <text x="320" y="199" font-weight="bold">Lager</text>
+      </g>
+      <rect x="170" y="302" width="300" height="66" rx="3" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+      <text x="320" y="320" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Haupt- und Anlagenbuchhaltung</text>
+      <text x="320" y="340" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Kostenrechnung</text>
+      <text x="320" y="360" text-anchor="middle" font-size="11" fill="currentColor" font-family="inherit">Personalwirtschaft</text>
+      <text x="80" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Beschaffung</text>
+      <text x="80" y="203" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">(Lieferantenseite)</text>
+      <text x="560" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Distribution</text>
+      <text x="560" y="203" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">(Kundenseite)</text>
+      <text x="80" y="60" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="inherit">Führung</text>
+      <text x="80" y="340" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="inherit">Administration</text>
+    </svg>
+    <figcaption>Nachbau von V05 F.85: Das Handels-H-Modell (Becker/Schütte) ordnet die Aufgaben eines Handelsbetriebs. Linker Schenkel = Beschaffungsprozess, rechter Schenkel = Distributionsprozess, verbunden durch das Lager; Dach = Führungsaufgaben, Sockel = betriebswirtschaftlich-administrative Aufgaben. Die Legende der Folie unterscheidet die Sichten Funktionen, Daten, Prozesse.</figcaption>
+  </figure>
+  <div class="box pit"><div class="box-h">Typischer Fehler · H-Modell = Datenmodell? (T05 F.10–12)</div>
+    <p>„Das Handels-H-Modell beschreibt das Datenmodell eines Handelsbetriebs.“ → <b>Falsch</b>. Laut Tutorium handelt es sich um ein <b>Funktionsmodell</b> (Ordnungsrahmen), das einen Überblick über die Aufgaben in einem betrieblichen Teilbereich gibt. <b>Datenmodelle</b> erläutern die Struktur, also die statische Komponente (z. B. Entity-Relationship-Modell); <b>Prozessmodelle</b> zeigen den Ablauf (z. B. ereignisgesteuerte Prozesskette). Im H-Modell lässt sich jede Funktion (z. B. Rechnungsprüfung) in alle drei Sichten verfeinern (T05 F.12: Funktionsdekompositionsdiagramm, ERM, EPK).</p></div>
+
+  <h4 id="k5-gesamtwirtschaft">Gesamtwirtschaftliche Reichweite (F.86)</h4>
+  <p>„Bezüglich ihrer gesamtwirtschaftlichen Reichweite lassen sich auf einer noch höheren Aggregationsstufe Informationssysteme, die Aufgaben in <b>Einzelwirtschaften</b> abbilden, von solchen unterscheiden, die Aufgaben in <b>Volkswirtschaften</b> abbilden“ (F.86). Beispiele für volkswirtschaftliche Systeme: Systeme, die regionale und nationale Arbeitsmarktdaten analysieren, Konjunkturprognosen erstellen oder Wirtschaftskreisläufe simulieren. Gegenüber Wirtschaftsbetrieben lassen sich <b>Verwaltungsbetriebe der öffentlichen Hand</b> abgrenzen; IS in der öffentlichen Verwaltung werden unter dem Begriff <b>E-Government</b> zusammengefasst.</p>
+  <div class="box ex"><div class="box-h">Beispiel · Ilias als aufgabenzentriertes IS (T05 F.13–15)</div>
+    <p>Aufgabe von Ilias: Distribution von Aufgaben, Informationen/Inhalten und Ankündigungen an einen ausgewählten Nutzerkreis innerhalb einer Organisation. Einordnung nach F.73: <b>Aufgabenphase</b> Nutzungsaufgabe; <b>Aufgabentyp</b> Ausführungsaufgabe; <b>Reichweiten</b> (im Tutorium markiert): einzelwirtschaftlich, sektorenspezifisch (Bildungssektor/Hochschule), intraorganisatorisch, funktionsbezogen (Lehre), Gruppenaufgaben (Kurs als Gruppe).</p></div>
+  <div class="box ex"><div class="box-h">Beispiel · Vitra-ERP/CRM (T05 F.18–19)</div>
+    <p>Kundinnen konfigurieren einen Esstisch im Webshop und bestellen; Schrauben, Tischfüße und Platten werden eingekauft; der Tisch wird montiert und ausgeliefert. Unterstützte betriebliche Funktionen: <b>Vertrieb, Beschaffung, Produktion, Versand</b>. Aufgabentyp: <b>Ausführungsaufgaben</b>. Ergänzend: funktionsübergreifend und horizontal integriert entlang des Auftragsdurchlaufs; über Webshop/Kundenkonfiguration (CRM) und Einkauf bei Lieferanten interorganisational.</p></div>
+
+  <!-- ===================== 5.15 Technik ===================== -->
+  <h3 id="k5-typ-technik">5.15 Typisierungsmerkmal Technik (F.87–89)</h3>
+  <p>„Eine Typisierung von Technik kann entlang der Unterscheidung in Hardware und Software erfolgen“ (F.87). <b>Hardware</b> stellt die physischen Bestandteile dar, die materielle und anfassbare Technik; <b>Software</b> repräsentiert immaterielle Technik, also alle nicht-physischen Bestandteile. Hardware und Software bedingen einander: „Hardware setzt konkrete Aktionen um, die Software legt die Funktionen und Abläufe fest“ (F.87).</p>
+  <p>Arten (F.88): <b>Hardware</b> = Computerhardware (Eingabe-/Ausgabehardware wie Tastatur, Maus, Bildschirm, Drucker; Verarbeitungshardware wie Prozessoren; Speicherhardware) und Netzwerkhardware (Router, Switches …). <b>Software</b> = Systemsoftware und Anwendungssoftware; Anwendungssoftware „setzt stets auf einer Systemsoftware auf (insb. dem Betriebssystem)“.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 240" role="img" aria-label="Schalenmodell: Hardware innen, Systemsoftware darum, Anwendungssoftware außen">
+      <rect x="160" y="10" width="320" height="220" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="190" y="40" width="260" height="175" rx="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="250" y="85" width="140" height="90" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+      <text x="320" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Anwendungssoftware</text>
+      <text x="320" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Systemsoftware</text>
+      <text x="320" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="currentColor" font-family="inherit">Hardware</text>
+      <text x="320" y="128" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Computer-HW</text>
+      <text x="320" y="148" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Netzwerk-HW</text>
+      <text x="320" y="200" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Betriebssystem · Werkzeuge</text>
+      <text x="10" y="90" font-size="12" fill="currentColor" font-family="inherit">Hardware setzt</text>
+      <text x="10" y="106" font-size="12" fill="currentColor" font-family="inherit">Aktionen um;</text>
+      <text x="10" y="122" font-size="12" fill="currentColor" font-family="inherit">Software legt</text>
+      <text x="10" y="138" font-size="12" fill="currentColor" font-family="inherit">Funktionen und</text>
+      <text x="10" y="154" font-size="12" fill="currentColor" font-family="inherit">Abläufe fest (F.87)</text>
+      <text x="495" y="90" font-size="12" fill="currentColor" font-family="inherit">Anwendungs-SW</text>
+      <text x="495" y="106" font-size="12" fill="currentColor" font-family="inherit">setzt stets auf</text>
+      <text x="495" y="122" font-size="12" fill="currentColor" font-family="inherit">Systemsoftware</text>
+      <text x="495" y="138" font-size="12" fill="currentColor" font-family="inherit">auf (F.88)</text>
+    </svg>
+    <figcaption>Nachbau von V05 F.89: Schalenmodell. Anwendungssoftware nutzt die Systemsoftware (Betriebssystem, Werkzeuge), diese steuert die Computer- und Netzwerkhardware.</figcaption>
+  </figure>
+  <div class="box ex"><div class="box-h">Beispiel · IKEA-App technisch typisiert</div>
+    <p>Anwendungssoftware: IKEA-App (inkl. AR-Funktion „IKEA Place“). Systemsoftware: iOS/Android. Hardware: Smartphone (Eingabe: Berühren, Kamera; Ausgabe: Display, Vibration) sowie Server/Netzwerkhardware bei IKEA und im Mobilfunknetz. Brücke zu F.13: Modalitäten Berühren/Sehen bzw. visuell/haptisch.</p></div>
+
+  <!-- ===================== 5.16 Informationsverhalten ===================== -->
+  <h3 id="k5-infoverhalten">5.16 Typisierung anhand der Phasen im Informationsverhalten (F.90–95)</h3>
+  <p>Ergänzend lassen sich IS „unter Bezugnahme auf die Phasen im Informationsverhalten ihrer Nutzerinnen“ typisieren (F.90). Die fünf Phasen:</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230" role="img" aria-label="Fünf Phasen im Informationsverhalten mit typischen Systemen">
+      <defs><marker id="k5o-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <g font-family="inherit" fill="currentColor" text-anchor="middle">
+        <rect x="8" y="10" width="116" height="50" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+        <rect x="134" y="10" width="116" height="50" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+        <rect x="260" y="10" width="116" height="50" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+        <rect x="386" y="10" width="116" height="50" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+        <rect x="512" y="10" width="116" height="50" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+        <text x="66" y="31" font-size="12" font-weight="bold">Informations-</text><text x="66" y="48" font-size="12" font-weight="bold">wahrnehmung</text>
+        <text x="192" y="31" font-size="12" font-weight="bold">Informations-</text><text x="192" y="48" font-size="12" font-weight="bold">sammlung</text>
+        <text x="318" y="31" font-size="12" font-weight="bold">-strukturierung</text><text x="318" y="48" font-size="12" font-weight="bold">+ -organisation</text>
+        <text x="444" y="31" font-size="12" font-weight="bold">Informations-</text><text x="444" y="48" font-size="12" font-weight="bold">suche</text>
+        <text x="570" y="31" font-size="12" font-weight="bold">Informations-</text><text x="570" y="48" font-size="12" font-weight="bold">pflege</text>
+        <text x="66" y="82" font-size="11">Aufspüren und</text><text x="66" y="97" font-size="11">Identifikation</text><text x="66" y="112" font-size="11">(sensing)</text>
+        <text x="192" y="82" font-size="11">zweckorientierte</text><text x="192" y="97" font-size="11">Information auf</text><text x="192" y="112" font-size="11">Medien sammeln</text>
+        <text x="318" y="82" font-size="11">strukturieren,</text><text x="318" y="97" font-size="11">klassifizieren,</text><text x="318" y="112" font-size="11">indexieren, verknüpfen</text>
+        <text x="444" y="82" font-size="11">Konversion Daten</text><text x="444" y="97" font-size="11">→ Information;</text><text x="444" y="112" font-size="11">Wiederauffinden</text>
+        <text x="570" y="82" font-size="11">Aktualisierung und</text><text x="570" y="97" font-size="11">Dokumentation</text><text x="570" y="112" font-size="11">(Datenqualität)</text>
+        <text x="66" y="145" font-size="11" font-style="italic">Suchmaschinen,</text><text x="66" y="160" font-size="11" font-style="italic">BI-Systeme</text>
+        <text x="192" y="145" font-size="11" font-style="italic">elektronische und</text><text x="192" y="160" font-size="11" font-style="italic">nichtelektr. Medien</text>
+        <text x="318" y="145" font-size="11" font-style="italic">Datenbanksysteme,</text><text x="318" y="160" font-size="11" font-style="italic">Archivierungssyst.</text>
+        <text x="444" y="145" font-size="11" font-style="italic">Abfragesprachen,</text><text x="444" y="160" font-size="11" font-style="italic">IR-Sprachen</text>
+        <text x="570" y="145" font-size="11" font-style="italic">Stammdaten-</text><text x="570" y="160" font-size="11" font-style="italic">managementsyst.</text>
+      </g>
+      <line x1="124" y1="35" x2="132" y2="35" stroke="currentColor" marker-end="url(#k5o-arr)"/>
+      <line x1="250" y1="35" x2="258" y2="35" stroke="currentColor" marker-end="url(#k5o-arr)"/>
+      <line x1="376" y1="35" x2="384" y2="35" stroke="currentColor" marker-end="url(#k5o-arr)"/>
+      <line x1="502" y1="35" x2="510" y2="35" stroke="currentColor" marker-end="url(#k5o-arr)"/>
+      <path d="M570 172 L570 195 L66 195 L66 174" fill="none" stroke="currentColor" stroke-dasharray="5 3" marker-end="url(#k5o-arr)"/>
+      <text x="318" y="218" text-anchor="middle" font-size="12" fill="currentColor" font-family="inherit">Pflege dient der zukünftigen Informationsproduktion (F.95) – Rückkopplung als Interpretation</text>
+    </svg>
+    <figcaption>V05 F.90–95: Phasen, Kernaussage und typische Systeme (kursiv). Die Folie zeigt die Phasen als lineare Abfolge; der gestrichelte Rückpfeil ist eine Interpretation.</figcaption>
+  </figure>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Phase</th><th>Definition (Folie)</th><th>Details und Beispielsysteme</th></tr></thead><tbody>
+    <tr><td><b>Informationswahrnehmung</b> (F.91)</td><td>„Diese Phase beschreibt das Aufspüren und die Identifikation von Information (engl. sensing).“</td><td>Erfordert eine „Aktivierung“ der Aufgabenträgerin, die eine betriebliche Aufgabe erfüllen will und verfügbares Datenmaterial nach seinem Informationsgehalt beurteilt. Systeme: Suchmaschinen, Business-Intelligence-Systeme.</td></tr>
+    <tr><td><b>Informationssammlung</b> (F.92)</td><td>Erachtet die Aufgabenträgerin die wahrgenommene Information als zweckorientiert, ist es ratsam, sie auf elektronischen und nichtelektronischen Speichermedien zu sammeln.</td><td>„Nicht alle Informationen sind als Daten gespeichert!“ – „Gerade unstrukturierte Information zur Lösung komplexer Probleme ist häufig <b>personen- und nicht maschinengebunden</b>.“</td></tr>
+    <tr><td><b>Informationsstrukturierung und -organisation</b> (F.93)</td><td>„Um die aus der zweiten Phase entstehenden Informationsmengen bewältigen zu können, müssen die Informationsbestände strukturiert, klassifiziert, indexiert und verknüpft werden.“</td><td>Dadurch werden sie einer Nutzung durch Dritte zugänglich. Systeme: Datenbanksysteme, Archivierungssysteme.</td></tr>
+    <tr><td><b>Informationssuche</b> (F.94)</td><td>„Bei der Phase Informationssuche geht es darum, die Konversion von Daten in Information sowie das Wiederauffinden von Information zu unterstützen.“</td><td>Information für Aufgabenträgerin A muss nicht Information für B sein (kein ausreichender Zweckbezug) – für B sind es wieder Daten. Abfragesprachen oder Information-Retrieval-Sprachen ermöglichen die Suche.</td></tr>
+    <tr><td><b>Informationspflege</b> (F.95)</td><td>„Bei dieser Phase geht es um die Aktualisierung und Dokumentation der Daten und verfügbaren Informationen zum Zweck der zukünftigen Informationsproduktion.“</td><td>Informations- bzw. Datenqualität wird zunehmend Gegenstand von Wissenschaft und Praxis: Verfahren zur Datenpflege und -bereinigung, zur Findung und Kenntlichmachung fehlerhafter Daten – z. B. in Stammdatenmanagementsystemen.</td></tr>
+  </tbody></table></div>
+  <div class="box ex"><div class="box-h">Beispiel · Klinik-Fall entlang der Phasen</div>
+    <p><i>Wahrnehmung:</i> Dr. Yilmaz erkennt, dass sie Medikation und Allergien kennen muss (Aktivierung durch die Aufgabe). <i>Sammlung:</i> Befunde, Arztbriefe, Laborwerte sind in der ePA gesammelt – das Wissen der Angehörigen über neue Medikamente ist dagegen personengebunden. <i>Strukturierung:</i> 200 Laborbefunde ohne Filter/Priorisierung = mangelhafte Strukturierung. <i>Suche:</i> Die Allergie steckt im Freitext eines Arztbriefs – schwer wiederauffindbar. <i>Pflege:</i> „Ob der Patient in den letzten Tagen neue Medikamente erhalten hat, ist nicht eingetragen“ = Defizit in der Informationspflege. Diese Analyse verbindet V05 mit der Frage nach Informationsdefizit/-überschuss aus Kapitel 4.</p></div>
+  <div class="box ex"><div class="box-h">Beispiel · Lehrveranstaltung (T05 F.16–17)</div>
+    <p>Wahrnehmung: Notwendigkeit der Recherche zu Vorlesungsinhalten. Sammlung: Informationen in einem Dokument zusammentragen. Strukturierung/Organisation: Erstellen der PowerPoint. Suche: detaillierte Auseinandersetzung mit dem Vorlesungsstoff. Pflege: Nachbereitung bzw. Aufbereitung für das nächste Jahr.</p></div>
+
+  <!-- ===================== 5.17 Anwendung ===================== -->
+  <h3 id="k5-anwendung">5.17 Anwendung: Systeme mehrdimensional typisieren</h3>
+  <p>Die Zusammenfassung der Vorlesung (F.96): Es gibt nicht <i>die</i> Nutzerin; mit der Nutzerschnittstelle wird die Interaktionsaufgabe abgebildet; es existieren Prinzipien zur Gestaltung von Nutzerschnittstellen; IS lassen sich entlang Mensch, Aufgabe und Technik typisieren; eine Typisierung nach den Phasen im Informationsverhalten ist ebenfalls möglich. Die folgende Tabelle zeigt, wie eine vollständige Typisierung in der Klausur aussehen kann (Einordnungen sind Argumentationen, keine Folienfakten – entscheidend ist die Begründung).</p>
+  <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Merkmal</th><th>ChatGPT (im Unternehmenseinsatz)</th><th>Klinik-System Notaufnahme</th><th>IKEA-App</th></tr></thead><tbody>
+    <tr><td><b>Mensch</b>: Nutzertyp / Rolle</td><td>sehr heterogen: Expertinnen bis gelegentliche/naive Nutzer (F.9); Rollen z. B. Admin vs. Mitglied im Team-Workspace</td><td>Rollen Ärztin, Pflege, Verwaltung (F.61); geübte vs. gelegentliche Nutzer</td><td>Endkundinnen aller D21-Typen (F.10); Personae z. B. „junge Erstwohnung“, „Familie mit Kindern“</td></tr>
+    <tr><td><b>Mensch</b>: Nutzungskontext</td><td>mobil und am Arbeitsplatz; teils kontextbasiert (Gedächtnisfunktion, F.71)</td><td>Notaufnahme, Nacht, Zeitdruck (situativer Kontext, affektiv/kognitiv); Stationsrechner = nomadisierend, Tablets = mobil (F.69)</td><td>zu Hause und im Markt; ortsbezogene Dienste (Bestand im nächsten Markt, F.60)</td></tr>
+    <tr><td><b>Aufgabe</b>: Phase / Typ</td><td>Nutzungsaufgabe; überwiegend Ausführungsaufgaben (Texte, Code), auch Unterstützung von Führungsaufgaben (Entscheidungsvorlagen); kann auch Entwicklungsaufgaben unterstützen (Testdaten, F.74)</td><td>Nutzungsaufgabe; Ausführung: Dokumentation (Administration), Medikationsentscheidung/Anforderung (Disposition); Führung: Kontrolle von Wartezeiten durch Klinikleitung</td><td>Nutzungsaufgabe; Ausführungsaufgaben (Verkauf, Bestellung = Administration, Lieferauslösung = Disposition)</td></tr>
+    <tr><td><b>Aufgabe</b>: Reichweiten</td><td>Individualaufgaben (Team-Workspaces: Gruppe); funktionsübergreifend; sektorenneutral; einzelwirtschaftlich; aus Unternehmenssicht externer Dienst (interorganisational)</td><td>Gruppenaufgabe (Behandlungsteam); funktionsübergreifend (Medizin, Pflege, Abrechnung); interorganisational (ePA-Anbindung); sektorenspezifisch (Gesundheit); einzelwirtschaftlich (ePA als nationale Infrastruktur berührt die gesamtwirtschaftliche Ebene – Interpretation)</td><td>Individualaufgabe; funktionsbezogen (Marketing/Vertrieb) bzw. CRM-Cluster; interorganisational (B2C); sektorenspezifisch (Handel → Handelsinformationssystem, rechter H-Schenkel); einzelwirtschaftlich</td></tr>
+    <tr><td><b>Technik</b></td><td>Anwendungssoftware (Web/App) auf Systemsoftware; Rechenzentren (Verarbeitungs-HW), Netzwerk-HW; Modalitäten Tippen, Sprechen, Bild → visuell/Audio</td><td>Tablets, Stationsrechner, Server, Netzwerk; KIS als Anwendungssoftware</td><td>Smartphone (Berühren, Kamera/AR → visuell, haptisch), iOS/Android, Server</td></tr>
+    <tr><td><b>Informationsverhalten</b></td><td>Schwerpunkt Suche (Konversion Daten → Information) und Strukturierung (Zusammenfassen); Wahrnehmung durch Hinweise</td><td>Sammlung, Strukturierung (Akte), Suche (Befunde); Pflege kritisch (fehlende Medikation)</td><td>Wahrnehmung (Inspiration), Suche (Produktsuche), Sammlung (Merkliste)</td></tr>
+  </tbody></table></div>
+
+  <!-- ===================== Selbsttest ===================== -->
+  <h3 id="k5-selbsttest">Selbsttest</h3>
+  <details class="quiz"><summary>1. Wahr oder falsch? „Entwicklungsaufgaben sind stets Ausführungsaufgaben.“</summary><div class="ans">
+    <p><b>Wahr.</b> V05 F.74 sagt wörtlich: „Entwicklungsaufgaben sind stets Ausführungsaufgaben.“ In der Darstellung auf F.73 ist die Aufgabenphase „Entwicklungsaufgaben“ nur mit dem Aufgabentyp „Ausführungsaufgaben“ verbunden, während Nutzungsaufgaben sowohl Ausführungs- als auch Führungsaufgaben sein können (F.75). Begründung in eigenen Worten: Systementwicklung folgt einem Phasenmodell (Anforderungen erheben, modellieren, testen); IS dafür unterstützen konkrete Verrichtungen, nicht die Planung und Kontrolle des Unternehmens. (Tutorium T05 F.4–5: wahr.)</p></div></details>
+  <details class="quiz"><summary>2. Wahr oder falsch? „Typisierungsmerkmale für IS lassen sich ausschließlich aus betrieblichen Aufgabeneigenschaften ableiten.“</summary><div class="ans">
+    <p><b>Falsch.</b> Die Aufgabe (Phase, Typ, Reichweite; F.72) ist nur eines von drei Typisierungsmerkmalen entlang der Strukturelemente Mensch, Aufgabe und Technik (F.58). Hinzu kommt die Typisierung nach den Phasen im Informationsverhalten der Nutzerinnen (F.90). Beispiel für eine nicht-aufgabenbezogene Typisierung: EIS tragen den Nutzertyp „Führungskraft“ im Namen (F.59); die Unterscheidung Hardware/Software ist eine technische Typisierung (F.87).</p></div></details>
+  <details class="quiz"><summary>3. Wahr oder falsch? „Das Handels-H-Modell beschreibt das Datenmodell eines Handelsbetriebs.“</summary><div class="ans">
+    <p><b>Falsch.</b> Das Handels-H-Modell (F.85, Becker/Schütte) ist ein Funktionsmodell bzw. Ordnungsrahmen: Es gibt einen Überblick über die Aufgaben eines Handelsbetriebs – Beschaffungsseite (Einkauf, Disposition, Wareneingang, Rechnungsprüfung, Kreditorenbuchhaltung), Lager, Distributionsseite (Marketing, Verkauf, Warenausgang, Fakturierung, Debitorenbuchhaltung), Dach (Unternehmensplanung, BI, Controlling) und Sockel (Haupt-/Anlagenbuchhaltung, Kostenrechnung, Personalwirtschaft). Datenmodelle beschreiben dagegen die statische Struktur (ERM), Prozessmodelle den Ablauf (EPK) (T05 F.11–12). Die einzelnen Funktionen des H-Modells können in Daten- und Prozesssicht verfeinert werden.</p></div></details>
+  <details class="quiz"><summary>4. Wahr oder falsch? „Gebrauchstauglichkeit und Nutzererlebnis sind zwei Bezeichnungen für dasselbe Konzept der ISO 9241.“</summary><div class="ans">
+    <p><b>Falsch.</b> Gebrauchstauglichkeit (ISO 9241-11) ist das Ausmaß, in dem ein System durch bestimmte Nutzerinnen in einem bestimmten Nutzungskontext genutzt werden kann, um bestimmte Ziele effektiv, effizient und zufriedenstellend zu erreichen (F.29). Sie betrifft nur die Phase <i>während</i> der Nutzung und zielt auf die Vermeidung negativer Erlebnisse. Das Nutzererlebnis (ISO 9241-210) beschreibt Wahrnehmungen und Reaktionen bei der Nutzung oder <i>erwarteten</i> Verwendung (F.30), umfasst alle drei Phasen (vor, während, nach) und zielt auf positive Effekte wie Bindung und Markenstärkung (F.31–32). Usability ist damit ein Teilaspekt der UX.</p></div></details>
+  <details class="quiz"><summary>5. Wahr oder falsch? „Beim konsensorientierten Ansatz der Nutzermitwirkung definieren die Arbeitnehmerinnen die Planungsziele, die Entwickler halten sich im Hintergrund.“</summary><div class="ans">
+    <p><b>Falsch</b> – das beschreibt den <b>gewerkschaftlichen Gegenmachtansatz</b> (F.43), den die Vorlesung als „keine realitätsnahe Vorstellung“ bewertet. Der konsensorientierte Ansatz (F.42) will über Motivationsstrategien und akzeptanzfördernde Maßnahmen die Bedingungen für Entwicklung, Einführung und Nutzung verbessern; die Entwickler verstehen sich als Beraterinnen und Vermittlerinnen. Er führt zu einer Perspektivenerweiterung, <i>akzeptiert aber die herrschenden Machtverhältnisse</i>.</p></div></details>
+  <details class="quiz"><summary>6. Wahr oder falsch? „Eine Nutzerin hat in einem IS genau eine Rolle; Rollen legen nur Rechte fest.“</summary><div class="ans">
+    <p><b>Falsch</b> in beiden Teilen. Rollen definieren <i>Aufgaben, Eigenschaften und Rechte</i> einer Nutzerin (F.61), nicht nur Rechte. Und: „Eine Nutzerin kann mehrere Rollen haben“ (F.61) – z. B. eine Oberärztin, die zugleich die Rolle „Ausbilderin“ oder „Qualitätsbeauftragte“ innehat. Das Personalabteilungsbeispiel (F.62) zeigt zudem, dass Rollen auch steuern, welche Datenfelder sichtbar sind.</p></div></details>
+  <details class="quiz"><summary>7. Wahr oder falsch? „Nomadisierende Nutzerinnen sind Nutzerinnen, die ihre Aufgaben mobil mit eigenem Laptop erledigen.“</summary><div class="ans">
+    <p><b>Falsch.</b> Nomadisierende (oder streunende) Nutzerinnen erfüllen ihre Aufgaben in IS, die <i>an unterschiedlichen Orten zur Verfügung stehen</i> – z. B. Bankmitarbeitende in mehreren Filialen oder Produktionsmitarbeitende in verschiedenen Abschnitten (F.69). „Davon zu unterscheiden sind Nutzer, die ihre Aufgaben mobil erfüllen“: Sie verfügen über eine <i>eigene mobile Infrastruktur, die mit ihnen auf Reisen geht</i> (F.69).</p></div></details>
+  <details class="quiz"><summary>8. Wahr oder falsch? „Laut Vorlesung sind die wichtigsten Gestaltgesetze Nähe, Symmetrie und Gleichartigkeit; Farbe sollte nicht als einziger Informationsträger dienen.“</summary><div class="ans">
+    <p><b>Wahr.</b> F.23 nennt Nähe, Symmetrie und Gleichartigkeit als die wichtigsten Gestaltgesetze; F.24 zeigt, wie sie sich zu „prägnanten Figuren“ verstärken. F.26 fordert, Farbe nicht als einzigen Informationsträger einzusetzen, weil 4 % aller Menschen in ihrer Farbwahrnehmung beeinträchtigt sind und sich viele nicht mehr als vier Farb-Bedeutungs-Kombinationen merken können. Weitere Regeln: ausreichender Kontrast, bekannte Farbcodes für Interaktionselemente.</p></div></details>
+  <details class="quiz"><summary>9. Fall Klinikum (Probeklausur 2026, A2a): Erläutern Sie, wie Nutzerrollen bei der Gestaltung des Notaufnahme-Systems helfen, und nennen Sie je einen Vor- und Nachteil.</summary><div class="ans">
+    <p><b>Definition:</b> Rollen definieren Aufgaben, Eigenschaften und Rechte einer Nutzerin in einem IS; sie werden verwendet, damit diese Merkmale nicht für jede Nutzerin einzeln festgelegt werden müssen (V05 F.61).</p>
+    <p><b>Anwendung:</b> Im Klinik-System werden die Rollen „Ärztin“, „Pflegekraft“ und „Verwaltung“ gebildet. Die Ärztin sieht Befunde, Vorerkrankungen, Laborwerte und Medikationspläne und darf Medikamente anordnen; die Pflege sieht Medikationspläne und Vitalwerte und dokumentiert Gaben; die Verwaltung sieht nur Stamm- und Abrechnungsdaten. Damit wird die Fallanforderung „jede Berufsgruppe sieht nur die Daten, die sie für ihre Arbeit braucht“ umgesetzt (Datenschutz). Zugleich hilft die Rolle bei der Gestaltung der Oberfläche: Jede Rolle bekommt eine auf ihre Aufgabe zugeschnittene Ansicht (Aufgabenangemessenheit nach ISO 9241-110), was Informationsüberschuss – etwa durch 200 ältere Laborbefunde – reduziert. Wie im Personalabteilungsbeispiel (F.62) kann die Rolle auch steuern, welche Felder eines Datensatzes sichtbar sind.</p>
+    <p><b>Vorteil:</b> Rechteverwaltung wird erleichtert; bei Änderungen (z. B. Pflege darf künftig Laborwerte sehen) muss nur die Rolle angepasst werden, nicht hunderte Einzelkonten (F.61). <b>Nachteil:</b> Rollen müssen im Voraus festgelegt und bei der Systementwicklung berücksichtigt werden (F.63); unvorhergesehene Situationen – nachts braucht eine Pflegekraft sofort die Allergieinformation – passen nicht in starre Rollen. Gegenmaßnahme: protokollierter Notfallzugriff.</p>
+    <p><b>Bonus (Usability vs. Sicherheit):</b> Die Forderung nach einer Zusatzanmeldung bei jedem Zugriff senkt die Effizienz und unter Zeitdruck ggf. die Effektivität (F.29). Rollen bieten strukturellen Datenschutz, sodass eine Zusatzanmeldung auf besonders sensible Kategorien beschränkt werden kann.</p></div></details>
+  <details class="quiz"><summary>10. Fall KI-Assistent (Probeklausur 2026, A1): Beschäftigte klagen über ständige Hinweise, fehlerhafte Antworten und das Gefühl, nicht Schritt halten zu können. Welche Gestaltungsgrundsätze sind verletzt, und wie lässt sich der digitale Stress verringern?</summary><div class="ans">
+    <p>Die Nutzerschnittstelle bildet die Interaktionsaufgabe ab; die Sachaufgabe kann nur erfüllt werden, wenn die Interaktionsaufgabe bewältigt wird (F.14). Hier wird die Interaktionsaufgabe zur Belastung. Nach ISO 9241 Teil 10 (F.27) sind verletzt: <b>Steuerbarkeit</b> und <b>Aufgabenangemessenheit</b> (Hinweise unterbrechen, die Nutzerin kann Tempo und Richtung des Dialogs nicht bestimmen), <b>Fehlertoleranz</b> bzw. <b>Selbstbeschreibungsfähigkeit</b> (fehlerhafte Antworten ohne Quellen oder Unsicherheitsangabe verursachen Prüfaufwand), <b>Lernförderlichkeit</b> und <b>Individualisierbarkeit</b> (das System passt sich nicht an weniger erfahrene Nutzerinnen an). Gebrauchstauglichkeit (F.29) leidet vor allem bei Effizienz und Zufriedenheit.</p>
+    <p><b>Maßnahmen:</b> (1) differenziell-dynamische Gestaltung (F.18): Laien-/Expertenmodus (F.28), Hinweisfrequenz pro Person einstellbar oder lernend; (2) kontextbasiertes System (F.71), das Stress oder Müdigkeit erkennt und Hinweise zurückhält; (3) Quellenangaben und Konfidenzanzeige; (4) Nutzermitwirkung (F.41–47): Key User je Abteilung, Schulungen, Fokusgruppen und Prototypentests vor dem Rollout. Querbezug: Technostress als negative Wirkung der digitalen Transformation (V06 F.91); Vertiefung: Techno-Overload, -Complexity, -Uncertainty (Tarafdar et al.).</p></div></details>
+  <details class="quiz"><summary>11. Fall: Eine Essens-Liefer-App zeigt Restaurantname, Bewertung und Lieferzeit jeweils in weit auseinanderliegenden Zeilen, nutzt für „Bestellen“ und „Abbrechen“ identische graue Buttons und markiert ausverkaufte Gerichte nur mit roter Schrift. Beurteilen Sie die Oberfläche anhand der Gestaltgesetze und der Farbregeln.</summary><div class="ans">
+    <p>Die Gestaltpsychologie beschreibt die Wahrnehmung als Fähigkeit, Strukturen und Ordnungsprinzipien in Sinneseindrücken auszumachen (F.22); visuelle Objekte werden zu Figuren zusammengesetzt erlebt (F.23).</p>
+    <p><b>Nähe verletzt:</b> Zusammengehörige Informationen eines Restaurants sollten nahe beieinander liegen (F.25); liegen sie weit auseinander, ordnet das Auge die Bewertung womöglich dem falschen Restaurant zu. Verbesserung: Name, Bewertung und Lieferzeit als kompakte Karte mit Abstand zur nächsten Karte. <b>Gleichartigkeit falsch eingesetzt:</b> Gleich aussehende Elemente werden als gleichartig wahrgenommen (F.24) – identische Buttons für gegensätzliche Funktionen führen zu Fehlbedienung. Verbesserung: Primäraktion hervorgehoben, Abbrechen als Textlink. <b>Symmetrie:</b> Karten im gleichmäßigen Raster würden die Blockbildung verstärken (F.24). <b>Farbe als einziger Informationsträger</b> verstößt gegen F.26 (4 % Farbsehschwäche): zusätzlich Text „ausverkauft“ und ausgegrauter Zustand (Norman: Einschränkungen). Ergebnis: übersichtliche, gut strukturierte Oberfläche, deren Informationen einfach aufgenommen werden können (F.25).</p></div></details>
+  <details class="quiz"><summary>12. Entwerfen Sie zwei Personae für eine neue Fahrkarten-App eines Verkehrsverbunds und nennen Sie Vorgehen und Grenzen der Methode.</summary><div class="ans">
+    <p><b>Definition:</b> Eine Persona ist ein imaginäres Modell einer Person mit konkreten Eigenschaften oder konkretem Nutzungsverhalten, das einen angenommenen Nutzertyp abstrakt repräsentiert (F.64).</p>
+    <p><b>Vorgehen (F.65):</b> Zweck klären (Tickets mobil kaufen und vorzeigen), Nutzerkreis bestimmen (Pendler, Gelegenheitsfahrer, Touristen, Seniorinnen), 3–10 fiktive Personae erdenken, Bedürfnisse in Anforderungsanalyse und Realisierung aufgreifen, Bedienungs- und Verstehensszenarien durchspielen.</p>
+    <p><b>Personae:</b> <i>Lena (24)</i>, Pendlerin, Technik-Enthusiastin, Motiv: Ticket in unter 10 Sekunden; Präferenz: Widget, Apple Pay; Nutzungsgewohnheit: täglich, oft mit einer Hand im Bus. <i>Helmut (72)</i>, konservativer Gelegenheitsnutzer, fährt zweimal im Monat zum Arzt, vergisst Bedienschritte zwischen den Nutzungen („naiver“ Nutzer, F.9), schlechtes Sehvermögen; braucht große Schrift, wenige Schritte, klare Rückmeldung. Szenario: „Kann Helmut bei Regen an der Haltestelle ein Seniorenticket kaufen?“</p>
+    <p><b>Grenzen (F.67):</b> Repräsentativer Querschnitt schwer zu finden; Personae sind angenommene, keine realen Nutzerinnen; bei komplexen Anforderungen reale Nutzerinnen einbinden (Nutzermitwirkung); häufige Prüfung verursacht Mehraufwand (T05 F.24).</p></div></details>
+  <details class="quiz"><summary>13. Typisieren Sie ChatGPT nach den Typisierungsmerkmalen der Vorlesung.</summary><div class="ans">
+    <p><b>Einleitung:</b> IS lassen sich entlang der Strukturelemente Mensch, Aufgabe und Technik (F.58) sowie nach den Phasen im Informationsverhalten (F.90) typisieren.</p>
+    <p><b>Mensch:</b> sehr heterogene Nutzertypen von Expertinnen bis zu gelegentlichen bzw. naiven Nutzern (F.9); im Unternehmen Rollen wie Administratorin vs. Mitglied (F.61); Nutzungskontext ortsunabhängig, auch mobil (F.68–69); teilweise kontextbasiert, da Präferenzen gespeichert werden (F.71). <b>Aufgabe:</b> Aufgabenphase Nutzungsaufgabe; Aufgabentyp vor allem Ausführungsaufgaben (Texte, E-Mails, Code), auch Unterstützung von Führungsaufgaben (Analysen für Planungsentscheidungen); Reichweite: personell meist Individualaufgabe, funktional übergreifend (in allen Funktionsbereichen einsetzbar), sektorenneutral, einzelwirtschaftlich; aus Sicht des nutzenden Unternehmens ein externer Dienst über die Unternehmensgrenze (interorganisational). <b>Technik:</b> Anwendungssoftware (Web-App/App) auf Systemsoftware, betrieben auf Verarbeitungshardware in Rechenzentren, Netzwerkhardware; Ein-/Ausgabemodalitäten Tippen, Sprechen, Bild bzw. visuell, Audio (F.13, F.88). <b>Informationsverhalten:</b> Schwerpunkt Informationssuche (Konversion von Daten in Information, Wiederauffinden, F.94) und -strukturierung (Zusammenfassen, Gliedern, F.93); Grenzen bei der Informationspflege (Aktualität, F.95).</p></div></details>
+  <details class="quiz"><summary>14. Fall Vitra (T05 Aufgabe 3) und Erweiterung: Welche Funktionen und Aufgabentypen unterstützt das ERP/CRM-System? Wie hängen horizontale und vertikale Integration damit zusammen?</summary><div class="ans">
+    <p><b>Funktionen:</b> Vertrieb (Konfiguration und Bestellung im Webshop), Beschaffung (Einkauf von Schrauben, Tischfüßen, Platten), Produktion (Montage), Versand (Auslieferung) (T05 F.19). <b>Aufgabentyp:</b> Ausführungsaufgaben – administrativ (Auftragserfassung) und dispositiv (Bestellung auslösen, Fertigung einplanen), F.76.</p>
+    <p><b>Horizontale Integration</b> (F.81): Das ERP-System verbindet diese Funktionen entlang des Auftragsdurchlaufs – der Kundenauftrag löst automatisch Bedarfe in Beschaffung und Produktion aus, ohne Mehrfacherfassung. <b>Vertikale Integration</b>: Die operativen Daten (Aufträge, Durchlaufzeiten, Kosten) werden z. B. im Data Warehouse verdichtet und Planungs- und Kontrollsystemen bereitgestellt (Führungsaufgaben, F.77), etwa für die Kontrolle der Lieferzeiten. Reichweite: funktionsübergreifend (F.80); über Webshop-Kundinnen und Lieferanten interorganisational (CRM, SCM/E-Procurement, F.82–83).</p></div></details>
+  <details class="quiz"><summary>15. Warum können die Grundsätze der ISO 9241 Teil 10 nicht alle gleichzeitig maximiert werden? Geben Sie ein Beispiel und eine Lösung.</summary><div class="ans">
+    <p>„Das gleichzeitige Verfolgen dieser Grundsätze kann zu Konflikten führen“ (F.28). Maßnahmen zur Verbesserung der <b>Steuerbarkeit</b> haben zumeist negative Auswirkungen auf die <b>Selbstbeschreibungsfähigkeit</b>; und je mehr eine Benutzerin das System ihren Bedürfnissen anpassen kann (<b>Individualisierbarkeit</b>), desto uneinheitlicher und unübersichtlicher wird es. Beispiel: Ein Klinik-System, in dem jede Ärztin ihre Maske frei anordnen kann, ist individuell effizient – aber eine Vertretungsärztin findet sich auf dem Rechner der Kollegin nicht zurecht (Erwartungskonformität leidet). Lösung laut F.28: ausgefeilte Hilfesysteme mit <b>Laienmodus und Expertenmodus</b>, die auf den Nutzertyp Rücksicht nehmen; ergänzend: Individualisierung nur innerhalb eines festen Grundrasters (Durchgängigkeit nach Norman).</p></div></details>
+</section>

@@ -1,0 +1,703 @@
+<section class="chapter" id="k1" data-short="Gegenstand &amp; Wissenschaft">
+<h2><span class="chap-no">Kapitel 1</span>Einführung und Grundlegung: Gegenstandsbereich und Wirtschaftsinformatik als Wissenschaft</h2>
+<p class="lead">Vorlesung 01 legt das Begriffsfundament für die gesamte Klausur: Was untersucht die Wirtschaftsinformatik (Erkenntnisobjekte Informationssystem, Informationsinfrastruktur, Informationsfunktion), was ist ein System und welche Eigenschaften hat es, und nach welchen Kriterien ist eine Aussage wissenschaftlich? Genau diese Begriffe werden in jeder Altklausur auf einen Fall angewendet („Ist YouTube/Instagram/ChatGPT/das Klinik-System ein Informationssystem?", „Untersuchen Sie die Systemeigenschaften", „Ist die Aussage der Geschäftsführerin wissenschaftlich?"). Wer dieses Kapitel sicher beherrscht, holt in Aufgabe 1 fast jeder Klausur die ersten 10–20 Punkte.</p>
+<div class="goals"><b>Lernziele</b><ul>
+<li>die vier Kernbegriffe (Information, Kommunikation, Technik, System) und die Definition der Wirtschaftsinformatik wörtlich wiedergeben können (V01 F.12–13),</li>
+<li>die historische Entwicklung des Gegenstandsbereichs in fünf Etappen skizzieren (V01 F.14),</li>
+<li>den Systembegriff und alle Systemeigenschaften (inkl. Emergenz) erklären und auf einen Fall anwenden (V01 F.16–22),</li>
+<li>Informationssysteme als MAT-Systeme beschreiben, vom Anwendungssystem abgrenzen und für jeden Fall begründet entscheiden, ob ein IS vorliegt (V01 F.23–28),</li>
+<li>Informationsinfrastruktur, Business/IT-Alignment und Informationsfunktion (Universalfunktion) erklären (V01 F.29–33),</li>
+<li>Teilgebiete über Wissenschaftsaufgaben, Analyseebenen und MAT-Dimensionen gliedern (V01 F.34–37),</li>
+<li>Real-, Formal- und Ingenieurwissenschaft unterscheiden und die WI einordnen (V01 F.40–42),</li>
+<li>eine beliebige Aussage anhand der Wissenschaftskriterien prüfen, normative Aussagen erkennen und wissenschaftlich / nicht-wissenschaftlich / unwissenschaftlich trennen (V01 F.43–66),</li>
+<li>die vier Wahrheitstheorien, die vier Wissenschaftsziele, die Phasen im Forschungsprozess und die Dualität der Wissenschaftsziele erläutern (V01 F.67–87),</li>
+<li>typische Plattform-Algorithmen (Empfehlung, Trending, Ranking, Moderation) skizzieren und mit Vorlesungsbegriffen verknüpfen (Exkurs; Klausuren 2024).</li>
+</ul></div>
+
+<div class="box pit"><div class="box-h">Hinweis zu den Folienverweisen</div><p>Alle Verweise „V01 F.n" meinen die <b>PDF-Seite n</b>. Ab PDF-Seite 16 ist die <b>auf die Folie gedruckte Nummer um 1 höher</b> (PDF-Seite 16 trägt unten rechts die „17", PDF-Seite 83 die „84"). Wer mit ausgedruckten Folien arbeitet, sucht also ab F.16 die aufgedruckte Nummer n+1.</p></div>
+
+<h3 id="k1-einordnung">1.1 Einordnung der Veranstaltung</h3>
+<p>Die Vorlesung verfolgt drei übergeordnete Lernziele: Sie sollen die Fundamente des Faches kennenlernen, erkennen, dass Wirtschaftsinformatik <b>mehr als Technik</b> ist, und das Gelernte nutzen, um neue Inhalte aus Wifo, BWL oder Informatik einzuordnen und Ihre Schwerpunkte zu planen (V01 F.5). Die Klausur legt den Fokus ausdrücklich auf <b>„Verstehen" und „Anwenden"</b> und ist <b>open book</b> (Mitschriften, Folienausdruck, Winbuch als Hardcopy; V01 F.8). Daraus folgt die wichtigste Strategie: Definitionen müssen Sie nicht auswendig können, aber Sie müssen sie in Sekunden finden und sauber auf den Fall übertragen können. Grundlage ist das Lehrbuch Heinzl/Mädche/Riedl, <i>Wirtschaftsinformatik – Einführung und Grundlegung</i>, 5. Aufl. 2024 („Winbuch", V01 F.4).</p>
+<p>Die Vorlesung gliedert sich in zwei Kapitel: <b>Kapitel 1 „Gegenstandsbereich der Wirtschaftsinformatik"</b> (V01 F.10–37) beantwortet die Frage <i>„Was untersucht die WI?"</i>, <b>Kapitel 2 „Wirtschaftsinformatik als Wissenschaft"</b> (V01 F.38–87) die Frage <i>„Wie und mit welchem Anspruch untersucht sie es?"</i>.</p>
+
+<h3 id="k1-kernbegriffe">1.2 Kernbegriffe und Definition der Wirtschaftsinformatik</h3>
+<p>Für die Charakterisierung des Gegenstandsbereichs sind laut Vorlesung vier Begriffe von fundamentaler Bedeutung. Sie sind die „Bausteine", aus denen sich die Definition der Disziplin zusammensetzt.</p>
+<div class="box def"><div class="box-h">Definition · Die vier Kernbegriffe</div>
+<ul>
+<li><b>Information:</b> „Zweckorientiertes, handlungsbestimmendes Wissen über vergangene, gegenwärtige und zukünftige Zustände und Vorgänge in der Wirklichkeit"</li>
+<li><b>Kommunikation:</b> „Eine Beziehung, die zwischen Menschen oder Maschinen durch Austausch von Nachrichten entsteht"</li>
+<li><b>Technik:</b> „Das Regeln folgende und Ziele anstrebende Handeln und Denken (<b>Arbeitstechnik</b>)" sowie „Vom Menschen geschaffene Geräte und Maschinen (<b>Sachtechnik</b>)"</li>
+<li><b>System:</b> „Ganzheitlicher Zusammenhang"</li>
+</ul><p class="src">V01 F.12</p></div>
+<p><b>Information</b> ist also nicht jedes Datum, sondern Wissen, das einem Zweck dient und Handeln bestimmt. Die Zeitdimension ist wichtig: Information kann sich auf Vergangenes (Umsatz letzten Monats), Gegenwärtiges (aktueller Lagerbestand) oder Zukünftiges (Absatzprognose) beziehen. Die feine Unterscheidung Daten – Information – Wissen wird in V04 vertieft; für V01 genügt: Zweckbezug + Handlungsbezug.</p>
+<p><b>Kommunikation</b> ist als <i>Beziehung</i> definiert, nicht als Vorgang – sie <i>entsteht</i> durch den Austausch von Nachrichten. Wichtig ist der Zusatz „zwischen Menschen <i>oder Maschinen</i>": Auch Mensch-Maschine-Kommunikation (Nutzerin ↔ ChatGPT) und Maschine-Maschine-Kommunikation (zwei Server tauschen über eine API Daten aus) fallen darunter.</p>
+<p><b>Technik</b> hat zwei Bedeutungen, die man in Klausuren gezielt einsetzen kann: Die <b>Sachtechnik</b> sind die Geräte (Smartphone, Server, Kassenscanner), die <b>Arbeitstechnik</b> ist das regelgeleitete, zielgerichtete Handeln und Denken (z. B. eine Methode wie Scrum oder eine Moderationsrichtlinie). Wer „Technik" in einem MAT-System nur als Hardware beschreibt, verschenkt Tiefe.</p>
+<div class="box def"><div class="box-h">Definition · Wirtschaftsinformatik</div><p>„Wirtschaftsinformatik ist die Wissenschaft von Information und Kommunikation unter systematischer Verwendung von Informations- und Kommunikationstechnologien in Wirtschaft und Gesellschaft auf individueller Ebene, Gruppenebene, Organisationsebene oder gesellschaftlicher Ebene."</p><p class="src">V01 F.13</p></div>
+<p>Lesen Sie die Definition als Satz mit vier Bausteinen: (1) <b>Gegenstand</b> = Information und Kommunikation, (2) <b>Mittel</b> = systematische Verwendung von IKT, (3) <b>Anwendungsfeld</b> = Wirtschaft <i>und Gesellschaft</i> (nicht nur Unternehmen!), (4) <b>Analyseebenen</b> = Individuum, Gruppe, Organisation, Gesellschaft (diese tauchen in F.36 als Gliederungsmerkmal wieder auf). Die Technik ist also <i>Mittel</i>, nicht Gegenstand – genau das meint das Lernziel „Wirtschaftsinformatik ist mehr als Technik".</p>
+<div class="box ex"><div class="box-h">Beispiel · Kernbegriffe an YouTube</div><p><b>Information:</b> Die Empfehlung „Dieses Tutorial erklärt Ihre Klausurfrage" ist zweckorientiert (Lernen) und handlungsbestimmend (Sie klicken). <b>Kommunikation:</b> Kommentare zwischen Creator und Zuschauern (Mensch–Mensch), die Suchanfrage an die Plattform (Mensch–Maschine), der Abruf von Videodaten aus dem Content-Delivery-Netz (Maschine–Maschine). <b>Technik:</b> Rechenzentren und App (Sachtechnik), Community-Richtlinien und Upload-Prozess (Arbeitstechnik). <b>System:</b> Das ganzheitliche Zusammenwirken all dessen.</p></div>
+
+<h3 id="k1-entwicklung">1.3 Historische Entwicklung des Gegenstandsbereichs</h3>
+<p>Der Gegenstandsbereich hat sich in den letzten Jahrzehnten deutlich <b>erweitert, aber auch vertieft</b> (V01 F.15). Die Vorlesung nennt fünf Etappen (V01 F.14):</p>
+<ul>
+<li><b>1950er-Jahre:</b> Erste elektronische Datenverarbeitungsanlagen (EDV) in Unternehmen.</li>
+<li><b>Ab den 1960er-Jahren:</b> Die EDV wird Gegenstandsbereich der BWL als abgrenzbares Erkenntnisobjekt.</li>
+<li><b>Ab den 1980er-Jahren:</b> Der Gegenstandsbereich weitet sich aus: mehrere Systeme sowie deren Planung, Überwachung und Steuerung.</li>
+<li><b>Seit Ende der 1990er-Jahre:</b> Fokus nicht nur noch auf Aufgabenunterstützung, sondern auch auf das <b>Innovationspotenzial</b>.</li>
+<li><b>Seit dem Jahr 2000:</b> Digitalisierung und digitale Transformation von Wirtschaft und Gesellschaft (→ vertieft in V06).</li>
+</ul>
+<figure class="fig">
+<svg viewBox="0 0 640 210" role="img" aria-label="Zeitstrahl der Entwicklung des Gegenstandsbereichs von der EDV in den 1950ern bis zur digitalen Transformation seit 2000">
+<defs><marker id="arr-k1a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<text x="320" y="20" text-anchor="middle" font-size="13" font-family="inherit" style="fill:var(--accent)">Gegenstandsbereich: erweitert und vertieft</text>
+<line x1="20" y1="60" x2="626" y2="60" stroke="currentColor" stroke-width="2" marker-end="url(#arr-k1a)"/>
+<circle cx="70" cy="60" r="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="195" cy="60" r="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="320" cy="60" r="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="445" cy="60" r="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="570" cy="60" r="8" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<g font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">
+<text x="70" y="44" font-weight="bold">1950er</text>
+<text x="195" y="44" font-weight="bold">ab 1960er</text>
+<text x="320" y="44" font-weight="bold">ab 1980er</text>
+<text x="445" y="44" font-weight="bold">ab Ende 1990er</text>
+<text x="570" y="44" font-weight="bold">seit 2000</text>
+</g>
+<g font-size="12" font-family="inherit" text-anchor="middle" fill="currentColor">
+<text x="70" y="92">erste EDV-</text><text x="70" y="108">Anlagen in</text><text x="70" y="124">Unternehmen</text>
+<text x="195" y="92">EDV wird</text><text x="195" y="108">abgrenzbares</text><text x="195" y="124">Erkenntnisobjekt</text><text x="195" y="140">der BWL</text>
+<text x="320" y="92">mehrere Systeme</text><text x="320" y="108">+ deren Planung,</text><text x="320" y="124">Überwachung</text><text x="320" y="140">und Steuerung</text>
+<text x="445" y="92">nicht nur Aufgaben-</text><text x="445" y="108">unterstützung,</text><text x="445" y="124">sondern auch</text><text x="445" y="140">Innovationspotenzial</text>
+<text x="570" y="92">Digitalisierung</text><text x="570" y="108">und digitale</text><text x="570" y="124">Transformation</text><text x="570" y="140">(→ V06)</text>
+</g>
+<rect x="20" y="160" width="360" height="34" rx="6" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1"/>
+<text x="200" y="182" text-anchor="middle" font-size="12" font-family="inherit" fill="currentColor">Effizienz: Aufgaben mit IT unterstützen</text>
+<rect x="390" y="160" width="236" height="34" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<text x="508" y="182" text-anchor="middle" font-size="12" font-family="inherit" fill="currentColor">Innovation und Transformation</text>
+</svg>
+<figcaption>Fünf Etappen nach V01 F.14. Die untere Zweiteilung (Effizienz vs. Innovation) ist eine Lesehilfe: Bis in die 1990er dominiert die Aufgabenunterstützung, danach kommen Innovationspotenzial und digitale Transformation hinzu.</figcaption>
+</figure>
+<div class="box exam"><div class="box-h">Klausurfokus</div><p>Die historische Entwicklung wurde in den vorliegenden Altklausuren nicht direkt gefragt. Nützlich ist sie als Argument: Wenn eine Aufgabe nach der Relevanz von Plattformen wie YouTube oder ChatGPT für die WI fragt, können Sie mit der jüngsten Etappe (Innovationspotenzial, digitale Transformation von <i>Wirtschaft und Gesellschaft</i>) begründen, warum solche Phänomene heute zum Gegenstandsbereich gehören.</p></div>
+
+<h3 id="k1-erkenntnisobjekte">1.4 Die drei Erkenntnisobjekte im Überblick</h3>
+<p>Der Gegenstandsbereich umfasst drei <b>Erkenntnisobjekte</b> – also die Dinge, über die die WI Erkenntnis gewinnen will: <b>Informationssystem (IS)</b>, <b>Informationsinfrastruktur (II)</b> und <b>Informationsfunktion (IF)</b>. Die Vorlesung betont: „Die Mengen der drei Erkenntnisobjekte sind <b>nicht disjunkt</b>" (V01 F.15). Sie überschneiden sich also. Ein IS ist Teil einer II (die II ist die organisatorische Gesamtheit von IS), und ein IS erfüllt Informationsaufgaben, also einen Teil der IF. Dasselbe reale Phänomen (z. B. LinkedIn) lässt sich deshalb unter allen drei Blickwinkeln betrachten (T01 F.14–15).</p>
+<p>Allen drei gemeinsam ist ihr <b>Charakter als System</b> (V01 F.16). Deshalb folgt in der Vorlesung direkt der Systembegriff (Abschnitt 1.5), bevor die drei Objekte einzeln definiert werden.</p>
+<p>Eine sehr einprägsame Analogie stammt aus dem Lernzettel des Studenten (vermutlich aus einem älteren Foliensatz bzw. dem Winbuch; im aktuellen V01-Foliensatz nicht enthalten): Man vergleicht die WI mit dem Verkehrswesen.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 280" role="img" aria-label="Verkehrsanalogie: Informationsfunktion entspricht Transportbedarf, Informationssystem dem Transportmittel, Informationsinfrastruktur den Verkehrswegen">
+<defs><marker id="arr-k1b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<g font-family="inherit" fill="currentColor">
+<text x="145" y="14" text-anchor="middle" font-size="12" style="fill:var(--accent)">Erkenntnisobjekt der WI</text>
+<text x="495" y="14" text-anchor="middle" font-size="12" style="fill:var(--muted)">Analogie Verkehrswesen</text>
+</g>
+<rect x="20" y="22" width="250" height="58" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<rect x="20" y="112" width="250" height="58" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<rect x="20" y="202" width="250" height="58" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<rect x="370" y="22" width="250" height="58" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="370" y="112" width="250" height="58" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="370" y="202" width="250" height="58" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<g font-family="inherit" fill="currentColor" text-anchor="middle">
+<text x="145" y="46" font-size="13" font-weight="bold">Informationsfunktion (IF)</text>
+<text x="145" y="66" font-size="12">Informationsaufgaben: was?</text>
+<text x="145" y="136" font-size="13" font-weight="bold">Informationssystem (IS)</text>
+<text x="145" y="156" font-size="12">MAT-System erfüllt Aufgabe</text>
+<text x="145" y="226" font-size="13" font-weight="bold">Informationsinfrastruktur (II)</text>
+<text x="145" y="246" font-size="12">Gesamtheit von IS + Mittel</text>
+<text x="495" y="46" font-size="13" font-weight="bold">Transport-/Mobilitätsbedarf</text>
+<text x="495" y="66" font-size="12">Menschen und Güter bewegen</text>
+<text x="495" y="136" font-size="13" font-weight="bold">Transportmittel</text>
+<text x="495" y="156" font-size="12">LKW, Zug, Schiff, Drohne</text>
+<text x="495" y="226" font-size="13" font-weight="bold">Verkehrswege</text>
+<text x="495" y="246" font-size="12">Straße, Schiene, Luftraum</text>
+<text x="320" y="56" font-size="16">≙</text>
+<text x="320" y="146" font-size="16">≙</text>
+<text x="320" y="236" font-size="16">≙</text>
+</g>
+<line x1="274" y1="51" x2="306" y2="51" stroke="currentColor" stroke-dasharray="3 3"/>
+<line x1="334" y1="51" x2="366" y2="51" stroke="currentColor" stroke-dasharray="3 3"/>
+<line x1="274" y1="141" x2="306" y2="141" stroke="currentColor" stroke-dasharray="3 3"/>
+<line x1="334" y1="141" x2="366" y2="141" stroke="currentColor" stroke-dasharray="3 3"/>
+<line x1="274" y1="231" x2="306" y2="231" stroke="currentColor" stroke-dasharray="3 3"/>
+<line x1="334" y1="231" x2="366" y2="231" stroke="currentColor" stroke-dasharray="3 3"/>
+<line x1="145" y1="200" x2="145" y2="174" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1b)"/>
+<line x1="145" y1="110" x2="145" y2="84" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1b)"/>
+<text x="153" y="192" font-size="12" font-family="inherit" fill="currentColor">ermöglicht</text>
+<text x="153" y="102" font-size="12" font-family="inherit" fill="currentColor">erfüllt</text>
+</svg>
+<figcaption>Die Infrastruktur (Verkehrswege) ermöglicht Systeme (Transportmittel), die einen Bedarf (Transport bzw. Information) decken. Analogie aus dem Lernzettel, nicht wörtlich auf den aktuellen V01-Folien.</figcaption>
+</figure>
+<div class="box ex"><div class="box-h">Beispiel · Klinikum (Probeklausur 2026)</div><p><b>IF:</b> Ärztinnen, Pflege und Verwaltung zum richtigen Zeitpunkt die richtigen Patientendaten bereitstellen (Befunde, Medikationsplan, Allergien). <b>IS:</b> das klinische Informationssystem der Notaufnahme als MAT-System (Ärztin Dr. Yilmaz + Aufgabe „Medikation entscheiden" + Tablet/KIS/ePA). <b>II:</b> die Gesamtheit aller IS des Klinikums plus Rechenzentrum, Netzwerk, IT-Personal, Datenschutzregeln, Zugriffskonzepte, Räume.</p></div>
+<div class="box exam"><div class="box-h">Klausurfokus</div><p>Tutoriumsaufgabe (T01 F.13–15, F.34): „Welche Erkenntnisobjekte erfüllt das Beispiel?" Die volle Antwort ordnet <b>alle drei</b> Objekte konkret zu und schließt mit dem Satz, dass das Beispiel alle drei Erkenntnisobjekte abdeckt und diese nicht disjunkt sind. Für die II reicht eine Aufzählung konkreter Komponenten (Rechner, Netz, Server, Programmierer, Geschäftsräume); in Klausuren ab 2024 wird die II mit den sieben Komponenten aus V01 F.29 bzw. V06 erwartet.</p></div>
+
+<h3 id="k1-system">1.5 Systembegriff und Systemeigenschaften</h3>
+<div class="box def"><div class="box-h">Definition · System</div><p>„System (von griech. sístima = das Gebilde, Zusammengestellte, Verbundene) meint den ganzheitlichen Zusammenhang von Elementen, die voneinander abhängig sind, ineinandergreifen oder zusammenwirken."</p><p class="src">V01 F.18</p></div>
+<p>Zum Systembegriff gehören vier Ergänzungen von derselben Folie (V01 F.18), die man in Systemeigenschafts-Aufgaben als Fachbegriffe verwenden kann:</p>
+<ul>
+<li><b>Abgrenzung und Schnittstellen:</b> Systeme sind Beziehungsgefüge, die sich von der Umwelt abheben und durch eine <i>gedankliche Umhüllung</i> (Systemgrenze) abgegrenzt sind. Verbindungen, die durch die Abgrenzung des Systems von seiner Umwelt entstehen, heißen <b>Schnittstellen</b>.</li>
+<li><b>Hierarchie:</b> Jedes System ist Teil eines <b>übergeordneten Systems</b>, und jedes System kann in <b>Teilsysteme</b> und diese wiederum in kleinere Teilsysteme zerlegt werden.</li>
+<li><b>Reale vs. ideale Systeme:</b> Die WI betrachtet <b>reale Systeme</b>, die in der Wirklichkeit vorhanden sind – im Unterschied zu idealen Systemen, die es in der Wirklichkeit nicht gibt (z. B. ein mathematisches Gleichungssystem).</li>
+<li><b>Systemgrenze ist eine Entscheidung des Betrachters:</b> Weil die Umhüllung „gedanklich" ist, muss man in der Klausur <i>festlegen</i>, was zum System gehört. Das Tutorium etwa zählt bei LinkedIn die Nutzer zur Umwelt (T01 F.18) – bei einer IS-Betrachtung (MAT) gehören Menschen dagegen zum System. Beide Sichten sind vertretbar, wenn Sie die Grenze explizit ziehen.</li>
+</ul>
+<figure class="fig">
+<svg viewBox="0 0 640 305" role="img" aria-label="Offenes System mit Systemgrenze, Systemelementen, Beziehungen, Umweltelement, Umsystem und Schnittstelle">
+<defs><marker id="arr-k1c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<ellipse cx="270" cy="190" rx="215" ry="98" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="2.5"/>
+<ellipse cx="545" cy="80" rx="82" ry="55" fill="none" stroke="currentColor" stroke-width="1.5"/>
+<circle cx="520" cy="62" r="12" style="fill:var(--surface-2)" stroke="currentColor"/>
+<circle cx="572" cy="72" r="12" style="fill:var(--surface-2)" stroke="currentColor"/>
+<circle cx="540" cy="106" r="12" style="fill:var(--surface-2)" stroke="currentColor"/>
+<line x1="530" y1="70" x2="562" y2="72" stroke="currentColor"/>
+<line x1="568" y1="83" x2="550" y2="99" stroke="currentColor"/>
+<circle cx="120" cy="40" r="16" style="fill:var(--surface-2)" stroke="currentColor"/>
+<circle cx="175" cy="170" r="18" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="275" cy="155" r="18" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="375" cy="180" r="18" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="205" cy="240" r="18" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<circle cx="320" cy="245" r="18" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<line x1="193" y1="167" x2="257" y2="158" stroke="currentColor" marker-start="url(#arr-k1c)" marker-end="url(#arr-k1c)"/>
+<line x1="293" y1="160" x2="357" y2="176" stroke="currentColor" marker-end="url(#arr-k1c)"/>
+<line x1="180" y1="188" x2="198" y2="222" stroke="currentColor" marker-end="url(#arr-k1c)"/>
+<line x1="223" y1="238" x2="268" y2="171" stroke="currentColor" marker-end="url(#arr-k1c)"/>
+<line x1="365" y1="195" x2="333" y2="231" stroke="currentColor" marker-end="url(#arr-k1c)"/>
+<line x1="124" y1="56" x2="168" y2="152" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1c)"/>
+<line x1="392" y1="172" x2="484" y2="117" stroke="currentColor" stroke-width="1.5" marker-start="url(#arr-k1c)" marker-end="url(#arr-k1c)"/>
+<circle cx="148" cy="109" r="5" style="fill:var(--accent)"/>
+<circle cx="450" cy="137" r="5" style="fill:var(--accent)"/>
+<g font-family="inherit" fill="currentColor" font-size="13">
+<text x="142" y="45">Umweltelement</text>
+<text x="20" y="140">Umwelt</text>
+<text x="545" y="15" text-anchor="middle" font-weight="bold">Umsystem</text>
+<text x="270" y="118" text-anchor="middle" font-weight="bold">System</text>
+<text x="12" y="275">Systemgrenze</text><line x1="100" y1="270" x2="126" y2="262" stroke="currentColor"/>
+<text x="140" y="100" text-anchor="end" style="fill:var(--accent)">Schnittstelle</text>
+<text x="462" y="154" style="fill:var(--accent)">Schnittstelle</text>
+<text x="386" y="212" font-size="12">Systemelement</text>
+<text x="196" y="148" font-size="12">Beziehung</text>
+</g>
+<text x="630" y="300" text-anchor="end" font-size="12" font-family="inherit" style="fill:var(--muted)">offen: Beziehungen über die Grenze · geschlossen: keine</text>
+</svg>
+<figcaption>Nachzeichnung von V01 F.20: Ein offenes System steht über einzelne Elemente mit Umweltelementen und Umsystemen in Beziehung; diese Verbindungen über die Systemgrenze sind die Schnittstellen (V01 F.18).</figcaption>
+</figure>
+
+<h4 id="k1-emergenz">Emergente und nicht emergente Eigenschaften</h4>
+<p>Für den Betrachter sind die Eigenschaften eines Systems entweder unmittelbar erkennbar oder nicht (V01 F.16). Daraus folgt die zentrale Unterscheidung:</p>
+<div class="box def"><div class="box-h">Definition · Emergente Eigenschaften</div><p>„Emergent genannte Eigenschaften werden nicht nur durch Eigenschaften der Systemelemente bestimmt, sondern zusätzlich durch Eigenschaften der Beziehungen zwischen den Systemelementen (Systemstruktur)."</p><ul><li>Emergente Eigenschaften lassen sich daher nicht auf Eigenschaften einzelner Elemente zurückführen.</li><li>Nicht emergente Eigenschaften sind im Allgemeinen von geringerem wissenschaftlichem Interesse als emergente Eigenschaften.</li></ul><p class="src">V01 F.16</p></div>
+<p>Das Vorlesungsbeispiel (V01 F.17): Die <b>Speicherkapazität der Hardware</b> ist <i>nicht emergent</i> – man addiert die Kapazitäten der Festplatten. Das <b>Antwortzeitverhalten von Transaktionen</b> und die <b>Durchsatzzeit einer bestimmten Arbeitslast</b> sind <i>emergent</i> – sie hängen davon ab, wie Prozessor, Netz, Datenbank, Software und gleichzeitige Nutzer zusammenwirken. Die Frage nach der Speicherkapazität ist „offensichtlich das kleinere Problem" als die Messung von Antwortzeit und Durchsatz.</p>
+<div class="box ex"><div class="box-h">Beispiel · Emergenz auf Plattformen</div><p>Bei Instagram ist die Anzahl gespeicherter Fotos nicht emergent. Emergent sind dagegen <b>Trends</b> (kein einzelnes Video „ist" ein Trend; er entsteht erst aus dem Zusammenspiel vieler Nutzer, Teilen, Likes und des Ranking-Algorithmus), die <b>Qualität der Empfehlungen</b> und die <b>Antwortzeit der App zur Stoßzeit</b>. Bei ChatGPT ist die Größe des Speichers nicht emergent; die Fähigkeit, einen kohärenten Text zu formulieren, ergibt sich dagegen erst aus dem Zusammenwirken von Modellparametern, Trainingsdaten und Eingabe – also emergent.</p></div>
+
+<h4 id="k1-systemeigenschaften">Die Systemeigenschaften (V01 F.19)</h4>
+<p>Die Vorlesung stellt die Eigenschaften als Gegensatzpaare in einer Tabelle vor. Die Definitionen sind fast wörtlich klausurrelevant:</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Eigenschaft</th><th>Definition (V01 F.19)</th><th>Prüffrage im Fall</th></tr></thead><tbody>
+<tr><td><b>Offenheit</b> vs. Geschlossenheit</td><td>Offenheit ist die Eigenschaft eines Systems, über seine Elemente (eines oder mehrere) mit seiner Umwelt in Beziehung zu stehen. Ein geschlossenes System (auch isoliertes System) ist ein System ohne Umwelt; Beziehungen bestehen nur innerhalb des Systems, und es interagiert nicht mit seiner Umwelt.</td><td>Welche Umweltelemente/Umsysteme gibt es, über welche Schnittstellen tauscht das System etwas aus?</td></tr>
+<tr><td><b>Komplexität</b> vs. Einfachheit</td><td>Komplexität ist die Eigenschaft eines Systems, die durch die Anzahl seiner Elemente und durch die Anzahl der Beziehungen zwischen den Elementen (Beziehungsreichtum) gegeben ist.</td><td>Wie viele Elemente, wie viele Beziehungen?</td></tr>
+<tr><td><b>Kompliziertheit</b> vs. Einfachheit</td><td>Kompliziertheit ist die Eigenschaft eines Systems, die durch die Anzahl der Elemente und deren Verschiedenartigkeit gegeben ist.</td><td>Wie viele <i>verschiedene Arten</i> von Elementen?</td></tr>
+<tr><td><b>Dynamik</b> vs. Statik</td><td>Ein System, in dem sich die Zustände der Elemente und/oder die der Beziehungen im Zeitablauf verändern, heißt dynamisches System.</td><td>Was ändert sich laufend – Elemente, Beziehungen?</td></tr>
+<tr><td><b>Zweckorientiert und zielorientiert</b></td><td>Zwecke beschreiben, welche Aufgaben sie erfüllen sollen (auch: Sachziele). Ziele beschreiben die Qualität oder Güte, mit der die Sachziele erreicht werden sollen.</td><td>Welche Aufgabe soll es erfüllen (Zweck), wie gut (Ziel)?</td></tr>
+</tbody></table></div>
+<figure class="fig">
+<svg viewBox="0 0 640 250" role="img" aria-label="Vergleich: Von einem einfachen System führen mehr Elemente und mehr Beziehungen zu Komplexität, mehr und verschiedenartige Elemente zu Kompliziertheit">
+<defs><marker id="arr-k1d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<ellipse cx="100" cy="125" rx="85" ry="50" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="2"/>
+<circle cx="75" cy="110" r="8" fill="none" stroke="currentColor"/>
+<circle cx="125" cy="110" r="8" fill="none" stroke="currentColor"/>
+<circle cx="100" cy="145" r="8" fill="none" stroke="currentColor"/>
+<line x1="79" y1="117" x2="96" y2="138" stroke="currentColor"/>
+<line x1="121" y1="117" x2="104" y2="138" stroke="currentColor"/>
+<text x="100" y="196" text-anchor="middle" font-size="13" font-family="inherit" font-weight="bold" fill="currentColor">einfach</text>
+<ellipse cx="530" cy="62" rx="100" ry="52" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+<g fill="none" stroke="currentColor">
+<circle cx="480" cy="45" r="7"/><circle cx="515" cy="35" r="7"/><circle cx="555" cy="40" r="7"/><circle cx="590" cy="60" r="7"/>
+<circle cx="470" cy="75" r="7"/><circle cx="505" cy="70" r="7"/><circle cx="540" cy="80" r="7"/><circle cx="575" cy="90" r="7"/><circle cx="515" cy="98" r="7"/>
+<line x1="487" y1="43" x2="508" y2="37"/><line x1="522" y1="36" x2="548" y2="40"/><line x1="562" y1="43" x2="584" y2="56"/>
+<line x1="480" y1="52" x2="472" y2="68"/><line x1="485" y1="51" x2="500" y2="64"/><line x1="515" y1="42" x2="507" y2="63"/>
+<line x1="555" y1="47" x2="543" y2="73"/><line x1="512" y1="71" x2="533" y2="78"/><line x1="547" y1="82" x2="568" y2="88"/>
+<line x1="477" y1="76" x2="498" y2="71"/><line x1="508" y1="77" x2="513" y2="91"/><line x1="535" y1="86" x2="521" y2="94"/>
+<line x1="583" y1="66" x2="578" y2="83"/><line x1="560" y1="44" x2="571" y2="84"/>
+</g>
+<text x="530" y="132" text-anchor="middle" font-size="13" font-family="inherit" font-weight="bold" fill="currentColor">komplex</text>
+<ellipse cx="530" cy="195" rx="100" ry="48" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+<g fill="none" stroke="currentColor">
+<circle cx="478" cy="180" r="8"/><rect x="500" y="168" width="15" height="15"/><path d="M540,166 L549,182 L531,182 z"/><path d="M575,170 L584,179 L575,188 L566,179 z"/>
+<rect x="470" y="200" width="18" height="10"/><circle cx="512" cy="208" r="5"/><path d="M535,198 L545,214 L525,214 z"/><circle cx="565" cy="207" r="9"/><rect x="590" y="195" width="12" height="18"/>
+</g>
+<text x="530" y="160" text-anchor="middle" font-size="13" font-family="inherit" font-weight="bold" fill="currentColor">kompliziert</text>
+<line x1="185" y1="108" x2="425" y2="70" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1d)"/>
+<line x1="185" y1="142" x2="425" y2="190" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1d)"/>
+<g font-size="12" font-family="inherit" fill="currentColor" text-anchor="middle">
+<text x="300" y="56">mehr Elemente +</text>
+<text x="300" y="72" style="fill:var(--accent)">mehr Beziehungen</text>
+<text x="300" y="192">mehr Elemente +</text>
+<text x="300" y="208" style="fill:var(--accent)">verschiedenartige Elemente</text>
+</g>
+</svg>
+<figcaption>Beide Eigenschaften steigen mit der Anzahl der Elemente – Komplexität zusätzlich mit dem Beziehungsreichtum, Kompliziertheit zusätzlich mit der Verschiedenartigkeit der Elemente (nach V01 F.21–22).</figcaption>
+</figure>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p><b>1. Komplex ≠ kompliziert.</b> Wer schreibt „YouTube ist komplex, weil es viele verschiedene Funktionen hat", vermischt beides. Komplex wegen <i>Beziehungen</i> (Abos, Kommentare, Verlinkungen, Empfehlungen zwischen Videos), kompliziert wegen <i>Verschiedenartigkeit</i> (Videos, Shorts, Livestreams, Kommentare, Kanäle, Werbeanzeigen, Playlists). <b>2. „Zweck- <i>versus</i> zielorientiert" ist falsch.</b> Auf der Folie steht „Zweckorientiert <i>und</i> zielorientiert" (V01 F.19). Das Tutorium formuliert es zwar als „versus" und hält eine eindeutige Aussage für schwer (T01 F.17, F.22), stellt aber selbst fest: „Jedes von einem Menschen geschaffene System ist zweck- und zielorientiert". Antworten Sie deshalb: Das System ist zweckorientiert <i>und</i> zielorientiert – und nennen Sie beides konkret. <b>3. Geschlossene Systeme</b> gibt es bei realen IS praktisch nicht; jedes IS braucht Eingaben aus der Umwelt.</p></div>
+<div class="box ex"><div class="box-h">Beispiel · Systemeigenschaften von YouTube (Musterantwort, Klausur 2024, 5 P.)</div>
+<p><b>Systemgrenze:</b> Ich betrachte die Plattform YouTube (Software, Server, Inhalte, Algorithmen); Nutzer, Werbekunden und Rechteinhaber sind Umweltelemente, Google/Alphabet ist das übergeordnete System, YouTube Music, Shorts und YouTube Studio sind Teilsysteme (V01 F.18).</p>
+<ul>
+<li><b>Offen:</b> YouTube steht über Elemente (Upload-Funktion, Kommentarfunktion, Werbeschnittstelle, Einbettung auf fremden Websites) mit Umweltelementen in Beziehung. Ohne Uploads der Nutzer gäbe es keine Inhalte – ein geschlossenes System wäre funktionslos.</li>
+<li><b>Komplex:</b> sehr viele Elemente (Videos, Kanäle, Kommentare) mit sehr vielen Beziehungen (Abonnements, Antworten, Playlists, Empfehlungen „nächstes Video") → hoher Beziehungsreichtum.</li>
+<li><b>Kompliziert:</b> die Elemente sind verschiedenartig: Kurzvideos, Langvideos, Livestreams, Podcasts, Kommentare, Community-Posts, Anzeigen, Kanäle.</li>
+<li><b>Dynamisch:</b> laufend kommen Videos hinzu, Abrufzahlen, Likes und Kommentare ändern ihren Zustand im Minutentakt, und der Empfehlungsalgorithmus ändert die Beziehungen zwischen Nutzer und Inhalt mit jeder Interaktion.</li>
+<li><b>Zweck- und zielorientiert:</b> Zweck (Sachziel) = Videos bereitstellen, finden und teilen; Ziele = Güte der Zweckerfüllung, z. B. hohe Verweildauer und Nutzerzufriedenheit, kurze Ladezeiten, Werbeumsatz.</li>
+<li><b>Emergente Eigenschaften:</b> Trends, Viralität und Antwortzeitverhalten zur Stoßzeit entstehen erst aus dem Zusammenwirken der Elemente; die Speicherkapazität der Server ist dagegen nicht emergent (V01 F.16–17).</li>
+</ul></div>
+<div class="box exam"><div class="box-h">Klausurfokus</div><p>Gefragt: YouTube (2024 E, 5 P.), Instagram (2024 Z, 5 P.), ChatGPT (2025 E, 10 P. „mit Beispielen"), LinkedIn (T01). Die Formulierung „Beziehen Sie sich auf die Fachbegriffe aus der Vorlesung bzw. dem Winbuch" heißt: Begriffe wie <i>Systemgrenze, Umwelt, Umweltelement, Umsystem, Schnittstelle, Teilsystem, übergeordnetes System, Beziehungsreichtum, Verschiedenartigkeit, Sachziel, emergent</i> ausdrücklich verwenden. Pro Eigenschaft: Begriff – Definition in einem Halbsatz – konkreter Beleg aus dem Fall – Urteil. Bei 10 Punkten zusätzlich Emergenz und System-Hierarchie (über-/untergeordnete Systeme) bringen.</p></div>
+<div class="box deep"><div class="box-h">Vertiefung (allgemeine Systemtheorie, nicht auf den V01-Folien)</div><p>In der allgemeinen Systemtheorie (Kybernetik) werden weitere Begriffe verwendet, die sich für Plattformen anbieten, aber als Ergänzung gekennzeichnet werden sollten: <b>Rückkopplung</b> (die Ausgabe eines Systems wirkt auf seine Eingabe zurück – das Verhalten der Nutzer ändert die Empfehlungen, die wiederum das Verhalten ändern), <b>Stabilität</b> (Fähigkeit, nach Störungen in einen Gleichgewichtszustand zurückzukehren), <b>Anpassungsfähigkeit/Lernfähigkeit</b> (ML-Modelle passen sich an), <b>deterministisch vs. stochastisch</b> (bei gleicher Eingabe gleiche bzw. nur wahrscheinliche Ausgabe – ChatGPT antwortet stochastisch). In der Klausur zuerst die fünf Vorlesungseigenschaften vollständig abarbeiten, dann ggf. einen dieser Begriffe als Zusatz.</p></div>
+
+<h3 id="k1-informationssystem">1.6 Erkenntnisobjekt Informationssystem: das MAT-System</h3>
+<div class="box def"><div class="box-h">Definition · Informationssystem</div><p>„Informationssysteme sind Mensch/Aufgabe/Technik-Systeme, kurz gesagt MAT-Systeme."</p><ul><li>Sie schließen die Weitergabe von Informationen ein!</li><li>Strukturelemente von MAT-Systemen: Mensch (M), Aufgabe (A), Informations- und Kommunikationstechnik (T)</li></ul><p class="src">V01 F.23</p></div>
+<p>Die drei Strukturelemente werden auf V01 F.24 erklärt:</p>
+<ul>
+<li><b>Mensch:</b> Menschen erfüllen Aufgaben (<b>Aufgabenträgerin</b>) und nutzen hierfür Informations- und Kommunikationstechniken.</li>
+<li><b>Aufgabe:</b> Aufgaben stellen entweder Einzelprobleme oder ganze Problembereiche in Wirtschaft und Gesellschaft dar.</li>
+<li><b>Technik:</b> Informations- und Kommunikationstechniken als integrierte Techniksysteme sowie Technologien im Sinne von Verfahren zur Systementwicklung und -einführung.</li>
+</ul>
+<p>Entscheidend ist der Kernsatz von V01 F.24: „Die Forschungen zur Wirtschaftsinformatik interessieren die <b>Beziehungen zwischen den Systemelementen, ihr Zusammenwirken und Interagieren sowie die davon ausgehenden Wirkungen</b>." Ein IS ist also nicht die Summe M + A + T, sondern deren Zusammenwirken – deshalb sind die wissenschaftlich interessanten Eigenschaften eines IS emergent (1.5).</p>
+<figure class="fig">
+<svg viewBox="0 0 640 320" role="img" aria-label="MAT-Dreieck am Beispiel YouTube: Mensch, Aufgabe und Technik stehen in wechselseitiger Beziehung; das Anwendungssystem umfasst nur die Technik">
+<defs><marker id="arr-k1e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<rect x="430" y="180" width="200" height="132" rx="8" fill="none" style="stroke:var(--accent)" stroke-dasharray="6 4"/>
+<text x="632" y="174" text-anchor="end" font-size="12" font-family="inherit" style="fill:var(--accent)">Anwendungssystem (nur T)</text>
+<circle cx="320" cy="55" r="36" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+<circle cx="130" cy="225" r="36" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+<circle cx="520" cy="225" r="36" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+<g font-family="inherit" fill="currentColor" text-anchor="middle" font-weight="bold" font-size="22">
+<text x="320" y="63">M</text><text x="130" y="233">A</text><text x="520" y="233">T</text>
+</g>
+<line x1="296" y1="82" x2="156" y2="198" stroke="currentColor" stroke-width="1.5" marker-start="url(#arr-k1e)" marker-end="url(#arr-k1e)"/>
+<line x1="344" y1="82" x2="494" y2="198" stroke="currentColor" stroke-width="1.5" marker-start="url(#arr-k1e)" marker-end="url(#arr-k1e)"/>
+<line x1="168" y1="225" x2="482" y2="225" stroke="currentColor" stroke-width="1.5" marker-start="url(#arr-k1e)" marker-end="url(#arr-k1e)"/>
+<g font-family="inherit" fill="currentColor" font-size="13">
+<text x="366" y="40" font-weight="bold">Mensch (Aufgabenträger)</text>
+<text x="366" y="58" font-size="12" style="fill:var(--muted)">Creator, Zuschauer,</text>
+<text x="366" y="74" font-size="12" style="fill:var(--muted)">Moderationsteam</text>
+<text x="130" y="280" text-anchor="middle" font-weight="bold">Aufgabe</text>
+<text x="130" y="297" text-anchor="middle" font-size="12" style="fill:var(--muted)">Videos teilen, finden,</text>
+<text x="130" y="312" text-anchor="middle" font-size="12" style="fill:var(--muted)">ansehen, bewerten</text>
+<text x="520" y="278" text-anchor="middle" font-weight="bold">IuK-Technik</text>
+<text x="520" y="294" text-anchor="middle" font-size="12" style="fill:var(--muted)">App, Server,</text>
+<text x="520" y="308" text-anchor="middle" font-size="12" style="fill:var(--muted)">Algorithmen</text>
+<text x="320" y="150" text-anchor="middle" font-size="12">Beziehungen,</text>
+<text x="320" y="166" text-anchor="middle" font-size="12">Zusammenwirken,</text>
+<text x="320" y="182" text-anchor="middle" font-size="12" style="fill:var(--accent)">= Forschungsinteresse</text>
+<text x="320" y="245" text-anchor="middle" font-size="12">Weitergabe von Informationen</text>
+</g>
+</svg>
+<figcaption>Die Strukturelemente M, A, T (V01 F.23) am Beispiel YouTube. Das Forschungsinteresse liegt auf den Beziehungen (V01 F.24); das Anwendungssystem ist nur der technische Teil des IS (V01 F.25).</figcaption>
+</figure>
+<h4 id="k1-anwendungssystem">Informationssystem vs. Anwendungssystem</h4>
+<p>Das Supermarktbeispiel (V01 F.25–26: Kasse eines Supermarkts in der Nähe des Paradeplatzes, REWE-Kassensoftware) zieht die wichtigste Abgrenzung des Kapitels:</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th>Informationssystem</th><th>Anwendungssystem</th></tr></thead><tbody>
+<tr><td>Umfang</td><td>Mensch + Aufgabe + Technik</td><td>nur die zur Aufgabe benötigte Technik (Teilsystem des IS)</td></tr>
+<tr><td>Kasse (V01 F.25)</td><td>Kassierer + „Bezahlung abwickeln" + Kasse, Kassensoftware, Kassenscanner</td><td>Kassenanwendung mit grafischer Benutzeroberfläche (GUI)</td></tr>
+<tr><td>Rolle des Menschen</td><td>Teil des Systems (Aufgabenträger)</td><td>bedient das System, ist aber <b>nicht</b> Teil davon</td></tr>
+<tr><td>YouTube</td><td>Creator/Zuschauer + Videos teilen/ansehen + Plattform</td><td>YouTube-App, Server-Software, Algorithmen</td></tr>
+</tbody></table></div>
+<p>Zwei weitere Folienbeispiele zeigen, dass IS nicht nur in Unternehmen vorkommen: <b>Privatleben</b> – eine Studentin (M) bucht eine Flixbus-Reise zu Freunden (A) über die mobile App (T) (V01 F.27); <b>Unternehmen</b> – eine Vertriebsmitarbeiterin im Backoffice (M) erstellt ein Angebot (A) mit einem CRM-System (T) (V01 F.28). Das Tutorium ergänzt das Uni-Portal (Studierende, Lehrende, Rechenzentrum – Bildung als „betriebliche Aufgabe" – Webtechnologie, Server; T01 F.34) und LinkedIn (T01 F.15).</p>
+<div class="box ex"><div class="box-h">Beispiel · „Ist ChatGPT ein Informationssystem?" (Klausur 2025 E, 5 P.)</div><p>Eine präzise Antwort trennt zwei Sichtweisen. <b>ChatGPT als Software/Sprachmodell allein</b> ist kein IS, sondern ein Anwendungssystem bzw. die Technik-Komponente – der Mensch fehlt. <b>ChatGPT im Einsatz</b> ist ein IS: Eine Studentin (M, Aufgabenträgerin) bereitet sich auf die WI-Klausur vor und lässt sich den Unterschied zwischen Komplexität und Kompliziertheit erklären (A, Einzelproblem); sie nutzt die ChatGPT-Web-App, das Sprachmodell und die Rechenzentren von OpenAI (T). Die Elemente wirken zusammen: Die Studentin formuliert einen Prompt, die Technik erzeugt eine Antwort, die Studentin bewertet sie und fragt nach – es findet eine <b>Weitergabe von Informationen</b> statt (V01 F.23), hier als Kommunikation zwischen Mensch und Maschine (V01 F.12). Fazit: Als MAT-System im Nutzungskontext ist ChatGPT ein Informationssystem.</p></div>
+<div class="box exam"><div class="box-h">Klausurfokus · Punktelogik „Ist X ein IS?"</div><p>Gefragt mit 2,5 P. (Instagram), 5 P. (YouTube, ChatGPT) und als Teil von 8 P. (Klinik-System, Probeklausur 2026). Plausible Punktelogik (Interpretation): Definition IS = MAT-System mit Folienverweis · M konkret · A konkret · T konkret (Sach- und ggf. Arbeitstechnik) · Zusammenwirken + Weitergabe von Informationen + Fazit. Für die Note 1,0 zusätzlich die Abgrenzung zum Anwendungssystem in einem Satz. Bei 2,5 Punkten genügen Definition, M/A/T in einem Satz und das Fazit.</p></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>„YouTube ist ein IS, weil es eine Software ist" – falsch begründet, denn die Software allein ist ein Anwendungssystem. Ebenso unvollständig: nur M, A, T aufzählen, ohne das <b>Zusammenwirken</b> und die <b>Weitergabe von Informationen</b> zu zeigen. Und umgekehrt: „MAT-Systeme sind immer Informationssysteme" ist <b>wahr</b>, denn IS sind per Definition MAT-Systeme (T01 F.5–6).</p></div>
+
+<h3 id="k1-informationsinfrastruktur">1.7 Erkenntnisobjekt Informationsinfrastruktur</h3>
+<div class="box def"><div class="box-h">Definition · Informationsinfrastruktur</div><p>„Informationsinfrastrukturen sind organisatorische Gesamtheiten von Informationssystemen in Wirtschaft und Verwaltung einschließlich aller Einrichtungen, Mittel und Maßnahmen, deren Verfügbarkeit und Anwendung Voraussetzung für Informationsproduktion und für Kommunikation im Unternehmen ist."</p><p class="src">V01 F.29</p></div>
+<p>Die Vorlesung nennt eine <b>Systematik aus sieben Komponenten</b> (V01 F.29; ausführlich in V06):</p>
+<ol>
+<li><b>Technische Infrastruktur</b> – Rechenzentren, Server, Netze, Endgeräte.</li>
+<li><b>Personelle Infrastruktur</b> – Wissen, Können und Fähigkeiten der beteiligten Personen (Entwickler, Data Scientists, Administratoren).</li>
+<li><b>Organisatorische Infrastruktur</b> – Aufbau-, Ablauf- und Projektorganisation.</li>
+<li><b>Räumliche Infrastruktur</b> – Orte und Gebäude (Rechenzentrumsstandorte, Büros).</li>
+<li><b>Methodische Infrastruktur und Managementsysteme</b> – Vorgehensweisen, Verfahren, Techniken (z. B. DevOps, Scrum).</li>
+<li><b>Informations- und kommunikationsrechtliche Infrastruktur</b> – Datenschutzrecht, Urheberrecht, Telemedienrecht.</li>
+<li><b>Qualitätsinfrastruktur</b> – Normen, Standards, Zertifizierung (z. B. ISO-Normen, Video-Codecs).</li>
+</ol>
+<p>Die Erläuterungen hinter den Gedankenstrichen sind Kurzfassungen aus V06 und dem Lernzettel; V01 nennt nur die Namen.</p>
+<h4 id="k1-alignment">Top-down vs. bottom-up und Business/IT-Alignment</h4>
+<p>Informationsinfrastrukturen werden <b>idealtypisch top-down</b> entworfen – die Unternehmensziele legen die Infrastruktur fest. Als <b>Forschungsfrage</b> steht im Vordergrund, „wie diese Strukturen so geplant, realisiert, überwacht und gesteuert werden können, dass sie bestmöglich zur Erreichung der Unternehmensziele beitragen". In der Fachliteratur heißt das <b>Business/IT-Alignment</b> = <i>wechselseitiges</i> Ausrichten von Unternehmens- und IT-Zielen. <b>In der Praxis</b> werden Informationsinfrastrukturen dagegen oft <b>bottom-up</b> entwickelt – als Zusammensetzung aus nicht immer zueinander passenden Teilen (V01 F.30).</p>
+<div class="box ex"><div class="box-h">Beispiel · Bottom-up im Klinikum</div><p>Ein Klinikum hat über Jahrzehnte für Labor, Radiologie, Abrechnung und Pflege jeweils eigene Systeme beschafft. Die Notaufnahme sieht deshalb über 200 Laborbefunde, aber nicht, ob der Patient in den letzten Tagen neue Medikamente erhalten hat (Probeklausur 2026). Das ist das typische Ergebnis einer bottom-up gewachsenen II. Ein top-down-Ansatz würde vom Ziel „sichere Medikation in Minuten" ausgehen und die Systeme daran ausrichten (Business/IT-Alignment).</p></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Business/IT-Alignment ist <b>wechselseitig</b>: nicht nur „IT folgt dem Business", sondern auch „neue IT-Möglichkeiten verändern die Unternehmensziele" (vgl. Innovationspotenzial, V01 F.14).</p></div>
+
+<h3 id="k1-informationsfunktion">1.8 Erkenntnisobjekt Informationsfunktion</h3>
+<div class="box def"><div class="box-h">Definition · Informationsfunktion</div><p>„Die Informationsfunktion umfasst die betrieblichen Aufgaben, deren Zweck die Produktion von Information ist und deren Bereitstellung durch Kommunikation erfolgt, mit anderen Worten die Informations- und Kommunikationsaufgaben oder kurz die Informationsaufgaben."</p><p>Bereitstellung zum richtigen Zeitpunkt · der richtigen Informationen · in der richtigen Menge · am richtigen Ort · in der erforderlichen Zeit.</p><p class="src">V01 F.31</p></div>
+<p>Die fünf „richtig"-Kriterien sind ein hervorragendes Prüfraster für jeden Fall: Im Klinik-Fall der Probeklausur sind die Informationen zwar vorhanden, aber nicht in der richtigen Menge (über 200 Laborbefunde = Informationsüberflutung) und nicht vollständig (neue Medikamente fehlen) – die Informationsfunktion wird also schlecht erfüllt.</p>
+<p>Die Informationsfunktion ist eine <b>Universalfunktion</b> – <b>weder Querschnitts- noch betriebliche Grundfunktion</b> (V01 F.32). Grundfunktionen sind die Phasen der Leistungserstellung (Beschaffung, Produktion, Absatz), Querschnittsfunktionen ziehen sich durch alle Grundfunktionen (Personalwesen, Finanz- und Rechnungswesen). Die Informationsfunktion steckt in <i>allen</i> davon: Jede Grund- und jede Querschnittsfunktion produziert und benötigt Informationen.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 290" role="img" aria-label="Informationsfunktion als Universalfunktion, die in allen Grund- und Querschnittsfunktionen enthalten ist">
+<rect x="170" y="80" width="400" height="38" style="fill:var(--surface-2)" stroke="currentColor" stroke-dasharray="4 3"/>
+<rect x="170" y="150" width="400" height="38" style="fill:var(--surface-2)" stroke="currentColor" stroke-dasharray="4 3"/>
+<rect x="220" y="40" width="70" height="200" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+<rect x="335" y="40" width="70" height="200" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+<rect x="450" y="40" width="70" height="200" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+<g style="stroke:var(--accent)" stroke-width="5">
+<line x1="255" y1="48" x2="255" y2="232"/><line x1="370" y1="48" x2="370" y2="232"/><line x1="485" y1="48" x2="485" y2="232"/>
+<line x1="178" y1="99" x2="562" y2="99"/><line x1="178" y1="169" x2="562" y2="169"/>
+</g>
+<g font-family="inherit" fill="currentColor" font-size="13">
+<text x="255" y="30" text-anchor="middle">Beschaffung</text>
+<text x="370" y="30" text-anchor="middle">Produktion</text>
+<text x="485" y="30" text-anchor="middle">Absatz</text>
+<text x="160" y="104" text-anchor="end">Personalwesen</text>
+<text x="160" y="166" text-anchor="end">Finanz- und</text>
+<text x="160" y="182" text-anchor="end">Rechnungswesen</text>
+</g>
+<rect x="40" y="260" width="22" height="12" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+<text x="68" y="271" font-size="12" font-family="inherit" fill="currentColor">Grundfunktion</text>
+<rect x="190" y="260" width="22" height="12" style="fill:var(--surface-2)" stroke="currentColor" stroke-dasharray="4 3"/>
+<text x="218" y="271" font-size="12" font-family="inherit" fill="currentColor">Querschnittsfunktion</text>
+<line x1="380" y1="266" x2="404" y2="266" style="stroke:var(--accent)" stroke-width="5"/>
+<text x="410" y="271" font-size="12" font-family="inherit" fill="currentColor">Informationsfunktion (überall)</text>
+</svg>
+<figcaption>Nach V01 F.32: Die Informationsfunktion (Akzentlinien) durchzieht jede Grundfunktion (Säulen) und jede Querschnittsfunktion (Zeilen) – sie ist deshalb eine Universalfunktion. „Absatz" ergänzt das „…" der Folie.</figcaption>
+</figure>
+<p>Mit der Informationsfunktion beschäftigen sich auch <b>BWL, Informationswissenschaft und Kognitionspsychologie</b>. Der <b>Fokus der WI</b> liegt auf Informations- und Kommunikationsprozessen zwischen Menschen als Aufgabenträgern in arbeitsteiligen Prozessen, bei denen die Aufgabenträger zur Aufgabenerfüllung Informationen benötigen (V01 F.33).</p>
+<div class="box ex"><div class="box-h">Beispiel · IS, II und IF an LinkedIn (T01 F.15)</div><p><b>IS:</b> Mensch = Privatpersonen, bekannte Personen, Unternehmen und Marken; Aufgabe = Teilen von Beiträgen, Vernetzung im Business-Umfeld, Austausch von Nachrichten; Technik = Webserver und Rechenzentren. <b>II:</b> Computer für den Zugang, Netzwerk, Server, Programmierer, Geschäftsräume. <b>IF:</b> Vernetzung zwischen Privatpersonen und Unternehmen (genauer: die Bereitstellung der richtigen Kontakte, Jobangebote und Beiträge zur richtigen Zeit). Fazit: LinkedIn deckt alle drei Erkenntnisobjekte ab.</p></div>
+
+<h3 id="k1-teilgebiete">1.9 Teilgebiete des Gegenstandsbereichs und Analyseebenen</h3>
+<p>Wenn der Gegenstandsbereich einer Wissenschaft einen gewissen Umfang bzw. die wissenschaftliche Gemeinschaft eine gewisse Größe erreicht hat, erfolgt meist eine <b>Gliederung in Teilgebiete</b>. Da die WI eine noch recht junge Disziplin ist, ist dieser Prozess nicht abgeschlossen; die Strukturen verändern sich weiterhin (V01 F.34). Die Vorlesung zeigt drei Gliederungsmöglichkeiten:</p>
+<ol>
+<li><b>Erkenntnisobjekte × Wissenschaftsaufgaben</b> (V01 F.35): Jedes der drei Erkenntnisobjekte (IF, IS, II) kann beschrieben, erklärt, prognostiziert und gestaltet werden – 3 × 4 = 12 Teilgebiete.</li>
+<li><b>Analyseebenen</b> (V01 F.36): Gesellschaft – Organisation bzw. Organisationsteile – Gruppe – Individuum. „Die Analyseebenen sind unterschiedliche <b>Aggregationen des Elements Mensch</b> im bereits eingeführten MAT-System." Sie werden den Erkenntnisobjekten gegenübergestellt.</li>
+<li><b>MAT-Dimensionen</b> (V01 F.37): Direkte Orientierung am MAT-System; konkrete Teilgebiete werden an M, A und T als Dimensionen eines Würfels beschrieben. Beispiel auf der Folie: <b>Usability Engineering</b> liegt im Würfel als Quader, der die Dimensionen Aufgabe, IuK-Technik und Mensch verbindet.</li>
+</ol>
+<figure class="fig">
+<svg viewBox="0 0 640 250" role="img" aria-label="Gliederung der Teilgebiete: Analyseebenen als Aggregationen des Menschen und Matrix aus Erkenntnisobjekten und Wissenschaftsaufgaben">
+<defs><marker id="arr-k1f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<text x="110" y="22" text-anchor="middle" font-size="13" font-weight="bold" font-family="inherit" fill="currentColor">Analyseebene</text>
+<rect x="45" y="36" width="140" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="45" y="80" width="140" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="45" y="124" width="140" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="45" y="168" width="140" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+<g font-size="12" font-family="inherit" fill="currentColor" text-anchor="middle">
+<text x="115" y="58">Gesellschaft</text><text x="115" y="102">Organisation</text><text x="115" y="146">Gruppe</text><text x="115" y="190">Individuum</text>
+</g>
+<line x1="28" y1="202" x2="28" y2="40" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1f)"/>
+<text x="20" y="122" transform="rotate(-90 20 122)" text-anchor="middle" font-size="11" font-family="inherit" style="fill:var(--accent)">Aggregation „Mensch"</text>
+<line x1="192" y1="120" x2="228" y2="120" stroke="currentColor" marker-start="url(#arr-k1f)" marker-end="url(#arr-k1f)"/>
+<rect x="240" y="30" width="110" height="30" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="350" y="30" width="90" height="30" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="440" y="30" width="90" height="30" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="530" y="30" width="90" height="30" style="fill:var(--surface-2)" stroke="currentColor"/>
+<g font-size="12" font-family="inherit" fill="currentColor" text-anchor="middle">
+<text x="295" y="50" font-weight="bold" font-size="11">Aufgabe \ Objekt</text>
+<text x="395" y="50" font-weight="bold">IF</text><text x="485" y="50" font-weight="bold">IS</text><text x="575" y="50" font-weight="bold">II</text>
+</g>
+<g fill="none" stroke="currentColor">
+<rect x="240" y="60" width="110" height="40"/><rect x="350" y="60" width="90" height="40"/><rect x="440" y="60" width="90" height="40"/><rect x="530" y="60" width="90" height="40"/>
+<rect x="240" y="100" width="110" height="40"/><rect x="350" y="100" width="90" height="40"/><rect x="530" y="100" width="90" height="40"/>
+<rect x="240" y="140" width="110" height="40"/><rect x="350" y="140" width="90" height="40"/><rect x="440" y="140" width="90" height="40"/><rect x="530" y="140" width="90" height="40"/>
+<rect x="240" y="180" width="110" height="40"/><rect x="350" y="180" width="90" height="40"/><rect x="530" y="180" width="90" height="40"/>
+</g>
+<rect x="440" y="100" width="90" height="40" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<rect x="440" y="180" width="90" height="40" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<rect x="440" y="60" width="90" height="40" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<g font-size="12" font-family="inherit" fill="currentColor">
+<text x="250" y="85">Beschreibung</text><text x="250" y="125">Erklärung</text><text x="250" y="165">Prognose</text><text x="250" y="205">Gestaltung</text>
+</g>
+<g font-size="11" font-family="inherit" fill="currentColor" text-anchor="middle">
+<text x="485" y="84">Umfrage F.77</text><text x="485" y="124">TAM F.53</text><text x="485" y="204">Prototyp F.80</text>
+</g>
+<text x="430" y="242" text-anchor="middle" font-size="12" font-family="inherit" style="fill:var(--muted)">3 Erkenntnisobjekte × 4 Wissenschaftsaufgaben = 12 Teilgebiete</text>
+</svg>
+<figcaption>Links V01 F.36 (Analyseebenen als Aggregationen des Elements Mensch), rechts V01 F.35 (Erkenntnisobjekte × Wissenschaftsaufgaben). Die markierten Zellen zeigen Folienbeispiele aus Kapitel 2 als Einordnungshilfe (eigene Zuordnung).</figcaption>
+</figure>
+<div class="box exam"><div class="box-h">Klausurfokus</div><p>Die Analyseebenen tauchen bereits in der WI-Definition auf (individuell, Gruppe, Organisation, Gesellschaft; V01 F.13). In Fallaufgaben lohnt ein Satz wie „Die Untersuchung liegt auf der Analyseebene Individuum (einzelne Beschäftigte und ihr digitaler Stress), lässt sich aber auf die Organisationsebene aggregieren (Produktivität des Unternehmens)". Das zeigt Begriffsbeherrschung, besonders in der Probeklausur-Konstellation (Forschungsteam untersucht Beschäftigte eines Unternehmens).</p></div>
+
+<h3 id="k1-wissenschaftstypen">1.10 WI als Real-, Formal- und Ingenieurwissenschaft</h3>
+<p>Kapitel 2 der Vorlesung fragt, welche Art von Wissenschaft die WI ist. Die Vorlesung unterscheidet drei Typen (V01 F.40–42):</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th></th><th>Empirische Wissenschaft (Realwissenschaft)</th><th>Formalwissenschaft</th><th>Ingenieurwissenschaft</th></tr></thead><tbody>
+<tr><td>Gegenstandsbereich</td><td>die Wirklichkeit</td><td>ein Gebilde der Gedankenwelt des Menschen</td><td>Konstruktion und Rekonstruktion von Artefakten (insbes. MAT-Systemen) + Methodik zur Systementwicklung inkl. Instrumentarium</td></tr>
+<tr><td>Prüfung der Aussagen</td><td>haben Bezug zur Wirklichkeit und können an der Wirklichkeit überprüft werden</td><td>ohne Bezug zur Wirklichkeit als wahr/falsch entscheidbar – allein aufgrund ihrer logischen Form und ihrer Definitionen</td><td>praktische Verwertbarkeit (angewandte Wissenschaft)</td></tr>
+<tr><td>Beispiel in der WI</td><td>TAM-Studie: Nutzen ChatGPT-Nutzer das System häufiger, wenn sie es als nützlich wahrnehmen?</td><td>Logik, formale Modelle, Algorithmen-Korrektheit, Datenbank-Relationenalgebra</td><td>Entwicklung eines Prototyps, eines Vorgehensmodells</td></tr>
+<tr><td>Folie</td><td>V01 F.40</td><td>V01 F.41</td><td>V01 F.42</td></tr>
+</tbody></table></div>
+<p>Die WI ist <b>primär Realwissenschaft</b>, weil ihre Erkenntnisobjekte (IS, II, IF) Teile der Wirklichkeit sind und ihre Kernaufgaben (Erkenntnisgewinnung/-verwertung) primär empirischen Bezug besitzen (T01 F.8). Sie ist „zudem auch eine Ingenieurwissenschaft" und damit eine <b>angewandte Wissenschaft</b>: Forschung und Entwicklung werden meist im Hinblick auf praktisch Verwertbares ausgerichtet (V01 F.42). Formalwissenschaftliche Elemente (Logik, Mathematik) nutzt sie als Werkzeug.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 260" role="img" aria-label="Die Wirtschaftsinformatik integriert Realwissenschaft, Formalwissenschaft und Ingenieurwissenschaft mit Schwerpunkt Realwissenschaft">
+<defs><marker id="arr-k1g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<rect x="15" y="15" width="190" height="96" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+<rect x="225" y="15" width="190" height="96" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="435" y="15" width="190" height="96" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<g font-family="inherit" fill="currentColor" text-anchor="middle">
+<text x="110" y="37" font-size="13" font-weight="bold">Realwissenschaft</text>
+<text x="110" y="56" font-size="12">(empirisch)</text>
+<text x="110" y="76" font-size="12">Gegenstand: Wirklichkeit</text>
+<text x="110" y="94" font-size="12">an Wirklichkeit prüfbar</text>
+<text x="320" y="37" font-size="13" font-weight="bold">Formalwissenschaft</text>
+<text x="320" y="58" font-size="12">Gegenstand: Gedankenwelt</text>
+<text x="320" y="76" font-size="12">wahr/falsch allein durch</text>
+<text x="320" y="94" font-size="12">logische Form + Definition</text>
+<text x="530" y="37" font-size="13" font-weight="bold">Ingenieurwissenschaft</text>
+<text x="530" y="58" font-size="12">Konstruktion/Rekonstruktion</text>
+<text x="530" y="76" font-size="12">von Artefakten (MAT)</text>
+<text x="530" y="94" font-size="12">angewandt: Verwertbares</text>
+</g>
+<line x1="110" y1="113" x2="250" y2="168" stroke-width="3" style="stroke:var(--accent)" marker-end="url(#arr-k1g)"/>
+<line x1="320" y1="113" x2="320" y2="166" stroke="currentColor" stroke-dasharray="4 3" marker-end="url(#arr-k1g)"/>
+<line x1="530" y1="113" x2="390" y2="168" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1g)"/>
+<g font-size="12" font-family="inherit" fill="currentColor">
+<text x="100" y="150" style="fill:var(--accent)">primär (T01 F.8)</text>
+<text x="328" y="146">als Werkzeug</text>
+<text x="470" y="150">„zudem auch" (F.42)</text>
+</g>
+<rect x="200" y="172" width="240" height="56" rx="8" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="2"/>
+<text x="320" y="196" text-anchor="middle" font-size="14" font-weight="bold" font-family="inherit" fill="currentColor">Wirtschaftsinformatik</text>
+<text x="320" y="216" text-anchor="middle" font-size="12" font-family="inherit" fill="currentColor">Integrationsdisziplin</text>
+<text x="320" y="250" text-anchor="middle" font-size="12" font-family="inherit" style="fill:var(--muted)">Pfeilstärke = Gewicht in der WI (Lesehilfe)</text>
+</svg>
+<figcaption>Die WI ist primär Realwissenschaft, zudem Ingenieurwissenschaft (angewandt) und nutzt formalwissenschaftliche Mittel – sie integriert die drei Orientierungen (Lernzettel: „Integrationsdisziplin").</figcaption>
+</figure>
+<div class="box deep"><div class="box-h">Vertiefung · Integrationsdisziplin</div><p>Der Begriff „Integrationsdisziplin" steht nicht wörtlich auf den V01-Folien, aber im Lernzettel und in der Literatur zum Fach (z. B. Heinrich 2005, „Forschungsmethodik einer Integrationsdisziplin", zitiert in V02). Gemeint ist zweierlei: Die WI integriert (1) die Orientierungen Real-, Formal- und Ingenieurwissenschaft und (2) Wissen aus Mutterdisziplinen – vor allem BWL und Informatik, aber auch Psychologie und Informationswissenschaft (vgl. V01 F.33). Die „Doppelgesichtigkeit" aus Erkenntnisgewinnung und Erkenntnisverwertung (V01 F.87, V03) ist eine Folge davon.</p></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>W/F-Aufgabe T01 1c: „Die WI ist hauptsächlich an der Formalwissenschaft orientiert" → <b>falsch</b>. Begründung: Die Erkenntnisobjekte IS, II, IF sind Teile der Wirklichkeit, die Wissenschaftsziele haben primär empirischen Bezug; die WI ist primär Realwissenschaft und zudem Ingenieurwissenschaft (T01 F.8, V01 F.40–42).</p></div>
+
+<h3 id="k1-wissenschaftskriterien">1.11 Wissenschaftskriterien</h3>
+<p>Wann ist eine Aussage wissenschaftlich? Die Vorlesung nennt vier <b>Kriterien, denen eine Aussage standhalten muss</b> (V01 F.43): <b>Überprüfbarkeit, Ableitungsrichtigkeit, Widerspruchsfreiheit, Systematisierbarkeit</b>. Hinzu kommt die <b>Verständlichkeit</b> als Voraussetzung, damit die vier Kriterien überhaupt erfüllt werden können (V01 F.56; im Tutorium als senkrechte Klammer neben den vier Kriterien dargestellt, T01 F.10).</p>
+<figure class="fig">
+<svg viewBox="0 0 640 260" role="img" aria-label="Prüfschema der vier Wissenschaftskriterien mit Verständlichkeit als übergreifender Voraussetzung">
+<rect x="20" y="8" width="600" height="32" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<text x="320" y="29" text-anchor="middle" font-size="14" font-weight="bold" font-family="inherit" fill="currentColor">Ist die Aussage wissenschaftlich? (V01 F.43)</text>
+<rect x="20" y="52" width="470" height="44" rx="5" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="20" y="104" width="470" height="44" rx="5" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="20" y="156" width="470" height="44" rx="5" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="20" y="208" width="470" height="44" rx="5" style="fill:var(--surface-2)" stroke="currentColor"/>
+<g font-family="inherit" fill="currentColor" font-size="13">
+<text x="32" y="79" font-weight="bold">Überprüfbarkeit</text>
+<text x="32" y="131" font-weight="bold">Ableitungsrichtigkeit</text>
+<text x="32" y="183" font-weight="bold">Widerspruchsfreiheit</text>
+<text x="32" y="235" font-weight="bold">Systematisierbarkeit</text>
+</g>
+<g font-family="inherit" fill="currentColor" font-size="12">
+<text x="215" y="79">durch Dritte an Wirklichkeit prüfbar?</text>
+<text x="215" y="131">nichts vorausgesetzt, was nicht dasteht?</text>
+<text x="215" y="183">keine Aussagen im Widerspruch?</text>
+<text x="215" y="235">Aussagensystem statt Einzelaussage?</text>
+</g>
+<rect x="505" y="52" width="115" height="200" rx="5" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<text x="560" y="152" transform="rotate(-90 560 152)" text-anchor="middle" font-size="14" font-weight="bold" font-family="inherit" fill="currentColor">Verständlichkeit</text>
+<text x="590" y="152" transform="rotate(-90 590 152)" text-anchor="middle" font-size="11" font-family="inherit" fill="currentColor">Voraussetzung (V01 F.56)</text>
+</svg>
+<figcaption>Die vier Kriterien sind der Prüfkatalog; Verständlichkeit (Präzision, Fachsprache) ist die übergreifende Voraussetzung, ohne die keines der vier festgestellt werden kann (nach V01 F.43, F.56 und T01 F.10).</figcaption>
+</figure>
+
+<h4 id="k1-ueberpruefbarkeit">Überprüfbarkeit</h4>
+<div class="box def"><div class="box-h">Definition · Überprüfbarkeit</div><p>„Wissenschaftliche Aussagen sollen sich durch Erfahrung an der Wirklichkeit überprüfen lassen, also als wahr oder falsch entscheidbar sein."</p><ul><li>Kann eine Aussage durch Überprüfung einer Hypothese nicht widerlegt werden, dann gilt sie so lange als wahr, bis sie durch eine neuerliche Überprüfung falsifiziert wird.</li><li>Jeder Erkenntnisstand ist immer nur ein vorläufiger.</li><li>Die Überprüfung einer Aussage muss durch Dritte möglich sein: <b>intersubjektive Überprüfbarkeit</b>, <b>intersubjektive Gültigkeit</b>.</li></ul><p class="src">V01 F.45</p></div>
+<p>Folienbeispiel (V01 F.46): Die Hypothese „Unternehmen mit einer Digitalisierungsstrategie sind erfolgreicher als Unternehmen ohne eine solche Strategie" kann mit anerkannten empirischen Methoden überprüft werden, Dritte können sie in <b>Replikationsstudien</b> erneut prüfen → Überprüfbarkeit liegt vor. Gegenbeispiel aus dem Tutorium: „Ein IT-Projekt benötigt mindestens zwei Projektleiter" ist kaum erfahrbar oder beobachtbar, also kaum überprüfbar (T01 F.12).</p>
+
+<h4 id="k1-ableitungsrichtigkeit">Ableitungsrichtigkeit</h4>
+<div class="box def"><div class="box-h">Definition · Ableitung und Ableitungsrichtigkeit</div><p>„Ableitung ist eine Folge von Aussagen oder Sätzen, die mit Prämissen oder Axiomen beginnt und dann schrittweise Aussagen anfügt, die aus vorangegangenen Aussagen logisch abgeleitet werden können."</p><p>„Eine Richtigkeit der Ableitung liegt dann vor, wenn in den Aussagen an keiner Stelle etwas vorausgesetzt wird, was nicht in vorhergehenden Aussagen bereits enthalten ist oder ausdrücklich vorausgesetzt wurde."</p><p class="src">V01 F.47</p></div>
+<p>Folienbeispiel (V01 F.48): <b>Prämisse 1:</b> Das Arbeiten mit unzuverlässigen generativen KI-Systemen (Halluzinationen) geht beim Benutzenden mit erhöhten Stresshormonwerten einher. <b>Prämisse 2:</b> Der KI-Chatbot Galaxy ist im konkreten Anwendungsfall unzuverlässig. <b>Konklusion:</b> Benutzende von Galaxy weisen in diesem Anwendungsfall erhöhte Stresshormonwerte auf. Die Konklusion enthält nichts, was nicht in den Prämissen steht → ableitungsrichtig. Hätte man gefolgert „…und kündigen deshalb häufiger", wäre etwas Neues vorausgesetzt worden → nicht ableitungsrichtig.</p>
+
+<h4 id="k1-widerspruchsfreiheit">Widerspruchsfreiheit</h4>
+<div class="box def"><div class="box-h">Definition · Widerspruchsfreiheit</div><p>„Eine Gesamtheit von Aussagen darf nicht zwei (oder mehr) Aussagen enthalten, die im Widerspruch zueinanderstehen; sie darf auch keine sich selbst widersprechende Aussage enthalten."</p><ul><li>Die Forderung folgt aus dem Ziel der Erkenntnisgewinnung; dieses theoretische Wissenschaftsziel ist unmöglich zu erreichen, wenn sich zwei Aussagen widersprechen.</li><li>Dem <b>Widerspruchsprinzip</b> zufolge ist zumindest eine der beiden Aussagen falsch.</li></ul><p class="src">V01 F.49</p></div>
+<p>Folienbeispiel (V01 F.50): Aussage 1 „Unternehmen, die für Marketingzwecke soziale Medien einsetzen, sind erfolgreicher" und Aussage 2 „Zwischen Unternehmen, die Facebook einsetzen bzw. nicht einsetzen, besteht kein Erfolgsunterschied" widersprechen sich, da Facebook ein Element der Menge „soziale Medien" ist. Eine <b>sich selbst widersprechende</b> Aussage wäre: „Unternehmen setzen für Marketingzwecke Facebook ein, soziale Medien jedoch nicht." Rhetorische Selbstwidersprüche (<b>Oxymoron</b>: „Weniger ist mehr", „bittersüß") sollten in wissenschaftlichen Texten sparsam eingesetzt werden (V01 F.51).</p>
+
+<h4 id="k1-systematisierbarkeit">Systematisierbarkeit und das TAM</h4>
+<div class="box def"><div class="box-h">Definition · Systematisierbarkeit</div><p>„Eine Menge von Aussagen ist noch keine Theorie; die Aussagen erfordern einen Klassifikations- oder Begründungszusammenhang. Daher dürfen die Aussagen nicht nur singuläre Aussagen sein, sondern es muss sich um eine Menge oder ein System von Aussagen handeln. Es gehört zum Wesen der Wissenschaft, dass sich Aussagen in einem Aussagensystem auch auf unterschiedliche Abstraktionsebenen beziehen."</p><p class="src">V01 F.52</p></div>
+<p>Als Beispiel dient das <b>Technologieakzeptanzmodell (TAM)</b> nach Davis 1989 (V01 F.53): <i>Perceived Ease of Use</i> wirkt positiv (+) auf <i>Perceived Usefulness</i> und auf <i>Intention to Use</i>; <i>Perceived Usefulness</i> wirkt positiv auf <i>Intention to Use</i>; <i>Intention to Use</i> wirkt positiv auf <i>Actual Use</i>; <i>Age</i> moderiert (gestrichelter Pfeil) den Zusammenhang zwischen Intention und Actual Use. Das TAM enthält zahlreiche singuläre Aussagen wie „Das Benutzergeschlecht verändert den Einfluss der wahrgenommenen Nützlichkeit auf die beabsichtigte Systemnutzung" und „Das Alter verändert diesen Einfluss". Auf einer <b>höheren Abstraktionsstufe</b> lassen sich Geschlecht und Alter zur Kategorie „demografische Faktoren" zusammenfassen: „Demografische Faktoren verändern den Einfluss der wahrgenommenen Nützlichkeit eines Systems auf die beabsichtigte Systemnutzung" (V01 F.54). Anwendung (V01 F.55): Viele Studierende nutzen ChatGPT zum Lernen, weil es <b>nützlich</b> (hilft schnell beim Verstehen) <b>und einfach zu bedienen</b> ist (Frage eintippen, ohne Einarbeitung).</p>
+<div class="box ex"><div class="box-h">Beispiel · TAM-Paper als wissenschaftliche Arbeit (T01 F.35–37)</div><p>Die Veröffentlichung von Davis (1989) erfüllt die Kriterien: Anwendung empirischer Methoden macht die Aussagen für Dritte überprüfbar; die Aussagen werden schrittweise abgeleitet; sie sind widerspruchsfrei; ein systematisches Vorgehen (Aufstellen und Prüfen von Hypothesen) liegt vor; Formulierungen sind präzise und fachsprachlich. Der Ansatz ist <b>realwissenschaftlich</b>: Wirklichkeit als Gegenstandsbereich, falsifizierbare Aussagen, Praxisbezug durch Studien.</p></div>
+
+<h4 id="k1-verstaendlichkeit">Verständlichkeit</h4>
+<div class="box def"><div class="box-h">Definition · Verständlichkeit</div><p>„Je verständlicher die Aussagen sind, umso größer ist die Wahrscheinlichkeit, dass der erhobene Erkenntnisanspruch als berechtigt oder nicht berechtigt festgestellt werden kann."</p><ul><li>Damit die vorgenannten Kriterien erfüllt werden können, ist es bedeutsam, dass wissenschaftliche Aussagen verständlich sind.</li><li>Größtmögliche Präzision der sprachlichen Ausdrücke liegt im Interesse einer unkomplizierten und schnellen Feststellung des Wahrheitswerts.</li><li>Das zeigt die Bedeutung der <b>Fachsprache</b>, denn nur sie kann größtmögliche Präzision sichern.</li></ul><p class="src">V01 F.56</p></div>
+<p>Folienbeispiel (V01 F.57): Aussage A „Wenn viele Studierende in einer Vorlesung fehlen, sinkt meist die Durchfallquote in der Klausur" ist verständlicher als Aussage B „Wenn nicht so viele da sind, geht's meistens ganz gut aus", weil <b>Subjekt und Objekt spezifiziert</b> werden.</p>
+
+<h4 id="k1-normativ">Normative Aussagen</h4>
+<div class="box def"><div class="box-h">Beispiel der Vorlesung · normative Aussage</div><p>„Jedes Unternehmen soll eine Digitalisierungsstrategie entwickeln" ist <b>keine wissenschaftliche Aussage, sondern eine Verhaltensanweisung an das Management (normative Aussage)</b>. Wenn empirische Belege für die Vorteilhaftigkeit von Digitalisierungsstrategien vorliegen, wird die Aussage aus wissenschaftlicher Sicht <b>zweckmäßig</b> – das ändert aber nichts daran, dass sie nicht wissenschaftlich ist, <b>es sei denn</b>, wir sind in der Lage, die damit verbundenen Gründe und Mechanismen zu erklären.</p><p class="src">V01 F.44</p></div>
+<p>Woran erkennt man normative Aussagen? An Wörtern wie <i>soll, sollte, muss, jedes Unternehmen sollte, man sollte</i>. Sie beziehen sich auf etwas, das (noch) nicht ist, sondern sein soll – ihr Wahrheitswert ist nicht feststellbar (→ Sollens-Wissenschaft, 1.14).</p>
+<div class="box exam"><div class="box-h">Klausurfokus · Probeklausur 2026, Aufgabe 1a (10 P.)</div><p>„KI-Assistenten steigern immer die Produktivität. Jedes Unternehmen sollte sie deshalb sofort einführen." – Prüfen anhand von <b>drei</b> Wissenschaftskriterien, Urteil, und <b>ausdrücklich auf den zweiten Satz eingehen</b>. Musterantwort:</p>
+<ol>
+<li><b>Überprüfbarkeit (V01 F.45):</b> Satz 1 ist eine Allaussage („immer"). Prinzipiell ist Produktivität messbar (z. B. bearbeitete Vorgänge pro Stunde), die Aussage also überprüfbar – aber nur, wenn „Produktivität" und „KI-Assistent" präzisiert werden. Schon der Fall liefert Gegenbelege: Beschäftigte klagen über Unterbrechungen und fehlerhafte Antworten, die sie mühsam prüfen müssen. Eine einzige Gegenbeobachtung falsifiziert ein „immer". Zudem fehlt die <b>Konditionalität</b> (V01 F.60): Unter welchen Bedingungen (Aufgabentyp, Qualifikation, Systemzuverlässigkeit) soll der Effekt gelten?</li>
+<li><b>Ableitungsrichtigkeit (V01 F.47):</b> Satz 2 wird mit „deshalb" aus Satz 1 abgeleitet. Dabei werden Prämissen vorausgesetzt, die nirgends genannt sind: dass Produktivitätssteigerung für jedes Unternehmen das maßgebliche Ziel ist, dass Kosten, Datenschutz und digitaler Stress nicht dagegen sprechen, dass „sofort" sinnvoll ist. Außerdem folgt aus einer Seins-Aussage („steigern") keine Sollens-Aussage („sollte") – die Ableitung ist nicht richtig.</li>
+<li><b>Widerspruchsfreiheit (V01 F.49):</b> Die Gesamtheit der Aussagen im Fall enthält einen Widerspruch: „KI-Assistenten steigern immer die Produktivität" vs. die Beobachtung „Andere Beschäftigte werden durch Hinweise und Fehler gebremst". Mindestens eine der Aussagen ist falsch – angesichts der Beobachtungen die Allaussage.</li>
+<li><i>(Alternativ/zusätzlich)</i> <b>Systematisierbarkeit (V01 F.52):</b> eine singuläre Behauptung ohne Begründungszusammenhang (keine Theorie, z. B. kein Bezug auf TAM oder Forschung zu digitalem Stress), keine Abstraktionsebenen. <b>Verständlichkeit (V01 F.56):</b> „Produktivität", „KI-Assistent", „sofort" sind unpräzise.</li>
+<li><b>Zweiter Satz:</b> „Jedes Unternehmen sollte sie sofort einführen" ist eine <b>normative Aussage</b>, eine Verhaltensanweisung an das Management (V01 F.44), also Gegenstand einer Sollens-Wissenschaft; Normen können streng genommen nicht als wissenschaftlich bezeichnet werden, da ihr Wahrheitswert (noch) nicht feststellbar ist (V01 F.64). Selbst bei empirischen Belegen würde sie nur <i>zweckmäßig</i>, nicht wissenschaftlich.</li>
+<li><b>Urteil:</b> Die Aussage ist <b>nicht wissenschaftlich</b>. Da die Geschäftsführerin keinen Wissenschaftsanspruch erhebt, ist sie <b>nicht-wissenschaftlich</b> (kein Werturteil), aber nicht „unwissenschaftlich" (V01 F.61, F.63). <b>Wissenschaftliche Umformulierung</b> als Hypothese: „Bei Sachbearbeitern eines mittelständischen Unternehmens geht die Nutzung eines KI-Assistenten für Routineanfragen mit einer höheren Zahl bearbeiteter Vorgänge pro Stunde einher; dieser Zusammenhang wird durch die wahrgenommene Zuverlässigkeit des Assistenten verstärkt."</li>
+</ol></div>
+
+<h3 id="k1-wissenschaftlichkeit">1.12 Objekte der Wissenschaftlichkeit und Forderungen an wissenschaftliches Arbeiten</h3>
+<p>Wissenschaftlich (oder nicht) können drei <b>Objekte</b> sein: <b>Arbeitsergebnis, Arbeitsprozess und Arbeitshaltung</b>. Arbeitshaltung und Arbeitsprozess sind Voraussetzung für wissenschaftliche Arbeitsergebnisse. Die wissenschaftliche Arbeitshaltung lautet: <b>„Prüfe alles, und verwende was gut ist."</b> Die <b>Fälschung</b> von Forschungsergebnissen verdient nicht einmal das Prädikat unwissenschaftlich, <b>sondern ist Betrug</b>. Als <b>Missachtungssyndrom</b> (auf der Folie „Misachtungssyndrom") bezeichnet die Vorlesung das bewusste Ignorieren oder unbeabsichtigte Nichtberücksichtigen vorhandener wissenschaftlicher Fachliteratur (V01 F.58).</p>
+<p>Vier <b>Forderungen an wissenschaftliches Arbeiten</b> gelten im Allgemeinen als verbindlich (V01 F.59–60):</p>
+<ul>
+<li><b>Vorurteilsfreiheit:</b> Alles kann und muss zum Gegenstand wissenschaftlicher Untersuchung werden, was zum Gegenstandsbereich der betreffenden Wissenschaft gehört; es darf grundsätzlich nichts ausgeschlossen werden.</li>
+<li><b>Öffentlichkeit:</b> Jeder ausreichend qualifizierten Person muss es möglich sein, einen erhobenen Erkenntnisanspruch zu überprüfen.</li>
+<li><b>Provisorische Gültigkeit:</b> Keine wissenschaftliche Aussage ist endgültig.</li>
+<li><b>Konditionalität:</b> Eine wissenschaftliche Aussage ist unter bestimmten Voraussetzungen und Bedingungen gültig; diese müssen explizit angegeben werden.</li>
+</ul>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Wissenschafts<b>kriterien</b> (für Aussagen: Überprüfbarkeit, Ableitungsrichtigkeit, Widerspruchsfreiheit, Systematisierbarkeit + Verständlichkeit) nicht mit den <b>Forderungen</b> an wissenschaftliches Arbeiten (für den Arbeitsprozess: Vorurteilsfreiheit, Öffentlichkeit, provisorische Gültigkeit, Konditionalität) verwechseln. Wenn die Klausur „drei Wissenschaftskriterien" verlangt, sind die Kriterien gemeint; die Forderungen (v. a. Konditionalität, provisorische Gültigkeit) können Sie als Zusatzargument anfügen. Der Lernzettel nennt unter den Forderungen „Vollständigkeit" – das ist falsch, es heißt <b>Vorurteilsfreiheit</b>.</p></div>
+
+<h3 id="k1-wiss-nicht-unwiss">1.13 Wissenschaftlich, nicht-wissenschaftlich, unwissenschaftlich</h3>
+<p>„Nicht alles, was als Wissenschaft bezeichnet wird, ist wissenschaftlich." In jeder Wissenschaft gibt es mehr oder weniger große nicht-wissenschaftliche Anteile. Als <b>unwissenschaftlich</b> können diese nur bezeichnet werden, wenn Forschende einen <b>Wissenschaftsanspruch erheben, ihn aber nicht erfüllen (können)</b> (V01 F.61).</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Kategorie</th><th>Merkmal</th><th>Werturteil?</th><th>Beispiel</th></tr></thead><tbody>
+<tr><td><b>wissenschaftlich</b></td><td>erfüllt die Wissenschaftskriterien und Forderungen</td><td>–</td><td>TAM-Studie (Davis 1989)</td></tr>
+<tr><td><b>nicht-wissenschaftlich</b></td><td>erhebt keinen Wissenschaftsanspruch</td><td><b>nein</b>, keine Abwertung (V01 F.63)</td><td>„Aussagen", die sich auf Daten zufälliger Beobachtungen bei Beratungsprojekten in der Praxis stützen (V01 F.63); die Aussage der Geschäftsführerin</td></tr>
+<tr><td><b>unwissenschaftlich</b></td><td>erhebt Wissenschaftsanspruch, erfüllt ihn aber nicht</td><td><b>ja</b>, Werturteil (V01 F.63)</td><td>unbegründete Behauptungen, Verschweigen diskutabler Gegenargumente, Ersetzen von Sachargumenten durch persönliche Meinungen, Weglassen von erhobenem Datenmaterial (V01 F.62)</td></tr>
+<tr><td><b>Betrug</b></td><td>Fälschung von Forschungsergebnissen</td><td>mehr als „unwissenschaftlich"</td><td>erfundene Messwerte (V01 F.58)</td></tr>
+</tbody></table></div>
+
+<h3 id="k1-seins-sollens">1.14 Seins-Wissenschaft versus Sollens-Wissenschaft</h3>
+<div class="box def"><div class="box-h">Definition · Seins- und Sollens-Wissenschaft</div><p><b>Seins-Wissenschaft:</b> „Eine Realwissenschaft, die nur Aussagen zulässt, die sich auf das beziehen, was ist."</p><p><b>Sollens-Wissenschaft:</b> „Eine Realwissenschaft, die auch Sachverhalte zulässt, die gegenwärtig noch nicht sind, sondern in Zukunft sein sollen." – auch als <b>Normwissenschaft</b> oder <b>normative Wissenschaft</b> bezeichnet. Normen können streng genommen nicht als wissenschaftlich bezeichnet werden, da ihr Wahrheitswert (noch) nicht feststellbar ist.</p><p class="src">V01 F.64</p></div>
+<p><b>Seins-Beispiel</b> (V01 F.65): „Studierende, die zur Vorlesung gehen, bestehen die Klausur mit größerer Wahrscheinlichkeit als Studierende, die nicht die Vorlesungen besucht haben." Nachprüfbar – sagt aber nicht, dass man zur Vorlesung gehen <i>sollte</i>. <b>Sollens-Beispiel</b> (V01 F.66): „Die Unterstützung des Top-Managements sollte bei Softwareprojekten sichergestellt werden, damit für die Projektabwicklung ausreichend Personalressourcen und Finanzmittel freigegeben werden." Diese Norm ist vernünftig, sinnvoll, berechtigt – aber keine wissenschaftliche Aussage.</p>
+<div class="box ex"><div class="box-h">Beispiel · Seins- und Sollens-Aussage zum gleichen Sachverhalt</div><p>Seins: „Nutzer, die YouTube-Empfehlungen mit Zufriedenheitsumfragen erhalten, sehen länger zu als Nutzer ohne." Sollens: „YouTube sollte Zufriedenheitsumfragen in alle Empfehlungen einbauen." Die erste lässt sich in einem A/B-Test prüfen, die zweite nicht – sie wird höchstens zweckmäßig, wenn die erste bestätigt ist (V01 F.44).</p></div>
+
+<h3 id="k1-wahrheitstheorien">1.15 Wahrheitstheorien</h3>
+<p>Wann ist eine Aussage „wahr"? Die Vorlesung stellt vier Wahrheitstheorien mit je einer Leitfrage vor (V01 F.67):</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Theorie</th><th>Leitfrage (F.67)</th><th>Definition</th><th>Folienbeispiel</th></tr></thead><tbody>
+<tr><td><b>Korrespondenztheorie</b></td><td>Stimmt eine Aussage mit der Wahrheit überein?</td><td>„Eine als Hypothese formulierte Aussage ist dann wahr, wenn sie durch einen Signifikanztest der schließenden Statistik im Rahmen der Anwendung einer empirischen Methode nicht falsifiziert werden konnte." (F.68)</td><td>Absturz eines Anwendungssystems unter Zeitdruck aktiviert den Sympathikus; Prüfung im Laborexperiment über Herzschlagrate, Blutdruck, Hautleitfähigkeit (F.68)</td></tr>
+<tr><td><b>Kohärenztheorie</b></td><td>Stimmt eine Aussage mit einem System von Aussagen überein?</td><td>„Eine Aussage (A) ist wahr, wenn sie mit einem bestimmten System von Aussagen (S) übereinstimmt. Als Kriterium für Kohärenz wird gefordert, dass A mit S konsistent ist oder dass A aus S logisch ableitbar sein muss." (F.69)</td><td>„X &gt; Z" ist wahr, wenn „X &gt; Y" und „Y &gt; Z" bekannt sind; in der WI oft durch Deduktion (logisches Schlussfolgern) nachgewiesen (F.69)</td></tr>
+<tr><td><b>Konsenstheorie</b></td><td>Wird eine Aussage allgemein akzeptiert?</td><td>„Eine Aussage gilt gemäß Konsenstheorie als wahr, wenn sie allgemein akzeptiert wird. Eine Aussage ist dann wahr, wenn ihr jede Person zustimmen kann, die I. gutwillig ist (keine Täuschungsabsicht hat), II. vernünftig ist (nicht von Emotionen geleitet ist), III. sprachkundig ist (die betreffende Aussage also richtig versteht), IV. über normale, intakte Sinne verfügt und V. sachkundig ist." (F.70)</td><td>„Unternehmen, die generative KI (z. B. ChatGPT, Microsoft Copilot) sinnvoll in ihre Geschäftsprozesse integrieren, sind erfolgreicher" – wahr, wenn ein überwiegender Anteil von Personen mit I–V zustimmt (F.71)</td></tr>
+<tr><td><b>Pragmatische Wahrheitstheorie</b></td><td>Geht eine Aussage mit Erfolg einher?</td><td>„Die pragmatische Wahrheitstheorie besagt, dass sich wahre Aussagen bzw. Theorien durch ihren Erfolg auszeichnen. Wahr ist somit, was erfolgreich ist, sich verbreitet hat." (F.72)</td><td>Die Deutsche Bahn ist häufig verspätet → „Um externe Termine einzuhalten, sollte man einen Zug früher nehmen" gilt als wahr (F.73)</td></tr>
+</tbody></table></div>
+<p>Zur pragmatischen Theorie betont die Vorlesung zwei Folgerungen (V01 F.72): Die Wahrheit ist demnach <b>historisch veränderlich und kontextabhängig</b>, und die in der WI zu beobachtende <b>Gleichsetzung von Wahrheit mit Erfolg birgt große Gefahren</b>, denn auch eine nicht-wissenschaftliche oder falsche Aussage kann nützlich und damit erfolgreich sein.</p>
+<div class="box ex"><div class="box-h">Beispiel · Tutoriumsaufgabe 3 (T01 F.23–33)</div><ul>
+<li>„TikTok ist eine der bedeutsamsten Plattformen für die neue Generation Z." → <b>pragmatische Wahrheitstheorie</b>: Die „Wahrheit" wird aus dem Erfolg (rasantes Nutzerwachstum, T01 F.26) abgeleitet.</li>
+<li>Axiomensystem („Alles, was existiert, ist ein Mensch … Tom ist Student") → <b>Kohärenztheorie</b>: Die Aussagen 5 und 6 sind wahr, weil sie mit dem System der ersten vier allgemeingültigen Aussagen übereinstimmen bzw. daraus ableitbar sind (T01 F.28–31).</li>
+<li>„Unternehmen, die die Potenziale digitaler Technologien berücksichtigen, sind erfolgreicher als Unternehmen, die dies nicht tun." → <b>Konsenstheorie</b> (T01 F.33). Vertretbar wäre auch: Korrespondenztheorie, wenn die Aussage als Hypothese empirisch getestet wird – in der Klausur begründen, welche Lesart Sie wählen.</li>
+</ul></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Korrespondenztheorie mit „Übereinstimmung mit einem System" verwechseln – das ist Kohärenz. Merkhilfe: <b>Korr</b>espondenz = <b>Realität</b> (Messung), <b>Koh</b>ärenz = <b>Logik</b> (Ableitung aus Aussagensystem), <b>Kons</b>ens = <b>Zustimmung</b> (I–V), <b>Pragm</b>atisch = <b>Erfolg</b>.</p></div>
+
+<h3 id="k1-wissenschaftsziele">1.16 Wissenschaftsziele und Phasen im Forschungsprozess</h3>
+<p>Es ist unbestritten, dass die WI eine eigenständige Wissenschaftsdisziplin ist. Strittig ist, welches <b>Wissenschaftsziel primär</b> verfolgt werden sollte (V01 F.74):</p>
+<ul>
+<li><b>Erkenntnisgewinnung</b> – Beschreibung und Erklärung (von MAT-Systemen),</li>
+<li><b>Erkenntnisverwertung</b> – Prognose und Gestaltung; Entwicklung von Artefakten, die in der Praxis einen unmittelbaren Nutzen stiften.</li>
+</ul>
+<p>Daraus ergibt sich die Zielhierarchie von V01 F.75: Wissenschaftsziele → Erkenntnisgewinnung (Beschreibung, Erklärung) und Erkenntnisverwertung (Gestaltung, Prognose). Dieselben vier Begriffe heißen in V01 F.11 und F.35 „Wissenschaftsaufgaben".</p>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Ziel</th><th>Definition (Kern im Folienwortlaut)</th><th>Folienbeispiel</th></tr></thead><tbody>
+<tr><td><b>Beschreibung</b><br/>(Erkenntnisgewinnung)</td><td>„Bei der Beschreibung wird der Untersuchungsgegenstand erfasst und möglichst präzise dokumentiert. Dies geschieht über die Nutzung einer Terminologie, durch Tatsachenbehauptungen, Systematisierungen und Typenbildungen. Im Vordergrund stehen die Begriffsbildung und Beschreibung des Untersuchungsgegenstands. Dabei werden Begriffe geklärt, Phänomene erfasst und erste Überlegungen zur Theoriebildung und -prüfung gewonnen." (F.76)</td><td>Online-Fragebogen zur Verbreitung und zu Einsatzbereichen von Process-Mining-Werkzeugen (Celonis, Signavio); Auswertung einer möglichst repräsentativen Stichprobe mit deskriptiver Statistik (F.77)</td></tr>
+<tr><td><b>Erklärung</b><br/>(Erkenntnisgewinnung)</td><td>„Bei der Erklärung der Wirklichkeit wird angestrebt, Erkenntnisse über kausale Zusammenhänge hinsichtlich der Erkenntnisobjekte zu gewinnen, die als allgemeine Muster oder als vorläufige Gesetze in Form von Ursache-Wirkungs-Beziehungen formuliert und dokumentiert werden. Sie können von der Wirklichkeit durch Wahrnehmung (im Sinne des Einsatzes anerkannter Methoden) nicht widerlegt werden. Durch eine Verallgemeinerung von Sachverhalten wird auf diese Weise eine Erklärung des Verhaltens der Erkenntnisobjekte angestrebt." (F.78)</td><td>Statt das individuelle Erleben einer Person zu erforschen, die durch Schädigung des Sprachzentrums die Sprache verliert, wird allgemein erklärt, wie die Schädigung den Sprachverlust verursacht (F.79)</td></tr>
+<tr><td><b>Gestaltung</b><br/>(Erkenntnisverwertung)</td><td>„Bei der Gestaltung von Wirklichkeitsausschnitten werden Zweck-Mittel-Beziehungen aus Ursache-Wirkungs-Beziehungen abgeleitet, auf deren Basis Gestaltungsempfehlungen formuliert werden. Auf diese Weise kann Erkenntnis das Handeln positiv beeinflussen. Handeln bedeutet in der Wirtschaftsinformatik vor allem die Entwicklung von technologiebezogenen Artefakten." (F.80)</td><td>Bau von Prototypen oder Konstruieren von Vorgehensmodellen (F.80)</td></tr>
+<tr><td><b>Prognose</b><br/>(Erkenntnisverwertung)</td><td>„Prognose bezeichnet die Vorhersage zukünftiger Abläufe und Zustände der Wirklichkeit. […] Erklärung ist für Prognose nützlich, aber nicht zwingend notwendig, weil es möglich ist, nur aufgrund von Erfahrung, also ohne Kenntnis von Ursache-Wirkungs-Beziehungen, Vorhersagen über ein interessierendes Erkenntnisobjekt zu machen." (F.81)</td><td>Aus den Zahlen der letzten Semester wird die Teilnehmerzahl des nächsten Semesters vorhergesagt – ohne zu wissen, warum Studierende kommen oder wegbleiben; die Vorhersage kann trotzdem richtig sein (F.82)</td></tr>
+</tbody></table></div>
+<p>Der Schlüssel zum Verständnis ist die Unterscheidung zweier Beziehungstypen: <b>Ursache-Wirkungs-Beziehungen</b> (Erklärung: „Wenn A, dann B") und <b>Zweck-Mittel-Beziehungen</b> (Gestaltung: „Um B zu erreichen, setze A ein"). Gestaltung <i>leitet</i> Zweck-Mittel-Beziehungen aus Ursache-Wirkungs-Beziehungen <i>ab</i> – das ist die Brücke zwischen Theorie und Technologie, die in V02/V03 ausgebaut wird.</p>
+<figure class="fig">
+<svg viewBox="0 0 640 330" role="img" aria-label="Phasen im Forschungsprozess: Beschreibung ist Voraussetzung für Erklärung, Erklärung ist nützlich für Prognose und Gestaltung, Gestaltung verändert die Wirklichkeit, die wieder Objekt der Beschreibung ist">
+<defs><marker id="arr-k1h" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<text x="195" y="24" text-anchor="middle" font-size="13" font-weight="bold" font-family="inherit" style="fill:var(--accent)">Erkenntnisgewinnung</text>
+<text x="505" y="24" text-anchor="middle" font-size="13" font-weight="bold" font-family="inherit" style="fill:var(--accent)">Erkenntnisverwertung</text>
+<rect x="105" y="40" width="180" height="50" rx="6" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+<rect x="415" y="40" width="180" height="50" rx="6" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+<rect x="105" y="170" width="180" height="50" rx="6" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="1.5"/>
+<rect x="415" y="170" width="180" height="50" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)" stroke-width="1.5"/>
+<rect x="20" y="262" width="250" height="52" rx="6" style="fill:var(--surface-2)" stroke="currentColor" stroke-dasharray="4 3"/>
+<g font-family="inherit" fill="currentColor" text-anchor="middle">
+<text x="195" y="61" font-size="13" font-weight="bold">Erklärung</text>
+<text x="195" y="79" font-size="11">Ursache-Wirkungs-Beziehungen</text>
+<text x="505" y="61" font-size="13" font-weight="bold">Prognose</text>
+<text x="505" y="79" font-size="11">Vorhersage künftiger Zustände</text>
+<text x="195" y="191" font-size="13" font-weight="bold">Beschreibung</text>
+<text x="195" y="209" font-size="11">Deskription mit Fachsprache</text>
+<text x="505" y="191" font-size="13" font-weight="bold">Gestaltung</text>
+<text x="505" y="209" font-size="11">Artefakte, Zweck-Mittel</text>
+<text x="145" y="284" font-size="13">Zustand von IS, II oder IF</text>
+<text x="145" y="302" font-size="11">zu einem Zeitpunkt (Wirklichkeit t0)</text>
+<text x="505" y="282" font-size="12">veränderte Wirklichkeit t1</text>
+</g>
+<line x1="285" y1="65" x2="413" y2="65" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1h)"/>
+<line x1="285" y1="88" x2="470" y2="168" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1h)"/>
+<line x1="195" y1="170" x2="195" y2="92" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1h)"/>
+<line x1="415" y1="195" x2="287" y2="195" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1h)"/>
+<line x1="235" y1="262" x2="235" y2="222" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1h)"/>
+<line x1="505" y1="220" x2="505" y2="266" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1h)"/>
+<line x1="430" y1="296" x2="272" y2="296" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr-k1h)"/>
+<g font-family="inherit" fill="currentColor" font-size="12">
+<text x="349" y="57" text-anchor="middle">ist nützlich für</text>
+<text x="400" y="122">ist nützlich für</text>
+<text x="188" y="135" text-anchor="end">ist Voraussetzung für</text>
+<text x="350" y="187" text-anchor="middle">ist Objekt der</text>
+<text x="242" y="247">ist Objekt der</text>
+<text x="350" y="316" text-anchor="middle">neuer Zustand</text>
+</g>
+</svg>
+<figcaption>Nachzeichnung von V01 F.83: Beschreibung ist Voraussetzung für Erklärung; Erklärung ist nützlich für Prognose und Gestaltung; Gestaltung verändert die Wirklichkeit (t0 → t1), die wieder Objekt der Beschreibung wird – ein Kreislauf aus Erkenntnisgewinnung und -verwertung.</figcaption>
+</figure>
+<div class="box exam"><div class="box-h">Klausurfokus</div><p>Die Wissenschaftsziele sind die Brücke zu V02 (theoretische vs. technologische Forschungsfrage) und V03 (gestaltungsorientierte Forschung). Im Probeklausur-Fall gilt: „prüfen, ob die Nutzung digitalen Stress auslöst" = <b>Erklärung</b> (Ursache-Wirkung, Erkenntnisgewinnung); „Lösung entwickeln, die den Stress verringert" = <b>Gestaltung</b> (Zweck-Mittel, Artefakt, Erkenntnisverwertung). Wer diese Zuordnung mit Folienverweis hinschreibt, verankert die Teilaufgaben b und c sauber in der Vorlesung.</p></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>„Für eine Prognose braucht man eine Erklärung" – <b>falsch</b>. Erklärung ist für Prognose nützlich, aber nicht zwingend notwendig (V01 F.81–82). Genau so arbeiten übrigens Empfehlungsalgorithmen: Sie sagen voraus, was Sie anklicken, ohne zu wissen, <i>warum</i> (siehe Exkurs 1.18).</p></div>
+
+<h3 id="k1-gestaltung-ohne-erklaerung">1.17 Gestaltung ohne Erklärung und Dualität der Wissenschaftsziele</h3>
+<p>Die Einbeziehung von systematischer Spekulation, Intuition und Kreativität bei der Gestaltung von MAT-Systemen ist ein Indiz dafür, dass bei der Entwicklung von Artefakten oft nicht alle relevanten Ursache-Wirkungs-Beziehungen bekannt sind – folglich wird vielfach <b>ohne Erkenntnis gestaltet</b> (V01 F.84).</p>
+<div class="box def"><div class="box-h">Kernaussage · Theorie und Praxis</div><p>„Theoretische Erkenntnisse sind nicht zwingend für praktisches Handeln erforderlich. Sie erleichtern es jedoch, da nichts praktischer ist als eine gute Theorie. ‚There is nothing as practical as a good theory' ist eine mehreren bedeutenden Personen (z. B. Immanuel Kant, Kurt T. Lewin, Ludwig E. Boltzmann) zugeschriebene Aussage. Praktisches Handeln liefert auf diese Weise keine wissenschaftlichen Aussagen."</p><p class="src">V01 F.84</p></div>
+<p>Beispiel (V01 F.85): Wesentliche ingenieurwissenschaftliche Entdeckungen wurden ohne detaillierte Kenntnis der physikalischen Gesetze gemacht – der erste Mensch, der die Steinschleuder erfand, kannte die Hebelgesetze sicher nicht. <b>Gründe und Fehlerpotenzial</b> der Gestaltung ohne Erklärung (V01 F.86):</p>
+<ul>
+<li>Fehlschläge führen beim Einsatz der Artefakte zu <b>enormen Kosten</b>.</li>
+<li>Die <b>Funktionsfähigkeit</b> des Artefakts ist ohne ausreichende Berücksichtigung existierender theoretischer Konzepte nicht gegeben.</li>
+<li>Technologisch erfolgreiche Prozesse oder deren Ergebnisse können <b>erkenntnistheoretisch bereits überholt</b> sein – z. B. werden in der Softwareentwicklung noch immer Vorgehensmodelle ohne Prototyping verwendet, obwohl die Vorteilhaftigkeit prototyping-orientierter Vorgehensmodelle empirisch nachgewiesen ist.</li>
+<li>Umgekehrt können <b>erkenntnistheoretische Aussagen für die Praxis unbrauchbar</b> sein, insbesondere weil sie zu abstrakt sind oder sich nicht mit vertretbarem Aufwand verwirklichen lassen.</li>
+</ul>
+<div class="box def"><div class="box-h">Dualität der Wissenschaftsziele</div><p>Die unterschiedlichen Wurzeln der WI haben zu einer <b>„Doppelgesichtigkeit"</b> geführt: Einige konzentrieren sich auf theoretische Systeme, anderen fehlt es an theoretischer Basis, während sie praktisch arbeiten. Eine Arbeitsteilung könnte sinnvoll sein, aber die Praxisferne der Ersten und die Theorieferne der Letzteren führen oft zu Herausforderungen. „Der Erfolg der Wirtschaftsinformatik als Wissenschaft hängt entscheidend davon ab, ob sich der Wissenschaftlertyp eines erkenntnisgewinnenden Theoretikers und erkenntnisverwertenden Gestaltenden ausbreiten wird bzw. – wenn dies nicht der Fall ist – ob und wie intensiv die Vertreterinnen der beiden Wissenschaftsziele zusammenarbeiten werden."</p><p class="src">V01 F.87</p></div>
+<div class="box ex"><div class="box-h">Beispiel · Gestaltung ohne Erklärung bei KI-Assistenten</div><p>Ein Unternehmen führt einen KI-Assistenten ein, der ständig Hinweise einblendet, weil „mehr Hilfe besser ist". Ohne Kenntnis der Ursache-Wirkungs-Beziehung „Unterbrechungen → digitaler Stress → geringere Leistung" entsteht ein Artefakt, das funktioniert, aber Schaden stiftet – genau die Fehlerpotenziale „enorme Kosten" und „Funktionsfähigkeit nicht gegeben" (V01 F.86). Erst Erklärung (Studie zum digitalen Stress) und darauf aufbauende Gestaltung (z. B. ein Hinweismodus, der nur bei Pausen eingreift) schließen den Kreislauf aus F.83.</p></div>
+<div class="box deep"><div class="box-h">Vertiefung</div><p>Die Doppelgesichtigkeit wird in V03 als besondere Stärke der WI gedeutet: Sie ermöglicht theoriegeleitete Gestaltung von Artefakten (Integration von Verhaltens- und Gestaltungsorientierung, im Lernzettel als „Mannheimer Paradigma" bezeichnet). Fehlt der Theoriebezug, dominiert eine spekulativ-pragmatische Vorgehensweise.</p></div>
+
+<h3 id="k1-algorithmen">1.18 Exkurs: Algorithmen digitaler Plattformen</h3>
+<p>Zweimal wurde in Aufgabe 1 nach Algorithmen gefragt: „Nennen Sie zwei Algorithmen, die YouTube verwendet. Skizzieren Sie, wie die genannten Algorithmen funktionieren und welches Ziel YouTube durch den Einsatz verfolgt" (2024 E, 10 P.) und „Instagram nutzt … den Trending-Algorithmus. Nennen Sie einen weiteren …" (2024 Z, 12,5 P.). Die Folien behandeln das kaum. Dieser Abschnitt fasst öffentlich bekannte Funktionsweisen zusammen (Quellen: Instagram-Blog „Instagram Ranking Explained", A. Mosseri 2023; YouTube-Hilfe zu Content ID; Berichte von TechCrunch/9to5Google 2025; Fachblogs) und verknüpft sie mit Vorlesungsbegriffen. Die Plattformen veröffentlichen ihre Algorithmen nicht vollständig – alles Folgende ist daher <b>Vertiefung</b>, keine Folienwahrheit.</p>
+<div class="box def"><div class="box-h">Definition · Algorithmus (Klausurtext 2024 Z)</div><p>„Ein Algorithmus ist eine klar definierte Folge von Anweisungen oder Regeln, die dazu dienen, eine spezifische Aufgabe zu lösen oder ein Problem zu bearbeiten. Er legt systematisch fest, welche Schritte in welcher Reihenfolge ausgeführt werden müssen, um ein gewünschtes Ergebnis zu erzielen."</p><p class="src">Klausur HWS 2024 Zweittermin, Aufgabe 1</p></div>
+<div class="tbl-wrap"><table class="tbl"><thead><tr><th>Algorithmus</th><th>Funktionsweise (Skizze)</th><th>Plattformziel</th></tr></thead><tbody>
+<tr><td><b>Empfehlungsalgorithmus</b> (YouTube-Startseite / „Nächstes Video", Instagram Explore und Reels, TikTok „Für dich", Spotify „Discover Weekly")</td><td>Zweistufig: (1) <b>Kandidatengenerierung</b>: aus Milliarden Inhalten werden einige hundert passende Kandidaten gewählt, z. B. über den Sehverlauf und „Co-Watch"-Muster – <b>kollaboratives Filtern</b> („Nutzer mit ähnlichem Verhalten mochten auch …") und <b>inhaltsbasiertes Filtern</b> (Ähnlichkeit von Themen, Audio, Hashtags). (2) <b>Ranking</b>: ein Machine-Learning-Modell prognostiziert für jeden Kandidaten Klick-, Sehdauer- und Interaktionswahrscheinlichkeit und sortiert danach. YouTube ergänzt Zufriedenheitsumfragen („valued watch time"), TikTok gewichtet vor allem Sehdauer und Wiederholungen, negatives Feedback („Nicht interessiert") wird abgewertet.</td><td>Verweildauer und Nutzerzufriedenheit erhöhen → mehr Werbeeinblendungen bzw. Abo-Bindung (Spotify: Free → Premium)</td></tr>
+<tr><td><b>Trending-Algorithmus</b> (YouTube-Trends bzw. -Charts, Instagram Trending Audio/Reels, X/TikTok-Trends)</td><td>Misst nicht die absolute Abrufzahl, sondern die <b>Wachstumsgeschwindigkeit</b> („view velocity") im Vergleich zum Normalniveau, dazu Quelle der Aufrufe, Neuheit, regionale Relevanz und Vielfalt der Ersteller; Filter entfernen richtlinienwidrige, irreführende oder nicht werbefreundliche Inhalte. Instagram erkennt so z. B. Audios, die gerade in vielen neuen Reels verwendet werden. Hinweis: YouTube hat im Juli 2025 die allgemeine Trends-Seite abgeschafft und durch kategoriebezogene Charts ersetzt (Trending Music Videos, Top Podcasts, Trending Movie Trailers), weil Nutzer Trends vor allem über Empfehlungen, Suche und Kommentare finden.</td><td>Aktualität und Gemeinschaftsgefühl („was alle gerade sehen"), Creator motivieren, Trends zu bedienen → mehr Inhalte und Nutzung</td></tr>
+<tr><td><b>Feed-/Ranking-Algorithmus</b> (Instagram Feed und Stories)</td><td>Rankt die neuen Beiträge abonnierter Accounts. Signale: Informationen über den Beitrag (Popularität, Zeitpunkt, Format), über den Ersteller, die eigene Aktivität und die gemeinsame Interaktionshistorie. Für jeden Beitrag werden Wahrscheinlichkeiten prognostiziert – ob man einige Sekunden verweilt, kommentiert, liked, teilt oder auf das Profilbild tippt (Mosseri 2023). Laut Instagram gibt es keinen einzelnen Algorithmus: Feed, Stories, Explore und Reels haben je eigene Systeme.</td><td>Relevanz der begrenzten Bildschirmfläche maximieren, Engagement steigern</td></tr>
+<tr><td><b>Content-ID / Moderationsalgorithmus</b> (YouTube; vergleichbar Instagram „Rights Manager")</td><td>Jedes hochgeladene Video wird automatisch mit einer Datenbank von Audio- und Videoreferenzen der Rechteinhaber abgeglichen (digitaler Fingerabdruck). Bei Übereinstimmung entsteht ein Claim; je nach Einstellung des Rechteinhabers wird das Video gesperrt, monetarisiert (Werbeerlöse gehen an den Rechteinhaber) oder nur getrackt. Daneben erkennen ML-Klassifikatoren Gewalt, Spam oder Hassrede; Grenzfälle prüfen Menschen.</td><td>Rechtskonformität (Urheber-, Telemedien-, Plattformrecht), Werbekundenfreundlichkeit, Vertrauen</td></tr>
+<tr><td><b>Suchalgorithmus</b></td><td>Bewertet Relevanz (Übereinstimmung von Suchbegriff mit Titel, Beschreibung, Untertiteln), Engagement und Qualität/Autorität (bei Nachrichten werden verlässliche Quellen bevorzugt), personalisiert nach Verlauf.</td><td>Informationsbedarf schnell decken → Zufriedenheit, Nutzung</td></tr>
+<tr><td><b>Werbe-/Targeting-Algorithmus</b></td><td>Ordnet Anzeigen per Auktion Nutzerprofilen zu (Interessen, Demografie, Kontext) und prognostiziert Klickwahrscheinlichkeiten.</td><td>Werbeumsatz (Hauptgeschäftsmodell)</td></tr>
+</tbody></table></div>
+<figure class="fig">
+<svg viewBox="0 0 640 220" role="img" aria-label="Ablauf eines Empfehlungsalgorithmus mit Rückkopplung: Signale, Kandidatengenerierung, Ranking, Filter, Feed und Rückkopplung der Nutzerreaktion">
+<defs><marker id="arr-k1i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+<rect x="8" y="30" width="112" height="56" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="136" y="30" width="112" height="56" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="264" y="30" width="112" height="56" rx="6" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+<rect x="392" y="30" width="112" height="56" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<rect x="520" y="30" width="112" height="56" rx="6" style="fill:var(--surface-2)" stroke="currentColor"/>
+<g font-family="inherit" fill="currentColor" text-anchor="middle" font-size="12" font-weight="bold">
+<text x="64" y="54">Signale</text><text x="64" y="72">sammeln</text>
+<text x="192" y="54">Kandidaten-</text><text x="192" y="72">generierung</text>
+<text x="320" y="54">Ranking</text><text x="320" y="72">(Prognose)</text>
+<text x="448" y="54">Filter /</text><text x="448" y="72">Richtlinien</text>
+<text x="576" y="54">Feed /</text><text x="576" y="72">Empfehlung</text>
+</g>
+<g font-family="inherit" fill="currentColor" text-anchor="middle" font-size="11">
+<text x="64" y="106">Verlauf, Likes,</text><text x="64" y="120">Sehdauer</text>
+<text x="192" y="106">Mrd. → Hunderte</text><text x="192" y="120">(kollab. Filtern)</text>
+<text x="320" y="106">P(Klick), Sehdauer,</text><text x="320" y="120">Zufriedenheit</text>
+<text x="448" y="106">Moderation,</text><text x="448" y="120">Vielfalt</text>
+<text x="576" y="106">sortierte Liste</text><text x="576" y="120">je Nutzer</text>
+</g>
+<line x1="120" y1="58" x2="134" y2="58" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1i)"/>
+<line x1="248" y1="58" x2="262" y2="58" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1i)"/>
+<line x1="376" y1="58" x2="390" y2="58" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1i)"/>
+<line x1="504" y1="58" x2="518" y2="58" stroke="currentColor" stroke-width="1.5" marker-end="url(#arr-k1i)"/>
+<path d="M576,132 V165 H64 V134" fill="none" style="stroke:var(--accent)" stroke-width="2" marker-end="url(#arr-k1i)"/>
+<text x="320" y="185" text-anchor="middle" font-size="12" font-family="inherit" style="fill:var(--accent)">Rückkopplung: Reaktion der Nutzer (Umwelt) wird neues Eingangssignal</text>
+<text x="320" y="205" text-anchor="middle" font-size="11" font-family="inherit" style="fill:var(--muted)">→ offen (Input aus der Umwelt) · dynamisch (Ranking ändert sich laufend) · Trends emergent</text>
+</svg>
+<figcaption>Vereinfachte Pipeline eines Empfehlungsalgorithmus (Vertiefung, nach öffentlich beschriebenen Systemen von YouTube und Instagram). Die Nutzerreaktion fließt zurück und verändert die nächste Empfehlung – das macht die Plattform zu einem offenen, dynamischen System.</figcaption>
+</figure>
+<h4 id="k1-algorithmen-vorlesung">Verknüpfung mit Vorlesungsbegriffen</h4>
+<ul>
+<li><b>Technik im MAT-System:</b> Algorithmen sind Teil der T-Komponente bzw. des Anwendungssystems (V01 F.24–25). Sie verändern die <b>Beziehungen</b> zwischen Mensch (Nutzer) und Aufgabe (Inhalte finden) – genau das, was die WI interessiert (F.24).</li>
+<li><b>Informationsfunktion:</b> Ein Empfehlungsalgorithmus operationalisiert die fünf „richtig"-Kriterien (V01 F.31): die richtige Information (passendes Video), in der richtigen Menge (Auswahl aus Milliarden), zum richtigen Zeitpunkt (Trends) am richtigen Ort (Startseite, Push) in der erforderlichen Zeit (Millisekunden).</li>
+<li><b>Systemeigenschaften:</b> <i>Offenheit</i> (Nutzerverhalten als Input aus der Umwelt), <i>Dynamik</i> (Ranking ändert sich mit jeder Interaktion), <i>Komplexität</i> (Milliarden Beziehungen Nutzer–Inhalt), <i>Emergenz</i> (Trends und Viralität entstehen erst aus dem Zusammenwirken, F.16). Ergänzend aus der Systemtheorie: <i>Rückkopplung</i>.</li>
+<li><b>Zweck- und Zielorientierung:</b> Zweck (Sachziel, F.19) = passende Inhalte bereitstellen; Ziele = Güte der Zweckerfüllung, gemessen an Verweildauer, Engagement, Zufriedenheit – und letztlich Werbeumsatz.</li>
+<li><b>Prognose ohne Erklärung:</b> Ranking-Modelle sagen Verhalten aus Erfahrungsdaten voraus, ohne Ursache-Wirkungs-Beziehungen zu kennen – exakt das Wissenschaftsziel Prognose nach V01 F.81–82.</li>
+<li><b>Pragmatische Wahrheitstheorie:</b> „Was viral geht, muss gut/wahr sein" ist die Gleichsetzung von Wahrheit mit Erfolg, vor der V01 F.72 warnt – Trending-Algorithmen können Falschinformationen verstärken.</li>
+<li><b>Netzwerkeffekte</b> (Vertiefung): Mehr Nutzer → mehr Creator → mehr Inhalte → bessere Empfehlungen → mehr Nutzer. Algorithmen verstärken diesen Kreislauf.</li>
+</ul>
+<div class="box ex"><div class="box-h">Musterantwort · „Nennen Sie zwei Algorithmen, die YouTube verwendet …" (10 P.)</div>
+<p><b>Algorithmus 1 – Empfehlungsalgorithmus:</b> Er wählt für jeden Nutzer die Videos auf der Startseite und unter „Nächstes Video" aus. In einem ersten Schritt grenzt er aus Milliarden Videos einige hundert Kandidaten ein, indem er den Sehverlauf mit dem Verhalten ähnlicher Nutzer vergleicht (kollaboratives Filtern). Im zweiten Schritt prognostiziert ein Machine-Learning-Modell für jeden Kandidaten, wie wahrscheinlich ein Klick, wie lang die Sehdauer und wie hoch die Zufriedenheit ist (u. a. aus Umfragen), und sortiert entsprechend. Jede Reaktion fließt als neues Signal zurück (Rückkopplung, dynamisches offenes System).</p>
+<p><b>Algorithmus 2 – Content-ID:</b> Jedes hochgeladene Video wird automatisch mit einer Datenbank von Referenzdateien der Rechteinhaber abgeglichen. Bei einer Übereinstimmung wird je nach Vorgabe des Rechteinhabers das Video gesperrt, zu dessen Gunsten monetarisiert oder nur beobachtet.</p>
+<p><b>Ziele:</b> Der Empfehlungsalgorithmus dient der Informationsfunktion (richtige Information, richtige Menge, richtiger Zeitpunkt) und den Formalzielen Verweildauer und Nutzerzufriedenheit – mehr Sehzeit bedeutet mehr Werbeeinblendungen und damit mehr Werbeumsatz, mehr Nutzer locken mehr Creator an (Netzwerkeffekt). Content-ID sichert Rechtskonformität (informationsrechtliche Infrastruktur), schützt das Verhältnis zu Rechteinhabern und Werbekunden und eröffnet zusätzliche Erlösquellen. <b>Kritisch</b> anzumerken: Optimierung auf Verweildauer kann Filterblasen und Suchtverhalten fördern; Prognosen ohne Erklärung (V01 F.81) machen Fehlempfehlungen schwer nachvollziehbar.</p></div>
+<div class="box exam"><div class="box-h">Klausurfokus</div><p>Für volle Punkte pro Algorithmus: (1) <b>Name</b>, (2) <b>Funktionsweise in 3–4 Schritten</b> (Input/Signale → Verarbeitung → Output → Rückkopplung), (3) <b>Ziel</b> der Plattform, (4) möglichst ein Vorlesungsbegriff (IF-Kriterien, Systemeigenschaften, Prognose). Bei Instagram 2024 Z ist der Trending-Algorithmus vorgegeben – er muss trotzdem skizziert werden (Wachstumsgeschwindigkeit statt Gesamtzahl, Filter, Ausspielung im Explore-/Reels-Bereich). Als „weiteren" Algorithmus eignen sich Feed-Ranking oder der Explore-/Reels-Empfehlungsalgorithmus am besten, weil Instagram sie selbst beschrieben hat.</p></div>
+
+<h3 id="k1-selbsttest">Selbsttest</h3>
+<details class="quiz"><summary>1 · Wahr oder falsch? „MAT-Systeme sind immer Informationssysteme." (T01 1a)</summary><div class="ans"><p><b>Wahr.</b> Nach V01 F.23 sind Informationssysteme Mensch/Aufgabe/Technik-Systeme, kurz MAT-Systeme – beide Begriffe bezeichnen dasselbe (T01 F.6). Ein System, das Mensch, Aufgabe und IuK-Technik in Beziehung setzt und Informationen weitergibt, ist per Definition ein IS. Achtung: Fehlt eine Komponente (z. B. der Mensch), liegt kein MAT-System vor, sondern etwa ein Anwendungssystem.</p></div></details>
+<details class="quiz"><summary>2 · Wahr oder falsch? „Die Kassensoftware im Supermarkt ist ein Informationssystem."</summary><div class="ans"><p><b>Falsch.</b> Die Kassenanwendung mit GUI ist ein <b>Anwendungssystem</b> – ein Teilsystem des IS, das nur die zur Aufgabe benötigte Technik umfasst. Der Kassierer bedient es, ist aber nicht Teil davon. Das IS besteht aus Kassierer (M), „Bezahlung abwickeln" (A) und Kasse, Kassensoftware, Scanner (T) (V01 F.25).</p></div></details>
+<details class="quiz"><summary>3 · Wahr oder falsch? „Eine Aussage muss Überprüfbarkeit, Ableitungsrichtigkeit, Widerspruchsfreiheit und Systematisierbarkeit standhalten, um wissenschaftlich zu sein." (T01 1b)</summary><div class="ans"><p><b>Wahr</b> (V01 F.43, T01 F.10). Für die volle Punktzahl ergänzen: Die <b>Verständlichkeit</b> ist Voraussetzung dafür, dass diese vier Kriterien überhaupt festgestellt werden können (V01 F.56) – Präzision durch Fachsprache.</p></div></details>
+<details class="quiz"><summary>4 · Wahr oder falsch? „Die WI ist hauptsächlich an der Formalwissenschaft orientiert; die realwissenschaftliche Orientierung spielt nur eine nachgeordnete Rolle." (T01 1c)</summary><div class="ans"><p><b>Falsch.</b> Die WI ist primär Realwissenschaft: Ihre Erkenntnisobjekte (IS, II, IF) sind Teile der Wirklichkeit, und ihre Kernaufgaben (Erkenntnisgewinnung/-verwertung) haben primär empirischen Bezug (T01 F.8). Ihre Aussagen können an der Wirklichkeit überprüft werden (V01 F.40). Zudem ist sie Ingenieurwissenschaft (Konstruktion von MAT-Systemen, angewandte Wissenschaft; V01 F.42). Formalwissenschaftliche Aussagen (wahr/falsch allein durch logische Form und Definitionen, F.41) nutzt sie nur als Werkzeug.</p></div></details>
+<details class="quiz"><summary>5 · Ist „Ein IT-Projekt benötigt mindestens zwei Projektleiter. In unserem Fall genügt jedoch einer." eine wissenschaftliche Aussage? (T01 1d)</summary><div class="ans"><p><b>Nein.</b> <b>Überprüfbarkeit:</b> Eine Mindestanzahl von Projektleitern ist kaum erfahrbar oder beobachtbar. <b>Ableitungsrichtigkeit:</b> Der zweite Satz ist ein Spezialfall des ersten, kommt aber zu einem anderen Schluss – er lässt sich nicht richtig ableiten. <b>Widerspruchsfreiheit:</b> Beide Sätze widersprechen sich. <b>Systematisierbarkeit:</b> Die allgemeine Aussage ist singulär, ein systematischer Charakter fehlt. <b>Verständlichkeit:</b> Es ist nicht eindeutig, dass „in unserem Fall" ein IT-Projekt meint (T01 F.12).</p></div></details>
+<details class="quiz"><summary>6 · Wahr oder falsch? „Ein System ist komplex, wenn es aus vielen verschiedenartigen Elementen besteht."</summary><div class="ans"><p><b>Falsch.</b> Das beschreibt <b>Kompliziertheit</b> (Anzahl der Elemente und deren Verschiedenartigkeit). <b>Komplexität</b> ergibt sich aus der Anzahl der Elemente und der Anzahl der Beziehungen zwischen ihnen (Beziehungsreichtum) (V01 F.19, F.21–22). Ein soziales Netzwerk aus Millionen gleichartiger, stark vernetzter Nutzerprofile ist komplex, aber nicht unbedingt kompliziert.</p></div></details>
+<details class="quiz"><summary>7 · Wahr oder falsch? „Wer eine Aussage als nicht-wissenschaftlich bezeichnet, wertet sie ab."</summary><div class="ans"><p><b>Falsch.</b> „Nicht-wissenschaftlich" ist <b>kein Werturteil und keine Abwertung</b> (V01 F.63) – es heißt nur, dass kein Wissenschaftsanspruch erhoben wird (z. B. Beobachtungen aus Beratungsprojekten). „<b>Unwissenschaftlich</b>" ist dagegen ein Werturteil: Ein Wissenschaftsanspruch wird erhoben, aber nicht erfüllt (V01 F.61), z. B. durch unbegründete Behauptungen oder das Weglassen von Daten (F.62). Fälschung ist sogar Betrug (F.58).</p></div></details>
+<details class="quiz"><summary>8 · Was sind emergente Eigenschaften? Nennen Sie je ein emergentes und ein nicht emergentes Beispiel für ein IS.</summary><div class="ans"><p>Emergente Eigenschaften werden nicht nur durch die Eigenschaften der Systemelemente bestimmt, sondern zusätzlich durch die Eigenschaften der Beziehungen zwischen ihnen (Systemstruktur); sie lassen sich nicht auf einzelne Elemente zurückführen und sind wissenschaftlich interessanter (V01 F.16). Nicht emergent: Speicherkapazität der Hardware. Emergent: Antwortzeitverhalten von Transaktionen, Durchsatzzeit einer Arbeitslast (V01 F.17) – oder bei Instagram die Entstehung eines Trends.</p></div></details>
+<details class="quiz"><summary>9 · Nennen Sie die sieben Komponenten der Informationsinfrastruktur und erklären Sie Business/IT-Alignment.</summary><div class="ans"><p>Technische, personelle, organisatorische, räumliche Infrastruktur, methodische Infrastruktur und Managementsysteme, informations- und kommunikationsrechtliche Infrastruktur, Qualitätsinfrastruktur (V01 F.29). Business/IT-Alignment ist das wechselseitige Ausrichten von Unternehmens- und IT-Zielen; idealtypisch wird die II top-down aus den Unternehmenszielen entworfen, in der Praxis entsteht sie oft bottom-up aus nicht immer zueinander passenden Teilen (V01 F.30).</p></div></details>
+<details class="quiz"><summary>10 · Welche Wahrheitstheorie liegt jeweils zugrunde? (a) „TikTok ist eine der bedeutsamsten Plattformen für die Generation Z." (b) Ein Axiomensystem, aus dem „Tom ist Student" folgt. (c) „Unternehmen, die die Potenziale digitaler Technologien berücksichtigen, sind erfolgreicher."</summary><div class="ans"><p>(a) <b>Pragmatische Wahrheitstheorie</b>: Wahr ist, was erfolgreich ist bzw. sich verbreitet hat (V01 F.72) – die „Bedeutsamkeit" wird aus dem Nutzererfolg abgeleitet (T01 F.25). (b) <b>Kohärenztheorie</b>: Die Aussage ist wahr, weil sie mit dem System von Aussagen konsistent bzw. daraus ableitbar ist (V01 F.69, T01 F.28–31). (c) <b>Konsenstheorie</b>: Wahr, wenn ihr jede gutwillige, vernünftige, sprachkundige, sachkundige Person mit intakten Sinnen zustimmen kann (V01 F.70, T01 F.33); als Hypothese mit Signifikanztest geprüft wäre es Korrespondenztheorie.</p></div></details>
+<details class="quiz"><summary>11 · Wahr oder falsch? „Ohne Erklärung kann es keine verlässliche Prognose geben."</summary><div class="ans"><p><b>Falsch.</b> Erklärung ist für Prognose nützlich, aber nicht zwingend notwendig, weil Vorhersagen auch allein aufgrund von Erfahrung möglich sind (V01 F.81). Beispiel: Die Teilnehmerzahl des nächsten Semesters lässt sich aus den Zahlen der letzten Semester vorhersagen, ohne die Gründe zu kennen (F.82). Ebenso wird oft ohne Erklärung gestaltet – mit Fehlerpotenzial (F.84–86).</p></div></details>
+<details class="quiz"><summary>12 · Fall (5 P.): Argumentieren Sie, ob das klinische System der Notaufnahme (Probeklausur 2026) ein Informationssystem ist.</summary><div class="ans"><p>IS sind Mensch/Aufgabe/Technik-Systeme, die die Weitergabe von Informationen einschließen (V01 F.23). <b>Mensch:</b> Ärztinnen und Ärzte (z. B. Dr. Yilmaz), Pflegekräfte und Verwaltung als Aufgabenträger. <b>Aufgabe:</b> Behandlung von Notfallpatienten, konkret die Entscheidung über die Medikation, sowie Dokumentation und Abrechnung. <b>Technik:</b> Tablets und Stationsrechner (Sachtechnik), die KIS-Software mit Anbindung an die ePA, dazu Rollen- und Anmeldekonzepte (Arbeitstechnik). <b>Zusammenwirken:</b> Die Ärztin ruft über das Tablet Medikationsplan, Laborwerte und Arztbrief ab und trifft auf dieser Grundlage eine Entscheidung; Befunde werden zwischen Berufsgruppen weitergegeben. <b>Fazit:</b> Das System ist ein IS. Die KIS-Software allein wäre nur das Anwendungssystem (V01 F.25). Bonus: Die fehlenden Medikamenteneinträge und 200 Altbefunde zeigen, dass die Informationsfunktion (richtige Information, richtige Menge, V01 F.31) nur unzureichend erfüllt wird.</p></div></details>
+<details class="quiz"><summary>13 · Fall (10 P.): Welche Systemeigenschaften besitzt ChatGPT? Verdeutlichen Sie Ihre Ausführungen an Beispielen. (2025 E)</summary><div class="ans"><p><b>Systemgrenze:</b> ChatGPT als Plattform (Modell, Software, Rechenzentren, Datenbestände); Nutzer, Unternehmenskunden und Drittanbieter-Apps sind Umwelt; OpenAI bzw. dessen Infrastruktur (Cloud-Partner) ist übergeordnetes System; Teilsysteme sind z. B. Bildgenerierung, Websuche, Sprachmodus (V01 F.18). <b>Offen:</b> ChatGPT steht über Elemente (Chat-Oberfläche, API-Schnittstelle) mit Umweltelementen in Beziehung – ohne Prompts der Nutzer keine Ausgabe; über die API ist es in fremde Anwendungen eingebunden. <b>Komplex:</b> sehr viele Elemente (Milliarden Modellparameter, Millionen Konversationen) mit hohem Beziehungsreichtum (Parameter sind über Schichten verknüpft). <b>Kompliziert:</b> verschiedenartige Elemente – Text, Bilder, Code, Audio, Dateien, Plugins, Nutzerkonten. <b>Dynamisch:</b> Konversationen verändern laufend ihren Zustand, Modelle werden aktualisiert, Antworten fallen bei gleicher Frage unterschiedlich aus. <b>Zweck- und zielorientiert:</b> Zweck = Texte erstellen, Fragen beantworten; Ziele = Qualität der Antworten (Korrektheit, wenige Halluzinationen), kurze Antwortzeit, Nutzerwachstum, Abo-Umsatz. <b>Emergent:</b> Die Fähigkeit, einen schlüssigen Aufsatz zu schreiben, ergibt sich nicht aus einem einzelnen Parameter, sondern aus der Systemstruktur; die Speichergröße des Modells ist dagegen nicht emergent (V01 F.16–17). Real: ChatGPT existiert in der Wirklichkeit (reales System).</p></div></details>
+<details class="quiz"><summary>14 · Fall (10 P.): Prüfen Sie „KI-Assistenten steigern immer die Produktivität. Jedes Unternehmen sollte sie deshalb sofort einführen." anhand von drei Wissenschaftskriterien. (Probeklausur 2026)</summary><div class="ans"><p>Kurzfassung (ausführlich in 1.11, Klausurfokus): <b>Überprüfbarkeit</b> – Allaussage „immer", nur prüfbar nach Präzisierung von „Produktivität"; bereits durch die Beobachtungen im Fall (Unterbrechungen, Fehler) falsifiziert; Bedingungen fehlen (Konditionalität, F.60). <b>Ableitungsrichtigkeit</b> – das „deshalb" setzt unausgesprochene Prämissen voraus (Produktivität sei für alle das maßgebliche Ziel, keine Kosten/Risiken); aus einer Seins- folgt keine Sollens-Aussage. <b>Widerspruchsfreiheit</b> – die Allaussage widerspricht den Erfahrungen der Beschäftigten; mindestens eine Aussage ist falsch (Widerspruchsprinzip, F.49). <b>Satz 2</b> ist normativ, eine Verhaltensanweisung an das Management (F.44); als Norm ist ihr Wahrheitswert nicht feststellbar (F.64). <b>Urteil:</b> nicht wissenschaftlich – genauer nicht-wissenschaftlich, da kein Wissenschaftsanspruch erhoben wird (F.61, F.63). Wissenschaftlich wäre eine präzise, bedingte, prüfbare Hypothese.</p></div></details>
+<details class="quiz"><summary>15 · Fall (12,5 P.): Instagram nutzt den Trending-Algorithmus. Nennen Sie einen weiteren Algorithmus, skizzieren Sie beide und das Ziel. (2024 Z)</summary><div class="ans"><p><b>Trending-Algorithmus:</b> beobachtet laufend, welche Inhalte, Audios oder Hashtags im Verhältnis zu ihrem üblichen Niveau besonders schnell an Aufrufen, Verwendungen und Interaktionen gewinnen (Wachstumsgeschwindigkeit statt absoluter Zahl), gewichtet Neuheit und regionale Relevanz, filtert richtlinienwidrige Inhalte und spielt die Trends z. B. im Reels- und Explore-Bereich oder als „Trending Audio" aus. <b>Weiterer Algorithmus – Feed-Ranking:</b> sortiert die neuen Beiträge abonnierter Accounts; Signale sind Informationen über den Beitrag, den Ersteller, die eigene Aktivität und die gemeinsame Interaktionshistorie; prognostiziert werden die Wahrscheinlichkeiten für Verweilen, Kommentieren, Liken, Teilen und Profilaufruf; die Beiträge mit dem höchsten Wert stehen oben (Mosseri 2023). <b>Ziel:</b> Informationsfunktion erfüllen (richtige Inhalte in der richtigen Menge zur richtigen Zeit, V01 F.31), dadurch Verweildauer und Engagement steigern → mehr Werbeeinblendungen → Werbeumsatz; Creator durch Reichweite binden (Netzwerkeffekte). <b>Vorlesungsbezug:</b> offene, dynamische Systeme mit Rückkopplung; Trends sind emergente Eigenschaften (F.16); das Ranking ist Prognose ohne Erklärung (F.81). Kritik: Verstärkung von Falschinformationen, wenn Erfolg mit Wahrheit gleichgesetzt wird (F.72).</p></div></details>
+</section>

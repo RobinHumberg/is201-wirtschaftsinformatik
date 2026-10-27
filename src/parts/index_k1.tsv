@@ -1,0 +1,80 @@
+Wirtschaftsinformatik (Definition)	r1-wi-definition	V01 F.13
+Information	r1-kernbegriffe	V01 F.12
+Kommunikation	r1-kernbegriffe	V01 F.12
+Technik	r1-kernbegriffe	V01 F.12
+Arbeitstechnik	r1-kernbegriffe	V01 F.12
+Sachtechnik	r1-kernbegriffe	V01 F.12
+Entwicklung des Gegenstandsbereichs	r1-entwicklung	V01 F.14–15
+Erkenntnisobjekte	r1-erkenntnisobjekte	V01 F.15
+Verkehrs-Analogie IF/IS/II	r1-erkenntnisobjekte	Lernzettel
+Informationssystem (IS)	r1-informationssystem	V01 F.23–24
+MAT-System (Mensch/Aufgabe/Technik)	r1-informationssystem	V01 F.23–24
+Aufgabenträger	r1-informationssystem	V01 F.24
+Weitergabe von Informationen	r1-informationssystem	V01 F.23
+Information System (engl.)	r1-informationssystem	V01 F.23
+Anwendungssystem	r1-anwendungssystem	V01 F.25
+Informationsinfrastruktur (II)	r1-informationsinfrastruktur	V01 F.29
+Komponenten der Informationsinfrastruktur	r1-informationsinfrastruktur	V01 F.29
+Business/IT-Alignment	r1-business-it-alignment	V01 F.30
+Top-down / Bottom-up (Infrastruktur)	r1-business-it-alignment	V01 F.30
+Informationsfunktion (IF)	r1-informationsfunktion	V01 F.31–33
+Universalfunktion	r1-informationsfunktion	V01 F.32
+Querschnittsfunktion / Grundfunktion	r1-informationsfunktion	V01 F.32
+System (Systembegriff)	r1-system	V01 F.18
+Systemgrenze	r1-system	V01 F.18, F.20
+Schnittstelle	r1-system	V01 F.18
+Umwelt / Umweltelement / Umsystem	r1-system	V01 F.20
+Teilsystem / übergeordnetes System	r1-system	V01 F.18
+Emergente Eigenschaften (Emergenz)	r1-emergenz	V01 F.16–17
+Systemeigenschaften	r1-systemeigenschaften	V01 F.19–22
+Offenheit / Geschlossenheit	r1-systemeigenschaften	V01 F.19–20
+Komplexität / Beziehungsreichtum	r1-systemeigenschaften	V01 F.19, F.21
+Kompliziertheit / Verschiedenartigkeit	r1-systemeigenschaften	V01 F.19, F.22
+Dynamik / Statik	r1-systemeigenschaften	V01 F.19
+Zweck- und Zielorientierung / Sachziel	r1-systemeigenschaften	V01 F.19
+Rückkopplung (Feedback)	r1-systemeigenschaften	Vertiefung
+Teilgebiete der WI	r1-teilgebiete	V01 F.34–37
+Analyseebenen (Individuum, Gruppe, Organisation, Gesellschaft)	r1-teilgebiete	V01 F.36
+Usability Engineering (MAT-Würfel)	r1-teilgebiete	V01 F.37
+Realwissenschaft / empirische Wissenschaft	r1-wissenschaftstypen	V01 F.40
+Formalwissenschaft	r1-wissenschaftstypen	V01 F.41
+Ingenieurwissenschaft / angewandte Wissenschaft	r1-wissenschaftstypen	V01 F.42
+Integrationsdisziplin	r1-wissenschaftstypen	Lernzettel
+Wissenschaftskriterien	r1-wissenschaftskriterien	V01 F.43
+Überprüfbarkeit / intersubjektiv	r1-ueberpruefbarkeit	V01 F.45–46
+Falsifikation / falsifizieren	r1-ueberpruefbarkeit	V01 F.45
+Ableitungsrichtigkeit / Prämisse / Konklusion	r1-ableitungsrichtigkeit	V01 F.47–48
+Widerspruchsfreiheit / Widerspruchsprinzip	r1-widerspruchsfreiheit	V01 F.49–51
+Systematisierbarkeit	r1-systematisierbarkeit	V01 F.52–54
+Verständlichkeit / Fachsprache	r1-verstaendlichkeit	V01 F.56–57
+Technologieakzeptanzmodell (TAM, Davis 1989)	r1-tam	V01 F.53–55
+Perceived Usefulness / Perceived Ease of Use	r1-tam	V01 F.53
+Normative Aussage	r1-normative-aussage	V01 F.44
+Objekte der Wissenschaftlichkeit	r1-objekte-forderungen	V01 F.58
+Missachtungssyndrom	r1-objekte-forderungen	V01 F.58
+Forderungen an wissenschaftliches Arbeiten	r1-objekte-forderungen	V01 F.59–60
+Vorurteilsfreiheit / Öffentlichkeit	r1-objekte-forderungen	V01 F.60
+Provisorische Gültigkeit / Konditionalität	r1-objekte-forderungen	V01 F.60
+nicht-wissenschaftlich / unwissenschaftlich	r1-wiss-nicht-unwiss	V01 F.61–63
+Seins-Wissenschaft	r1-seins-sollens	V01 F.64–65
+Sollens-Wissenschaft / Normwissenschaft	r1-seins-sollens	V01 F.64, F.66
+Wahrheitstheorien	r1-wahrheitstheorien	V01 F.67
+Korrespondenztheorie	r1-wahrheitstheorien	V01 F.68
+Kohärenztheorie	r1-wahrheitstheorien	V01 F.69
+Konsenstheorie	r1-wahrheitstheorien	V01 F.70–71
+Pragmatische Wahrheitstheorie	r1-wahrheitstheorien	V01 F.72–73
+Wissenschaftsziele / Wissenschaftsaufgaben	r1-wissenschaftsziele	V01 F.74–75
+Erkenntnisgewinnung / Erkenntnisverwertung	r1-wissenschaftsziele	V01 F.74
+Beschreibung / Erklärung / Prognose / Gestaltung	r1-wissenschaftsziele	V01 F.76–82
+Ursache-Wirkungs- vs. Zweck-Mittel-Beziehung	r1-wissenschaftsziele	V01 F.78, F.80
+Phasen im Forschungsprozess	r1-forschungsprozess	V01 F.83
+Gestaltung ohne Erklärung	r1-gestaltung-ohne-erklaerung	V01 F.84–86
+„Nothing as practical as a good theory"	r1-gestaltung-ohne-erklaerung	V01 F.84
+Dualität der Wissenschaftsziele / Doppelgesichtigkeit	r1-dualitaet	V01 F.87
+Algorithmus / Empfehlungsalgorithmus / Recommender	r1-algorithmen	Klausur 2024
+Trending-Algorithmus	r1-algorithmen	Klausur 2024 Z
+Content ID / Moderation	r1-algorithmen	Vertiefung
+Kollaboratives Filtern	r1-algorithmen	Vertiefung
+Schema: Ist X ein Informationssystem?	r1-schema-is	V01 F.23–25
+Schema: Systemeigenschaften untersuchen	r1-schema-systemeigenschaften	V01 F.16–22
+Schema: Aussage wissenschaftlich?	r1-schema-wissenschaftlichkeit	V01 F.43–64

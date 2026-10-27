@@ -1,0 +1,865 @@
+<section class="chapter" id="k4" data-short="Ziele & Information">
+  <h2><span class="chap-no">Kapitel 4</span>Zweck und Ziele – Information und Kommunikation</h2>
+  <p class="lead">Vorlesung 04 verbindet zwei Kernthemen: Im ersten Teil (alte Nummerierung „Kapitel 7“) geht es darum, <em>wozu</em> Informationssysteme gestaltet werden – Zweck, Zielarten, Formalziele, strategische Ziele der Informationsinfrastruktur, Zielbeziehungen und das Langfristziel der sinnhaften Vollautomation. Im zweiten Teil („Kapitel 8“) geht es um den <em>Gegenstand</em> der Wirtschaftsinformatik selbst: Zeichen, Daten, Information, Wissen und Kommunikation bis hin zu Informationsbedarf, -bedürfnis, -nachfrage, -angebot und -stand. Kein anderes Kapitel wurde in den Altklausuren so oft und mit so vielen Punkten geprüft (HWS24 Erst- und Zweittermin je 30 P., HWS25 Erst- und Zweittermin, Probeklausur 2026 Aufgabe 2).</p>
+  <div class="goals"><b>Lernziele</b><ul>
+    <li>Zweck und Ziel definieren und Zielarten (Organisations-/Individualziele, ökonomische/nicht-ökonomische, Sach-/Formalziele) an einem Fall zuordnen.</li>
+    <li>Die Formalziele für IS (Prozess- und Produktqualität), das Zielsystem nach Eller &amp; Riedl und die sechs strategischen Ziele der Informationsinfrastruktur kennen.</li>
+    <li>Zielbeziehungen (komplementär, konfliktär, indifferent) definieren und an zwei Zielen eines Falls begründen – inklusive des „Kippens“ am Hochpunkt.</li>
+    <li>Zeichen, Daten, Information und Wissen mit den Ebenen der Semiotik (Syntax, Semantik, Pragmatik) sauber abgrenzen und an einem Beispiel (Flugbuchung, ChatGPT, Ampel, Morsecode) durchspielen.</li>
+    <li>Shannons Informationsbegriff vom pragmatischen Informationsbegriff der Wirtschaftsinformatik unterscheiden und Informationsgehalt bzw. Entropie berechnen.</li>
+    <li>Implizites/explizites und deklaratives/prozedurales Wissen unterscheiden.</li>
+    <li>Kommunikation und Kommunikationsstörungen auf den drei semiotischen Ebenen erklären.</li>
+    <li>Informationsbedarf, -bedürfnis, -nachfrage, -angebot, -stand, -defizit und -überschuss als Mengen verstehen und auf einen Fall (z. B. Ärztin in der Notaufnahme) anwenden.</li>
+    <li>Chancen und Risiken neuer Technologien (Social Media, ChatGPT) für die Informationsproduktion mit Vorlesungsbegriffen begründen.</li>
+  </ul></div>
+
+  <p>Die Vorlesung nennt für den Zielteil drei Lernziele: Beispiele für Formalziele kennen, die für Entwicklung, Einführung und Nutzung von MAT-Systemen typisch sind; Empfehlungen für zielorientiertes Handeln beim Gestalten von MAT-Systemen geben; und aufzeigen, dass Ziele mit Organisationsfokus einen maßgeblichen Einfluss auf Ziele anderer Analyseebenen (Individuum, Gesellschaft) haben können (V04 F.5). Für den Informationsteil: Information und Kommunikation als grundlegende Gegenstände der WI kennen, die unterschiedlichen Informationsbegriffe von Informatik und Geistes-/Sozialwissenschaften kennen, erkennen, welche Phänomene als Information und Kommunikation bezeichnet werden, Wissen als weiteren Kernbegriff kennen und den Zusammenhang zwischen Zeichen, Daten, Informationen und Wissen verstehen (V04 F.39). „MAT-System“ steht dabei für Mensch–Aufgabe–Technik-System, also für das Informationssystem im Sinne von Kapitel 1.</p>
+
+  <!-- ===================== TEIL A: ZWECK UND ZIELE ===================== -->
+  <h3 id="k4-zweck-ziel">4.1 Zweck und Ziel</h3>
+  <p>Die Vorlesung trennt zwei Begriffe, die im Alltag oft verschwimmen. Der <b>Zweck</b> ist die Absicht hinter einer Handlung – das „Wozu“. Ein <b>Ziel</b> ist dagegen ein konkret beschriebener, gewollter zukünftiger Zustand, der in einer bestimmten Zeit erreicht werden soll. Ziele sind <b>normative Aussagen</b>: Sie beschreiben nicht, wie die Welt ist, sondern wie sie sein soll. Damit knüpft das Kapitel an Kapitel 2 an (deskriptive vs. normative Aussagen; technologische Aussagen enthalten Ziel-Mittel-Beziehungen).</p>
+  <div class="box def"><div class="box-h">Definition · Zweck</div><p>„Als Zweck bezeichnet man, was jemand oder etwas mit einer Handlung beabsichtigt, also das, was bewirkt bzw. erreicht werden soll.“</p><p class="src">V04 F.6, F.96</p></div>
+  <div class="box def"><div class="box-h">Definition · Ziel</div><p>„Ziele sind Ergebnisse bewussten Handelns und beschreiben gewollte, zukünftige Zustände oder Wirkungen, die in einer bestimmten Zeit zu bestimmten Zuständen führen; sie sind also normative Aussagen.“</p><p class="src">V04 F.6</p></div>
+  <p>Die Folie nennt zwei Funktionen von Zielen. Erstens <b>lenken (Sach-)Ziele die Auswahl von Alternativen</b>, „indem die prognostizierten Wirkungen der Alternativen mit den normativen Aussagen verglichen werden“: Man schätzt ab, was jede Alternative bewirken würde, und wählt die, deren Wirkung dem Soll-Zustand am nächsten kommt. Zweitens dient das Setzen und Verfolgen von Zielen der <b>Koordination und Kontrolle der Aufgabenerfüllung</b> sowie der <b>Motivation der Aufgabenträgerinnen</b> (V04 F.6).</p>
+  <div class="box ex"><div class="box-h">Beispiel · Zweck vs. Ziel</div><p>Ein Klinikum führt ein klinisches Informationssystem ein. <b>Zweck:</b> Die Behandlung in der Notaufnahme soll besser werden. <b>Ziel:</b> „Die durchschnittliche Wartezeit in der Notaufnahme soll bis Ende 2027 von 90 auf 60 Minuten sinken; verantwortlich ist die ärztliche Leitung.“ Der Zweck ist eine allgemeine Absicht, das Ziel ist operationalisiert (Inhalt, Maßstab, Ausmaß, Zeit, Verantwortung – siehe 4.3).</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>„Zweck“ und „Ziel“ synonym verwenden. In der Klausur muss das Ziel als <em>gewollter zukünftiger Zustand in einer bestimmten Zeit</em> formuliert werden. „Das System soll helfen“ ist ein Zweck, kein Ziel.</p></div>
+
+  <h3 id="k4-zielarten">4.2 Zielarten</h3>
+  <p>Die Vorlesung unterscheidet Zielarten nach mehreren Kriterien. Wichtig ist, in der Klausur das jeweilige <em>Kriterium</em> mitzunennen, denn ein und dasselbe Ziel kann gleichzeitig mehreren Zielarten angehören (z. B. „Kostensenkung“ ist ein ökonomisches Ziel, ein Organisationsziel und ein Formalziel – genauer ein Kostenziel der Prozessqualität).</p>
+
+  <h4 id="k4-org-indiv">Kriterium 1: Wer setzt das Ziel? – Organisations- vs. Individualziele</h4>
+  <div class="box def"><div class="box-h">Definition · Zielarten nach zuständiger Instanz</div><p>„Zielarten werden zunächst danach unterschieden, welche Instanzen dafür zuständig sind, Ziele zu setzen, nämlich Organisationen und Individuen.“</p><p class="src">V04 F.7</p></div>
+  <ul>
+    <li><b>Organisationsziele</b> werden „von den dafür zuständigen Personen, Stellen oder Gremien gesetzt“ – z. B. <em>strategische IT-Ziele vom Top-Management</em> (V04 F.7).</li>
+    <li><b>Individualziele</b> werden „von den Personen [gesetzt], die ein fachliches und persönliches Interesse daran haben“ – z. B. <em>Akzeptanzziele von Nutzerinnen</em> (V04 F.7).</li>
+  </ul>
+  <p>Das <b>Zielsystem</b> einer Organisation ist „eine Menge von miteinander in Beziehung stehenden Zielen“. Es kann sich nur bewähren, „wenn es gelingt, Organisationsziele und Individualziele so zu setzen, dass sie nicht (zu sehr) in Widerspruch zueinanderstehen“ (V04 F.7). Hier liegt die Brücke zum Lernziel „Ziele mit Organisationsfokus beeinflussen andere Analyseebenen“: Wenn das Management Effizienz will, die Nutzerinnen aber Entlastung und Bedienbarkeit, scheitert das System an fehlender Akzeptanz.</p>
+
+  <h4 id="k4-oekonomisch">Kriterium 2: Inhalt – ökonomische vs. nicht-ökonomische Ziele</h4>
+  <ul>
+    <li><b>Ökonomische Ziele</b>, z. B. Produktivität, Wirtschaftlichkeit (V04 F.8).</li>
+    <li><b>Nicht-ökonomische Ziele</b>, z. B. Nachhaltigkeit, Zufriedenheit, Wohlbefinden. Sie „gewinnen zunehmend an Bedeutung“ und „können erheblichen Einfluss darauf haben, welche ökonomischen Ziele umgesetzt werden (können)“ (V04 F.8).</li>
+  </ul>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Nutzerakzeptanz</div><p>Bei der Zielplanung für ein Digitalisierungsprojekt ist besonders auf die <b>Nutzerakzeptanz</b> (ein nicht-ökonomisches Individualziel) zu achten, weil sie Produktivität und Wirtschaftlichkeit (ökonomische Ziele) beeinflusst. Fehlende oder niedrige Akzeptanz geht mit negativen Wirkungen auf diese ökonomischen Ziele einher. Außerdem setzen sich in Digitalisierungsprojekten oft die Personen mit starker <b>Machtposition</b> durch, sodass „sachlich besser begründbare Ziele ‚auf der Strecke bleiben‘“ (V04 F.9).</p></div>
+
+  <h4 id="k4-sach-formal">Kriterium 3: Was vs. wie gut – Sachziele und Formalziele</h4>
+  <p>Auf den Folien taucht das Begriffspaar an zwei Stellen auf: „Sachziele lenken die Auswahl von Alternativen“ (V04 F.6) und im Zielsystem nach Eller &amp; Riedl, wo „Sachziele“ in die Wirksamkeit einfließen (V04 F.16). Ab F.10 spricht die Vorlesung fast nur noch von <b>Formalzielen</b> für MAT-Systeme. Eine ausdrückliche Definition des Begriffspaars steht nicht auf den Folien. Nach dem Winbuch (Heinrich/Heinzl/Riedl) gilt: Das <b>Sachziel</b> beschreibt, <em>was</em> ein System leisten soll, also seine Aufgabe (z. B. „Medikationsdaten in der Notaufnahme bereitstellen“). <b>Formalziele</b> beschreiben, <em>wie gut</em> diese Aufgabe erfüllt werden soll (Qualität, Zeit, Kosten, Sicherheit, Wirtschaftlichkeit …).</p>
+  <div class="box deep"><div class="box-h">Vertiefung · Sach- vs. Formalziel (Winbuch-Logik)</div><p>Sachziele beziehen sich auf den Gegenstand der Aufgabe (welche Leistung erbracht wird), Formalziele auf die Art und Güte der Aufgabenerfüllung. Eine Faustregel für die Klausur: Lässt sich das Ziel mit „besser/schneller/billiger/sicherer“ steigern, ist es ein Formalziel; beschreibt es eine Funktion des Systems („Patientendaten anzeigen“, „Flüge buchen“), ist es ein Sachziel. Die Zielforschung der WI befasst sich mit den Formalzielen (V04 F.10).</p></div>
+
+  <h4 id="k4-ebenen">Kriterium 4: Planungsebene – strategisch, administrativ, operativ</h4>
+  <p>Für die Informationsinfrastruktur unterscheidet die Vorlesung <b>strategische, administrative und operative Ziele</b> im idealtypischen Controlling-Prozess (V04 F.19, siehe 4.6). Strategische Ziele werden vom Top-Management gesetzt und „heruntergebrochen“.</p>
+
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Kriterium</th><th>Zielarten</th><th>Beispiel aus einem Klinik-Fall</th><th>Folie</th></tr></thead>
+    <tbody>
+      <tr><td>Zuständige Instanz</td><td>Organisationsziel ↔ Individualziel</td><td>Klinikleitung: geringere Dokumentationskosten ↔ Ärztin: schnell bedienbares System (Akzeptanz)</td><td>V04 F.7</td></tr>
+      <tr><td>Inhalt</td><td>ökonomisch ↔ nicht-ökonomisch</td><td>Kostensenkung, Produktivität ↔ Patientensicherheit, Zufriedenheit, Wohlbefinden</td><td>V04 F.8</td></tr>
+      <tr><td>Gegenstand vs. Güte</td><td>Sachziel ↔ Formalziel</td><td>„Medikationsplan anzeigen“ ↔ „Zugriff in unter 5 Sekunden“, „sicher“</td><td>V04 F.6, F.10, F.16</td></tr>
+      <tr><td>Formalziel-Gliederung</td><td>Prozessqualität (Leistung, Termin, Kosten) ↔ Produktqualität (Nutzung, Wartung, Rahmen)</td><td>Einführung bis 30.06. (Terminziel) ↔ intuitive Bedienung (Nutzungsziel)</td><td>V04 F.12–15</td></tr>
+      <tr><td>Planungsebene</td><td>strategisch ↔ administrativ ↔ operativ</td><td>Sicherheitsstreben der II ↔ Rollen- und Rechtekonzept ↔ Login pro Zugriff</td><td>V04 F.18–19</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · Zielarten zuordnen</div><p>Probeklausur 2026, A2b (10 P.): „Nennen Sie drei Ziele, die mit dem System verfolgt werden, und ordnen Sie jedes einer Zielart aus der Vorlesung zu.“ Für volle Punkte: Ziel aus dem Fall wörtlich übernehmen, Zielart mit Kriterium nennen („ökonomisches Ziel, weil …“), Folie zitieren. Doppelzuordnungen sind erlaubt und zeigen Verständnis („geringere Dokumentationskosten = ökonomisches Organisationsziel; als Formalziel ein Kostenziel bzw. Kostensenkung im Sinne der GPM-Ziele, F.17“).</p></div>
+
+  <h3 id="k4-zielelemente">4.3 Zielelemente und Zielforschung</h3>
+  <div class="box def"><div class="box-h">Definition · Zielelemente</div><p>„Zielelemente sind Zielinhalt, Zielmaßstab, Ausmaß der Zielerreichung, zeitlicher Bezug sowie personifizierte Verantwortung der Zielerreichung.“</p><p class="src">V04 F.10</p></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Zielelement</th><th>Frage</th><th>Beispiel „Wartezeit Notaufnahme“</th></tr></thead>
+    <tbody>
+      <tr><td>Zielinhalt</td><td>Was soll erreicht werden?</td><td>Wartezeit der Patientinnen</td></tr>
+      <tr><td>Zielmaßstab</td><td>Woran wird gemessen?</td><td>Minuten zwischen Ankunft und ärztlichem Erstkontakt (Durchschnitt)</td></tr>
+      <tr><td>Ausmaß der Zielerreichung</td><td>Wie viel? (maximieren, minimieren, Zielwert)</td><td>von 90 auf höchstens 60 Minuten</td></tr>
+      <tr><td>Zeitlicher Bezug</td><td>Bis wann?</td><td>bis 31.12.2027</td></tr>
+      <tr><td>Personifizierte Verantwortung</td><td>Wer ist verantwortlich?</td><td>Chefärztin der Notaufnahme</td></tr>
+    </tbody>
+  </table></div>
+  <p>Mit den Formalzielen für MAT-Systeme beschäftigt sich die <b>Zielforschung</b>. Sie will herausfinden, welche Ziele von Bedeutung <em>sind</em>, welche Ziele von Bedeutung <em>sein werden</em> und welche <em>Beziehungen zwischen den Zielen</em> bestehen. Ausdrücklich ist es „nicht Zweck der Zielforschung, der Praxis Vorschriften darüber machen zu wollen, welche Ziele sie verfolgen soll“ (V04 F.10). Die Zielforschung ist also deskriptiv-erklärend, nicht normativ.</p>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>„Die Zielforschung schreibt Unternehmen vor, welche IT-Ziele sie haben sollen.“ – Falsch, das schließt F.10 ausdrücklich aus.</p></div>
+
+  <h3 id="k4-formalziele">4.4 Formalziele für Informationssysteme: Prozess- und Produktqualität</h3>
+  <p>Die Formalziele für IS werden in zwei Gruppen gegliedert (V04 F.11–12): Ziele der <b>Prozessqualität</b> beziehen sich auf den Entwicklungs-, Einführungs- und Nutzungs<em>prozess</em>, Ziele der <b>Produktqualität</b> auf das entstandene <em>Produkt</em>, also das System selbst.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 300" role="img" aria-label="Hierarchie der Formalziele für Informationssysteme: Prozessqualität mit Leistungs-, Termin- und Kostenzielen, Produktqualität mit Rahmen-, Wartungs- und Nutzungszielen; Rahmenziele mit Innovation, Automatisierung, Integration und Dialogisierung">
+      <g stroke="currentColor" stroke-width="1.2" fill="none">
+        <line x1="320" y1="48" x2="160" y2="82"/><line x1="320" y1="48" x2="480" y2="82"/>
+        <line x1="160" y1="110" x2="55" y2="152"/><line x1="160" y1="110" x2="160" y2="152"/><line x1="160" y1="110" x2="265" y2="152"/>
+        <line x1="480" y1="110" x2="375" y2="152"/><line x1="480" y1="110" x2="480" y2="152"/><line x1="480" y1="110" x2="585" y2="152"/>
+        <line x1="375" y1="180" x2="155" y2="232"/><line x1="375" y1="180" x2="285" y2="232"/><line x1="375" y1="180" x2="415" y2="232"/><line x1="375" y1="180" x2="545" y2="232"/>
+      </g>
+      <rect x="260" y="20" width="120" height="28" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <text x="320" y="39" font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor" font-weight="bold">Formalziele</text>
+      <rect x="90" y="82" width="140" height="28" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="160" y="101" font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">Prozessqualität</text>
+      <rect x="410" y="82" width="140" height="28" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <text x="480" y="101" font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">Produktqualität</text>
+      <g font-size="12" font-family="inherit" text-anchor="middle" fill="currentColor">
+        <rect x="5" y="152" width="100" height="28" rx="4" fill="none" stroke="currentColor"/><text x="55" y="170">Leistungsziele</text>
+        <rect x="110" y="152" width="100" height="28" rx="4" fill="none" stroke="currentColor"/><text x="160" y="170">Terminziele</text>
+        <rect x="215" y="152" width="100" height="28" rx="4" fill="none" stroke="currentColor"/><text x="265" y="170">Kostenziele</text>
+        <rect x="325" y="152" width="100" height="28" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/><text x="375" y="170">Rahmenziele</text>
+        <rect x="430" y="152" width="100" height="28" rx="4" fill="none" stroke="currentColor"/><text x="480" y="170">Wartungsziele</text>
+        <rect x="535" y="152" width="100" height="28" rx="4" fill="none" stroke="currentColor"/><text x="585" y="170">Nutzungsziele</text>
+        <rect x="96" y="232" width="118" height="28" rx="4" fill="none" stroke="currentColor"/><text x="155" y="250">Innovation</text>
+        <rect x="226" y="232" width="118" height="28" rx="4" fill="none" stroke="currentColor"/><text x="285" y="250">Automatisierung</text>
+        <rect x="356" y="232" width="118" height="28" rx="4" fill="none" stroke="currentColor"/><text x="415" y="250">Integration</text>
+        <rect x="486" y="232" width="118" height="28" rx="4" fill="none" stroke="currentColor"/><text x="545" y="250">Dialogisierung</text>
+      </g>
+      <text x="320" y="288" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--muted)">Rahmenziele wirken auf alle anderen Formalziele ein (jeweils als „…grad“ messbar)</text>
+    </svg>
+    <figcaption>Zielhierarchie der Formalziele für IS nach V04 F.12. Achtung: Auf F.11 steht an dritter Stelle unter Prozessqualität versehentlich „Formalziele“ – korrekt ist „Kostenziele“ (F.12, F.13, T04 F.4).</figcaption>
+  </figure>
+
+  <h4 id="k4-prozessqualitaet">Prozessqualität (V04 F.13)</h4>
+  <ul>
+    <li><b>Leistungsziele:</b> „Ziele, welche die Erbringung von Zwischenergebnissen und Ergebnissen im Entwicklungs-, Einführungs- und Nutzungsprozess beschreiben“ (z. B. „Pflichtenheft liegt vor“, „Schulung aller Pflegekräfte abgeschlossen“).</li>
+    <li><b>Terminziele:</b> „Ziele, welche die geplanten Zeitpunkte oder Zeiträume für die Erbringung von Zwischenergebnissen und Ergebnissen beschreiben“ (z. B. „Go-live am 01.04.“).</li>
+    <li><b>Kostenziele:</b> „Ziele, die den geplanten und bewerteten Verbrauch an Gütern und Dienstleistungen für die Erbringung von Zwischenergebnissen und Ergebnissen beschreiben“ (z. B. „Einführungsbudget 2 Mio. €“).</li>
+  </ul>
+  <p>Leistung, Termin und Kosten bilden das bekannte „magische Dreieck“ des Projektmanagements. Die Folie ergänzt: Weitere Ziele der Prozessqualität lassen sich ableiten, „wenn die Beziehungen zwischen Leistungen, Terminen und Kosten präzisiert und darüber hinaus diese Phänomene aus einem anderen Blickwinkel betrachtet werden“ (V04 F.13) – etwa Produktivität (Leistung je Einsatz) oder Wirtschaftlichkeit (Leistung im Verhältnis zu Kosten).</p>
+
+  <h4 id="k4-produktqualitaet">Produktqualität (V04 F.14–15)</h4>
+  <ul>
+    <li><b>Nutzungsziele</b> „beschreiben die Qualität der Benutzung der Produkte; sie bestimmen ihre Gebrauchstauglichkeit“.</li>
+    <li><b>Wartungsziele</b> (oder Rekonstruktionsziele) „beschreiben Qualitätsmerkmale der Produkte bezüglich ihrer Anpassung an veränderte Anforderungen“ und „bestimmen die Wartbarkeit der Produkte“.</li>
+    <li><b>Rahmenziele</b> „legen Qualitätsforderungen an Produkte fest, die auf alle anderen Formalziele einwirken“ und „beeinflussen damit entscheidend das Entwerfen alternativer Systemkonzepte im Entwicklungsprozess“. Beispiele: Innovation bzw. Innovationsgrad, Automatisierung bzw. Automatisierungsgrad, Integration bzw. Integrationsgrad, Dialogisierung bzw. Dialogisierungsgrad (F.15).</li>
+  </ul>
+  <div class="box ex"><div class="box-h">Beispiel · Rahmenziel wirkt auf alles</div><p>Entscheidet ein Krankenhaus, dass das neue System einen hohen <b>Integrationsgrad</b> haben soll (alle Abteilungen auf einer gemeinsamen ePA-Datenbasis), verändert das alle anderen Formalziele: Die Kosten- und Terminziele steigen (aufwendigere Schnittstellen), die Nutzungsziele profitieren (keine Doppelerfassung), die Wartungsziele werden anspruchsvoller. Deshalb heißt es „Rahmen“-Ziel.</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>Prozess- und Produktqualität vertauschen. Merksatz: <b>Prozess</b> = Leistung, Termin, Kosten (wie läuft das Projekt?); <b>Produkt</b> = Nutzung, Wartung, Rahmen (wie gut ist das System?). T04 Aufgabe 1a: „Kostenziele stellen ein Element der Prozessqualität dar“ ist <b>wahr</b>.</p></div>
+
+  <h3 id="k4-eller-riedl">4.5 Zielsystem strategischer Formalziele nach Eller &amp; Riedl</h3>
+  <p>Eller und Riedl (2016) haben ein Zielsystem strategischer Formalziele von IS entwickelt (V04 F.16). Es zeigt, wie Qualitätsmerkmale über Nutzung und Zufriedenheit bis zu den obersten Zielen wirken.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 320" role="img" aria-label="Zielsystem strategischer Formalziele nach Eller und Riedl: System-, Informations- und Servicequalität wirken auf Nutzerzufriedenheit und Nutzung, Nutzung auf Wirksamkeit, Wirksamkeit auf Wirtschaftlichkeit, beide auf Nachhaltigkeit; Sachziele fließen in Wirksamkeit, Kosten in Wirtschaftlichkeit">
+      <defs><marker id="arr-k4b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <g stroke="currentColor" stroke-width="1.2" fill="none" marker-end="url(#arr-k4b)">
+        <line x1="230" y1="100" x2="283" y2="50"/>
+        <line x1="410" y1="100" x2="357" y2="50"/>
+        <line x1="255" y1="114" x2="363" y2="114"/>
+        <line x1="375" y1="195" x2="242" y2="130"/>
+        <line x1="300" y1="209" x2="348" y2="209"/>
+        <line x1="125" y1="280" x2="188" y2="225"/>
+        <line x1="160" y1="282" x2="368" y2="225"/>
+        <line x1="300" y1="280" x2="252" y2="225"/>
+        <line x1="345" y1="280" x2="383" y2="225"/>
+        <line x1="515" y1="280" x2="425" y2="225"/>
+        <line x1="485" y1="282" x2="292" y2="225"/>
+      </g>
+      <g stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4" marker-end="url(#arr-k4b)">
+        <line x1="85" y1="195" x2="168" y2="130"/>
+        <line x1="550" y1="195" x2="482" y2="130"/>
+      </g>
+      <rect x="257" y="20" width="126" height="28" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <rect x="145" y="100" width="110" height="28" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="365" y="100" width="150" height="28" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="25" y="195" width="90" height="28" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="150" y="195" width="150" height="28" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="350" y="195" width="90" height="28" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="525" y="195" width="80" height="28" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="50" y="280" width="120" height="28" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="240" y="280" width="160" height="28" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="468" y="280" width="124" height="28" rx="4" fill="none" stroke="currentColor"/>
+      <g font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">
+        <text x="320" y="39" font-weight="bold">Nachhaltigkeit</text>
+        <text x="200" y="119">Wirksamkeit</text>
+        <text x="440" y="119">Wirtschaftlichkeit</text>
+        <text x="70" y="214">Sachziele</text>
+        <text x="225" y="214">Nutzerzufriedenheit</text>
+        <text x="395" y="214">Nutzung</text>
+        <text x="565" y="214">Kosten</text>
+        <text x="110" y="299">Systemqualität</text>
+        <text x="320" y="299">Informationsqualität</text>
+        <text x="530" y="299">Servicequalität</text>
+      </g>
+      <g font-size="12" font-family="inherit" style="fill:var(--muted)">
+        <text x="20" y="40">— wirkt auf</text>
+        <text x="20" y="58">- - fließt ein</text>
+      </g>
+    </svg>
+    <figcaption>Zielsystem nach Eller &amp; Riedl (V04 F.16): Die drei Qualitäten treiben Nutzerzufriedenheit und Nutzung; Nutzung macht das IS wirksam; Wirksamkeit und Wirtschaftlichkeit münden in Nachhaltigkeit.</figcaption>
+  </figure>
+  <p>Die Aussage des Modells lässt sich so lesen: Ein IS kann nur dann <b>nachhaltig</b> erfolgreich sein, wenn es sowohl <b>wirksam</b> (es erfüllt seine Sachziele) als auch <b>wirtschaftlich</b> (Leistung im Verhältnis zu den Kosten) ist. Wirksam wird es, wenn es tatsächlich <b>genutzt</b> wird; die Nutzung hängt von der <b>Nutzerzufriedenheit</b> und beide hängen von <b>System-, Informations- und Servicequalität</b> ab. Wirksamkeit wirkt außerdem auf die Wirtschaftlichkeit, denn ein System, das nichts bewirkt, ist auch nicht wirtschaftlich.</p>
+  <div class="box deep"><div class="box-h">Vertiefung · DeLone &amp; McLean</div><p>Die unteren beiden Ebenen entsprechen dem IS-Erfolgsmodell von DeLone &amp; McLean (2003, im Literaturverzeichnis von V04): System Quality, Information Quality und Service Quality beeinflussen Use (Nutzung) und User Satisfaction; daraus entstehen „Net Benefits“. Eller &amp; Riedl ersetzen die Net Benefits durch die Zielgrößen Wirksamkeit, Wirtschaftlichkeit und Nachhaltigkeit. Auch TAM (Davis 1989) steht im Literaturverzeichnis – Akzeptanz als Voraussetzung der Nutzung, siehe Kapitel 2/5.</p></div>
+
+  <h4 id="k4-gpm-ziele">Ziele in Projekten des Geschäftsprozessmanagements (V04 F.17)</h4>
+  <ul>
+    <li><b>Durchlaufzeitverkürzung:</b> Reduzierung der Zeit, mit der ein bestimmter Geschäftsprozess abgewickelt wird.</li>
+    <li><b>Kostensenkung:</b> Verringerung der im Leistungserstellungsprozess anfallenden Kosten.</li>
+    <li><b>Qualitätsverbesserung:</b> Steigerung der von Kundinnen wahrgenommenen Qualität von Sachgütern oder Dienstleistungen.</li>
+    <li><b>Kundenorientierung:</b> „ergibt sich als Resultat verkürzter Durchlaufzeiten, gesenkter Kosten sowie verbesserter Qualität“ – sie ist also ein abgeleitetes Ziel, das komplementär zu den drei vorigen steht.</li>
+    <li><b>Flexibilität:</b> die Eigenschaft, auf geänderte Anforderungen ohne grundlegende Veränderung des Prozessablaufs reagieren zu können.</li>
+  </ul>
+  <div class="box exam"><div class="box-h">Klausurfokus</div><p>Die GPM-Ziele sind die „Praxis-Vokabeln“, mit denen man Fallziele benennt: „kürzere Wartezeiten“ = Durchlaufzeitverkürzung, „weniger Behandlungsfehler“ = Qualitätsverbesserung, „geringere Papierkosten“ = Kostensenkung. Kombiniert mit Zielart (ökonomisch/nicht-ökonomisch) und Folienverweis ergibt das eine saubere Zuordnung.</p></div>
+
+  <h3 id="k4-ii-ziele">4.6 Ziele für Informationsinfrastrukturen</h3>
+  <p>Die strategische IT-Planung verläuft primär „von oben nach unten“: Sie macht Vorgaben zur unternehmensweiten, langfristigen und marktwirksamen Gestaltung der Informationsinfrastruktur (II) und zur Schaffung jedes einzelnen IS (V04 F.18).</p>
+  <div class="box def"><div class="box-h">Kernaussage · Top-down / Bottom-up</div><p>„Die Ziele für die Gestaltung der Informationsinfrastruktur werden also idealtypisch auf strategischer Ebene vom Top-Management gesetzt und von dort systematisch bis auf die Ebene der Nutzung jedes Anwendungssystems durch jede einzelne Nutzerin ‚heruntergebrochen‘.“ Rückmeldungen über die Zielerreichung erfolgen <b>bottom-up</b>; so kann das Top-Management die Zielerreichung überwachen und gegebenenfalls steuernd eingreifen (<b>IT-Controlling</b>).</p><p class="src">V04 F.18</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 230" role="img" aria-label="Idealtypischer Controlling-Prozess: Plan-Vorgaben von strategischen über administrative zu operativen Zielen nach unten, Ist-Rückmeldungen nach oben, auf jeder Ebene ein eigener Regelkreis">
+      <defs><marker id="arr-k4i" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="220" y="15" width="200" height="34" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <rect x="220" y="95" width="200" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="220" y="175" width="200" height="34" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <g font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">
+        <text x="320" y="37" font-weight="bold">strategische Ziele</text>
+        <text x="320" y="117">administrative Ziele</text>
+        <text x="320" y="197">operative Ziele</text>
+      </g>
+      <g stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#arr-k4i)">
+        <line x1="260" y1="49" x2="260" y2="93"/>
+        <line x1="260" y1="129" x2="260" y2="173"/>
+        <line x1="380" y1="93" x2="380" y2="51"/>
+        <line x1="380" y1="173" x2="380" y2="131"/>
+      </g>
+      <g font-size="13" font-family="inherit" fill="currentColor">
+        <text x="250" y="76" text-anchor="end">Plan (Vorgabe, top-down)</text>
+        <text x="250" y="156" text-anchor="end">Plan (Vorgabe, top-down)</text>
+        <text x="390" y="76">Ist (Rückmeldung, bottom-up)</text>
+        <text x="390" y="156">Ist (Rückmeldung, bottom-up)</text>
+      </g>
+      <text x="320" y="226" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--muted)">auf jeder Ebene: Soll-Ist-Vergleich und Steuerung (IT-Controlling)</text>
+    </svg>
+    <figcaption>Idealtypischer Controlling-Prozess (V04 F.19): Ziele werden als Plan nach unten weitergegeben, Ist-Werte nach oben gemeldet; jede Ebene vergleicht Plan und Ist und steuert nach.</figcaption>
+  </figure>
+
+  <h4 id="k4-empirische-zielforschung">Empirische Zielforschung (V04 F.20)</h4>
+  <p>Die empirische Zielforschung soll herausfinden, welche Zielinhalte das Top-Management tatsächlich verwendet, und Aussagen darüber machen, welche Zielinhalte für die strategische Planung, Überwachung und Steuerung der II geeignet sind. Die Folie hält selbstkritisch fest: Wissenschaft und Praxis haben bisher <b>wenige Antworten</b> darauf geliefert, nach welchen Formalzielen auf strategischer Ebene geplant, überwacht und gesteuert werden soll. Bekannt ist, dass das Streben nach <b>Sicherheit, Produktivität und Wirtschaftlichkeit</b> als strategische Formalziele verwendet wird.</p>
+
+  <h4 id="k4-strategische-ziele">Die sechs strategischen Ziele der Informationsinfrastruktur (V04 F.21–22)</h4>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Strategisches Ziel</th><th>Definition (Folienwortlaut)</th><th>Beispiel</th></tr></thead>
+    <tbody>
+      <tr><td><b>Sicherheitsstreben</b></td><td>Sicherheit ist die Eigenschaft der II, Bedrohungen so begegnen zu können, dass Schäden vermieden, entstandene Schäden erkannt und negative Auswirkungen auf den Unternehmenserfolg verringert werden.</td><td>Backup, Zugriffsrechte, Zwei-Faktor-Login für Gesundheitsdaten</td></tr>
+      <tr><td><b>Produktivitätsstreben</b></td><td>Produktivität ist die Eigenschaft der II, bezüglich ihres mengenmäßigen Ertrags in einem bestimmten Verhältnis zum mengenmäßigen Einsatz von Produktionsfaktoren zur Erbringung dieses Ertrags zu stehen.</td><td>behandelte Patientinnen pro Ärztin und Schicht</td></tr>
+      <tr><td><b>Wirtschaftlichkeitsstreben</b></td><td>Wirtschaftlichkeit ist die Eigenschaft der II, bezüglich ihrer Kostensituation und ihrer Leistungssituation in einem bestimmten Verhältnis zu stehen.</td><td>Nutzen der ePA im Verhältnis zu Lizenz- und Betriebskosten</td></tr>
+      <tr><td><b>Anpassungsstreben</b> (Flexibilitätsstreben)</td><td>Anpassung ist die Eigenschaft der II, auf qualitative und quantitative Änderungen des Aufgabensystems ohne grundlegende Veränderungen der IS reagieren zu können.</td><td>neue gesetzliche Meldepflicht ohne Neuentwicklung umsetzbar</td></tr>
+      <tr><td><b>Durchdringungsstreben</b></td><td>Durchdringung ist die Eigenschaft der II, das Aufgabensystem mehr oder weniger umfassend durch IS zu unterstützen.</td><td>Anteil der Klinikprozesse, die digital unterstützt sind</td></tr>
+      <tr><td><b>Wirksamkeitsstreben</b> (Effektivitätsstreben)</td><td>Wirksamkeit ist die Eigenschaft der II, Funktionen und Leistungen, unabhängig von dem dafür erforderlichen Mitteleinsatz und seinen Kosten, zur Nutzung anzubieten.</td><td>Medikationsplan überhaupt in der Notaufnahme abrufbar</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>Produktivität und Wirtschaftlichkeit verwechseln. <b>Produktivität</b> ist ein <em>Mengen</em>verhältnis (Output-Menge zu Input-Menge), <b>Wirtschaftlichkeit</b> ein <em>Wert</em>verhältnis (Leistung zu Kosten). <b>Wirksamkeit</b> (Effektivität) fragt nur, <em>ob</em> etwas geleistet wird – ausdrücklich „unabhängig vom Mitteleinsatz und seinen Kosten“. T04 Aufgabe 1b: „Es gibt sechs strategische Ziele zur Planung, Überwachung und Steuerung der II“ ist <b>wahr</b> (T04 F.6).</p></div>
+  <div class="box deep"><div class="box-h">Vertiefung · Bündel</div><p>Im Lernzettel (nach Winbuch) werden die sechs Ziele in zwei Bündel geteilt: Sicherheit, Durchdringung, Wirksamkeit einerseits, Produktivität, Wirtschaftlichkeit, Anpassung andererseits; außerdem gelten Wirksamkeit und Wirtschaftlichkeit als die beiden Phänomene, mit denen das Top-Management die IT „in den Griff“ bekommt. Auf den aktuellen Folien steht diese Bündelung nicht – nur als Hintergrund verwenden.</p></div>
+
+  <h3 id="k4-informationsfunktion">4.7 Ziele für die Informationsfunktion und Wissensmanagement</h3>
+  <div class="box def"><div class="box-h">Definition · Informationsfunktion</div><p>„Die Informationsfunktion umfasst die betrieblichen Aufgaben, deren Zweck das Beschaffen und Verwenden von Information ist.“ (V04 F.23) – In V01 F.31 ausführlicher: die betrieblichen Aufgaben, „deren Zweck die Produktion von Information ist und deren Bereitstellung durch Kommunikation erfolgt“, kurz die Informationsaufgaben.</p><p class="src">V04 F.23 · V01 F.31</p></div>
+  <p>Ziele, die beim Gestalten von Kommunikations- und Wissensprozessen verfolgt werden (V04 F.23), lassen sich als „fünf R“ merken. Den Aufgabenträgerinnen sollen</p>
+  <ol>
+    <li>zum <b>richtigen Zeitpunkt</b></li>
+    <li>die <b>richtigen Informationen</b></li>
+    <li>in der <b>richtigen Menge</b></li>
+    <li>am <b>richtigen Ort</b></li>
+    <li>in der <b>erforderlichen Qualität</b></li>
+  </ol>
+  <p>zur Verfügung gestellt werden.</p>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Außendienst (V04 F.24)</div><p>Eine Außendienstmitarbeiterin (Aufgabenträgerin) führt ein Verkaufsgespräch beim Kunden. Über ein mobiles Endgerät greift sie <em>unmittelbar im Gespräch</em> (richtiger Zeitpunkt, richtiger Ort) auf Lagerstände zu, aus denen die Lieferbereitschaft generiert wird (richtige Informationen, richtige Menge). Weil Lagereingänge und -ausgänge korrekt erfasst wurden, sind die Informationen <em>wahr</em> (Qualität). Die nachgefragten Artikelpreise werden mit den Lagerständen angezeigt, und die Informationen sind ausreichend detailliert, um den Vertrag abzuschließen.</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · Informationsproduktion</div><p>Die fünf R sind das Bewertungsraster für jede Frage nach „Chancen und Risiken für die Informationsproduktion“ (HWS24 Zweittermin A3, HWS25 Zweittermin A2). Eine Chance ist, was eines der R verbessert (Echtzeit = Zeitpunkt; mobil = Ort; personalisiert = richtige Information/Menge), ein Risiko, was eines verschlechtert (Fake News = Qualität; Überlastung = Menge). Siehe 4.20.</p></div>
+  <div class="box def"><div class="box-h">Definition · Wissensmanagement</div><p>„Wissensmanagement ist ein Teilbereich der Wirtschaftsinformatik und meint die unternehmerische Aufgabe der Entwicklung und Nutzung von Wissen in Organisationen.“</p><p class="src">V04 F.25</p></div>
+  <p>Für die Gestaltung von Kommunikations- und Wissensprozessen sind die Erklärungen des Wissensmanagements von großer Bedeutung. In der bekannten Systematik der Aufgaben des Wissensmanagements nach <b>Probst</b> steht an erster Stelle das <b>Setzen der Wissensziele</b>. Wissensziele sind aus den Unternehmenszielen abzuleiten und in der Regel darauf ausgerichtet, für den Unternehmenserfolg relevante Fähigkeiten und Fertigkeiten der Mitarbeiterinnen zu verbessern (V04 F.25).</p>
+  <div class="box deep"><div class="box-h">Vertiefung · Bausteine nach Probst, Raub &amp; Romhardt</div><p>Das Modell (im Literaturverzeichnis: Probst et al. 2012) umfasst acht Bausteine: Wissensziele und Wissensbewertung als strategischer Rahmen, dazwischen der operative Kreislauf aus Wissensidentifikation, Wissenserwerb, Wissensentwicklung, Wissens(ver)teilung, Wissensnutzung und Wissensbewahrung. Auf den Folien steht nur der erste Baustein.</p></div>
+
+  <h3 id="k4-zielbeziehungen">4.8 Zielbeziehungen</h3>
+  <p>Weil eine Organisation immer mehrere Ziele zugleich verfolgt, stehen diese in Beziehung zueinander. Idealtypisch sind Zielbeziehungen komplementär, konfliktär oder indifferent; <b>realtypisch verändert sich häufig der Charakter der Zielbeziehung</b> (V04 F.26).</p>
+  <div class="box def"><div class="box-h">Definitionen · Zielbeziehungen (V04 F.26)</div>
+    <p><b>Zielkomplementarität:</b> „Zwei Ziele Z1 und Z2 sind komplementär, wenn mit der Steigerung der Zielerreichung von Z1 auch die Zielerreichung von Z2 steigt.“</p>
+    <p><b>Zielkonflikt:</b> „Zwei Ziele Z1 und Z2 sind konfliktär, wenn mit der Steigerung der Zielerreichung von Z1 die Zielerreichung von Z2 sinkt.“</p>
+    <p><b>Zielindifferenz:</b> „Zwei Ziele Z1 und Z2 sind indifferent, wenn mit der Steigerung der Zielerreichung von Z1 die Zielerreichung von Z2 unverändert bleibt, oder wenn mit der Steigerung der …“ (der Satz ist auf der Folie abgeschnitten; sinngemäß: … Zielerreichung von Z2 die Zielerreichung von Z1 unverändert bleibt).</p>
+    <p class="src">V04 F.26</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 290" role="img" aria-label="Zielbeziehung zwischen Sicherheit und Benutzerakzeptanz: links vom Hochpunkt steigen beide gemeinsam (komplementär), rechts davon sinkt die Akzeptanz bei weiter steigender Sicherheit (konfliktär); rechts drei Grundtypen komplementär, konfliktär, indifferent">
+      <defs><marker id="arr-k4c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="61" y="30" width="137" height="209" style="fill:var(--accent-soft)"/>
+      <rect x="198" y="30" width="142" height="209" style="fill:var(--surface-2)"/>
+      <g stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#arr-k4c)">
+        <line x1="60" y1="240" x2="350" y2="240"/>
+        <line x1="60" y1="240" x2="60" y2="22"/>
+      </g>
+      <path d="M60,240 Q190,-110 320,200" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <line x1="198" y1="54" x2="198" y2="240" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"/>
+      <circle cx="198" cy="54" r="4" style="fill:var(--accent)"/>
+      <g font-size="13" font-family="inherit" fill="currentColor">
+        <text x="206" y="48">Hochpunkt</text>
+        <text x="129" y="228" text-anchor="middle" style="fill:var(--accent)" font-weight="bold">komplementär</text>
+        <text x="269" y="228" text-anchor="middle" font-weight="bold">konfliktär</text>
+        <text x="205" y="262" text-anchor="middle">Zielerreichung Z1 (Sicherheit)</text>
+        <text x="44" y="135" text-anchor="middle" transform="rotate(-90 44 135)">Zielerreichung Z2 (Akzeptanz)</text>
+        <text x="205" y="282" text-anchor="middle" style="fill:var(--muted)" font-size="12">Login + App-Freigabe ← → jede Eingabe einzeln bestätigen</text>
+      </g>
+      <g stroke="currentColor" stroke-width="1.2" fill="none">
+        <polyline points="400,30 400,80 460,80"/>
+        <polyline points="400,115 400,165 460,165"/>
+        <polyline points="400,200 400,250 460,250"/>
+      </g>
+      <g stroke-width="2.2" fill="none" style="stroke:var(--accent)">
+        <line x1="405" y1="75" x2="455" y2="38"/>
+        <line x1="405" y1="122" x2="455" y2="160"/>
+        <line x1="405" y1="222" x2="455" y2="222"/>
+      </g>
+      <g font-size="13" font-family="inherit" fill="currentColor">
+        <text x="472" y="52" font-weight="bold">komplementär</text>
+        <text x="472" y="70">Z1 ↑ ⇒ Z2 ↑</text>
+        <text x="472" y="137" font-weight="bold">konfliktär</text>
+        <text x="472" y="155">Z1 ↑ ⇒ Z2 ↓</text>
+        <text x="472" y="222" font-weight="bold">indifferent</text>
+        <text x="472" y="240">Z1 ↑ ⇒ Z2 unverändert</text>
+      </g>
+    </svg>
+    <figcaption>Links: Beispiel der Vorlesung (V04 F.27–28). Bis zum Hochpunkt erhöht mehr Sicherheit auch die Akzeptanz, danach senkt jede weitere Sicherheitsmaßnahme die Akzeptanz. Rechts: die drei idealtypischen Zielbeziehungen (F.26).</figcaption>
+  </figure>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Online-Banking (V04 F.28)</div><p>Login-Daten und die Freigabe per Banking-App (Fingerabdruck, Face-ID) erhöhen die Sicherheit und wirken positiv auf die Nutzerakzeptanz – <b>komplementär</b>, links vom Hochpunkt. Müsste jede einzelne Eingabe zusätzlich in der App bestätigt werden, stiege zwar die Sicherheit weiter, die Nutzerakzeptanz sänke aber – <b>konfliktär</b>, rechts vom Hochpunkt. Die Aufgabenerfüllung (Durchführung der Banktransaktion) wäre dann behindert.</p></div>
+  <div class="box ex"><div class="box-h">Eigenes Beispiel · Klinikum mit ePA (Probeklausur 2026)</div><p><b>Komplementär:</b> „Kürzere Wartezeiten“ und „weniger Behandlungsfehler“. Wenn Befunde, Allergien und Medikationsplan sofort digital abrufbar sind, entscheidet die Ärztin schneller <em>und</em> mit vollständigerer Information; steigt die Zielerreichung des einen Ziels, steigt die des anderen. Ebenso komplementär: „geringere Papierkosten“ und „kürzere Wartezeiten“, weil das Suchen in Papierakten entfällt.</p><p><b>Konfliktär:</b> „Datenschutz/Sicherheit“ (zusätzliche Anmeldung bei jedem Zugriff, Forderung des Datenschutzbeauftragten) und „kürzere Wartezeiten“ bzw. Nutzerakzeptanz. Jede zusätzliche Anmeldung kostet in der Nacht wertvolle Minuten; mehr Sicherheit senkt hier die Zielerreichung der Schnelligkeit – genau die Situation rechts vom Hochpunkt in F.27. Ebenfalls konfliktär: „jede Berufsgruppe sieht nur die Daten, die sie braucht“ (Sicherheit) vs. „vollständige Information für Notfallentscheidungen“.</p><p><b>Indifferent:</b> z. B. „geringere Papierkosten“ und „Zufriedenheit der Verwaltung mit dem Dienstplanmodul“ – das eine beeinflusst das andere kaum.</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · Zielbeziehungen</div><p>Probeklausur 2026 A2b verlangt eine komplementäre Beziehung an <em>zwei</em> Zielen und eine konfliktäre an <em>zwei anderen</em>. Pro Beziehung: (1) beide Ziele benennen, (2) Definition aus F.26 anwenden („mit steigender Zielerreichung von Z1 steigt/sinkt Z2“), (3) Wirkmechanismus aus dem Fall erklären. Pluspunkt: Hinweis, dass sich der Charakter realtypisch ändern kann (F.26–27) – eine maßvolle Anmeldung ist komplementär zur Akzeptanz, eine Anmeldung bei <em>jedem</em> Zugriff konfliktär.</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>„Sicherheit und Akzeptanz sind konfliktär“ als feste Aussage. Die Vorlesung zeigt gerade, dass dieselben zwei Ziele je nach Ausmaß der Zielerreichung erst komplementär, dann konfliktär sind. In der Klausur heißt es auf der Folie „konfliktär“ – „konkurrierend“ ist ein gängiges Synonym, besser aber den Folienbegriff verwenden.</p></div>
+
+  <h3 id="k4-vollautomation">4.9 Sinnhafte Vollautomation als Langfristziel der Wirtschaftsinformatik</h3>
+  <div class="box def"><div class="box-h">Kernaussage · Sinnhafte Vollautomation</div><p>„Im Jahr 1995 formulierte Mertens die ‚sinnhafte Vollautomation‘ als Langfristziel der Wirtschaftsinformatik.“ Mit „sinnhaft“ ist gemeint, dass „ein Automationsschritt von der Allgemeinheit nach einer Lernfrist akzeptiert wird und sich allenfalls Nostalgiker und Sonderlinge nach der personellen Lösung zurücksehnen“.</p><p class="src">V04 F.29</p></div>
+  <p>Die Systematik beschreibt einen Entwicklungspfad (V04 F.30–31):</p>
+  <ol>
+    <li><b>Technikzentrierte IS</b> als kritisierter Ausgangspunkt: für Nutzerinnen nur schwierig zu bedienen, leisten nur einen begrenzten Beitrag zur Aufgabenerfüllung.</li>
+    <li><b>Menschenzugängliche</b> Systeme: möglichst breite Kreise der Bevölkerung können IuK-Systeme im teilautomatisch/interaktiven Betrieb leicht bedienen und nutzen sie gerne.</li>
+    <li><b>Menschenähnliche</b> Informationsverarbeitung.</li>
+    <li><b>Vollautomatisierung</b>, sofern sinnhaft, als anzustrebender Endzustand.</li>
+  </ol>
+  <p>Aufgrund aktueller Entwicklungen (insbesondere KI) ist das <b>Substitutionspotenzial</b> von IKT enorm: Nicht nur monotone, sondern auch administrativ-operative Tätigkeiten werden übernommen. Nach Ansicht von Fachvertreterinnen wird die WI damit zu einer <b>Automatisierungslehre</b> (V04 F.31). Die Grafik auf F.32 zeigt den Kern: Eine Aufgabe A wandelt Input in Output um; Aufgabenträger ist zunächst der Mensch M, der „ersetzt wird durch“ Computer, Roboter und Maschine C, der dann Aufgabenträger ist.</p>
+  <div class="box ex"><div class="box-h">Beispiele der Vorlesung (V04 F.33, „NEU“)</div><ul>
+    <li>Arbeiten, die komplexe Wahrnehmung und Handhabung von Objekten oder Personen erfordern (Zahnärztin), haben weiterhin ein geringes Risiko, wegrationalisiert zu werden.</li>
+    <li>Generative KI (ChatGPT, Bildgeneratoren) stellt die Annahme infrage, dass hohe Kreativität vor Automatisierung schützt; Texterinnen, Übersetzer und Grafikerinnen nutzen KI bereits für Entwürfe.</li>
+    <li>Arbeiten mit hoher sozialer Intelligenz (PR-Managerinnen) gelten weiterhin als schwer automatisierbar.</li>
+    <li>Bei rund 80 % der US-Beschäftigten könnten mindestens 10 % der Aufgaben von Sprachmodellen betroffen sein, bei rund 19 % sogar die Hälfte (Eloundou et al. 2024). Anders als in der Oxford-Studie von 2013 (Frey &amp; Osborne) sind vor allem besser bezahlte Wissensberufe betroffen.</li>
+  </ul></div>
+  <h4 id="k4-eversmann">Kritik: Eversmanns drei Gründe (V04 F.34–35)</h4>
+  <ol>
+    <li>Ein vollautomatisiertes Unternehmen wäre kein Unternehmen, sondern ein Automat im Besitz einer Betreiberin.</li>
+    <li>Ein vollautomatisiertes Unternehmen wäre nicht in der Lage, dauerhaft Gewinn zu erzielen.</li>
+    <li>Eine vollautomatisierte Volkswirtschaft käme wegen fehlender Beschäftigung und daher fehlender Kaufkraft zum Erliegen.</li>
+  </ol>
+  <p>F.35 zeigt den dritten Grund als Teufelskreis: Vollautomatisierung → niedrige Beschäftigung → wenig Kaufkraft → geringer Umsatz → sinkende Gewinne → Stellenabbau → noch niedrigere Beschäftigung … → die Volkswirtschaft kommt zum Erliegen.</p>
+  <p>Trotz dieser Argumente blieb das Langfristziel in der WI erhalten (V04 F.36). 2009 wurden erstmals <b>Gehirn-Computer-Schnittstellen</b> vorgestellt – betriebswirtschaftlich zunächst nur als konzeptionelle Idee und möglicher Schritt zur sinnhaften Vollautomation. Riedl nennt als Langfristziele, Prozessschritte bei administrativen Arbeitsabläufen zu automatisieren und die Benutzerfreundlichkeit von Systemen zu erhöhen; beides kann die Annäherung an die sinnhafte Vollautomation ermöglichen und zur Produktivitätssteigerung beitragen.</p>
+  <div class="box def"><div class="box-h">Forderung der Vorlesung (V04 F.37)</div><p>„Es erscheint zweckmäßig, dass sich die Wirtschaftsinformatik auch als eine Automatisierungslehre versteht, jedoch ist es zwingend erforderlich, eine solche Lehre nicht nur betriebswirtschaftlich zu konzeptualisieren, sondern auch aus anderen Perspektiven wie beispielsweise jenen der Psychologie, Soziologie, Philosophie und der Volkswirtschaftslehre.“ Eine solche <b>multiperspektivische Betrachtung</b> stellt sicher, dass fundamentale humanistische und gesellschaftliche Ziele ausreichend berücksichtigt werden.</p><p class="src">V04 F.37, F.96</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus</div><p>Bisher nicht als eigene Aufgabe geprüft, eignet sich aber als Diskussionsbaustein bei KI-Fällen („Ist der KI-Assistent ein Schritt zur sinnhaften Vollautomation?“): Definition „sinnhaft“ (Akzeptanz nach Lernfrist), Substitutionspotenzial (F.31, F.33), Gegenargumente (Eversmann), Forderung nach Multiperspektivität (F.37). Verbindet sich mit dem Lernziel, dass organisationale Ziele auf Individuum und Gesellschaft wirken (F.5).</p></div>
+
+  <!-- ===================== TEIL B: INFORMATION UND KOMMUNIKATION ===================== -->
+  <h3 id="k4-informationsbegriff">4.10 Historischer Hintergrund zum Informationsbegriff</h3>
+  <p>Information war zunächst ein Prinzip zur Darstellung und Erklärung der <b>Bedeutung von Zeichen</b> (Semantik). In der Wissenschaft wird der Begriff später auf unterschiedliche Arten verwendet (V04 F.40):</p>
+  <ul>
+    <li>als <b>Maß für die Informationsdichte</b> eines Zeichensystems (Entropie) – Shannon, 4.11;</li>
+    <li>als <b>System von Regeln</b> zum Aufbau von Zeichenfolgen (Syntax);</li>
+    <li>als <b>Bedeutung</b> von Zeichenfolgen (Semantik);</li>
+    <li>als <b>Handlungen und Prozesse</b>, die durch Information ausgelöst werden (Pragmatik).</li>
+  </ul>
+  <p>Diese vier Verwendungen sind der rote Faden des ganzen Teils: Die Informatik arbeitet mit dem syntaktisch-technischen Begriff (Bits, Entropie), die Wirtschaftsinformatik interessiert sich primär für die pragmatische Ebene (F.59, siehe 4.13). Ein Lernziel lautet deshalb, dass in Informatik und Geistes-/Sozialwissenschaften unterschiedliche Informationsbegriffe verwendet werden (F.39).</p>
+  <div class="box deep"><div class="box-h">Vertiefung · ältere Folienversion</div><p>Im Lernzettel steht zusätzlich (ältere Foliensätze): Wirtschaftswissenschaftlerinnen sehen Information als Produktionsfaktor gleichwertig zu Kapital, Arbeit und Rohstoffen; Biologinnen als Grundlage der Übertragung von Genen und Definitionsmerkmal aller Lebensformen; Physikerinnen als objektive Eigenschaft des Universums neben Materie und Energie. Auf den aktuellen Folien steht nur noch die Produktionsfaktor-Sicht (F.56).</p></div>
+
+  <h3 id="k4-shannon">4.11 Die Informationstheorie von Claude E. Shannon</h3>
+  <div class="box def"><div class="box-h">Definition · Information nach Shannon</div><p>„Die mathematische Theorie von Claude E. Shannon definiert Information als objektiv messbare Verringerung der Unsicherheit oder Entropie.“ In dieser Sichtweise steht Information im Zusammenhang mit ihrer <b>Neuartigkeit</b>: „Ein weniger wahrscheinliches Ereignis ist informativer, da es die Unsicherheit stärker reduziert als ein wahrscheinliches Ereignis.“</p><p class="src">V04 F.41</p></div>
+  <p>Information wird hier mit objektiven Messungen des Austauschs von Informationen, also mit <b>Kommunikation</b>, in Verbindung gebracht (F.41). Das Beispiel der Vorlesung (F.42): Der Wurf einer <b>fairen Münze</b> hat ein nicht vorhersehbares Ergebnis – es besteht Unsicherheit, und das Ergebnis informiert. Eine Münze mit dem gleichen Bild auf beiden Seiten informiert über nichts, was wir nicht schon wissen: keine Unsicherheit, also keine Information.</p>
+  <div class="box def"><div class="box-h">Definition · Informationsgehalt</div><p>Shannon definiert Information als <b>technisches Maß, das den Zeichen einer Nachricht zugeordnet wird</b>. „Der Informationsgehalt eines Ereignisses I<sub>i</sub> hängt von der Wahrscheinlichkeit p<sub>i</sub> ab, mit der das Ereignis eintritt; er ist umgekehrt proportional zum Logarithmus der Wahrscheinlichkeit (I<sub>i</sub> = log 1/p<sub>i</sub>, mit 0 ≤ p<sub>i</sub> ≤ 1).“ Seltene Ereignisse haben einen hohen, häufige einen geringen Informationsgehalt. Bei Logarithmus zur Basis 2 ist die Einheit das <b>Bit</b>.</p><p class="src">V04 F.43</p></div>
+  <div class="box ex"><div class="box-h">Rechenbeispiele</div>
+    <p><b>Faire Münze:</b> p = 0,5 → I = ld(1/0,5) = ld 2 = <b>1 Bit</b>. <b>Zweiseitig gleiche Münze:</b> p = 1 → I = ld 1 = <b>0 Bit</b> (F.42).</p>
+    <p><b>Buchstaben im Deutschen (F.44, nach Rost 2020):</b> „e“ hat p = 0,1470 → I = ld(1/0,147) ≈ 2,77 Bit (niedrigster Informationsgehalt); „x“ hat p = 0,0001 → I = ld(10 000) ≈ 13,3 Bit (höchster). Ebenso haben die zehn häufigsten Wörter („die, der, und, den, am, in, zu, ist, dass, es“) den niedrigsten Informationsgehalt.</p>
+    <p><b>Entropie (F.45, nach Brügge 2004):</b> Die Entropie ist der mittlere Informationsgehalt: H(I) = Σ p<sub>j</sub> · ld(1/p<sub>j</sub>). Alphabet {a, b} mit p<sub>a</sub> = 0,75, p<sub>b</sub> = 0,25: H = 0,75 · ld(4/3) + 0,25 · ld 4 ≈ 0,75 · 0,415 + 0,25 · 2 ≈ 0,31 + 0,5 ≈ <b>0,8 Bit</b> pro Zeichen. Zum Vergleich: Bei p<sub>a</sub> = p<sub>b</sub> = 0,5 wäre H = 1 Bit (maximale Unsicherheit).</p></div>
+  <p>Entscheidend ist F.46: „Die Bedeutung und der Kontext der Zeichen sind unerheblich.“ Shannon gab dem Wort Information eine technische Bedeutung, die sich von der alltagssprachlichen absonderte. Die Folie warnt: Die Entwicklung der IuK-Technologie und die Verwendung dieser Bezeichnung „suggeriert, dass allein das Vorhandensein und die bloße Nutzung dieser Technologie etwas mit Information und Kommunikation zu tun haben muss“ (F.46).</p>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · PRÜFUNG BESTANDEN (V04 F.47–48, nach Föll 2019)</div><p>Welcher Satz enthält mehr Information: „PRÜFUNG BESTANDEN“ oder „ARFGUND SEPÜNNBET“? Intuitiv der erste – informationstheoretisch ist das falsch. Beide enthalten <b>exakt dieselbe Information</b>: Die Zahl der Bits zur Kodierung ist identisch, die Störanfälligkeit ebenfalls (es sind dieselben Buchstaben). Dass nur Sequenz 1 „Sinn ergibt“, liegt daran, dass wir automatisch die <b>Bedeutung (Semantik)</b> betrachten. „Die Beimessung von Bedeutung hängt untrennbar mit der informationsverarbeitenden Person zusammen. Sie ist subjektbezogen.“ (F.48)</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>T04 Aufgabe 1d: „Der Informationsbegriff nach Shannon berücksichtigt die Bedeutung (Semantik) von Daten“ ist <b>falsch</b> – Shannon misst nur die syntaktische Ebene (T04 F.10). Für die WI ist die syntaktische Ebene und damit die Informationstheorie „weniger bedeutend“ (F.59).</p></div>
+
+  <h4 id="k4-kommunikationsmodell">Das Kommunikationsmodell: Sender, Kodierung, Kanal, Störquelle, Empfänger</h4>
+  <p>Shannons Theorie ist eine Theorie der Nachrichtenübertragung. Die Folien beschreiben die Bausteine verstreut: Daten werden als Nachrichten durch „optische, akustische oder andere sensorische <b>Signale</b> übertragen“; „mithilfe von Übertragungstechniken können die Signale <b>kodiert, gesendet und dekodiert</b> werden“ (F.54); Kommunikation ist ein Prozess, mit dem ein <b>Sender</b> die Absicht verfolgt, einem <b>Empfänger</b> Information zur Verfügung zu stellen (F.78); es liegen mögliche <b>Störquellen</b> vor (F.80), etwa die „Veränderung von Signalen im Kommunikationskanal“ (F.81). Die Grafik fasst das zusammen und ordnet zugleich die drei Ebenen der Übertragung aus F.85 zu.</p>
+  <figure class="fig">
+    <svg viewBox="0 0 640 330" role="img" aria-label="Kommunikationsmodell: Sender kodiert Nachricht in Signale, Kanal überträgt, Störquelle verändert Signale, Dekodierung, Empfänger; darunter die drei Übertragungsebenen syntaktisch, semantisch, pragmatisch mit typischer Störung">
+      <defs><marker id="arr-k4f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="230" y="12" width="180" height="32" rx="4" style="fill:var(--surface-2)" stroke="currentColor" stroke-dasharray="4 3"/>
+      <text x="320" y="33" font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">Störquelle (Rauschen)</text>
+      <g stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#arr-k4f)">
+        <line x1="320" y1="44" x2="320" y2="92"/>
+        <line x1="110" y1="120" x2="138" y2="120"/>
+        <line x1="240" y1="120" x2="268" y2="120"/>
+        <line x1="370" y1="120" x2="398" y2="120"/>
+        <line x1="500" y1="120" x2="528" y2="120"/>
+      </g>
+      <text x="328" y="72" font-size="12" font-family="inherit" fill="currentColor">verändert Signale</text>
+      <rect x="10" y="95" width="100" height="50" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <rect x="140" y="95" width="100" height="50" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="270" y="95" width="100" height="50" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="400" y="95" width="100" height="50" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="530" y="95" width="100" height="50" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <g font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">
+        <text x="60" y="116" font-weight="bold">Sender</text><text x="60" y="134" font-size="12">(Absicht)</text>
+        <text x="190" y="116" font-weight="bold">Kodierung</text><text x="190" y="134" font-size="12">in Signale</text>
+        <text x="320" y="116" font-weight="bold">Kanal</text><text x="320" y="134" font-size="12">Signal</text>
+        <text x="450" y="116" font-weight="bold">Dekodierung</text><text x="450" y="134" font-size="12">aus Signalen</text>
+        <text x="580" y="116" font-weight="bold">Empfänger</text><text x="580" y="134" font-size="12">(Handlung?)</text>
+      </g>
+      <text x="320" y="166" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--muted)">Nachricht (Bedeutung tragende Zeichen) → Signal → ggf. gestörtes Signal → Nachricht</text>
+      <line x1="10" y1="180" x2="630" y2="180" stroke="currentColor" stroke-width="0.8"/>
+      <g font-size="12" font-family="inherit" fill="currentColor">
+        <text x="20" y="200" font-weight="bold">Ebene (F.85)</text><text x="125" y="200" font-weight="bold">übertragen wird …</text><text x="405" y="200" font-weight="bold">typische Störung (F.81)</text>
+      </g>
+      <g stroke="currentColor" stroke-width="0.6"><line x1="10" y1="242" x2="630" y2="242"/><line x1="10" y1="280" x2="630" y2="280"/></g>
+      <g font-size="13" font-family="inherit" fill="currentColor">
+        <text x="20" y="228" style="fill:var(--accent)" font-weight="bold">pragmatisch</text>
+        <text x="20" y="266" font-weight="bold">semantisch</text>
+        <text x="20" y="304" font-weight="bold">syntaktisch</text>
+      </g>
+      <g font-size="12" font-family="inherit" fill="currentColor">
+        <text x="125" y="228">Zeichen + Bedeutung + Absicht</text>
+        <text x="125" y="266">Zeichen + Bedeutung der Zeichen</text>
+        <text x="125" y="304">(physikalische) Zeichen</text>
+        <text x="405" y="228">Handlung ≠ erwartete Handlung</text>
+        <text x="405" y="266">Begriff unscharf/missverstanden</text>
+        <text x="405" y="304">falsch kodiert / Signal gestört</text>
+      </g>
+    </svg>
+    <figcaption>Kommunikationsmodell mit Störquelle (in Anlehnung an Shannon &amp; Weaver 1949, zusammengesetzt aus V04 F.54, F.78, F.80–81, F.85). Shannon betrachtet nur die unterste, syntaktische Ebene; die WI interessiert sich vor allem für die oberste.</figcaption>
+  </figure>
+  <div class="box deep"><div class="box-h">Vertiefung · Shannon &amp; Weaver</div><p>Im Original (Shannon 1948; Shannon &amp; Weaver 1949, beide im Literaturverzeichnis von V04) besteht das Modell aus Informationsquelle, Sender (Transmitter), Kanal mit Störquelle (Noise Source), Empfänger (Receiver) und Ziel (Destination). Weaver unterschied dazu drei Problemebenen: Level A (technisch: Wie genau werden Zeichen übertragen?), Level B (semantisch: Wie genau transportieren sie die gemeinte Bedeutung?), Level C (Effektivität: Beeinflusst die Bedeutung das Verhalten wie gewünscht?). Das entspricht genau Syntax, Semantik und Pragmatik der Vorlesung.</p></div>
+
+  <h3 id="k4-semiotik">4.12 Semiotik: Syntax, Semantik und Pragmatik</h3>
+  <p>„Eine Möglichkeit der Abgrenzung von Zeichen, Daten und Information bietet die <b>Zeichenlehre</b>“ (Semiotik, V04 F.49). Nach <b>Morris’ semiotischem Dreieck</b> (F.50) gibt es drei Beziehungen:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Ebene</th><th>Beziehung (F.50)</th><th>Zuordnung (F.52–55, T04 F.27)</th><th>Ampel (F.53)</th><th>Morsecode (T04 F.27)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Syntax / Syntaktik</b></td><td>Beziehungen von Zeichen untereinander</td><td>Zeichen, Zeichenfolge, Zeichensystem</td><td>Rot · Gelb · Grün</td><td>· · · − − − · · ·</td></tr>
+      <tr><td><b>Semantik</b></td><td>Beziehungen von Zeichen zu den Objekten, die sie bezeichnen</td><td>Daten, Nachricht/Mitteilung</td><td>Stopp! · Achtung! · Los!</td><td>„SOS“ = internationaler Notruf</td></tr>
+      <tr><td><b>Pragmatik</b></td><td>Beziehungen von Zeichen zu den Kommunikationsteilnehmern</td><td>Information</td><td>Stehen bleiben · Anfahren/Abbremsen · Fahren/Gehen</td><td>„Brauche Hilfe!“ → Rettung wird ausgelöst</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box def"><div class="box-h">Definition · Signale, Syntaktik, Pragmatik (V04 F.49)</div><p>„Signale beschreiben nur das, was nach vorgegebenen Regeln codiert werden kann (Syntaktik), unabhängig vom Verhältnis der Zeichen zum Bezeichneten und unabhängig von der Bedeutung der Zeichen untereinander (Semantik).“ „Wird die Empfängerin der Zeichen in die Betrachtung miteinbezogen, werden die syntaktische und die semantische Ebene um die pragmatische Ebene erweitert (Pragmatik).“</p><p class="src">V04 F.49</p></div>
+
+  <h4 id="k4-zeichen">Zeichen (Syntaktische Ebene)</h4>
+  <div class="box def"><div class="box-h">Definition · Zeichen</div><p>„Zeichen sind etwas Sichtbares oder Hörbares, das etwas deutlich bzw. auf etwas aufmerksam macht.“</p><p class="src">V04 F.51 · T04 F.8</p></div>
+  <p>Bei der Analyse von Zeichen wird zunächst nur der <b>Zeichenkörper</b> erfasst. Durch Aneinanderreihung entsteht eine <b>Zeichenfolge</b> oder ein <b>Zeichenkomplex</b>. Eine Menge von Zeichen zusammen mit ihren Beziehungen untereinander bildet ein <b>Zeichensystem</b>. Beziehungen zwischen Zeichen stellen eine <b>Ordnung</b> dar (Syntax). Zeichensysteme bedienen sich einer diskreten Menge oder bilden ein komplexes Muster (<b>Kodierung</b>) (F.51).</p>
+
+  <h4 id="k4-daten">Daten (Semantische Ebene)</h4>
+  <div class="box def"><div class="box-h">Definition · Datum / Daten</div><p>„Die Beziehung zwischen Zeichen und einem Gegenstand oder Sachverhalt wird als <b>Referenz</b> bezeichnet, das referenzierte Objekt als <b>Datum</b>.“ „Ein Datum (vom griech. und lat. ‚das Gegebene‘) wird allgemein als gegebener Gegenstand oder Sachverhalt bezeichnet.“ „Daten sind Zuordnungen von Zeichen zu Objekten und Sachverhalten der Wirklichkeit.“ „Erst die Beziehung zwischen Zeichen und dem Bezeichneten bringt eine Bedeutung (Semantik) zum Ausdruck.“ „Die Weitergabe von Bedeutung tragenden Zeichen oder Daten wird als <b>Nachricht</b> oder <b>Mitteilung</b> bezeichnet.“</p><p class="src">V04 F.52</p></div>
+
+  <h4 id="k4-information-pragmatik">Information (Pragmatische Ebene)</h4>
+  <div class="box def"><div class="box-h">Definition · Information (pragmatisch)</div><p>„Weitergegebene Daten in Form von Nachrichten werden zu Informationen, wenn sie auf der empfangenden Seite eine Handlung auslösen (Pragmatik).“ „Infolge neuer Zeichenmuster kann neues Wissen entstehen bzw. vorhandenes Wissen verändert werden.“</p><p class="src">V04 F.53</p></div>
+  <p>Weitere Begriffe auf F.54: <b>Redundanz</b> ist „der Teil einer Nachricht, der keine Information enthält“. Daten sind Voraussetzung für Bedeutung tragende Nachrichten, die durch optische, akustische oder andere sensorische Signale übertragen werden. Das <b>Ziel einer Nachricht</b> ist, „mit einer bestimmten Menge an Zeichen so viel Information wie möglich bzw. eine Information mit so wenig Zeichen wie möglich zu übermitteln“.</p>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Rauchzeichen (V04 F.55)</div><p>Eine Rauchwolke = ACHTUNG, zwei = ALLES IST OK, drei = GEFAHR. Der <b>Zeichenvorrat</b> (eine, zwei, drei Rauchwolken) ist die Syntaktik. Durch Zuordnung der Zeichen zu Sachverhalten wird die Bedeutung festgelegt (Semantik); die referenzierten Sachverhalte sind die Daten. Wenn aus den Daten Handlungen folgen, werden sie zur Information: Eine Rauchwolke steigert die Aufmerksamkeit der Einwohner (Pragmatik).</p></div>
+  <div class="box ex"><div class="box-h">Tutoriumsbeispiel · Apple „sanftes Gelb“ (T04 F.13–14)</div><p>Vertriebsmitarbeiter Smart fragt Herrn Schön (Design), ob das neue Smartphone in „sanftem Gelb“ erhältlich ist. <b>Zeichen:</b> die Wörter bzw. Buchstaben der E-Mail (im Computer als Bits dargestellt). <b>Daten/Nachricht:</b> Die Zeichenfolge „sanftes Gelb“ referenziert eine bestimmte Farbvariante; die versendete Anfrage ist die Nachricht. <b>Information:</b> Die Design-Abteilung erkennt, dass eine Anfrage existiert und Handlungsbedarf besteht (Zweckorientierung) – Herr Schön prüft die Verfügbarkeit.</p></div>
+  <div class="box pit"><div class="box-h">Achtung · zwei Zuordnungen in den Unterlagen</div><p>Die Kursmaterialien ordnen die Semiotik-Ebenen nicht ganz einheitlich zu. <b>V04 F.52–55 und T04 F.27 (Morse):</b> Zeichen = Syntaktik, Daten/Nachricht = Semantik, Information = Pragmatik. <b>Wissenspyramide V04 F.67 und T04 F.14:</b> Die <em>Übergänge</em> werden benannt – Syntax macht aus Zeichen Daten, Semantik macht aus Daten Information, Vernetzung (T04: Pragmatik) macht aus Information Wissen. Beides ist konsistent, wenn man es so liest: Syntax ordnet Zeichen; mit Bedeutung (Semantik) werden sie zu Daten, die interpretiert werden können; erst Zweck und Handlung beim Empfänger (Pragmatik) machen Information. Für die Klausur empfiehlt sich die erste Zuordnung (wörtlich F.53: „werden zu Informationen, wenn sie … eine Handlung auslösen (Pragmatik)“), mit einem Satz zur Pyramide.</p></div>
+
+  <h3 id="k4-daten-gut">4.13 Daten als wirtschaftliches Gut, Informationsmissbrauch und Information in der WI</h3>
+  <p>In der WI gelten Informationen als <b>Produktionsfaktor</b>; „<b>Daten sind Rohstoff für Informationsproduktion</b>“ (V04 F.56, F.96). Eigenschaften von Daten (F.56):</p>
+  <ul>
+    <li>ohne Abnutzungserscheinung mehrfach verwendbar;</li>
+    <li>beliebig reproduzierbar;</li>
+    <li>Basis für das Training von KI-Systemen;</li>
+    <li>können auf einfache Weise kopiert und transportiert werden;</li>
+    <li>der Wert der Daten hängt von der Art ihrer Verwendung ab;</li>
+    <li>die Kosten von Daten hängen von ihrer Beschaffung, Bearbeitung und Speicherung ab;</li>
+    <li>Missbrauch ist möglich;</li>
+    <li>Daten haben einen Lebenszyklus.</li>
+  </ul>
+  <p>Diese Eigenschaften haben Folgen, die beim Umgang mit Information als Produktionsfaktor berücksichtigt werden müssen (F.57):</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Folge</th><th>Folienwortlaut (F.57)</th><th>Beispiel</th></tr></thead>
+    <tbody>
+      <tr><td><b>Informationsverluste</b></td><td>durch Löschen, Aggregation oder Komprimierung</td><td>ChatGPT fasst einen Arztbrief zusammen und lässt die Allergie weg</td></tr>
+      <tr><td><b>Informationsüberlastung / Informationsschock</b></td><td>wenn die Erhöhung des Angebots an Daten zur Verschlechterung der kognitiven Wahrnehmung führt</td><td>200 ältere Laborbefunde in der Notaufnahme</td></tr>
+      <tr><td><b>Informationspathologien</b></td><td>entstehen durch Mängel bei der Informationsproduktion: produzierbare Information wird nicht produziert, beschaffbare nicht beschafft und vorhandene falsch oder nicht verwendet</td><td>neue Medikation wird nicht in die ePA eingetragen</td></tr>
+      <tr><td><b>Informationsverzerrung</b></td><td>entsteht durch intrapersonelles, partielles und selektives Wahrnehmen von Information und das meist bewusste Durchsetzen individueller Anschauungen und Beurteilungen</td><td>Filterblase im Social-Media-Feed</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box def"><div class="box-h">Definition · Informationsmissbrauch, Fake News (V04 F.58)</div><p>„Die bewusste Verzerrung führt zum Informationsmissbrauch.“ „‚Fake News‘ sind manipulativ verbreitete, vorgetäuschte Nachrichten, die sich viral verbreiten, um Desinformation zu praktizieren.“ Eine weitere Form des Informationsmissbrauchs hängt mit dem <b>Eindringen in die bzw. dem Verlust von Privatsphäre</b> zusammen; die fortschreitende Digitalisierung intensiviert die Speicherung personen- und objektbezogener Daten.</p><p class="src">V04 F.58</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus</div><p>F.56–58 sind die wichtigste Fundstelle für „Risiken für die Informationsproduktion“ (HWS24 Zweittermin A3b, HWS25 Zweittermin A2b): Fake News, Verlust der Privatsphäre, Informationsüberlastung, Informationsverzerrung, Informationspathologien, Informationsverluste – sechs foliengestützte Risiken sofort verfügbar.</p></div>
+
+  <h4 id="k4-information-wi">Information aus Sicht der Wirtschaftsinformatik (V04 F.59–62)</h4>
+  <p>„Das primäre Interesse der Wirtschaftsinformatik gilt der <b>pragmatischen Ebene</b> der Semiotik, also der Information.“ Die syntaktische Ebene und damit die Informationstheorie sind für die WI weniger bedeutend. Pragmatik hat neben der Handlungs- und Entscheidungsorientierung viel mit <b>Kontext, Kultur und Verhalten</b> zu tun; das kann dazu führen, dass vom Sender erwartete Verhaltensweisen beim Empfänger nicht eintreten. Daraus folgt: „Information ist demzufolge in hohem Maß <b>subjektbezogen</b>“ (F.59).</p>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Peter und Julian (V04 F.60)</div><p>Ein Vater fordert seine Kinder auf, nicht mehr fernzusehen. Peter spielt daraufhin am Computer, Julian liest ein Buch. Eine Interpretation führt zu dem Schluss, dass Julian die Nachricht des Vaters besser verstanden hat: Syntaktisch und semantisch kam dieselbe Nachricht an, pragmatisch löste sie unterschiedliche Handlungen aus.</p></div>
+  <p>Zur Semantik (F.61): „Semantik hat viel damit zu tun, welche Bedeutung bestimmte Zeichenfolgen haben, d. h. welche Objekte und Sachverhalte sie referenzieren.“ „Kundin“, „Lieferzeit“ und „Kundenauftrag“ sind Bezeichnungen für betriebliche Objekte und Sachverhalte (Entitätstypen), die einer Mitarbeiterin bekannt sein sollten; es können aber firmenspezifische Besonderheiten mit unterschiedlicher Bedeutung auftreten.</p>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · „Lieferzeit“ (V04 F.62)</div><p>In Unternehmen A ist die Lieferzeit der Zeitraum von der <b>Auftragserteilung durch die Kundin</b> bis zum Eingang der Lieferung bei der Kundin; in Unternehmen B der Zeitraum von der <b>Auftragsbestätigung durch den Lieferanten</b> bis zum Eingang der Lieferung. Dieselbe Zeichenfolge referenziert verschiedene Sachverhalte; die Zeiträume können erheblich voneinander abweichen. Gleiche Syntax, unterschiedliche Semantik – Quelle semantischer Kommunikationsstörungen.</p></div>
+
+  <h3 id="k4-diw">4.14 Zeichen – Daten – Information – Wissen</h3>
+  <p>„Wissen unterscheidet sich von Daten und Informationen, obwohl die drei Begriffe fälschlicherweise oft synonym verwendet werden“ (V04 F.63). Die Vorlesung baut die Begriffe stufenweise auf.</p>
+  <div class="box def"><div class="box-h">Definition · Daten (herrschende Lehre)</div><p>„Nach herrschender Lehre gilt: Daten umfassen etwas Gegebenes, d. h. Fakten, Beobachtungen oder Wahrnehmungen und betrachten keinen Kontext, keine Bedeutung oder keine Absicht.“</p><p class="src">V04 F.63</p></div>
+  <p>Beispiel (F.64): Wir beobachten, dass eine geworfene Münze „Kopf“ zeigt – für uns ist das ein Datum. Obwohl Daten ohne Kontext, Bedeutung oder Absicht sind, können sie leicht erfasst, gespeichert und übermittelt werden. „Informationen werden aus Daten gewonnen“; dabei werden nur jene Daten einbezogen, „die einen <b>Kontext</b>, eine <b>Relevanz</b> und eine <b>Zweckorientierung</b> aufweisen“ (F.65).</p>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Die Wette (V04 F.66)</div><p>Philipp bietet eine Wette an: Er zahlt jedem 10 €, wenn die Münze „Kopf“ zeigt, und bekommt 8 €, wenn sie „Zahl“ zeigt. Nele erinnert sich an ein Experiment, in dem diese Münze bei 100 Würfen 40-mal Kopf und 60-mal Zahl ergab. <b>Für Nele</b> sind die Daten der letzten 100 Würfe eine <b>Information</b>, weil sie überlegt, in das Spiel einzusteigen (Kontext + Zweck). <b>Für Anna-Maria</b> sind die Münzwürfe lediglich <b>Daten</b>, da sie sich mit der Wahrscheinlichkeitstheorie gut auskennt. Merksatz der Folie: „Es hängt von der betreffenden Person und dem Kontext ab, ob es sich um Informationen oder Daten handelt.“</p><p><em>Interpretation:</em> Die Folie begründet Anna-Marias Fall nur knapp. Eine plausible Lesart: Sie verbindet mit den Würfen keinen eigenen Entscheidungszweck – die Daten lösen bei ihr keine Handlung aus und bleiben deshalb Daten.</p></div>
+
+  <figure class="fig">
+    <svg viewBox="0 0 640 310" role="img" aria-label="Wissenspyramide: Zeichen, Daten, Informationen, Wissen von unten nach oben; Übergänge Syntax, Semantik, Vernetzung; rechts das Regenbeispiel">
+      <defs><marker id="arr-k4d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <polygon points="160,15 193.9,84 126.1,84" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <polygon points="124.1,88 195.9,88 228.8,155 91.2,155" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <polygon points="89.3,159 230.7,159 263.6,226 56.4,226" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <polygon points="54.4,230 265.6,230 300,300 20,300" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <g font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">
+        <text x="160" y="79" font-weight="bold">Wissen</text>
+        <text x="160" y="127">Informationen</text>
+        <text x="160" y="198">Daten</text>
+        <text x="160" y="270">Zeichen</text>
+      </g>
+      <g stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#arr-k4d)">
+        <line x1="303" y1="262" x2="303" y2="204"/>
+        <line x1="303" y1="192" x2="303" y2="132"/>
+        <line x1="303" y1="120" x2="303" y2="58"/>
+      </g>
+      <g font-size="12" font-family="inherit" fill="currentColor">
+        <text x="315" y="14" style="fill:var(--muted)">Übergang (F.67)</text>
+        <text x="485" y="14" style="fill:var(--muted)">Beispiel (F.69)</text>
+        <text x="315" y="222" style="fill:var(--accent)" font-weight="bold">Syntax:</text>
+        <text x="315" y="237">Zeichen werden einer</text>
+        <text x="315" y="252">Aussage zugeordnet</text>
+        <text x="315" y="150" style="fill:var(--accent)" font-weight="bold">Semantik:</text>
+        <text x="315" y="165">Daten interpretiert,</text>
+        <text x="315" y="180">erhalten Bedeutung</text>
+        <text x="315" y="78" style="fill:var(--accent)" font-weight="bold">Vernetzung:</text>
+        <text x="315" y="93">mit Erfahrung verknüpft</text>
+        <text x="315" y="108">→ Basis für Handeln</text>
+        <text x="485" y="268">„Igecihergetnse“</text>
+        <text x="485" y="198">„gleich regnet es“</text>
+        <text x="485" y="118">Ich verlasse das Haus</text>
+        <text x="485" y="133">→ relevant für mich</text>
+        <text x="485" y="46">Regen macht nass</text>
+        <text x="485" y="61">→ Schirm aufspannen</text>
+      </g>
+    </svg>
+    <figcaption>Wissenspyramide (V04 F.67, nach Wölbl 2021) mit den benannten Übergängen und dem Regenbeispiel aus F.69. Nach oben steigen Kontextbezug, Subjektbezug und Wertbeitrag.</figcaption>
+  </figure>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Von Zeichen zur Aktion (V04 F.69)</div><ol>
+    <li><b>Zeichen:</b> ungeordnete Buchstabenfolge „Igecihergetnse“.</li>
+    <li><b>Daten:</b> Durch Ordnung entsteht die Aussage „gleich regnet es“.</li>
+    <li><b>Bedeutung:</b> Regentropfen werden in einigen Augenblicken vom Himmel fallen.</li>
+    <li><b>Information:</b> Sie verlassen Ihr Haus (Kontext) – das Gegebene wird wesentlich.</li>
+    <li><b>Wissen:</b> Aus Erfahrung wird Ihnen bewusst, dass Sie nass werden.</li>
+    <li><b>Aktion:</b> Sie spannen einen Regenschirm auf.</li>
+  </ol></div>
+  <p>Zur Abgrenzung von Information und Wissen sagt F.68: Die Konsequenzen des praktischen Handelns lassen sich nicht allein aus dem Inhalt des Datums bzw. der Information ableiten; es wird die <b>Fähigkeit des beteiligten Subjekts</b> benötigt, Information zu interpretieren und in Beziehung zum jeweiligen Kontext zu setzen. Daher gilt: <b>„Information ist situativ. Das Wissen von Subjekten ist kumulativ.“</b></p>
+  <div class="box def"><div class="box-h">Definition · Faktenwissen</div><p>„Faktenwissen weist Ähnlichkeiten zu Informationen und Daten auf, ist aber umfassender und anhaltender.“</p><p class="src">V04 F.68</p></div>
+  <div class="box def"><div class="box-h">Definition · Wissen (komplexe Sichtweise)</div><p>„Wissen hilft, Informationen so zu beschaffen oder zu interpretieren, dass man Entscheidungen zur Lösung von Problemen treffen kann.“ Die faktenorientierte Sicht erscheint schlüssig, erklärt die Eigenschaften von Wissen aber nicht vollständig; eine komplexe Sichtweise ist notwendig. „Wissen leitet sich nicht alleine aus Fakten ab, sondern begleitet den Entscheidungsprozess auf einer <b>Metaebene</b>.“</p><p class="src">V04 F.70</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 250" role="img" aria-label="Münzwurf-Beispiel: Wissen wirkt auf Metaebene; Beobachtungen (Daten) werden gezählt, in Wahrscheinlichkeiten umgerechnet und zum Erwartungswert verdichtet; der Wertbeitrag steigt von null bis sehr hoch">
+      <defs><marker id="arr-k4e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+      <rect x="20" y="30" width="600" height="42" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <g font-size="12" font-family="inherit" fill="currentColor" text-anchor="middle">
+        <text x="52" y="56" font-weight="bold" font-size="13">Wissen</text>
+        <text x="157" y="56">Beobachten, zählen</text>
+        <text x="312" y="56">pK = nK/(nK+nZ)</text>
+        <text x="497" y="56">EW = pK·EK + pZ·EZ</text>
+      </g>
+      <g fill="none" stroke="currentColor" stroke-dasharray="4 3">
+        <rect x="20" y="105" width="120" height="64" rx="3"/>
+        <rect x="175" y="105" width="120" height="64" rx="3"/>
+        <rect x="330" y="105" width="150" height="64" rx="3"/>
+        <rect x="515" y="105" width="105" height="64" rx="3"/>
+      </g>
+      <g stroke="currentColor" stroke-width="1.3" fill="none" marker-end="url(#arr-k4e)">
+        <line x1="157" y1="72" x2="157" y2="128"/>
+        <line x1="312" y1="72" x2="312" y2="128"/>
+        <line x1="497" y1="72" x2="497" y2="128"/>
+        <line x1="140" y1="137" x2="173" y2="137"/>
+        <line x1="295" y1="137" x2="328" y2="137"/>
+        <line x1="480" y1="137" x2="513" y2="137"/>
+      </g>
+      <g font-size="12" font-family="inherit" fill="currentColor" text-anchor="middle">
+        <text x="80" y="124">K Z K Z Z</text><text x="80" y="140">K K K Z K</text><text x="80" y="156">… (100 Würfe)</text>
+        <text x="235" y="132">nK = 40</text><text x="235" y="150">nZ = 60</text>
+        <text x="405" y="132">pK = 0,40; pZ = 0,60</text><text x="405" y="150">EK = +10 €; EZ = −8 €</text>
+        <text x="567" y="132">EW = −0,80 €</text><text x="567" y="150">→ ablehnen</text>
+      </g>
+      <g stroke="currentColor" stroke-width="1" fill="none">
+        <polyline points="20,178 20,184 140,184 140,178"/>
+        <polyline points="175,178 175,184 620,184 620,178"/>
+      </g>
+      <g font-size="13" font-family="inherit" fill="currentColor" text-anchor="middle">
+        <text x="80" y="201" font-weight="bold">Daten</text>
+        <text x="397" y="201" font-weight="bold">Information</text>
+      </g>
+      <line x1="20" y1="216" x2="620" y2="216" stroke="currentColor" stroke-width="1.3" marker-end="url(#arr-k4e)"/>
+      <g font-size="12" font-family="inherit" style="fill:var(--muted)">
+        <text x="20" y="236">Wertbeitrag: null</text>
+        <text x="190" y="236">gering</text>
+        <text x="330" y="236">mittel</text>
+        <text x="470" y="236">hoch</text>
+        <text x="620" y="236" text-anchor="end">sehr hoch</text>
+      </g>
+    </svg>
+    <figcaption>Münzwurf-Beispiel (V04 F.71–72): Wissen (Zählen, Formel für Wahrscheinlichkeiten, Erwartungswert) wirkt auf einer Metaebene und verwandelt Daten in immer wertvollere Information bis zur Entscheidung „Spiel ablehnen“.</figcaption>
+  </figure>
+  <p>Erläuterung zu F.71: Die Häufigkeiten von Kopf und Zahl bei 100 Würfen ergeben die Wahrscheinlichkeiten p<sub>K</sub> = 0,40 und p<sub>Z</sub> = 0,60. Verknüpft mit den Erträgen E<sub>K</sub> = 10 € und E<sub>Z</sub> = −8 € ergibt sich der Erwartungswert EW = 0,40 · 10 € + 0,60 · (−8 €) = 4 € − 4,80 € = <b>−0,80 €</b> → das Spiel wird abgelehnt. Die Beziehung p<sub>K</sub> = n<sub>K</sub>/(n<sub>K</sub> + n<sub>Z</sub>) und die Ermittlung des Erwartungswerts <em>sind</em> Wissen. Die Beobachtungen, Wahrscheinlichkeiten und der Erwartungswert basieren nicht auf Fakten, sondern wurden beobachtet, abgeleitet oder ermittelt.</p>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>T04 Aufgabe 1c: „Daten und Information liegt eine identische Definition zugrunde“ ist <b>falsch</b>. Daten sind Zuordnungen von Zeichen zu Objekten/Sachverhalten ohne Kontext und Absicht (F.52, F.63); Information entsteht erst, wenn Daten mit Kontext, Relevanz und Zweck beim Empfänger eine Handlung auslösen (F.53, F.65). Ein und dieselbe Zeichenfolge kann für die eine Person Information, für die andere nur Daten sein (F.66).</p></div>
+
+  <h3 id="k4-wissensarten">4.15 Wissensarten und Wissensentstehung</h3>
+  <div class="box def"><div class="box-h">Definitionen · implizit / explizit (V04 F.73)</div><p><b>Implizites oder subjektives Wissen</b> „lässt sich nur schwer formalisieren und kann daher nur unvollkommen beschrieben, dokumentiert und kommuniziert werden“.</p><p><b>Explizites oder objektives Wissen</b> „ist solches, das formalisierbar, beschreibbar, dokumentierbar und leicht kommunizierbar ist“.</p><p class="src">V04 F.73</p></div>
+  <div class="box def"><div class="box-h">Definitionen · deklarativ / prozedural (V04 F.74)</div><p><b>Deklaratives Wissen:</b> „Als deklaratives Wissen gelten Inhalte, wenn sie sich auf Fakten beziehen und sprachlich in Form von Aussagesätzen beschrieben werden können.“ („Wissen, <em>dass</em> …“)</p><p><b>Prozedurales Wissen:</b> „umfasst Handlungsabläufe oder Problemlösungsschritte und widersetzt sich häufig einer sprachlichen Formulierung.“ („Wissen, <em>wie</em> …“)</p><p class="src">V04 F.74</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 270" role="img" aria-label="Wissensarten-Matrix: Zeilen explizit und implizit, Spalten deklarativ und prozedural, je mit Beispielen">
+      <g font-size="12" font-family="inherit" fill="currentColor" text-anchor="middle">
+        <text x="262" y="24" font-weight="bold">deklarativ („Wissen, dass …“)</text>
+        <text x="262" y="40" style="fill:var(--muted)">Fakten, Aussagesätze</text>
+        <text x="512" y="24" font-weight="bold">prozedural („Wissen, wie …“)</text>
+        <text x="512" y="40" style="fill:var(--muted)">Handlungsabläufe, Lösungsschritte</text>
+      </g>
+      <rect x="10" y="50" width="122" height="100" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="10" y="158" width="122" height="100" rx="4" style="fill:var(--surface-2)" stroke="currentColor"/>
+      <rect x="140" y="50" width="245" height="100" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <rect x="390" y="50" width="245" height="100" rx="4" fill="none" stroke="currentColor"/>
+      <rect x="140" y="158" width="245" height="100" rx="4" fill="none" stroke="currentColor" stroke-dasharray="4 3"/>
+      <rect x="390" y="158" width="245" height="100" rx="4" style="fill:var(--accent-soft);stroke:var(--accent)"/>
+      <g font-size="13" font-family="inherit" fill="currentColor" text-anchor="middle">
+        <text x="71" y="88" font-weight="bold">explizit</text>
+        <text x="71" y="106" font-size="12">formalisierbar,</text>
+        <text x="71" y="121" font-size="12">dokumentierbar</text>
+        <text x="71" y="196" font-weight="bold">implizit</text>
+        <text x="71" y="214" font-size="12">schwer</text>
+        <text x="71" y="229" font-size="12">formalisierbar</text>
+      </g>
+      <g font-size="12" font-family="inherit" fill="currentColor">
+        <text x="152" y="76" font-weight="bold">Lexikon, Datenbank, Lehrbuch</text>
+        <text x="152" y="96">„Bangkok liegt 6 h vor MEZ“</text>
+        <text x="152" y="114">„Tarif enthält 1 Gepäckstück“</text>
+        <text x="152" y="132">„pK = nK/(nK+nZ)“ als Formel</text>
+        <text x="402" y="76" font-weight="bold">Dokumentierte Abläufe</text>
+        <text x="402" y="96">Buchungsanleitung, Checkliste,</text>
+        <text x="402" y="114">Algorithmus, Arbeitsanweisung,</text>
+        <text x="402" y="132">Schritt-für-Schritt-Antwort</text>
+        <text x="152" y="184" font-weight="bold">Grenzfall: Erfahrungsgespür</text>
+        <text x="152" y="204">„Gespür“ für Sachverhalte, z. B.</text>
+        <text x="152" y="222">dass ein Befund „nicht stimmt“,</text>
+        <text x="152" y="240">ohne es begründen zu können</text>
+        <text x="402" y="184" font-weight="bold">Können, schwer erklärbar</text>
+        <text x="402" y="204">Radfahren, Verhandlungsgeschick,</text>
+        <text x="402" y="222">schnelles Triage-Urteil</text>
+        <text x="402" y="240">einer erfahrenen Ärztin</text>
+      </g>
+    </svg>
+    <figcaption>Eigene Darstellung der zwei Unterscheidungen aus V04 F.73–74 als Matrix. Typisch: deklaratives Wissen ist eher explizierbar, prozedurales „widersetzt sich häufig einer sprachlichen Formulierung“ und ist daher oft implizit. Die gestrichelte Zelle ist ein Grenzfall (Interpretation).</figcaption>
+  </figure>
+  <p>Wissen hilft (F.75): Daten in Information umzuwandeln, Entscheidungen zwecks Problemlösung vorzubereiten und angemessene Handlungen einzuleiten. „Die Verwendung von Information zur Entscheidungsfindung bzw. zum Auslösen von Handlungen erfordert Wissen.“ Es entsteht ein <b>Kreislauf</b>: „Die mit den Entscheidungen und Handlungen zusammenhängenden Faktoren können wieder Daten- und Informationserzeugung zur Folge haben“; bei <b>Bewährung</b> führen die verbundenen Informationen zu einer <b>Erweiterung des Wissens</b> eines Individuums (F.75).</p>
+  <p>Neben Erfahrung entsteht Wissen durch <b>(Aus-)Bildung</b> (F.76). <b>Ausbildung</b> meint „die Vermittlung von Kenntnissen, Fähigkeiten und Fertigkeiten in einer systematisierten, reglementierten Form an eine Person in einer definierten Zeitspanne“. Bei <b>Bildung</b> geht es darum, Zusammenhänge zu erkennen, als Voraussetzung zur Einordnung und Bewertung von Fakten.</p>
+  <div class="box ex"><div class="box-h">Tutoriumsbeispiel · Entstehung von Wissen bei Agilität (T04 F.23–25)</div><p>Eine Softwarefirma erhält vermehrt Kundenrezensionen, dass ihre Software fehlerhaft ist und Releases verspätet kommen (Daten/Nachrichten). Die Geschäftsführerin zieht daraus die <b>Information</b>, dass die plangetriebene Methode nicht zur Kundenzufriedenheit führt. Aus Best Practices der Industrie (vorhandenes Wissen) und diesen Informationen beschließt sie die Umstellung auf agile Methoden (Handlung). Bewährt sich die Umstellung, erweitert sich das Wissen der Organisation (F.75) – Wissen ist kumulativ.</p></div>
+  <div class="box deep"><div class="box-h">Vertiefung · Nonaka (SECI)</div><p>Nonaka (1994) und Nonaka &amp; Takeuchi (1995), beide im Literaturverzeichnis, beschreiben Wissensschaffung als Umwandlung zwischen implizitem und explizitem Wissen: Sozialisation (implizit → implizit, z. B. Zuschauen bei der Oberärztin), Externalisierung (implizit → explizit, z. B. Erfahrungen in eine Checkliste schreiben), Kombination (explizit → explizit, z. B. Berichte zusammenführen) und Internalisierung (explizit → implizit, durch Anwenden). Nützlich als Argument, warum ein Wissensmanagementsystem implizites Wissen nie vollständig erfassen kann.</p></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · deklarativ vs. prozedural am Beispiel ChatGPT</div><p>HWS25 Ersttermin A2d (15 P.) fragte, „wie deklaratives sowie prozedurales Wissen generiert wird“. Deklarativ: ChatGPT liefert Faktenaussagen in Aussagesätzen („Die DSGVO gilt seit 2018“); werden sie von der Nutzerin geprüft, behalten und mit Vorwissen verknüpft, entsteht deklaratives Wissen. Prozedural: ChatGPT liefert Lösungswege oder Code Schritt für Schritt; zu prozeduralem Wissen der Nutzerin werden sie erst durch wiederholtes eigenes Anwenden und Bewährung (F.75) – Handlungsabläufe lassen sich schwer rein sprachlich übertragen (F.74). Ausführliches Schema in 4.19.</p></div>
+
+  <h3 id="k4-kommunikation">4.16 Kommunikation</h3>
+  <div class="box def"><div class="box-h">Definitionen · Kommunikation</div><p>„Kommunikation (von lat. communicatio = Mitteilung, Verständigung) [ist] die Beziehung, die zwischen Menschen, Lebewesen, maschinellen Systemen oder Geräten durch Austausch von Nachrichten entsteht.“ (F.77)</p><p>„Kommunikation ist ein Prozess, mit dem ein Sender die Absicht verfolgt, einem Empfänger Information zur Verfügung zu stellen.“ (F.78)</p><p class="src">V04 F.77–78</p></div>
+  <p>Der Austausch ist <b>nicht zweckneutral</b>; er erfolgt mit der Absicht, problembezogene und handlungsrelevante Entscheidungen zu treffen. „Kommunikation ist Zweckmittel für Information.“ Information und Kommunikation sind für die WI <b>zwei Aspekte desselben Phänomens</b>: Information ohne Kommunikation ist nicht möglich, Kommunikation ohne die Absicht der Information ist unzweckmäßig (F.77). Kommunikation ist ein <b>sozialer Prozess</b> zwischen Menschen; Mensch-Mensch-Kommunikation kann ohne Hilfsmittel stattfinden; Hilfsmittel als Kommunikationskanal haben die Funktion, <b>Raum und/oder Zeit zu überbrücken</b> (F.78).</p>
+  <p>Der Kommunikationsbegriff der WI geht über die Mensch-Mensch-Kommunikation hinaus (F.79):</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Unterscheidung nach …</th><th>Formen</th></tr></thead>
+    <tbody>
+      <tr><td>Beteiligten</td><td>Mensch-Mensch-, Mensch-Maschine- und Maschine-Maschine-Kommunikation</td></tr>
+      <tr><td>verwendeten Darstellungsarten der Daten</td><td>Bild-, Text- und Sprachkommunikation</td></tr>
+      <tr><td>verwendeten Medien</td><td>elektronische, schriftliche, mündliche und andere Kommunikation (z. B. Vibration eines Smartphones)</td></tr>
+    </tbody>
+  </table></div>
+  <p>Bei Mensch-Mensch-Kommunikation spielt neben verbaler Kommunikation die <b>nonverbale Kommunikation</b> eine wichtige Rolle für die Interpretation der Daten. <b>Mensch-Maschine-Kommunikation</b> „ist die Form der Kommunikation, bei der Information zwischen dem Menschen und dem Techniksystem ausgetauscht wird“; auch die zwischenmenschliche Kommunikation erfolgt (heute oft) über Maschinen (F.80). Die Gestaltung dieser Mensch-Maschine-Kommunikation über die <b>Nutzerschnittstelle</b> (Interaktionsaufgabe, Gestaltungsprinzipien, ISO 9241-110) wird in Vorlesung 05 behandelt – siehe Kapitel 5.</p>
+  <div class="box deep"><div class="box-h">Vertiefung · Watzlawick</div><p>Im Literaturverzeichnis steht Watzlawick: „Man kann nicht nicht kommunizieren“ – auch Schweigen oder ein Blick sind Nachrichten, die interpretiert werden. Das stützt die Bedeutung nonverbaler Kommunikation (F.80) und erklärt, warum pragmatische Störungen so schwer zu verhindern sind.</p></div>
+
+  <h3 id="k4-stoerungen">4.17 Informations- und Kommunikationsstörungen</h3>
+  <div class="box def"><div class="box-h">Kernaussage</div><p>„Kommunikation kann so gestört werden, dass der Informationszweck nicht erreicht wird.“</p><p class="src">V04 F.81</p></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Ebene</th><th>Störung (F.81)</th><th>Beispiel der Vorlesung (F.82–84)</th><th>Gegenmaßnahme (T04 F.16)</th></tr></thead>
+    <tbody>
+      <tr><td><b>syntaktisch</b></td><td>Nachrichten werden fehlerhaft als Zeichen kodiert; Signale verändern sich im Kommunikationskanal</td><td>Die Gefängniswärterin schreibt nach einem Ausbruch an die Polizei „Der gefangene Floh“ (statt „Der Gefangene floh“) – ein Groß-/Kleinschreibungsfehler verändert die Zeichen.</td><td>technisch, z. B. Paritätsbits/Hamming-Code; einheitliche Kodierung; Rechtschreibung</td></tr>
+      <tr><td><b>semantisch</b></td><td>Informationsabsichten werden in Nachrichten umgesetzt, die der Empfänger aufgrund begrifflicher Unschärfe nicht erkennt</td><td>Die Beamtin versteht ein Insekt und antwortet „Habt Ihr nichts Wichtigeres zu tun?“</td><td>Einigung auf und klare Definition von Fachbegriffen (gemeinsames Glossar)</td></tr>
+      <tr><td><b>pragmatisch</b></td><td>fehlende Übereinstimmung in der Informationsabsicht; die Information wird richtig verstanden, aber die resultierenden Handlungen weichen von der Erwartung ab</td><td>Die Wärterin versteht die Gründe nicht und antwortet „Doch schon, aber offensichtlich Ihr nicht – Habt Ihr mit der Fahndung begonnen?“</td><td>schwer zu verhindern; Nachfragen beim Sender, Absicht explizit formulieren („Bitte bis 15 Uhr prüfen“)</td></tr>
+    </tbody>
+  </table></div>
+  <p>F.85 ordnet die Ebenen den Kommunikationsprozessen zwischen Sender und Empfänger zu: Auf der <b>syntaktischen</b> Ebene werden (physikalische) Zeichen übertragen, auf der <b>semantischen</b> Zeichen + Bedeutung der Zeichen, auf der <b>pragmatischen</b> Zeichen + Bedeutung + Absicht des Senders (siehe Grafik in 4.11).</p>
+  <div class="box ex"><div class="box-h">Tutoriumsbeispiele · Apple (T04 F.16)</div><p><b>Syntaktisch:</b> Herr Smart sendet eine E-Mail, bei Herrn Schön kommt wegen eines defekten Kabels nur „Buchstabensalat“ an. <b>Semantisch:</b> Smart bittet um ein „dynamisches CAD-Modell“; Schön kennt den Fachbegriff nicht und malt ein gelbes Smartphone auf Papier mit dieser Beschriftung. <b>Pragmatisch:</b> „Die Ampel ist grün.“ – „Immer kritisierst du meinen Fahrstil!“ (Die Nachricht wird verstanden, aber als Kritik statt als Hinweis aufgefasst.)</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>Semantische und pragmatische Störung verwechseln. Test: Hat der Empfänger die <em>Bedeutung</em> falsch verstanden (Floh = Insekt) → semantisch. Hat er die Bedeutung richtig verstanden, handelt aber anders als beabsichtigt oder erkennt die <em>Absicht</em> nicht → pragmatisch.</p></div>
+
+  <h3 id="k4-informationsbedarf">4.18 Informationsbedarf, -bedürfnis, -nachfrage, -angebot und -stand</h3>
+  <p>Dieser Abschnitt verbindet alles Vorherige: Eine Aufgabenträgerin braucht für ihre Aufgabe bestimmte Information (Bedarf), möchte subjektiv bestimmte Information haben (Bedürfnis), fragt tatsächlich bestimmte Information nach (Nachfrage) und bekommt aus den verfügbaren Quellen bestimmte Information angeboten (Angebot). Wie gut sie informiert ist, zeigt die Schnittmenge (Stand). Die Vorlesung betont in der Zusammenfassung ausdrücklich die „klare Abgrenzung zwischen den Begriffen Informationsnachfrage, -bedürfnis, -stand, -bedarf, -defizit, -überschuss“ (F.96).</p>
+  <p>Überblick (F.86): Die <b>Informationsnachfrage ist Pendant zur Informationsabsicht</b> des Senders (Kommunikation, 4.16). Die Nachfrage wird durch den aufgabenbezogenen Informationsbedarf und das individuelle Informationsbedürfnis ausgelöst. Sie ist in der Regel kleiner als Informationsbedarf bzw. -bedürfnis. „Je besser das Informationsangebot der Informationsnachfrage entspricht, desto höher ist der Informationsstand.“</p>
+
+  <h4 id="k4-bedarf">Informationsbedarf – objektiv, aufgabenbezogen</h4>
+  <div class="box def"><div class="box-h">Definition · Bedarf und Informationsbedarf</div><p>„In den Wirtschaftswissenschaften versteht man unter Bedarf die konkretisierte, objektivierte Anforderung nach einem bestimmten Gut, die aus einem Mangel resultiert.“ „Der Informationsbedarf bezeichnet Art, Menge und Beschaffenheit von Information, die zur Erfüllung einer Aufgabe benötigt wird.“</p><p class="src">V04 F.87 · T04 F.12</p></div>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Rechnung erstellen (V04 F.88)</div><p>Um eine Rechnung zu erstellen, benötigt man: Rechnungsempfängerin, Steuernummer, Rechnungsdatum, gekaufte Artikel, Menge je Artikel, Einzelpreise. Dann wird je Position Menge × Einzelpreis gerechnet, die Positionen werden zum Nettobetrag addiert, die Mehrwertsteuer wird anhand der Mehrwertsteuersätze berechnet und Nettobetrag + Mehrwertsteuer ergibt den Bruttobetrag. Der Informationsbedarf folgt <em>aus der Aufgabe</em>, nicht aus der Person – jede Sachbearbeiterin bräuchte dieselben Angaben.</p></div>
+
+  <h4 id="k4-beduerfnis">Informationsbedürfnis – subjektiv, personenbezogen</h4>
+  <div class="box def"><div class="box-h">Definition · Informationsbedürfnis</div><p>„Informationsbedürfnis wird durch Merkmale und Empfindungen des Menschen bestimmt, der als Aufgabenträger auftritt.“ In der Fachliteratur wird es oft „subjektiver Informationsbedarf“ genannt; dieser Begriff ist aber ungenau, denn <b>Bedarf</b> ist stets die konkretisierte, objektivierte Anforderung nach einem Gut, <b>Bedürfnis</b> aber der subjektiv empfundene Mangel nach einem Gut.</p><p class="src">V04 F.89 · T04 F.12</p></div>
+  <div class="box ex"><div class="box-h">Beispiel der Vorlesung · Sachbearbeiterin (V04 F.90)</div><p>Eine Sachbearbeiterin im Rechnungswesen, die eine Fakturierung durchführt, verlangt Information über die <b>Zahlungsmoral der Kundin</b> – ihr Bedürfnis geht über den aufgabenorientierten Bedarf <b>hinaus</b>. Die <b>Einzelpreise</b> der fakturierten Artikel interessieren sie dagegen nicht – hier ist ihr Bedürfnis <b>geringer</b> als der Bedarf. Bedarf und Bedürfnis sind also zwei <em>überlappende</em>, aber nicht deckungsgleiche Mengen.</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>T04 Aufgabe 1e: „Der Informationsbedarf wird vom subjektiven Wissensstand eines Menschen abgeleitet“ ist <b>falsch</b>. Der Bedarf ist objektiv und aufgabenbezogen; vom Menschen (Merkmale, Empfindungen) hängt das <em>Bedürfnis</em> ab.</p></div>
+
+  <h4 id="k4-nachfrage">Informationsnachfrage – das tatsächlich Nachgefragte</h4>
+  <div class="box def"><div class="box-h">Definition · Informationsnachfrage</div><p>„Informationsnachfrage beschreibt, welche Information zur Aufgabenerfüllung in einer konkreten Handlungssituation von der Aufgabenträgerin nachgefragt wird.“ Sie wird durch Informationsbedarf und Informationsbedürfnis bestimmt; die Nachfragemenge ist in der Regel kleiner als die Bedarfs- bzw. Bedürfnismenge.</p><p class="src">V04 F.91</p></div>
+  <p>Gründe für die <b>Reduktion der Nachfragemenge</b> (F.91):</p>
+  <ul>
+    <li><b>Zeitliche Restriktionen</b> – es ist keine Zeit, alles nachzufragen.</li>
+    <li><b>Informationsbedarf nicht exakt ermittelbar</b> – man weiß nicht genau, was man braucht.</li>
+    <li><b>Sequenzieller Prozess</b> – Information wird so lange beschafft, bis ein befriedigendes Anspruchsniveau erreicht ist (dann wird aufgehört, auch wenn mehr verfügbar wäre).</li>
+  </ul>
+  <p>Wie stark Bedarf oder Bedürfnis die Nachfrage bestimmen, hängt von der <b>Aufgabe</b> ab (F.92–93): „Die Bestimmung des Informationsbedarfs ist umso einfacher, je strukturierter und je weniger veränderlich die Aufgabe ist.“ Folglich gilt: Je schwächer strukturiert und je veränderlicher die Aufgabe, desto stärker beeinflusst das Bedürfnis die Nachfrage. Bei gut strukturierten, wenig veränderlichen Aufgaben wird die Nachfrage im Wesentlichen, im Grenzfall vollständig durch den Bedarf bestimmt; bei schwach strukturierten, stark veränderlichen Aufgaben kaum, im Grenzfall überhaupt nicht. „Das Informationsbedürfnis ist umso bestimmender für die Informationsnachfrage, je schwächer strukturiert und je veränderlicher die Aufgabe ist.“ (F.93)</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Faktoren zur Erhöhung des Informationsbedürfnisses</th><th>Faktoren zur Verringerung des Informationsbedürfnisses</th></tr></thead>
+    <tbody>
+      <tr><td>Motivation</td><td>Selbstsicherheit</td></tr>
+      <tr><td>Neugierde</td><td>Risikobereitschaft</td></tr>
+      <tr><td>Unsicherheitsvermeidung</td><td>Pragmatismus</td></tr>
+      <tr><td>Streben nach kognitiver Klarheit</td><td>Routine</td></tr>
+    </tbody>
+  </table></div>
+  <p class="src">V04 F.92</p>
+  <div class="box ex"><div class="box-h">Beispiel · strukturierte vs. unstrukturierte Aufgabe</div><p><b>Rechnung schreiben</b> (gut strukturiert, kaum veränderlich): Die Nachfrage entspricht fast genau dem Bedarf aus F.88 – das ERP-System fragt die Felder ohnehin ab. <b>Notfallentscheidung bei einem bewusstlosen Patienten</b> oder <b>Strategieentscheidung des Vorstands</b> (schwach strukturiert, veränderlich): Der Bedarf ist nicht exakt ermittelbar; was nachgefragt wird, hängt stark von Erfahrung, Unsicherheitsvermeidung oder Routine der Person ab.</p></div>
+
+  <h4 id="k4-angebot-stand">Informationsangebot und Informationsstand</h4>
+  <p>Das <b>Informationsangebot</b> wird auf den Folien nicht eigens definiert, sondern erscheint als vierte Menge im Diagramm (F.94). Sinngemäß ist es die Information, die der Aufgabenträgerin aus Informationssystemen und anderen Quellen tatsächlich zur Verfügung gestellt wird (<em>Interpretation</em>; vgl. Informationsfunktion: Bereitstellung der richtigen Information, F.23).</p>
+  <div class="box def"><div class="box-h">Definition · Informationsstand</div><p>„Die Schnittmenge von Informationsbedarf, -bedürfnis, -nachfrage, -angebot wird als Informationsstand bezeichnet.“</p><ul>
+    <li><b>Informationelles Gleichgewicht:</b> Informationsangebot und -nachfrage sind deckungsgleich.</li>
+    <li><b>Informationsmangel bzw. -defizit:</b> Informationsnachfrage ist größer als Informationsangebot.</li>
+    <li><b>Informationsüberschuss:</b> Informationsangebot übersteigt Informationsnachfrage.</li>
+  </ul><p class="src">V04 F.86, F.95</p></div>
+  <figure class="fig">
+    <svg viewBox="0 0 640 420" role="img" aria-label="Mengendiagramm: Kreise Informationsbedarf, Informationsbedürfnis und Informationsangebot überlappen; die gestrichelte Informationsnachfrage liegt im Bedürfnis und ragt in den Bedarf; die Schnittmenge aller vier ist der Informationsstand, der nicht angebotene Teil der Nachfrage ist das Informationsdefizit, der nicht nachgefragte Teil des Angebots der Überschuss">
+      <defs>
+        <pattern id="k4-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="currentColor" stroke-width="1.3" opacity="0.55"/></pattern>
+        <clipPath id="k4-clipN"><circle cx="360" cy="200" r="70"/></clipPath>
+        <clipPath id="k4-clipA"><circle cx="225" cy="175" r="125"/></clipPath>
+        <marker id="arr-k4g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
+      </defs>
+      <circle cx="360" cy="200" r="70" fill="url(#k4-hatch)"/>
+      <circle cx="300" cy="295" r="115" clip-path="url(#k4-clipN)" style="fill:var(--surface-2)"/>
+      <g clip-path="url(#k4-clipA)"><circle cx="300" cy="295" r="115" clip-path="url(#k4-clipN)" style="fill:var(--accent)"/></g>
+      <g fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="225" cy="175" r="125"/>
+        <circle cx="375" cy="170" r="125"/>
+        <circle cx="300" cy="295" r="115"/>
+      </g>
+      <circle cx="360" cy="200" r="70" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="7 5"/>
+      <g font-size="13" font-family="inherit" text-anchor="middle" fill="currentColor">
+        <text x="160" y="140">Informations-</text><text x="160" y="156" font-weight="bold">bedarf</text>
+        <text x="430" y="110">Informations-</text><text x="430" y="126" font-weight="bold">bedürfnis</text>
+        <text x="300" y="362">Informations-</text><text x="300" y="378" font-weight="bold">angebot</text>
+      </g>
+      <g stroke="currentColor" stroke-width="1" fill="none" marker-end="url(#arr-k4g)">
+        <line x1="150" y1="317" x2="316" y2="239"/>
+        <line x1="178" y1="394" x2="248" y2="361"/>
+        <line x1="502" y1="142" x2="378" y2="160"/>
+        <line x1="497" y1="228" x2="431" y2="207"/>
+      </g>
+      <g font-size="13" font-family="inherit" fill="currentColor">
+        <text x="10" y="322" font-weight="bold" style="fill:var(--accent)">Informationsstand</text>
+        <text x="10" y="398">Informationsüberschuss</text>
+      </g>
+      <g font-size="12" font-family="inherit" fill="currentColor">
+        <text x="505" y="146" font-weight="bold">Informationsdefizit</text>
+        <text x="500" y="226">Informations-</text>
+        <text x="500" y="241">nachfrage (- - -)</text>
+      </g>
+      <rect x="440" y="320" width="14" height="14" style="fill:var(--accent)"/>
+      <rect x="440" y="345" width="14" height="14" fill="url(#k4-hatch)" stroke="currentColor" stroke-width="0.8"/>
+      <rect x="440" y="370" width="14" height="14" style="fill:var(--surface-2)" stroke="currentColor" stroke-width="0.8"/>
+      <g font-size="12" font-family="inherit" fill="currentColor">
+        <text x="460" y="331">Informationsstand</text>
+        <text x="460" y="356">Informationsdefizit</text>
+        <text x="460" y="381">nachgefragt + angeboten,</text>
+        <text x="460" y="396">aber nicht im Bedarf</text>
+      </g>
+    </svg>
+    <figcaption>Mengendiagramm nach V04 F.94: Die Nachfrage (gestrichelt) entsteht aus Bedarf und Bedürfnis. Informationsstand = Schnittmenge aller vier Mengen (dunkel). Defizit = nachgefragt, aber nicht angeboten (schraffiert). Überschuss = angeboten, aber nicht nachgefragt (übriges Angebot).</figcaption>
+  </figure>
+  <p>Wie man das Diagramm liest – Region für Region:</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Region</th><th>Bedeutung</th><th>Beispiel Rechnung (F.88/F.90)</th></tr></thead>
+    <tbody>
+      <tr><td>Bedarf ohne Bedürfnis</td><td>objektiv nötig, subjektiv uninteressant → wird kaum nachgefragt (Risiko: fehlerhafte Aufgabenerfüllung)</td><td>Einzelpreise der Artikel</td></tr>
+      <tr><td>Bedürfnis ohne Bedarf</td><td>subjektiv gewünscht, für die Aufgabe nicht nötig (Risiko: unwirtschaftlich)</td><td>Zahlungsmoral der Kundin</td></tr>
+      <tr><td>Nachfrage</td><td>tatsächlich nachgefragt; liegt im Bedürfnis, teilweise im Bedarf; kleiner als beide</td><td>Empfängerin, Artikel, Mengen, Zahlungsmoral</td></tr>
+      <tr><td>Nachfrage ∩ Angebot ∩ Bedarf (= Stand)</td><td>was nötig, gewünscht, nachgefragt <em>und</em> verfügbar ist – darauf beruht die Aufgabenerfüllung</td><td>Empfängerin, Artikel, Mengen aus dem ERP-System</td></tr>
+      <tr><td>Nachfrage ohne Angebot (= Defizit)</td><td>gesucht, aber nicht verfügbar</td><td>Zahlungsmoral – das System speichert keine Zahlungshistorie</td></tr>
+      <tr><td>Angebot ohne Nachfrage (= Überschuss)</td><td>verfügbar, aber nicht nachgefragt (Gefahr der Informationsüberlastung, F.57)</td><td>komplette Lagerhistorie der Artikel</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box exam"><div class="box-h">Klausurfokus · so wird es gefragt</div><p>Probeklausur 2026 A2c (12 P.): Bedarf, Bedürfnis, Nachfrage und Stand am Beispiel der Ärztin erläutern und beurteilen, ob ein Informationsdefizit oder ein Informationsüberschuss vorliegt. HWS24 Zweittermin A3c (10 P.): Chancen und Risiken von Social Media in Bezug auf Informationsdefizite. Tutorium 04 Aufgabe 3 (Power GmbH): Warum sind Bedarf und Bedürfnis nicht deckungsgleich? Warum wird Relevantes nicht nachgefragt? Wie entsteht ein Defizit? – Immer gilt: Definition (Folie) → Fallbezug je Begriff → Urteil mit Begründung über die Mengenrelation <em>Nachfrage vs. Angebot</em>.</p></div>
+
+  <h4 id="k4-bsp-yilmaz">Durchgespielt 1: Dr. Yilmaz in der Notaufnahme (Probeklausur 2026 A2c)</h4>
+  <p>Fall: Ein 78-jähriger Patient wird nachts bewusstlos eingeliefert; Dr. Yilmaz muss innerhalb weniger Minuten entscheiden, welches Medikament sie gibt. Im System findet sie einen Medikationsplan, über 200 ältere Laborbefunde und einen Arztbrief, in dem Allergien erwähnt werden. Ob der Patient in den letzten Tagen neue Medikamente erhalten hat, ist nicht eingetragen.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Begriff</th><th>Anwendung auf den Fall</th></tr></thead>
+    <tbody>
+      <tr><td><b>Informationsbedarf</b> (objektiv, F.87)</td><td>Was die Aufgabe „sichere Medikamentengabe beim bewusstlosen Patienten“ erfordert: vollständige aktuelle Medikation <em>inklusive der Medikamente der letzten Tage</em> (Wechselwirkungen), Allergien/Unverträglichkeiten, relevante Vorerkrankungen, aktuelle Laborwerte (z. B. Nieren- und Leberwerte für die Dosierung), Alter und Gewicht.</td></tr>
+      <tr><td><b>Informationsbedürfnis</b> (subjektiv, F.89)</td><td>Hängt von Dr. Yilmaz ab. Unsicherheitsvermeidung (nachts, allein, bewusstloser Patient) erhöht es – sie möchte z. B. auch frühere Arztbriefe oder die Hausärztin sprechen (über den Bedarf hinaus). Routine oder Pragmatismus senken es – ältere Laborwerte interessieren sie kaum, obwohl einzelne davon zum Bedarf gehören könnten (F.92).</td></tr>
+      <tr><td><b>Informationsnachfrage</b> (F.91)</td><td>Was sie in dieser konkreten Situation tatsächlich abfragt: Medikationsplan, Allergieangaben aus dem Arztbrief, neue Medikation der letzten Tage, die jüngsten Laborwerte. Wegen der <em>zeitlichen Restriktion</em> (Minuten) und des sequenziellen Vorgehens (Suche endet bei befriedigendem Anspruchsniveau) ist die Nachfrage deutlich kleiner als Bedarf und Bedürfnis. Die Aufgabe ist schwach strukturiert, das Bedürfnis prägt die Nachfrage daher stark (F.93).</td></tr>
+      <tr><td><b>Informationsangebot</b> (F.94)</td><td>Medikationsplan, &gt;200 ältere Laborbefunde, Arztbrief mit Allergien. <em>Nicht</em> angeboten: Medikation der letzten Tage.</td></tr>
+      <tr><td><b>Informationsstand</b> (F.95)</td><td>Schnittmenge aller vier: Medikationsplan (sofern aktuell) und Allergieinformation – das ist die Basis ihrer Entscheidung. Ob der Stand hoch ist, hängt davon ab, wie gut das Angebot der Nachfrage entspricht (F.86).</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box ex"><div class="box-h">Beurteilung: Defizit oder Überschuss?</div><p><b>Beides liegt vor, entscheidend ist das Defizit.</b> Bezüglich der neuen Medikamente der letzten Tage ist die Nachfrage größer als das Angebot → <b>Informationsdefizit</b> (F.95). Es betrifft genau die entscheidungskritische Information (Wechselwirkungen), und es ist eine Informationspathologie: Produzierbare Information wurde nicht produziert, weil die neue Medikation nicht eingetragen wurde (F.57). Zugleich übersteigt das Angebot bei den über 200 älteren Laborbefunden die Nachfrage → <b>Informationsüberschuss</b>; in wenigen Minuten droht Informationsüberlastung (F.57), relevante Werte gehen unter. Fazit: Für die Aufgabe ist das Defizit gravierender, weil kein Überschuss an alten Befunden die fehlende aktuelle Medikation ersetzen kann. Gestaltungsempfehlung: Pflichtfeld „aktuelle Medikation“, Filter/Hervorhebung der jüngsten und kritischen Laborwerte.</p></div>
+
+  <h4 id="k4-bsp-power">Durchgespielt 2: Power GmbH (T04 Aufgabe 3)</h4>
+  <p>Der CFO der Power GmbH lässt sich von seinem Assistenten monatlich individualisierte Berichte aus einem Wissensmanagementsystem erstellen.</p>
+  <ul>
+    <li><b>a) Warum sind Bedarf und Bedürfnis nicht deckungsgleich?</b> Weil der Bedarf aus der Aufgabe, das Bedürfnis aus der Person folgt. Bedarf &gt; Bedürfnis: Der Assistent fordert zu wenige Informationen an, um die Aufgabe zu lösen – ungünstiges Verhalten (z. B. aus Pragmatismus lässt er die geforderte Logistikkostenanalyse weg). Bedarf &lt; Bedürfnis: Er fordert mehr an als nötig – unwirtschaftliches Handeln (z. B. aus Unsicherheitsvermeidung Rohdaten der letzten drei Jahre) (T04 F.18).</li>
+    <li><b>b) Warum wird Relevantes, Verfügbares nicht nachgefragt?</b> Unwissenheit (Ort oder Relevanz der Information unbekannt), schlechte Präsentation (Bezeichnung, Struktur), Zeitdruck (keine Zeit, Beschaffung dauert zu lange), menschliche Komponente (beschränkte Informationsverarbeitungskapazität), Routine (T04 F.20) – passend zu den Folien: zeitliche Restriktionen, Bedarf nicht exakt ermittelbar, sequenzieller Prozess (F.91), Faktoren wie Routine (F.92).</li>
+    <li><b>c) Wie kommt es zu einem Defizit?</b> Nachfrage &gt; Angebot: Der Assistent würde aufgrund von Bedürfnis oder Bedarf gern weitere Informationen sammeln, findet aber in der Datenbank, auf die er Zugriff hat, nichts dazu – z. B. tagesaktuelle Verkaufszahlen, während das System nur wöchentlich aktualisiert wird. Aus Unternehmenssicht gilt es, Defizite zu vermeiden (T04 F.22).</li>
+  </ul>
+
+  <h4 id="k4-bsp-flug-bedarf">Durchgespielt 3: Flugbuchung nach Bangkok</h4>
+  <p>Ein Doktorand will vom 11. bis 18. Dezember zu einer Konferenz nach Bangkok, Budget unter 1000 € (HWS24 Ersttermin A3). <b>Bedarf:</b> Abflug-/Ankunftszeiten, Preis, Datum, Abflughafen, Gepäckregeln – was objektiv für die Buchung nötig ist. <b>Bedürfnis:</b> Er möchte zusätzlich Sitzplatzkomfort und Bewertungen der Airline wissen (Neugierde), interessiert sich aber nicht für die Umsteigeflughäfen (Pragmatismus). <b>Nachfrage:</b> Er filtert im Portal nach „Frankfurt–Bangkok, 10.–18.12., unter 1000 €“. <b>Angebot:</b> die Liste mit Condor-, Air-France- und ITA-Verbindungen. <b>Stand:</b> die beiden Condor-Verbindungen unter 1000 € mit Zeiten und Gepäck. <b>Defizit:</b> Er möchte wissen, ob der Preis morgen steigt – das Portal bietet es nicht an. <b>Überschuss:</b> die fünf Verbindungen über 1000 €.</p>
+
+  <h3 id="k4-klausur-diw">4.19 Klausuranwendung: Daten, Information und Wissen am Beispiel</h3>
+  <p>„Daten/Information/Wissen am Beispiel X“ ist die häufigste Aufgabe zu diesem Kapitel (HWS24 Ersttermin A3, 30 P.; HWS25 Ersttermin A2d, 15 P.; HWS25 Zweittermin A2c, 6 P.). Die Korrektur erwartet pro Begriff: Definition im Vorlesungswortlaut mit Folie, Anwendung auf den Fall, Abgrenzung zum Nachbarbegriff. Ein bewährter Aufbau: (1) Einleitung mit der Wissenspyramide und dem Hinweis, dass die Begriffe oft fälschlich synonym verwendet werden (F.63, F.67); (2) Daten; (3) Information; (4) Wissen, jeweils mit Semiotik-Ebene; (5) Zusammenhang/Kreislauf (F.75).</p>
+
+  <h4 id="k4-bsp-flug">Musterlösung: Flugbuchung FRA–Bangkok, 11.–18.12., unter 1000 € (HWS24 Ersttermin A3)</h4>
+  <p>Vorgelegt war ein Ausschnitt eines Flugportals mit sieben Verbindungen: zwei Condor-Nonstop-Verbindungen (Hinflug 09.12. bzw. 10.12., jeweils 19:30–12:20<sup>+1</sup>, Rückflug 18.12. 22:35–5:25<sup>+1</sup>, 974 € bzw. 978 €), drei Air-France-Verbindungen mit Umstieg in Paris CDG (1.002 €, 1.014 €, 1.015 €, Rückflug 19.12.) und zwei ITA-Verbindungen über Rom FCO (je 1.016 €, Hinflug 08.12.).</p>
+  <div class="box ex"><div class="box-h">Daten (10 P.)</div><p><b>Definition:</b> Daten umfassen etwas Gegebenes – Fakten, Beobachtungen, Wahrnehmungen – und betrachten keinen Kontext, keine Bedeutung oder Absicht (V04 F.63). Semiotisch sind Daten Zuordnungen von Zeichen zu Objekten und Sachverhalten der Wirklichkeit (F.52). Die Zeichen selbst (Ziffern, Buchstaben, „€“, „+1“) gehören zur syntaktischen Ebene; erst ihre Referenz auf einen Sachverhalt macht sie zu Daten (Semantik).</p><p><b>Im Fall:</b> Die einzelnen Angaben der Liste sind Daten: „974 €“, „19:30 – 12:20<sup>+1</sup>“, „10.12.“, „Nonstop“, „10:50 Std.“, „1 Stopp CDG“, „Condor“, „Air France“. Jede Angabe referenziert einen Sachverhalt (Preis, Abflugzeit, Airline), sagt aber für sich nichts darüber aus, ob sie für die Konferenzreise geeignet ist. Dieselbe Liste wäre für eine Person, die nicht reisen will, nur eine Sammlung von Daten. Daten lassen sich leicht erfassen, speichern und übermitteln (F.65) – das Portal hat sie aus den Systemen der Airlines übernommen und beliebig reproduziert (F.56).</p></div>
+  <div class="box ex"><div class="box-h">Information (10 P.)</div><p><b>Definition:</b> Informationen werden aus Daten gewonnen; einbezogen werden nur Daten, die Kontext, Relevanz und Zweckorientierung aufweisen (F.65). Weitergegebene Daten werden zu Informationen, wenn sie beim Empfänger eine Handlung auslösen (Pragmatik, F.53). Information ist subjektbezogen und situativ (F.59, F.68).</p><p><b>Im Fall:</b> Der <em>Kontext</em> ist die Konferenz vom 11. bis 18.12., der <em>Zweck</em> die Buchung unter 1000 €. Mit diesem Filter werden die Daten zu Information: „Nur die beiden Condor-Verbindungen liegen unter 1000 €“; „Air France und ITA scheiden aus (1.002–1.016 €)“; „Die Verbindung 10.12.–18.12. für 978 € trifft am 11.12. um 12:20 Ortszeit in Bangkok ein und fliegt am Abend des letzten Konferenztages zurück“. Diese Information löst eine Handlung aus: Der Doktorand klickt bei 978 € auf „Auswählen“ (Pragmatik). Für die Kollegin ohne Reiseabsicht bleiben dieselben Angaben Daten (vgl. Nele/Anna-Maria, F.66). Der Wertbeitrag steigt mit der Verdichtung (F.72): von 7 Zeilen Rohdaten zu 1 entscheidungsrelevanten Aussage.</p></div>
+  <div class="box ex"><div class="box-h">Wissen (10 P.)</div><p><b>Definition:</b> Wissen hilft, Informationen so zu beschaffen oder zu interpretieren, dass man Entscheidungen zur Lösung von Problemen treffen kann; es begleitet den Entscheidungsprozess auf einer Metaebene (F.70). Es ist kumulativ (F.68), entsteht durch Erfahrung und (Aus-)Bildung (F.76) und wird bei Bewährung erweitert (F.75). Wissen ist nötig, um Daten in Information umzuwandeln (F.75).</p><p><b>Im Fall:</b> Ohne Wissen könnte der Doktorand die Daten gar nicht interpretieren. <b>Deklaratives Wissen</b> (Aussagesätze über Fakten, F.74): „<sup>+1</sup> bedeutet Ankunft am Folgetag“, „Bangkok liegt im Dezember 6 Stunden vor der MEZ“ (erklärt, warum 19:30–12:20 nur 10:50 Std. Flugzeit sind), „Nonstop ist schneller und weniger störanfällig als ein Umstieg in CDG“, „ein früherer Abflug am 09.12. kostet eine zusätzliche Hotelnacht“. <b>Prozedurales Wissen</b> (Handlungsabläufe, F.74): wie man im Portal filtert, Gesamtkosten (Flug + Hotelnächte) vergleicht und die Buchung abschließt. <b>Implizites Wissen</b> (F.73): das Erfahrungsgespür, dass eine Ankunft um 12:20 nach einem Nachtflug für einen Vortrag am selben Nachmittag zu knapp sein kann – dann wäre trotz Zusatznacht die 974-€-Verbindung am 09.12. die bessere Wahl. Bewährt sich die Buchung, erweitert sich sein Wissen für die nächste Reise (F.75).</p></div>
+  <div class="box exam"><div class="box-h">Bewertungslogik</div><p>Pro 10-Punkte-Block: Definition mit Folie (ca. 3 P.), konkrete Fallanwendung mit mehreren Beispielen (ca. 5 P.), Abgrenzung/Zusammenhang (ca. 2 P.). Die Zahlen aus der Abbildung zitieren – das zeigt, dass man mit dem Fall arbeitet. Eine Grafik der Pyramide mit den Fallbeispielen spart Text.</p></div>
+
+  <h4 id="k4-bsp-chatgpt">Musterlösung: Daten, Information, Wissen am Beispiel ChatGPT (HWS25 Ersttermin A2d)</h4>
+  <p>Gefragt: Unterschied am Beispiel ChatGPT; wo die Daten herkommen, wie Information entsteht, wie deklaratives und prozedurales Wissen generiert wird (15 P.).</p>
+  <ul>
+    <li><b>Woher die Daten kommen:</b> Trainingsdaten – große Mengen Text aus öffentlich zugänglichen Webseiten, Büchern, Code und lizenzierten Quellen, ergänzt um Feedback menschlicher Trainerinnen und Nutzerinteraktionen; dazu im Moment der Nutzung der <b>Prompt</b>. Auf Zeichenebene sind das Zeichenfolgen bzw. Tokens (Syntax); als Daten referenzieren sie Sachverhalte (Semantik, F.52). Daten sind „Basis für das Training von KI-Systemen“ und „Rohstoff für Informationsproduktion“ (F.56). <em>Technische Details sind Vertiefung, nicht Folienstoff.</em></li>
+    <li><b>Wie Information entsteht:</b> ChatGPT erzeugt eine Antwort, also Bedeutung tragende Zeichen – eine Nachricht (F.52). Zur <b>Information</b> wird sie erst bei der Nutzerin, wenn sie im Kontext ihrer Aufgabe relevant ist und eine Handlung auslöst (F.53, F.65): Die Studentin übernimmt die vorgeschlagene Gliederung in ihre Hausarbeit. Dieselbe Antwort ist für jemanden ohne diese Aufgabe nur Daten (F.66). Information ist subjektbezogen (F.59) – das System selbst „hat“ keine Information im pragmatischen Sinn.</li>
+    <li><b>Deklaratives Wissen:</b> ChatGPT liefert Faktenaussagen in Aussagesätzen (F.74), z. B. „Shannon veröffentlichte 1948 seine Informationstheorie“. Zu Wissen der Nutzerin werden sie, wenn sie die Aussagen prüft, interpretiert, mit Vorwissen verknüpft (Vernetzung, F.67) und dauerhaft behält – Faktenwissen ist „umfassender und anhaltender“ als Information (F.68). Risiko: Halluzinationen erzeugen falsches deklaratives „Wissen“.</li>
+    <li><b>Prozedurales Wissen:</b> ChatGPT liefert Handlungsabläufe und Problemlösungsschritte (Schritt-für-Schritt-Anleitung, Code). Weil sich prozedurales Wissen „häufig einer sprachlichen Formulierung widersetzt“ (F.74), entsteht es bei der Nutzerin erst durch eigenes wiederholtes Anwenden und Bewährung (F.75) – Lesen der Anleitung allein reicht nicht.</li>
+    <li><b>Abgrenzung:</b> Daten (Trainingstexte, Prompt) → Information (relevante, handlungsauslösende Antwort) → Wissen (bei der Nutzerin, kumulativ). Wissen ist zugleich Voraussetzung: Nur wer Vorwissen hat, kann die Antwort beurteilen (F.75).</li>
+  </ul>
+  <div class="box exam"><div class="box-h">„Sind Daten und Informationen dasselbe?“ (HWS25 Zweittermin A2c, 6 P.)</div><p><b>Nein.</b> Daten sind Zuordnungen von Zeichen zu Objekten und Sachverhalten und betrachten keinen Kontext, keine Bedeutung und keine Absicht (F.52, F.63). Informationen werden aus Daten gewonnen, wenn diese Kontext, Relevanz und Zweckorientierung haben, und sie lösen beim Empfänger eine Handlung aus (F.53, F.65). Information ist daher subjektbezogen und situativ (F.59, F.68), Daten nicht. <b>Beispiel ChatGPT:</b> Die Antwort „Die Abgabefrist für die Steuererklärung 2025 endet am 31.07.2026“ ist zunächst ein Datum. Für eine Steuerpflichtige, die ihre Erklärung noch nicht abgegeben hat, wird es zur Information – sie plant die Abgabe. Für jemanden, der schon abgegeben hat, bleibt es ein Datum. (Weiterer Unterschied: Shannons technischer Informationsbegriff misst nur Zeichen ohne Bedeutung, F.46 – auch deshalb darf man „Daten“ und „Information“ nicht gleichsetzen.)</p></div>
+
+  <h3 id="k4-informationsproduktion">4.20 Klausuranwendung: Chancen und Risiken für die Informationsproduktion</h3>
+  <p>HWS24 Zweittermin A3 (Social Media: je 5 Chancen und Risiken, je 10 P.; je 2 Chancen/Risiken zu Informationsdefiziten, 10 P.) und HWS25 Zweittermin A2 (ChatGPT: je 3 Chancen und Risiken mit Ausführung, je 12 P.) folgen demselben Muster. Der Schlüssel ist, jede Chance und jedes Risiko an einen <b>Vorlesungsbegriff</b> zu binden. Die Grundlage: Daten sind Rohstoff für Informationsproduktion (F.56); Ziel der Informationsfunktion ist die Bereitstellung der richtigen Information zum richtigen Zeitpunkt, in der richtigen Menge, am richtigen Ort, in der erforderlichen Qualität (F.23, V01 F.31).</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Chance</th><th>Vorlesungsanker</th><th>Social Media</th><th>ChatGPT / KI</th></tr></thead>
+    <tbody>
+      <tr><td>Größeres Informationsangebot, jede/r kann Sender sein</td><td>Informationsangebot (F.94), Daten beliebig reproduzierbar (F.56)</td><td>Augenzeugen posten von Ereignissen</td><td>Texte zu jedem Thema auf Abruf</td></tr>
+      <tr><td>Echtzeit</td><td>richtiger Zeitpunkt (F.23)</td><td>Eilmeldungen, Live-Streams</td><td>Antwort in Sekunden statt Recherche</td></tr>
+      <tr><td>Ortsunabhängigkeit</td><td>richtiger Ort (F.23)</td><td>mobiler Feed</td><td>App am Arbeitsplatz/unterwegs</td></tr>
+      <tr><td>Personalisierung</td><td>richtige Information, richtige Menge (F.23)</td><td>algorithmischer Feed nach Interessen</td><td>Antwort auf die konkrete Frage zugeschnitten</td></tr>
+      <tr><td>Verdichtung/Zusammenfassung</td><td>gegen Informationsüberlastung (F.57); Wertbeitrag steigt mit Verdichtung (F.72)</td><td>Thread fasst Debatte zusammen</td><td>Zusammenfassung langer Dokumente</td></tr>
+      <tr><td>Sichtbare Nachfrage</td><td>Informationsnachfrage (F.91)</td><td>Trends, Hashtags zeigen, was gesucht wird</td><td>Prompts zeigen Informationsbedürfnisse</td></tr>
+      <tr><td>Geringe Kosten der Produktion und Verteilung</td><td>Kosten von Daten (F.56), Wirtschaftlichkeit (F.21)</td><td>Posten ist kostenlos</td><td>Entwurf ohne Agentur</td></tr>
+      <tr><td>Wissensaustausch und Vernetzung</td><td>Wissensmanagement (F.25), Vernetzung zu Wissen (F.67)</td><td>Fach-Communities, LinkedIn-Gruppen</td><td>erklärt Schritte, unterstützt Lernen</td></tr>
+      <tr><td>Weniger semantische Störungen</td><td>Kommunikationsstörung semantisch (F.81)</td><td>Bilder/Videos statt Fachbegriffe</td><td>Übersetzung, Erklärung von Fachbegriffen</td></tr>
+      <tr><td>Rückfragen möglich</td><td>pragmatische Störung (F.81), Kommunikation als Prozess (F.78)</td><td>Kommentare, Direktnachrichten</td><td>Dialog: nachfragen, präzisieren</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tbl-wrap"><table class="tbl">
+    <thead><tr><th>Risiko</th><th>Vorlesungsanker</th><th>Social Media</th><th>ChatGPT / KI</th></tr></thead>
+    <tbody>
+      <tr><td>Fake News / Desinformation</td><td>Informationsmissbrauch (F.58)</td><td>virale Falschmeldungen, Bots</td><td>Deepfakes, massenhaft erzeugte Falschtexte</td></tr>
+      <tr><td>Verlust der Privatsphäre</td><td>Informationsmissbrauch (F.58)</td><td>Profile, Tracking, Datenhandel</td><td>sensible Daten in Prompts</td></tr>
+      <tr><td>Informationsüberlastung / -schock</td><td>F.57</td><td>endloser Feed</td><td>lange, ausufernde Antworten</td></tr>
+      <tr><td>Informationsverzerrung</td><td>selektive Wahrnehmung (F.57)</td><td>Filterblasen, Echokammern</td><td>Bias aus Trainingsdaten</td></tr>
+      <tr><td>Mangelnde Qualität / Halluzination</td><td>„erforderliche Qualität“ (F.23)</td><td>ungeprüfte Inhalte</td><td>plausible, aber falsche Antworten ohne Quelle</td></tr>
+      <tr><td>Informationspathologien</td><td>F.57: produzierbare Information wird nicht produziert, vorhandene falsch verwendet</td><td>seriöse Information geht im Lärm unter</td><td>Antwort wird ungeprüft übernommen</td></tr>
+      <tr><td>Informationsverluste</td><td>Aggregation, Komprimierung (F.57)</td><td>Kurzformate verkürzen Sachverhalte</td><td>Zusammenfassung lässt Wichtiges weg</td></tr>
+      <tr><td>Semantische/pragmatische Störungen</td><td>F.81</td><td>Ironie/Kontext gehen verloren</td><td>Prompt missverstanden, Antwort am Zweck vorbei</td></tr>
+      <tr><td>Verlust eigenen Wissens</td><td>Wissen ist kumulativ, entsteht durch Erfahrung und Bewährung (F.68, F.75)</td><td>Oberflächenlesen statt Verstehen</td><td>prozedurales Wissen wird nicht mehr selbst aufgebaut</td></tr>
+      <tr><td>Kommerzielle bzw. Macht-Interessen</td><td>bewusste Verzerrung (F.58), Machtposition (F.9)</td><td>Algorithmus maximiert Verweildauer statt Wahrheit</td><td>Anbieter steuert, welche Inhalte erzeugt werden</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box ex"><div class="box-h">Informationsdefizite: je zwei Chancen und Risiken (HWS24 Zweittermin A3c)</div><p>Ausgangspunkt ist die Definition: <b>Defizit = Informationsnachfrage &gt; Informationsangebot</b> (F.95). <b>Chancen zur Reduktion:</b> (1) Social Media <em>erhöht das Angebot</em> – zu fast jeder Nachfrage, auch zu Nischenthemen, existiert ein Beitrag oder lässt sich schnell erfragen; die Angebotsmenge wächst über die Nachfrage. (2) Social Media <em>macht die Nachfrage sichtbar</em> (Suchanfragen, Trends, Fragen in Communities); Unternehmen und Medien können gezielt Angebot schaffen, sodass Angebot und Nachfrage zusammenrücken (informationelles Gleichgewicht). <b>Risiken der Vergrößerung:</b> (1) <em>Informationsüberlastung</em>: Ein Überschuss irrelevanter Inhalte verdeckt das passende Angebot; faktisch bleibt die Nachfrage unbefriedigt – ein Überschuss erzeugt ein wahrgenommenes Defizit (F.57). (2) <em>Informationsverzerrung durch Filterblasen</em>: Der Algorithmus zeigt nur einen selektiven Ausschnitt des Angebots; obwohl die Information existiert, erreicht sie die Nutzerin nicht (Nachfrage &gt; wahrgenommenes Angebot). Ebenfalls möglich: Fake News besetzen die Nachfrage mit falschem Angebot, die echte Nachfrage nach verlässlicher Information bleibt offen.</p></div>
+  <div class="box pit"><div class="box-h">Typischer Fehler</div><p>Chancen/Risiken nur allgemein aufzählen („Social Media ist schnell“). Für volle Punkte: Begriff aus der Vorlesung + Mechanismus + konkretes Beispiel aus dem Fall. Und nicht „Informationsproduktion“ mit „Datenproduktion“ verwechseln: Gefragt ist, ob am Ende die <em>richtige</em> Information beim Empfänger ankommt (F.23).</p></div>
+
+  <h3 id="k4-zusammenfassung">4.21 Zusammenfassung</h3>
+  <p>Die Vorlesung fasst zusammen (F.96): Zweck ist, was jemand mit einer Handlung beabsichtigt; Ziele sind Ergebnisse bewussten Handelns und beschreiben gewollte zukünftige Zustände oder Wirkungen. Der Arbeitsmarkt ist durch Digitalisierung und Automatisierung stark im Wandel, multiperspektivische Sichtweisen sind erforderlich. Zeichen, Daten, Informationen und Wissen sind miteinander vernetzt; Daten sind Rohstoff für Informationsproduktion. Und es braucht eine klare Abgrenzung zwischen Informationsnachfrage, -bedürfnis, -stand, -bedarf, -defizit und -überschuss.</p>
+
+  <h3 id="k4-selbsttest">Selbsttest</h3>
+  <details class="quiz"><summary>Wahr oder falsch: „Kostenziele stellen ein Element der Prozessqualität dar.“</summary><div class="ans"><p><b>Wahr.</b> Die Formalziele der Prozessqualität gliedern sich in Leistungs-, Termin- und Kostenziele (V04 F.12–13, T04 F.4). Kostenziele beschreiben den geplanten und bewerteten Verbrauch an Gütern und Dienstleistungen für die Erbringung von (Zwischen-)Ergebnissen. Die Produktqualität umfasst dagegen Nutzungs-, Wartungs- und Rahmenziele (F.14). Vorsicht: Auf F.11 steht fälschlich „Formalziele“ statt „Kostenziele“.</p></div></details>
+  <details class="quiz"><summary>Wahr oder falsch: „Es gibt sechs strategische Ziele zur Planung, Überwachung und Steuerung der Informationsinfrastruktur.“ Nennen Sie sie.</summary><div class="ans"><p><b>Wahr</b> (T04 F.6): Sicherheitsstreben, Produktivitätsstreben, Wirtschaftlichkeitsstreben (F.21), Anpassungs- bzw. Flexibilitätsstreben, Durchdringungsstreben, Wirksamkeits- bzw. Effektivitätsstreben (F.22). Ergänzend F.20: Als bekannt gilt nur, dass Sicherheit, Produktivität und Wirtschaftlichkeit tatsächlich als strategische Formalziele verwendet werden; Wissenschaft und Praxis haben insgesamt wenige Antworten geliefert.</p></div></details>
+  <details class="quiz"><summary>Wahr oder falsch: „Daten und Information liegt eine identische Definition zugrunde.“</summary><div class="ans"><p><b>Falsch.</b> Daten sind Zuordnungen von Zeichen zu Objekten und Sachverhalten (F.52) und betrachten nach herrschender Lehre keinen Kontext, keine Bedeutung, keine Absicht (F.63). Information wird aus Daten gewonnen, die Kontext, Relevanz und Zweckorientierung aufweisen (F.65), und liegt vor, wenn weitergegebene Daten beim Empfänger eine Handlung auslösen (F.53). Ob etwas Datum oder Information ist, hängt von Person und Kontext ab (Nele vs. Anna-Maria, F.66).</p></div></details>
+  <details class="quiz"><summary>Wahr oder falsch: „Der Informationsbegriff nach Shannon berücksichtigt die Bedeutung (Semantik) von Daten.“</summary><div class="ans"><p><b>Falsch.</b> Shannon definiert Information als technisches Maß, das den Zeichen einer Nachricht zugeordnet wird (F.43, T04 F.10); „die Bedeutung und der Kontext der Zeichen sind unerheblich“ (F.46). Deshalb enthalten „PRÜFUNG BESTANDEN“ und „ARFGUND SEPÜNNBET“ exakt dieselbe Information (F.47).</p></div></details>
+  <details class="quiz"><summary>Wahr oder falsch: „Der Informationsbedarf wird vom subjektiven Wissensstand eines Menschen abgeleitet.“</summary><div class="ans"><p><b>Falsch.</b> Der Informationsbedarf bezeichnet Art, Menge und Beschaffenheit von Information, die zur Erfüllung einer <em>Aufgabe</em> benötigt wird – er ist objektiviert (F.87). Von Merkmalen und Empfindungen des Menschen hängt das Informations<em>bedürfnis</em> ab (F.89). Darum ist „subjektiver Informationsbedarf“ ein ungenauer Begriff.</p></div></details>
+  <details class="quiz"><summary>Wahr oder falsch: „Der Informationsstand ist die Schnittmenge von Informationsnachfrage und Informationsangebot.“</summary><div class="ans"><p><b>Falsch bzw. unvollständig.</b> Laut F.86/F.95 ist der Informationsstand die Schnittmenge von Informations<b>bedarf</b>, -<b>bedürfnis</b>, -<b>nachfrage</b> und -<b>angebot</b> – also aller vier Mengen. Was nachgefragt und angeboten wird, aber nicht zum Bedarf gehört, erhöht den Stand nicht. Richtig ist allerdings: Je besser das Angebot der Nachfrage entspricht, desto höher der Stand (F.86).</p></div></details>
+  <details class="quiz"><summary>Berechnen Sie: Wie groß ist der Informationsgehalt eines Ereignisses mit p = 1/8, und wie groß ist die Entropie eines Alphabets mit zwei gleich wahrscheinlichen Zeichen?</summary><div class="ans"><p>I = ld(1/p) = ld 8 = <b>3 Bit</b> (F.43). Entropie H = Σ p<sub>j</sub> · ld(1/p<sub>j</sub>) = 0,5 · ld 2 + 0,5 · ld 2 = <b>1 Bit</b> (F.45). Das ist mehr als die 0,8 Bit beim Alphabet mit 0,75/0,25 aus F.45: Gleichverteilung bedeutet maximale Unsicherheit, also maximale Entropie. Eine Münze mit zwei gleichen Seiten (p = 1) hat 0 Bit (F.42).</p></div></details>
+  <details class="quiz"><summary>Fall: Sicherheit und Benutzerakzeptanz sind konfliktäre Ziele. Stimmt das?</summary><div class="ans"><p><b>Nicht pauschal.</b> Idealtypisch sind Zielbeziehungen komplementär, konfliktär oder indifferent, <b>realtypisch verändert sich häufig ihr Charakter</b> (F.26). Am Beispiel Online-Banking (F.27–28): Login und App-Freigabe erhöhen Sicherheit und Akzeptanz zugleich (komplementär, links vom Hochpunkt). Müsste jede Eingabe einzeln bestätigt werden, stiege die Sicherheit weiter, die Akzeptanz sänke (konfliktär, rechts vom Hochpunkt), und die Aufgabenerfüllung wäre behindert.</p></div></details>
+  <details class="quiz"><summary>Fall (Klausurfrage T04): Erklären Sie den Zusammenhang der Dimensionen der Semiotik anhand des Morsealphabets.</summary><div class="ans"><p><b>Syntaktik:</b> Zeichen und ihre Beziehungen untereinander – das Alphabet aus Punkt, Strich und Pause; z. B. die Folge „· · · − − − · · ·“ (Zeichenfolge nach Kodierungsregeln, F.51). <b>Semantik:</b> Beziehung der Zeichen zum Bezeichneten – die Folge referenziert „SOS“, den internationalen Notruf; damit liegen Daten bzw. eine Nachricht vor (F.52). <b>Pragmatik:</b> Beziehung zu den Kommunikationsteilnehmern – für die Funkerin eines Schiffes in der Nähe bedeutet die Nachricht „Brauche Hilfe!“ und löst die Handlung Kurswechsel/Rettung aus; erst dadurch wird sie zur Information (F.53, T04 F.27). Störungen sind auf jeder Ebene möglich: verrauschtes Signal (syntaktisch), unbekannter Code (semantisch), Nachricht wird für eine Übung gehalten (pragmatisch).</p></div></details>
+  <details class="quiz"><summary>Fall: Ordnen Sie die Störungen einer Ebene zu: (a) Eine E-Mail kommt wegen falscher Zeichenkodierung als „Ã¤“-Salat an. (b) Das Controlling meint mit „Umsatz“ netto, der Vertrieb brutto. (c) Die Chefin schreibt „Kannst du dir den Bericht mal ansehen?“, die Mitarbeiterin liest ihn, unternimmt aber nichts – gemeint war „überarbeite ihn bis morgen“.</summary><div class="ans"><p>(a) <b>syntaktisch</b> – Nachricht fehlerhaft als Zeichen kodiert bzw. Signal verändert (F.81); Gegenmaßnahme: einheitliche Kodierung (UTF-8), Prüfverfahren. (b) <b>semantisch</b> – gleiche Zeichenfolge, unterschiedlicher referenzierter Sachverhalt, begriffliche Unschärfe (F.81; vgl. „Lieferzeit“ F.62); Gegenmaßnahme: Glossar, Begriffsdefinition. (c) <b>pragmatisch</b> – die Nachricht wird richtig verstanden, aber es fehlt die Übereinstimmung in der Informationsabsicht, die Handlung weicht von der Erwartung ab (F.81); Gegenmaßnahme: Absicht explizit formulieren, nachfragen.</p></div></details>
+  <details class="quiz"><summary>Fall: Eine Sachbearbeiterin fakturiert. Sie will die Zahlungsmoral der Kundin wissen, die Einzelpreise interessieren sie nicht. Ordnen Sie das mithilfe von Bedarf und Bedürfnis ein und nennen Sie mögliche Folgen.</summary><div class="ans"><p>Bedarf (objektiv, aus der Aufgabe Rechnungserstellung, F.87–88): u. a. Empfängerin, Steuernummer, Artikel, Mengen, <b>Einzelpreise</b>. Bedürfnis (subjektiv, F.89): Zahlungsmoral (geht <b>über den Bedarf hinaus</b>), Einzelpreise uninteressant (Bedürfnis <b>geringer als der Bedarf</b>) – so V04 F.90. Folgen: Fragt sie die Einzelpreise nicht nach (Bedarf ohne Bedürfnis), drohen Fehler in der Rechnung – ungünstiges Verhalten. Fragt sie die Zahlungsmoral nach, die das System nicht anbietet, entsteht ein Informationsdefizit (Nachfrage &gt; Angebot, F.95); bietet das System sie an, obwohl nicht nötig, ist das aus Aufgabensicht eher unwirtschaftlich (T04 F.18).</p></div></details>
+  <details class="quiz"><summary>Fall (Probeklausur 2026): Liegt bei Dr. Yilmaz ein Informationsdefizit oder ein Informationsüberschuss vor?</summary><div class="ans"><p>Beides, mit Schwerpunkt Defizit. <b>Defizit</b> (Nachfrage &gt; Angebot, F.95): Die neue Medikation der letzten Tage wird für die Medikamentenentscheidung nachgefragt, ist aber nicht eingetragen – entscheidungskritisch wegen möglicher Wechselwirkungen; zugleich eine Informationspathologie (produzierbare Information nicht produziert, F.57). <b>Überschuss</b> (Angebot &gt; Nachfrage): über 200 ältere Laborbefunde, die in Minuten nicht auswertbar sind und zu Informationsüberlastung führen (F.57). Urteil: Der Überschuss kann das Defizit nicht ausgleichen; für die Aufgabe ist das Defizit maßgeblich. Der Informationsstand (Schnittmenge aller vier Mengen) umfasst Medikationsplan und Allergien, ist aber unvollständig.</p></div></details>
+  <details class="quiz"><summary>Fall: Nennen Sie drei Ziele des Klinik-Informationssystems (ePA), ordnen Sie sie Zielarten zu und begründen Sie je eine komplementäre und eine konfliktäre Beziehung.</summary><div class="ans"><p>(1) <b>Kürzere Wartezeiten</b>: Formalziel (Prozess), im GPM-Vokabular Durchlaufzeitverkürzung (F.17); Organisationsziel der Klinikleitung (F.7); eher nicht-ökonomisch (Patientenwohl), mit ökonomischer Wirkung (Produktivität, F.8). (2) <b>Weniger Behandlungsfehler</b>: Qualitätsverbesserung (F.17), nicht-ökonomisch (Wohlbefinden/Sicherheit der Patienten, F.8). (3) <b>Geringere Dokumentationskosten</b>: ökonomisches Ziel (F.8), Kostensenkung (F.17), Wirtschaftlichkeitsstreben (F.21). Zusätzlich (4) <b>Datenschutz/Sicherheit</b>: Sicherheitsstreben (F.21), gefordert vom Datenschutzbeauftragten. <b>Komplementär:</b> (1) und (2) – sofortiger digitaler Zugriff auf Befunde und Allergien beschleunigt die Entscheidung und macht sie zugleich fundierter; steigt Z1, steigt Z2 (F.26). <b>Konfliktär:</b> (4) mit zusätzlicher Anmeldung bei jedem Zugriff und (1) bzw. Nutzerakzeptanz – jede weitere Anmeldung kostet im Notfall Zeit; steigt Z1, sinkt Z2 (F.26); analog zum Online-Banking rechts vom Hochpunkt (F.27–28). Die Beziehung kann kippen: eine einmalige, schnelle Anmeldung (z. B. Badge) wäre noch komplementär.</p></div></details>
+  <details class="quiz"><summary>Wahr oder falsch: „Ein gutes Wissensmanagementsystem kann das implizite Wissen erfahrener Ärztinnen vollständig dokumentieren.“</summary><div class="ans"><p><b>Falsch.</b> Implizites (subjektives) Wissen lässt sich nur schwer formalisieren und kann daher nur unvollkommen beschrieben, dokumentiert und kommuniziert werden (F.73). Ein System kann explizites Wissen speichern (Leitlinien, Checklisten) und Teile impliziten Wissens externalisieren (Vertiefung Nonaka), aber nicht vollständig. Prozedurales Wissen „widersetzt sich häufig einer sprachlichen Formulierung“ (F.74). Wissensmanagement beginnt nach Probst mit dem Setzen von Wissenszielen, die aus den Unternehmenszielen abgeleitet werden (F.25).</p></div></details>
+  <details class="quiz"><summary>Nennen Sie Eversmanns drei Gründe gegen das vollautomatisierte Unternehmen und erklären Sie, was „sinnhaft“ bei Mertens bedeutet.</summary><div class="ans"><p>„Sinnhaft“: Ein Automationsschritt wird von der Allgemeinheit nach einer Lernfrist akzeptiert, und allenfalls Nostalgiker und Sonderlinge sehnen sich nach der personellen Lösung zurück (Mertens 1995, F.29). Eversmann (F.34): (1) Ein vollautomatisiertes Unternehmen wäre kein Unternehmen, sondern ein Automat im Besitz einer Betreiberin; (2) es könnte nicht dauerhaft Gewinn erzielen; (3) eine vollautomatisierte Volkswirtschaft käme mangels Beschäftigung und Kaufkraft zum Erliegen (Kreislauf F.35: niedrige Beschäftigung → wenig Kaufkraft → geringer Umsatz → sinkende Gewinne → Stellenabbau). Die Vorlesung fordert deshalb eine multiperspektivische Automatisierungslehre (Psychologie, Soziologie, Philosophie, VWL, F.37).</p></div></details>
+</section>

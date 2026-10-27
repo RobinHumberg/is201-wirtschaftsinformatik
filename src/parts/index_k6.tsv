@@ -1,0 +1,109 @@
+Infrastruktur	r6-infrastruktur	V06 F.7
+Jochimsen (Infrastrukturdefinition)	r6-infrastruktur	V06 F.7
+Materielle Infrastruktur	r6-infrastruktur	V06 F.8
+Immaterielle Infrastruktur	r6-infrastruktur	V06 F.8
+Informationsinfrastruktur	r6-ii-begriff	V06 F.10, F.14
+Deckung der Informationsnachfrage	r6-ii-begriff	V06 F.14
+IT-Infrastruktur	r6-ii-begriff	V06 F.17
+Architektur	r6-architektur	V06 F.12
+Beschreibungs-, Gestaltungs-, Kommunikationsfunktion	r6-architektur	V06 F.13
+Komponenten der Informationsinfrastruktur	r6-ii-komponenten	V06 F.15
+Technische Infrastruktur	r6-technisch	V06 F.16
+IuK-Technik	r6-technisch	V06 F.18
+Rechenzentrum	r6-technisch	V06 F.18–19
+DAS / NAS / SAN	r6-technisch	V06 F.20
+Virtualisierung	r6-technisch	V06 F.21
+Nicht-IuK-Technik	r6-nicht-iuk	V06 F.22
+USV (unterbrechungsfreie Stromversorgung)	r6-nicht-iuk	V06 F.25
+Schutz / Sicherheit / Schutztechnik	r6-nicht-iuk	V06 F.28
+Carr vs. Lewis (Informationsfabrik / Wettbewerbsvorteil)	r6-cloud	V06 F.31–32
+On-Premises / On-Demand	r6-cloud	V06 F.33
+Affordances (Angebots-/Nutzungscharakter)	r6-cloud	V06 F.34–35
+Cloud Computing	r6-cloud	V06 F.36
+IaaS (Infrastructure as a Service)	r6-cloud	V06 F.36
+Personelle Infrastruktur	r6-personell	V06 F.37
+Kern-, Misch-, Randberufe	r6-personell	V06 F.37
+Infomediärin	r6-personell	V06 F.38
+Datenwissenschaftlerin / Data Scientist	r6-personell	V06 F.38
+Bedürfnispyramide der Datenwissenschaften (AI Hierarchy of Needs)	r6-personell	V06 F.39
+Organisatorische Infrastruktur	r6-organisatorisch	V06 F.41
+Aufbauorganisation	r6-organisatorisch	V06 F.42
+Ablauforganisation	r6-organisatorisch	V06 F.43
+Projekt / Projektorganisation	r6-organisatorisch	V06 F.45
+Einfluss-, Matrix-, reine Projektorganisation	r6-organisatorisch	V06 F.46
+Gremien / Ausschüsse	r6-organisatorisch	V06 F.47
+Räumliche Infrastruktur	r6-raeumlich	V06 F.48
+Closed-Shop-Betrieb	r6-raeumlich	V06 F.48
+DevOps	r6-raeumlich	V06 F.48–49
+Follow-the-Sun-Prinzip	r6-raeumlich	V06 F.50
+Methodische Infrastruktur und Managementsysteme	r6-methodisch	V06 F.52
+CIO (Chief Information Officer)	r6-cdo	V06 F.52, F.103
+COBIT	r6-methodisch	V06 F.53
+ITIL (IT Infrastructure Library)	r6-methodisch	V06 F.54
+Informationsmanagement	r6-methodisch	V06 F.55
+Managementprinzipien (by objectives/exceptions/delegation, servant leadership)	r6-methodisch	V06 F.55
+Informations- und kommunikationsrechtliche Infrastruktur	r6-recht	V06 F.56
+Compliance	r6-recht	V06 F.56
+Datenschutzrecht	r6-recht	V06 F.57
+Softwarevertragsrecht / Software (Definition)	r6-recht	V06 F.58
+Qualitätsinfrastruktur	r6-qualitaet	V06 F.59
+Standard / De-facto-Standard	r6-qualitaet	V06 F.60
+BSI-Standard 100-1	r6-qualitaet	V06 F.61
+ISO/IEC 25000	r6-qualitaet	V06 F.62
+Zertifizierung	r6-qualitaet	V06 F.64
+Akkreditierung (ISO/IEC 17011)	r6-qualitaet	V06 F.64
+Antwortschema II-Komponenten (YouTube/Instagram)	r6-schema-ii	V06 F.15
+Antwortschema II für agile Projekte	r6-schema-ii-agil	V06 F.41–50
+Digitalisierung (digitization / digitalization)	r6-dig-begriffe	V06 F.75
+Computerbasierte Automatisierung	r6-dig-begriffe	V06 F.75
+Digitale Transformation	r6-dig-begriffe	V06 F.72
+Cyberphysisches System	r6-dig-begriffe	V06 F.73
+Disruptive Technologien	r6-dig-begriffe	V06 F.71
+Beschreibungsmodell der digitalen Transformation	r6-modell	V06 F.76
+SMACIT (Social, Mobile, Analytics, Cloud, IoT)	r6-technologien	V06 F.76
+Technologiemanagement	r6-technologien	V06 F.79–80
+Antwortschema SMACIT (Netflix)	r6-schema-smacit	V06 F.76–80
+Disruption	r6-disruption	V06 F.88
+Nutzen statt Besitzen (Fix- zu variablen Kosten)	r6-disruption	V06 F.90
+Geschäftsmodell	r6-geschaeftsmodell	V06 F.81
+Business Model Canvas	r6-geschaeftsmodell	V06 F.82–84
+Digitale Geschäftsstrategie (Digital Business Strategy)	r6-strategie	V06 F.85
+Digitale Transformationsstrategie	r6-strategie	V06 F.85
+Digitalisierungsstrategie	r6-strategie	V06 F.85
+Kritische Erfolgsfaktoren (CSF) / Erfolgsdimensionen	r6-erfolgsfaktoren	V06 F.86–87
+Antwortschema Erfolgsfaktoren (Bunzel)	r6-schema-erfolg	V06 F.86
+Wirkungen der digitalen Transformation	r6-wirkungen	V06 F.91–92
+Antwortschema Beschreibungsmodell (Spotify)	r6-schema-modell	V06 F.76
+Referenzmodell	r6-rrv-modelle	V06 F.93
+Reifegradmodell	r6-rrv-modelle	V06 F.93
+Vorgehensmodell	r6-rrv-modelle	V06 F.93
+Appelfeller und Feldmann (10 Elemente, 4 Reifegrade, 5 Phasen)	r6-rrv-modelle	V06 F.95–97
+PDCA-Zyklus (Plan, Do, Check, Act)	r6-rrv-modelle	V06 F.96
+Schallmo et al. (Roadmap)	r6-rrv-modelle	V06 F.99
+Digital Maturity Model (DMM)	r6-rrv-modelle	V06 F.101
+Antwortschema Referenz-/Reifegrad-/Vorgehensmodell (IKEA)	r6-schema-rrv	V06 F.93–97
+CDO (Chief Digital Officer)	r6-cdo	V06 F.102
+Antwortschema CDO vs. CIO	r6-schema-cdo	V06 F.102–103
+Agilität	r6-agilitaet	V06 F.104
+Agilitätskonzept (8 Charakteristika)	r6-agilitaet	V06 F.105
+Agile Softwareentwicklung	r6-agile-se	V06 F.104
+Agiles Manifest	r6-agile-se	V06 F.104
+Scrum	r6-agile-se	V06 F.104
+Wasserfallmodell	r6-agile-se	V06 F.49
+Antwortschema agile Aufgaben	r6-schema-agil	V06 F.105
+Multikanal (Multi-Channel)	r6-handel	V06 F.106
+Omni-Channel	r6-handel	V06 F.108
+In-Store-Technologien	r6-handel	V06 F.109
+Vorkauf-, Kauf-, Nachkaufphase	r6-handel	V06 F.109–111
+Antwortschema Handel/Kaufphasen (IKEA)	r6-schema-handel	V06 F.106–111
+Digitale Plattform	r6-plattformen	V06 F.112
+Direkte / indirekte Netzwerkeffekte	r6-plattformen	V06 F.113
+Transaktionsplattform	r6-plattformen	V06 F.114
+Innovationsplattform	r6-plattformen	V06 F.114–116
+Digital Platform Ecosystem (DPE)	r6-plattformen	V06-Z1 F.16–17
+Digital Transformation vs. Digital Innovation	r6-zusatz-ai	V06-Z1 F.3
+Edge Computing	r6-zusatz-ai	V06-Z1 F.14
+EcoStruxure (Schneider Electric)	r6-zusatz-ai	V06-Z1 F.13–15
+PORT29 KI-Rechenzentrum	r6-zusatz-port29	V06-Z2 S.1–13
+PUE (Power Usage Effectiveness)	r6-zusatz-port29	V06-Z2 S.6
+Nachhaltigkeit (Green IT, Abwärme)	r6-zusatz-port29	V06 F.24, F.91; V06-Z2 S.8
