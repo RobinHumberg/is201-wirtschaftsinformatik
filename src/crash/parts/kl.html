@@ -1,0 +1,142 @@
+<section class="chapter" id="kl">
+<span class="chap-no">Klausurteil</span>
+<h2>Klausuraufgaben: Schemata, Lösungsskizzen, Checkliste</h2>
+<p class="lead">K.1 wiederholt die drei Schemata aus Kapitel 1 und 2, die in fast jeder Klausur Punkte bringen. K.2 zeigt alle 16 bisherigen Klausuraufgaben mit einer Lösungsskizze und dem passenden Abschnitt in diesem Skript. K.3 sagt, was am Freitag wahrscheinlich kommt, K.4 ist die Checkliste für den Klausurtag. Die ausführlichen Musterlösungen und vier Prognose-Klausuren mit Timer stehen in <code>03_Klausuren</code>.</p>
+
+<h3>K.1 Kernschemata aus Kapitel 1 und 2 <span class="prio p1">Muss</span></h3>
+<h4>„Ist X ein Informationssystem?“ (2,5–8 P., in vier von fünf Klausuren)</h4>
+<div class="box exam"><div class="box-h">Schema · V01 F.23–25</div>
+<p>(1) Definition: „Informationssysteme sind Mensch/Aufgabe/Technik-Systeme, kurz MAT-Systeme“; sie schließen die Weitergabe von Informationen ein (V01 F.23). (2) <b>Mensch</b> konkret: wer erfüllt als Aufgabenträger die Aufgabe? (3) <b>Aufgabe</b> konkret: Einzelproblem oder Problembereich in Wirtschaft und Gesellschaft. (4) <b>Technik</b> konkret: App, Server, Rechenzentrum, Algorithmen. (5) <b>Zusammenwirken</b>: wer gibt welche Information an wen weiter? (6) Abgrenzung: Die Software allein ist nur das <b>Anwendungssystem</b>, weil der Mensch nicht Teil davon ist (V01 F.25). (7) Fazit.</p>
+<p><i>Baustein:</i> „Bei ChatGPT erfüllt eine Studentin (Mensch) die Aufgabe, sich auf die Klausur vorzubereiten, mithilfe von App, Sprachmodell und Rechenzentrum (Technik). Sie stellt eine Frage, das Modell gibt eine Antwort zurück, die sie prüft und weiterverwendet. Damit liegt ein MAT-System und somit ein IS vor. Die ChatGPT-Software für sich genommen wäre nur das Anwendungssystem.“</p></div>
+<p>Die drei Erkenntnisobjekte der WI sind Informationssystem, Informationsinfrastruktur und Informationsfunktion; sie sind <b>nicht disjunkt</b> (V01 F.15). Die Informationsfunktion umfasst die betrieblichen Aufgaben, deren Zweck die Produktion von Information ist und deren Bereitstellung durch Kommunikation erfolgt (V01 F.31).</p>
+
+<h4>„Untersuchen Sie die Systemeigenschaften von X“ (5–10 P., dreimal in Folge)</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Eigenschaft (V01 F.19)</th><th>Definition</th><th>Beleg im Fall suchen</th></tr>
+<tr><td>offen (vs. geschlossen)</td><td>steht über seine Elemente mit der Umwelt in Beziehung</td><td>Schnittstellen: Upload, API, Werbekunden</td></tr>
+<tr><td>komplex (vs. einfach)</td><td>Anzahl der Elemente <b>und Beziehungen</b> (Beziehungsreichtum)</td><td>Millionen Nutzer, Follower-Netz</td></tr>
+<tr><td>kompliziert (vs. einfach)</td><td>Anzahl der Elemente <b>und ihre Verschiedenartigkeit</b></td><td>Creator, Zuschauer, Werbekunden, Server, Algorithmen</td></tr>
+<tr><td>dynamisch (vs. statisch)</td><td>Zustände von Elementen oder Beziehungen ändern sich im Zeitablauf</td><td>neue Inhalte, neue Follower, Updates</td></tr>
+<tr><td>zweck- <b>und</b> zielorientiert</td><td>Zweck = welche Aufgaben (Sachziel); Ziel = Güte der Erfüllung</td><td>Zweck: Videos teilen; Ziel: kurze Ladezeit, Werbeumsatz</td></tr>
+<tr><td>emergent (V01 F.16)</td><td>Eigenschaft ergibt sich erst aus den <b>Beziehungen</b> der Elemente, nicht aus einzelnen Elementen</td><td>Trends, Viralität, Antwortzeitverhalten; nicht emergent: Speicherkapazität</td></tr>
+</table></div>
+<p>Vorher kurz die Systemgrenze ziehen: System = „ganzheitlicher Zusammenhang von Elementen, die voneinander abhängig sind, ineinandergreifen oder zusammenwirken“, abgegrenzt von der Umwelt (V01 F.18).</p>
+
+<h4>Forschungsmodell: Variablentypen, Vorzeichen, „Was erklärt das Modell?“ (22–30 P.)</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Typ (V02 F.59)</th><th>Definition</th><th>Erkennen im Diagramm</th></tr>
+<tr><td>unabhängige Variable (UV)</td><td>ihr Einfluss auf die AV soll untersucht werden</td><td>nur ausgehende Pfeile, meist links</td></tr>
+<tr><td>abhängige Variable (AV)</td><td>ihre Abhängigkeit von der UV ist Gegenstand der Untersuchung</td><td>nur eingehende Pfeile, meist rechts</td></tr>
+<tr><td>Mediator</td><td>vermittelt den Einfluss der UV auf die AV; die UV wirkt nicht direkt</td><td>Kasten in der Kette, Pfeil hinein und hinaus</td></tr>
+<tr><td>Moderator</td><td>verändert den Einfluss der UV auf die AV</td><td><b>Pfeil endet auf einem Pfeil</b></td></tr>
+<tr><td>Kontrollvariable</td><td>nicht im Fokus, hat aber Einfluss auf die AV</td><td>oft gestrichelt, Pfeil direkt auf AV</td></tr>
+</table></div>
+<p><b>Vorzeichen</b> immer als „Je höher X, desto höher/niedriger Y, <i>weil</i> …“ formulieren. Beim Moderator: „Je höher Z, desto <b>stärker</b> (+) bzw. <b>schwächer</b> (−) wirkt X auf Y.“ Bei Mediation ist der indirekte Effekt das Produkt der Teilvorzeichen. Mediator mit zusätzlichem direktem Pfad UV → AV = partielle Mediation. Ein Gruppierungsrahmen („Markers of team adaptability“) ist keine Variable.</p>
+<p><b>„Was erklärt das Modell?“</b>: Erklärungsziel (AV) → Hauptpfad mit Mediatoren in Worten → Randbedingung (Moderator) → Kontrollvariable → zugrunde liegender Mechanismus → Einordnung als theoretische Forschung (Ursache-Wirkung, falsifizierbar, Prüfung per Befragung oder Experiment).</p>
+<div class="box ex"><div class="box-h">Lösung HWS25 Zweittermin A3 · Modell agiler Teams (V05 F.52, T02 F.28)</div>
+<p>Agile Techniques (Pair Programming, Code Review, Testing) = <b>UV</b>; Shared Mental Models = <b>Mediator</b>; Backup Behavior = <b>Mediator</b> (sequenzielle, vollständige Mediation, kein direkter Pfeil zur Leistung); Task Complexity = <b>Moderator</b> (Pfeil auf den Pfeil Backup → Performance); Team Size = <b>Kontrollvariable</b> (gestrichelt); Team Performance = <b>AV</b>. Vorzeichen alle (+): Gemeinsame Arbeit am Code schafft gemeinsames Verständnis; wer den Code der anderen kennt, kann einspringen; Einspringen gleicht Last aus und korrigiert Fehler. Komplexität verstärkt (+): Je komplexer die Aufgabe, desto wichtiger das Backup. Teamgröße plausibel (−) wegen Koordinationsaufwand. Das Modell erklärt, <b>wie und warum</b> agile Techniken die Teamleistung erhöhen: über die Anpassungsfähigkeit des Teams, besonders bei komplexen Aufgaben.</p></div>
+<div class="box ex"><div class="box-h">Lösung HWS24 Zweittermin A1 · MSI-Modell (V02 F.59–60)</div>
+<p>MSI in the Internet = UV; Perceived Ease of Use = Mediator (partiell, da H1 direkt); Use of the Internet for Information Search = AV; Age = Moderator (Pfeil auf H3); Qualification Level = Kontrollvariable (gestrichelt). H3 (+): je einfacher, desto mehr Nutzung (TAM). H4 vertretbar (+): Je älter, desto stärker hängt die Nutzung von der Einfachheit ab. Technologische Umformulierung: „Wie muss ein Informationssuchangebot gestaltet sein, damit ältere Verbraucherinnen das Internet häufiger zur Informationssuche nutzen?“</p></div>
+<div class="box exam"><div class="box-h">Theoretisch ↔ technologisch umformulieren (V02 F.18–29)</div>
+<p>Theoretische Aussagen sind Ursache-Wirkungs-Beziehungen, wahr oder falsch, falsifizierbar, empirisch geprüft. Technologische Aussagen sind <b>Zweck-Mittel-Beziehungen</b>, zweckmäßig oder unzweckmäßig, „ohne Ziele nicht möglich“, mit pragmatischem Wissenschaftsziel und Ingenieurmethoden. Umformulieren: Die bisherige AV wird zum Zweck, die UV/Mediatoren werden zu Gestaltungshebeln. Satzmuster: „Wie muss [Artefakt] gestaltet sein, damit [Zielgruppe] [Ziel] erreicht?“ Umgekehrt (theoretisch): „Welchen Einfluss hat [UV] auf [AV] – und warum?“ plus Hypothese „Je …, desto …“. Verbindung beider (HWS24 Erst A4c): erst Theorie prüfen, daraus Gestaltungsempfehlung ableiten (V01 F.80), Prototyp bauen und evaluieren, Ergebnis zurück in die Theorie. Gestaltung ohne Theorie wäre eine <b>Praxeologie</b> (V02 F.29).</p></div>
+
+<h4>Wissenschaftskriterien und Methoden (Probeklausur A1, 22 P.)</h4>
+<p><b>Wissenschaftskriterien</b> (V01 F.43–57): Überprüfbarkeit (an der Wirklichkeit als wahr/falsch entscheidbar), Ableitungsrichtigkeit (logisch korrekt aus Prämissen abgeleitet), Widerspruchsfreiheit, Systematisierbarkeit (nicht nur singuläre Aussagen, Begründungszusammenhang), dazu Verständlichkeit. <b>Normative Aussagen</b> („Jedes Unternehmen soll …“) sind Verhaltensanweisungen und keine wissenschaftlichen Aussagen (V01 F.44); Signalwörter: soll, sollte, muss. <b>Wahrheitstheorien</b> (V01 F.67–73): Korrespondenz (stimmt mit der Wirklichkeit überein, empirisch geprüft), Kohärenz (widerspruchsfrei zu einem Aussagensystem), Konsens (allgemein akzeptiert von sachkundigen Personen), pragmatisch (wahr ist, was erfolgreich ist). <b>Wissenschaftsziele</b>: Beschreibung, Erklärung (Erkenntnisgewinnung), Prognose, Gestaltung (Erkenntnisverwertung).</p>
+<p><b>Quantitativ</b> (Zahlen; Befragung, Labor-/Feldexperiment, Simulation, Metaanalyse) prüft Hypothesen an großen Stichproben, <b>qualitativ</b> (Texte; Fallstudie, Interviews mit Inhaltsanalyse, Synopse) erklärt das Warum und generiert Hypothesen; die Kombination liefert den höchsten Erkenntniswert (V02 F.56). Schema für „Schlagen Sie eine Methode vor“: Methode + Definition → Vorgehen in Schritten (Hypothese mit UV/AV, Messung z. B. validierter Fragebogen, Stichprobe/Design, Auswertung) → je ein fallbezogener Vor- und Nachteil → Beitrag einer qualitativen Methode.</p>
+
+<h3>K.2 Alle bisherigen Klausuraufgaben mit Lösungsskizze <span class="prio p1">Muss</span></h3>
+<p>Lies diese Tabellen mit Blick auf das Muster: Fast jede Teilaufgabe ist „Begriff erklären + auf Fall anwenden“. Die rechte Spalte nennt den Abschnitt in diesem Skript.</p>
+
+<h4>HWS 2024/25 Ersttermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a YouTube ein IS?</td><td>5</td><td>MAT: Creator/Zuschauer, Inhalte teilen/konsumieren, Plattform/Server/Algorithmen; Zusammenwirken; Anwendungssystem abgrenzen</td><td>K.1</td></tr>
+<tr><td>A1b Vier Komponenten der II</td><td>10</td><td>technisch (Rechenzentren, CDN), personell (Data Scientists, Moderation), rechtlich (Urheber-, Datenschutzrecht), organisatorisch (Moderations- und Uploadprozesse)</td><td>6.2</td></tr>
+<tr><td>A1c Systemeigenschaften</td><td>5</td><td>offen, komplex, kompliziert, dynamisch, zweck- und zielorientiert, Trends als emergent</td><td>K.1</td></tr>
+<tr><td>A1d Zwei Algorithmen</td><td>10</td><td>Empfehlungsalgorithmus (kollaboratives Filtern, Ziel Verweildauer/Werbung) und Suche/Ranking oder Trending; kaum Folienstoff, seit 2025 nicht mehr gefragt</td><td>–</td></tr>
+<tr><td>A2a Fünf Charakteristika agiler Verfahren</td><td>10</td><td>aus V06 F.105: Kundenzentrierung, iterative Entwicklung, mitarbeiterzentrierte Führung, Fehlerkultur, Transparenz; je Erklärung + Beispiel</td><td>6.8</td></tr>
+<tr><td>A2b Kundeninteraktion: 3 Vorteile, 2 Nachteile</td><td>10</td><td>+ frühes Feedback, Bedürfnisorientierung, Vertrauen/Transparenz; − Zeitaufwand des Kunden, Planungs-/Vertragsunsicherheit</td><td>6.8</td></tr>
+<tr><td>A2c Fünf kritische Erfolgsfaktoren</td><td>10</td><td>fünf verschiedene Dimensionen aus V06 F.86, Faktor im Wortlaut + Fallbezug</td><td>6.5</td></tr>
+<tr><td>A3 Daten, Information, Wissen (Flugbuchung)</td><td>30</td><td>Flugangaben = Daten; für den Doktoranden mit Zweck (11.–18.12., &lt;1000 €) Information, löst Buchung aus; Wissen = „+1“ verstehen, Hotelkosten einrechnen; deklarativ/prozedural</td><td>4.8</td></tr>
+<tr><td>A4a–c Theorie vs. Technologie</td><td>30</td><td>Argumente für technologisch (Zweck-Mittel, Artefakt, Zweckmäßigkeit), theoretische Umformulierung mit Hypothese, Verbindung beider</td><td>K.1</td></tr>
+</table></div>
+
+<h4>HWS 2024/25 Zweittermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a–d MSI-Forschungsmodell</td><td>30</td><td>Variablentypen, Vorzeichen H3/H4, was erklärt das Modell, technologische Umformulierung</td><td>K.1</td></tr>
+<tr><td>A2a–d Instagram (IS, Systemeigenschaften, 4 Komponenten, Algorithmen)</td><td>30</td><td>wie HWS24 Erst A1, nur mit Instagram</td><td>K.1, 6.2</td></tr>
+<tr><td>A3a Fünf Chancen sozialer Medien für die Informationsproduktion</td><td>10</td><td>größeres Angebot, Echtzeit, Ortsunabhängigkeit, Personalisierung, sichtbare Nachfrage (Raster „richtige Zeit/Menge/Ort/Qualität“)</td><td>4.9</td></tr>
+<tr><td>A3b Fünf Risiken</td><td>10</td><td>Fake News/Missbrauch, Überlastung, Verzerrung/Filterblase, Privatsphäre, Pathologien</td><td>4.9</td></tr>
+<tr><td>A3c Informationsdefizite: je 2 Chancen und Risiken</td><td>10</td><td>Chancen: Angebot steigt, Nachfrage wird sichtbar; Risiken: Überlastung verdeckt Passendes, Fake News besetzen Nachfrage</td><td>4.11</td></tr>
+</table></div>
+
+<h4>HWS 2025/26 Ersttermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1 Beschreibungsmodell der digitalen Transformation (Spotify)</td><td>30</td><td>vier Phasen mit Leitfrage; SMACIT; Disruption mit drei Definitionsmerkmalen und Ausmaß (Handel gänzlich, Labels teilweise); Canvas; Wirkungen ±</td><td>6.5</td></tr>
+<tr><td>A2b ChatGPT ein IS?</td><td>5</td><td>MAT mit konkretem Beispiel (Studentin, Klausurvorbereitung)</td><td>K.1</td></tr>
+<tr><td>A2c Systemeigenschaften ChatGPT</td><td>10</td><td>alle sechs mit Beispiel; Antwortqualität als emergent</td><td>K.1</td></tr>
+<tr><td>A2d Daten, Information, Wissen bei ChatGPT</td><td>15</td><td>Daten = Trainingstexte und Prompt; Information = Antwort mit Zweckbezug, löst Handlung aus; deklaratives und prozedurales Wissen</td><td>4.8</td></tr>
+<tr><td>A3a Drei Merkmale agil vs. traditionell</td><td>6</td><td>iterativ statt sequenziell, veränderliche statt fixierter Anforderungen, Kunde kontinuierlich eingebunden</td><td>6.8</td></tr>
+<tr><td>A3b Drei Komponenten der II für agile Projekte</td><td>12</td><td>organisatorisch, räumlich (DevOps, Follow-the-Sun), personell</td><td>6.2</td></tr>
+<tr><td>A3c Zwei Vorteile, zwei Herausforderungen agiler Methoden</td><td>12</td><td>Flexibilität, schnellere Ergebnisse; Planbarkeit, Kulturwandel/Skalierung</td><td>6.8</td></tr>
+</table></div>
+
+<h4>HWS 2025/26 Zweittermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a Artefakt + vier Artefakttypen (ShopFlow)</td><td>16</td><td>Definition V03 F.8; Konstrukte, Modelle, Methoden, Instanziierungen je mit Fallbeispiel und Begründung</td><td>3.3</td></tr>
+<tr><td>A1b Problem- und Lösungsraum, je zwei Aspekte</td><td>8</td><td>Problem + Ursache, Evaluationskriterien; Artefakt + Gestaltungsprinzip; Evaluation als Brücke</td><td>3.2</td></tr>
+<tr><td>A1c Deskriptiv vs. präskriptiv mit Beispiel</td><td>6</td><td>Ω = „X führt zu Y“, λ = „Um Y zu erreichen, baue X“</td><td>3.4</td></tr>
+<tr><td>A2a/b Je drei Chancen und Risiken von ChatGPT</td><td>24</td><td>je Fachbegriff + Mechanismus + Beispiel, 3–4 Sätze</td><td>4.9</td></tr>
+<tr><td>A2c Daten = Information?</td><td>6</td><td>Nein; Subjekt- und Kontextbezug; Beispiel mit zwei Personen</td><td>4.8</td></tr>
+<tr><td>A3a–c Forschungsmodell agiler Teams</td><td>30</td><td>siehe Lösung oben</td><td>K.1</td></tr>
+</table></div>
+
+<h4>Probeklausur 2026 (Tutorium) – neuer Stil</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a Aussage der Geschäftsführerin anhand von drei Wissenschaftskriterien prüfen</td><td>10</td><td>Überprüfbarkeit, Widerspruchsfreiheit, Systematisierbarkeit; der zweite Satz ist eine <b>normative Aussage</b> („soll“) und damit nicht wissenschaftlich</td><td>K.1</td></tr>
+<tr><td>A1b Quantitative Methode zu digitalem Stress</td><td>12</td><td>Befragung mit validiertem Stressfragebogen oder Feldexperiment (Gruppe mit/ohne KI-Assistent); Vor-/Nachteil; qualitative Interviews ergänzen das Warum</td><td>K.1</td></tr>
+<tr><td>A1c Problem-/Lösungsraum, zwei Artefakttypen, Evaluation</td><td>8</td><td>Problem: Stress durch ständige Hinweise; Lösung z. B. Hinweisbündelung (Instanziierung) und Gestaltungsregeln (Methode); Evaluation per Experiment mit Stressmessung vorher/nachher</td><td>3.2–3.6</td></tr>
+<tr><td>A2a Notaufnahme-System ein IS? Nutzerrollen mit Vor-/Nachteil</td><td>8</td><td>MAT; Rollen Ärztin/Pflege/Verwaltung mit unterschiedlichen Rechten; + zentrale Rechteverwaltung, − starr im Notfall</td><td>K.1, 5.10</td></tr>
+<tr><td>A2b Drei Ziele + Zielart, komplementär und konfliktär</td><td>10</td><td>z. B. kürzere Wartezeiten, weniger Fehler, Datenschutz; Sicherheit vs. Schnelligkeit konfliktär</td><td>4.2, 4.4</td></tr>
+<tr><td>A2c Bedarf, Bedürfnis, Nachfrage, Stand; Defizit oder Überschuss</td><td>12</td><td>Aufgabe von Dr. Yilmaz benennen, vier Begriffe am Fall; <b>beides</b>: Defizit (neue Medikation), Überschuss (200 alte Befunde)</td><td>4.11</td></tr>
+<tr><td>A3a Disruption im Handel ist nicht nur offline → online (IKEA)</td><td>12</td><td>Multikanal (V06 F.108); Customer Journey; je Kaufphase eine Technologie, AR-Planung explizit auf der Folie</td><td>6.9</td></tr>
+<tr><td>A3b Referenz-/Reifegrad-/Vorgehensmodell; zwei Elemente einordnen</td><td>10</td><td>drei Definitionen; Appelfeller &amp; Feldmann; zwei Elemente mit Reifegrad und Begründung</td><td>6.6</td></tr>
+<tr><td>A3c CDO: Aufgabe, Abgrenzung CIO, Pro/Contra</td><td>8</td><td>CDO plant und koordiniert den Wandel; CIO verantwortet Informationsressourcen; pro Bündelung, contra Doppelstrukturen</td><td>6.7</td></tr>
+</table></div>
+
+<h3>K.3 Was am Freitag wahrscheinlich kommt <span class="prio p1">Muss</span></h3>
+<p>Mit großer Wahrscheinlichkeit wieder eine <b>Fall-Aufgabe zu den Gegenständen der WI</b> (IS? Systemeigenschaften? Komponenten der II?), eine <b>Forschungsaufgabe</b> (Forschungsmodell oder gestaltungsorientierte Forschung) und eine Aufgabe zu <b>digitaler Transformation, Plattformen oder Agilität</b>, wobei im neuen Stil Begriffe aus mehreren Vorlesungen in einer Aufgabe gemischt werden. Unter den nie geprüften Themen sind die stärksten Kandidaten <b>Semiotik</b> (4.7), <b>Plattformen und Netzwerkeffekte</b> (6.10) und die <b>Nutzerschnittstelle</b> mit Gestaltgesetzen und ISO 9241 (5.4–5.5).</p>
+<p>Die vier Prognose-Klausuren in <code>03_Klausuren</code> decken genau diese Kombinationen ab. Wenn du nur Zeit für eine hast, nimm <b>Prognose-Klausur 2</b> (Probeklausur-Stil: Wissenschaft + Ziele/Mensch + Plattformen/Transformation); als Ergänzung die Teilaufgaben zu Semiotik und Portal² aus Prognose-Klausur 3.</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Übungsaufgabe aus den Prognose-Klausuren</th><th>Trainiert</th></tr>
+<tr><td>P2 A2a: vier Ziele den Formalzielen zuordnen, strategisches Ziel der II</td><td>4.3</td></tr>
+<tr><td>P2 A2b: konsensorientiert vs. gewerkschaftlich, Dimensionen, Key User</td><td>5.7</td></tr>
+<tr><td>P2 A2c: Gebrauchstauglichkeit vs. UX, drei ISO-Grundsätze am Terminal</td><td>5.5</td></tr>
+<tr><td>P2 A3: Lieferando als Plattform, Netzwerkeffekte, Beschreibungsmodell, Transaktions- vs. Innovationsplattform</td><td>6.5, 6.10</td></tr>
+<tr><td>P3 A1: Shannon rechnen (Warnmeldung), Semiotik am Cell Broadcast, Kommunikationsstörungen</td><td>4.6, 4.7, 4.10</td></tr>
+<tr><td>P3 A2: Gestaltgesetze, Norman, Personae, Typisierung nach Aufgabe (Portal²)</td><td>5.3–5.4, 5.10</td></tr>
+<tr><td>P3 A3: Vollautomation, Nicht-IuK-Technik, Carr vs. Lewis, Bedürfnispyramide</td><td>4.5, 6.3</td></tr>
+<tr><td>P4 A2: Process Mining, Relevanz vs. Stringenz, DSRM, Lebenszyklus</td><td>3.5–3.9</td></tr>
+<tr><td>P4 A3: drei Bedeutungen von Digitalisierung, BTP als Plattform, äußere/innere Grenze</td><td>6.4, 6.10</td></tr>
+</table></div>
+
+<h3>K.4 Checkliste für den Klausurtag</h3>
+<h4>Registerfahnen in den Folienausdruck</h4>
+<p>V01 F.19 (Systemeigenschaften), F.23 (MAT), F.29 (II) · V02 F.59 (Variablentypen) · V03 F.6–8 (Problem-/Lösungsraum, Artefakte), F.14 (Ω/λ) · V04 F.26 (Zielbeziehungen), F.49–53 (Semiotik), F.63–75 (Daten/Information/Wissen), F.86–95 (Informationsbedarf bis -stand) · V05 F.24 (Gestaltgesetze), F.27–29 (ISO 9241), F.61 (Rollen) · V06 F.15 (sieben Komponenten), F.76 (Beschreibungsmodell), F.86 (Erfolgsfaktoren), F.93–96 (Modelle), F.105 (Agilität), F.108–111 (Handel), F.112–114 (Plattformen).</p>
+<h4>In der Klausur</h4>
+<ol>
+<li><b>Lesezeit nutzen:</b> Zu jeder Teilaufgabe die passende Folie aufschlagen und die Reihenfolge festlegen; leichte Punkte zuerst.</li>
+<li><b>Eine Minute pro Punkt.</b> Nach 30 Minuten zur nächsten Aufgabe wechseln, Lücken am Ende füllen.</li>
+<li><b>Schema</b> für jede Teilaufgabe: Fachbegriff → Definition mit Folienbegriff → Fallbezug → Fazit.</li>
+<li><b>Anzahl exakt einhalten</b> und nummerieren („drei Chancen“ = genau drei, sauber getrennt).</li>
+<li><b>Nebensätze abhaken:</b> „je ein Vor- und Nachteil“, „begründen Sie“, „beurteilen Sie“ kosten die meisten Punkte.</li>
+<li><b>Fachbegriffe der Folie verwenden</b> (Informationsverzerrung statt „einseitige Infos“, komplementär statt „passen zusammen“).</li>
+<li><b>Fünf Minuten am Ende</b> für die Kontrolle, ob jede Teilfrage beantwortet ist.</li>
+</ol>
+<div class="box pit"><div class="box-h">Die zehn häufigsten Verwechslungen</div>
+<p>(1) IS ≠ Anwendungssystem. (2) komplex (Beziehungen) ≠ kompliziert (Verschiedenartigkeit). (3) Moderator (Pfeil auf Pfeil) ≠ Mediator (in der Kette). (4) Prozessmodell = Modell, nicht Methode. (5) Prototyp ist ausführbar. (6) Informationsbedarf objektiv, Bedürfnis subjektiv. (7) Shannon ignoriert Bedeutung. (8) Usability ≠ UX. (9) Informationsinfrastruktur ≠ IT-Infrastruktur, ≠ Architektur. (10) Invention ≠ Innovation (Ausbreitung).</p></div>
+</section>

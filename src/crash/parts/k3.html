@@ -1,0 +1,123 @@
+<section class="chapter" id="k3">
+<span class="chap-no">Kapitel 3 · Vorlesung 3</span>
+<h2>Gestaltungsorientierte Forschung und Praxisorientierung</h2>
+<p class="lead">Die erste Hälfte (F.5–27) ist klausurrelevant und wurde im HWS 2025 Zweittermin mit 30 Punkten geprüft (Fall ShopFlow) und in der Probeklausur 2026 mit 8 Punkten. Die zweite Hälfte (Praxisorientierung, F.28–76) ist eher Nachschlagestoff; nur Relevanz vs. Stringenz und der Lebenszyklus lohnen sich wirklich.</p>
+
+<h3>3.1 Worum geht es? <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.5</div>
+<p>„Die gestaltungsorientierte Forschung in der Wirtschaftsinformatik zielt darauf ab, <mark>Artefakte zu konstruieren und Wissen zur Konstruktion von Artefakten bereitzustellen</mark>, um bestimmte Ziele zu erreichen.“</p></div>
+<p>Gestaltungsorientierte Forschung (engl. Design Science) liefert also zwei Ergebnisse: ein konkretes Artefakt und verallgemeinerbares Gestaltungswissen. Sie ist das Gegenstück zur verhaltensorientierten Forschung aus Kapitel 2, die Ursache-Wirkungs-Zusammenhänge erklärt. Beide „stehen in enger Beziehung zueinander und ergänzen sich“ (F.5). Diese „Doppelgesichtigkeit“ gilt als besondere Stärke der WI, weil sie eine theoriegeleitete Gestaltung von Artefakten ermöglicht. Die Verbindung zu Kapitel 2: Gestaltung folgt einer <b>Zweck-Mittel-Beziehung</b> (Technologie), Erklärung einer <b>Ursache-Wirkungs-Beziehung</b> (Theorie).</p>
+
+<h3>3.2 Problemraum und Lösungsraum <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.6–7</div>
+<p>„Der <b>Problemraum</b> umfasst die Menge aller spezifischen Probleme in einem bestimmten Gegenstandsbereich.“ „Der <b>Lösungsraum</b> enthält alle möglichen Lösungsansätze.“ „Die Projektion von Problem- auf Lösungsraum muss grundsätzlich immer <mark>evaluiert</mark> werden.“</p></div>
+<div class="flow">
+  <div class="st"><b>Problemraum</b>Problembeschreibung und Evaluationskriterien</div>
+  <div class="ar">⇄</div>
+  <div class="st"><b>Evaluation</b>Wie gut löst die Lösung das Problem?</div>
+  <div class="ar">⇄</div>
+  <div class="st"><b>Lösungsraum</b>Artefakte, Gestaltungsprinzipien und -theorien</div>
+</div>
+<p>Das Ziel des Paradigmas ist die „Bereitstellung innovativer Lösungen in Form konkreter Artefakte für reale Probleme in Wirtschaft und Gesellschaft“ (F.6). Ein Artefakt wird auf zwei Arten beurteilt: nach <b>technischen Merkmalen</b> (Präzision, Robustheit, Sicherheit, Verlässlichkeit, Schnelligkeit) und nach seinem <b>Beitrag zu ökonomischen Zielen</b> (Kosten, Nutzen, Produktivität) (F.6). Den Problemraum versteht und beschreibt man mit empirischen Methoden, den Lösungsraum entwickelt man mit Ingenieurmethoden (F.19, F.21).</p>
+<div class="box ex"><div class="box-h">Beispiel · so sieht eine Klausurantwort aus</div>
+<p><b>Problemraum:</b> Im Onlineshop brechen 70 % der Kundinnen den Bestellvorgang ab, weil der Checkout sechs Seiten lang ist (Problem + Ursache + Folge). Evaluationskriterien: Abbruchquote und Zeit bis zum Kaufabschluss (messbar).<br>
+<b>Lösungsraum:</b> Mögliche Artefakte sind ein Ein-Seiten-Checkout, ein Gast-Checkout oder eine Express-Zahlung. Leitendes Gestaltungsprinzip: „So wenige Eingaben wie möglich“. Die gewählte Lösung wird anhand der Kriterien aus dem Problemraum evaluiert, technisch (Ladezeit, Fehlerfreiheit) und ökonomisch (Umsatz, Conversion).</p></div>
+
+<h3>3.3 Artefakte und Artefakttypen <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.8</div>
+<p>„Artefakte sind <mark>konstruierte Dinge, die von Menschen geschaffen werden, um bestimmte Ziele zu erreichen</mark>.“</p></div>
+<p>Drei Merkmale stecken in der Definition: konstruiert (nicht natürlich), von Menschen geschaffen, zielgerichtet. Artefakte sind die Elemente des Lösungsraums (F.7) und keineswegs nur Software: Auch Begriffe, Modelle und Vorgehensweisen zählen dazu. Es gibt vier Typen (nach March &amp; Smith 1995):</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Typ</th><th>Definition (F.8, wörtlich)</th><th>Testfrage</th><th>BPMN-Beispiel (F.12)</th></tr>
+<tr><td><b>Konstrukte</b></td><td>„stellen das grundlegende Vokabular und die Symbole zur Definition von Problemen und Lösungen zur Verfügung“</td><td>Einzelner Begriff oder Symbol?</td><td>grafische Elemente (Kreis = Ereignis, Raute = Entscheidung)</td></tr>
+<tr><td><b>Modelle</b></td><td>„beschreiben auf Basis von Konstrukten relevante Zusammenhänge“</td><td>Zusammenhang, Ablauf, Struktur?</td><td>ein konkretes Prozessmodell</td></tr>
+<tr><td><b>Methoden</b></td><td>„beschreiben systematische, auf Regeln aufbauende Vorgehensweisen“</td><td>Schrittfolge „wie man vorgeht“?</td><td>Methode zur Erstellung von Prozessmodellen</td></tr>
+<tr><td><b>Instanziierungen</b></td><td>„stellen konkrete Repräsentationen dar“</td><td>Konkret ausführbar oder benutzbar?</td><td>softwarebasiertes Modellierungswerkzeug</td></tr>
+</table></div>
+<p><b>Merkhilfe:</b> Wörter → Sätze → Rezept → Gericht. Ein Forschungsmodell wie das der agilen Teams (Schmidt/Kude/Heinzl/Mithas 2014) ist übrigens ebenfalls ein Artefakt vom Typ <b>Modell</b> (T03 F.23).</p>
+<p><b>BPMN</b> (Business Process Model and Notation) ist „eine in der Praxis weit verbreitete grafische Modellierungssprache“ (F.12). Symbole, die du kennen solltest: Ereignis = Kreis, Aktivität = abgerundetes Rechteck, Entscheidungsoperator = Raute; Sonderereignisse Message (Kreis mit Brief), Error (Kreis mit Blitz, unterbricht den umgebenden Prozess) und Eskalation (Kreis mit Pfeilspitze) (F.10–11).</p>
+<div class="box pit"><div class="box-h">Typische Fehler</div>
+<p>Ein Prozessmodell ist ein <b>Modell</b>, keine Methode. Die Methode ist die Anleitung, wie man das Modell erstellt. Instanziierungen immer konkret benennen („die implementierte Empfehlungskomponente im Shop“), nicht abstrakt („eine Software“).</p></div>
+<div class="box exam"><div class="box-h">Klausurfokus · HWS25 Zweittermin A1a (16 P.)</div>
+<p>„Erläutern Sie den Begriff Artefakt und nennen Sie vier Artefakttypen mit je einem Beispiel aus dem Fall.“ Aufbau: Definition (F.8) und Einordnung als Element des Lösungsraums → Ziel des Artefakts im Fall in einem Satz → je Typ ein eigener Absatz mit Definition, Fallbeispiel und Begründung („… weil es eine regelbasierte Schrittfolge ist“).</p>
+<p><i>Baustein:</i> „Konstrukte stellen das grundlegende Vokabular und die Symbole bereit – im Fall z. B. die Begriffe ‚Warenkorb‘, ‚Abbruch‘, ‚Empfehlung‘. Modelle beschreiben auf Basis dieser Konstrukte relevante Zusammenhänge – z. B. ein BPMN-Modell des Bestellprozesses. Methoden beschreiben systematische, regelbasierte Vorgehensweisen – z. B. das Vorgehen (1) Daten erheben, (2) Abbruchstellen identifizieren, (3) Varianten im A/B-Test vergleichen. Instanziierungen sind konkrete Repräsentationen – hier die implementierte Checkout-Komponente im Shop.“</p></div>
+
+<h3>3.4 Gestaltungswissen: deskriptives (Ω) und präskriptives (λ) Wissen <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.13–14</div>
+<p>„Gestaltungswissen umfasst die <b>Beschreibung des Problems</b>, die <b>entworfene Lösung</b> und den <b>Evaluationsnachweis</b>.“ „Deskriptiv meint hier die <mark>Beschreibung von Kausalzusammenhängen</mark>“ (Ω-Wissen). „Präskriptives Wissen gibt eine <mark>konkrete Handlungsorientierung</mark> vor“ (λ-Wissen); es besteht aus konkreten Artefakten und abstrahierten Beschreibungen in Form von Gestaltungsprinzipien/-theorien.</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th></th><th>Deskriptiv (Ω)</th><th>Präskriptiv (λ)</th></tr>
+<tr><td>Inhalt</td><td>Kausalzusammenhänge</td><td>Handlungsorientierung</td></tr>
+<tr><td>Satzform</td><td>„X bewirkt Y“</td><td>„Um Y zu erreichen, tue/baue X“</td></tr>
+<tr><td>Ort</td><td>Problemraum</td><td>Lösungsraum</td></tr>
+<tr><td>Forschung</td><td>traditionell verhaltensorientiert</td><td>Fokus der gestaltungsorientierten Forschung</td></tr>
+<tr><td>Bezug zu Kapitel 1/2</td><td>Ursache-Wirkung, Theorie</td><td>Zweck-Mittel, Technologie</td></tr>
+<tr><td>Beispiel (T03)</td><td>80 % der Smartphone-Käufer kaufen binnen vier Wochen Zubehör.</td><td>Ein Empfehlungsmodul für Zubehör direkt nach dem Smartphone-Kauf.</td></tr>
+</table></div>
+<p>Die beiden Wissensarten wirken zusammen (F.15): existierendes Ω-Wissen wird verwendet und neues erzeugt (Problemraum), existierendes λ-Wissen wird verwendet und neues erzeugt (Lösungsraum). Kurz: Ω-Wissen begründet das Design, die Evaluation erzeugt wieder neues Ω-Wissen. <b>Eselsbrücke:</b> λ wie „Lösung“.</p>
+
+<h3>3.5 Prozessmodelle und DSRM <span class="prio p2">Sollte</span></h3>
+<p>Weil gestaltungsorientierte Projekte komplex sind, ist die Planung des Forschungsprozesses „besonders erfolgskritisch“ (F.16). Das Grundmuster hat drei Schritte: Exploration des Problemraums → Realisierung von Lösungen → Evaluierung der Lösung. Ausführlicher ist die <b>Design Science Research Methodik (DSRM)</b> nach Peffers et al. (2007) mit sechs Aktivitäten (F.17):</p>
+<div class="flow small">
+  <div class="st">1 Problem identifizieren, Motivation</div><div class="ar">→</div>
+  <div class="st">2 Ziele der Lösung definieren</div><div class="ar">→</div>
+  <div class="st">3 Design und Entwicklung</div><div class="ar">→</div>
+  <div class="st">4 Demonstration</div><div class="ar">→</div>
+  <div class="st">5 Evaluation</div><div class="ar">→</div>
+  <div class="st">6 Kommunikation</div>
+</div>
+<p>Von Evaluation (5) und Kommunikation (6) führen Iterationsschleifen zurück zu den Schritten 2 und 3. DSRM wurde noch nie einzeln gefragt, ist aber in Prognose-Klausur 4 eine 12-Punkte-Aufgabe („Strukturieren Sie das Projekt anhand der DSRM“). Dann einfach die sechs Schritte auf den Fall abbilden und in Schritt 3 die Artefakttypen und das Prototyping, in Schritt 5 die Evaluation einbauen.</p>
+
+<h3>3.6 Methoden, Prototyping und Evaluation <span class="prio p1">Muss</span></h3>
+<p>Gestaltungsorientierte Forschung „greift auf verschiedenste Forschungsmethoden zurück“, empirische und ingenieurwissenschaftliche, letztere „insbesondere im Lösungsraum“ (F.18).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Phase</th><th>Ziel</th><th>Methoden</th></tr>
+<tr><td>Problemraum (F.19)</td><td>„das zu lösende Problem zu verstehen und zu beschreiben“</td><td>qualitative und quantitative empirische Methoden; bei vielen Vorarbeiten eine Synopse (Literaturreview). Beispiel F.20: Synopse über 25 Jahre Guidance-Forschung → Taxonomie mit zehn Gestaltungsdimensionen.</td></tr>
+<tr><td>Lösungsraum (F.21)</td><td>„passende Lösungen zu entwickeln“</td><td>primär Ingenieurmethoden: Objektorientierung, Testverfahren, <b>Prototyping</b></td></tr>
+<tr><td>Evaluation (F.25–26)</td><td>„den Wert (value) eines Artefaktes zu ermitteln“</td><td>Befragungen und Interviews, Labor- und Feldexperimente</td></tr>
+</table></div>
+<div class="box def"><div class="box-h">Definition · Prototyp · V03 F.22</div>
+<p>„Ein Prototyp ist ein mit geringem Aufwand hergestelltes und einfach zu änderndes, <mark>ausführbares</mark> Modell der intendierten Lösung, das erprobt und beurteilt werden kann.“</p></div>
+<p>Merkmale: schnell und billig realisierbar; funktionales, ausführbares Modell wesentlicher Teile vor der vollständigen Implementierung; flexibel änderbar; bildet die Lösung nicht unbedingt vollständig ab; Kommunikationsmittel zwischen Gestalterinnen und Nutzerinnen; von allen Beteiligten beurteilbar.</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Low-Fidelity (F.23)</th><th>High-Fidelity (F.23)</th></tr>
+<tr><td>„dient der Generierung von Ideen für potenzielle Lösungsansätze“, im einfachsten Fall Papierprototyp oder Wireframe; früh, billig, viele Alternativen</td><td>„Interaktivität, Inhalt und visuelle Elemente stehen stärker im Fokus“; „viel realistischer, aber auch aufwändiger“; später, für realistische Evaluation</td></tr>
+</table></div>
+<div class="box def"><div class="box-h">Evaluation · V03 F.25–26</div>
+<p>„Ziel jeder Evaluationsstudie ist es, den Wert (value) eines Artefaktes zu ermitteln.“ Was „Wert“ bedeutet, präzisiert das Evaluationsziel. Die Evaluationskriterien werden „üblicherweise im Problemraum definiert“. Artefakte werden „oftmals in mehreren Iterationen und unter Verwendung unterschiedlicher Evaluationsmethoden bewertet“.</p></div>
+<p>Vorlesungsbeispiel Process Guidance (F.27): erst ein Laborexperiment mit Studierenden, dann ein Feldexperiment im Unternehmen; Ergebnis: positiver Effekt auf Prozesswissen und Leistungsfähigkeit.</p>
+<div class="box exam"><div class="box-h">Klausurfokus · „Wie kann die Lösung evaluiert werden?“ (Probeklausur A1c)</div>
+<p>(1) Ziel: Wert des Artefakts ermitteln, Wert durch Evaluationsziel präzisieren. (2) Zwei bis drei messbare Kriterien aus dem Problemraum, technisch und ökonomisch. (3) Quantitative Methode mit Ablauf: Labor- oder Feldexperiment mit Versuchs- und Kontrollgruppe und Vorher-Nachher-Messung, oder Befragung. (4) Qualitative Ergänzung: Interviews zu Gründen und Akzeptanz. (5) Hinweis auf Iterationen und Methodenmix (F.26).</p></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Tutoriumsaussage „Ein Prototyp ist ein nicht ausführbares Modell“ ist <b>falsch</b>: Laut F.22 ist er ausführbar. Ein reines Mock-up ist eher ein Low-Fidelity-Entwurf.</p></div>
+
+<h3>3.7 Praxis vs. Theorie, Relevanz vs. Stringenz <span class="prio p2">Sollte</span></h3>
+<p><b>Praxis</b> (griech. prattein = handeln) bezeichnet die Durchführung einer Tätigkeit, <b>Theorie</b> (griech. theorein = betrachten) ursprünglich die Betrachtung der Wahrheit von Aussagen durch reines Denken (F.30). „Theorien können Handlungsempfehlungen oder Prognosen für die Praxis geben, müssen sich aber nicht unmittelbar auf die Praxis übertragen lassen“ (F.31). Theorie und Praxis sind komplementär (F.32). Vorlesungsbeispiel Newton: Das Gravitationsgesetz erklärt Mondumlauf, Gezeiten und Raumfahrt; Unstimmigkeiten führten später zu Einsteins Relativitätstheorie (F.33–34).</p>
+<p><b>Technologie</b> ist „die Gesamtheit der anwendbaren und tatsächlich angewendeten Arbeits-, Entwicklungs-, Produktions- und Implementierungsverfahren der Technik“; Technologien sind „anwendungsbezogene Umformungen von Theorien“ (F.35).</p>
+<div class="box def"><div class="box-h">Definition · V03 F.36</div>
+<p>„Praxis fordert <b>Relevanz</b>, das heißt die praktische Bedeutung im Sinne von Tragweite, Wert oder Wichtigkeit des Ergebnisses.“ „Wissenschaftlerinnen orientieren sich an der rigorosen <b>Stringenz</b>, dem Ideal der formalen und methodischen Präzision.“</p></div>
+<p>Wo eine Forscherin sich positioniert, hängt ab von persönlichen Neigungen und Qualifikation, dem Abstraktionsniveau des Gegenstands und der herrschenden Lehrmeinung (F.36). Für die WI ergibt sich ein <b>zweidimensionales Entscheidungsproblem</b>: Weil die Praxis eine maßgebliche Konstituente ist, ist Relevanz unerlässlich; im Vergleich mit anderen Disziplinen braucht es aber auch deren methodische Standards. Fazit: Probleme aufgreifen, „die praxisrelevant und rigoros bearbeitet werden können“ (F.37). Eine technologieorientierte Forscherin gewichtet Relevanz stärker (Tutorium: wahr).</p>
+
+<h3>3.8 Praxisorientierung der WI <span class="prio p3">Überfliegen</span></h3>
+<p>„Für die Wirtschaftsinformatik ist eine ausgeprägte Praxisorientierung von hoher Bedeutung, da diese die <b>Basis ihrer Legitimation</b> ist“ (F.38). Belege: Bedarf seit den 1950ern; Verhältnis der Bachelorabschlüsse Informatik zu WI fiel von 3,5 : 1 (1980) auf 1,09 : 1 (2020); 149.000 offene IT-Stellen 2024 (F.39–40). Fachverbände: GI-Fachbereich WI (größter), WKWI (Professorinnen), AIS German Chapter, Wirtschaftsinformatik e. V. (F.41).</p>
+<p><b>Verbundforschung</b> (F.44–46): WI-Forschende bearbeiten in der Praxis beobachtete Probleme, deren Lösung die aktive Mitarbeit von Praktikern erfordert; gemeinsam von Unternehmen und öffentlicher Hand finanziert (Unternehmen tragen bis zu 80 %), z. B. M2OLIE oder Rettungsnetz 5G. Die Beteiligung ist ein „Indiz für das hohe Ausmaß ihrer Praxisorientierung“.</p>
+<p><b>WI-nahe Produkte:</b> <i>Unternehmenssoftware</i> ist „integrierte Standardsoftware für Unternehmen in Wirtschaft und Verwaltung, die betriebliche Aufgaben funktionsbezogen, funktionsübergreifend und organisationsübergreifend unterstützt“ (F.48; ERP, CRM, SCM …; Markt polypolistisch, >500 ERP-Anbieter in Deutschland). <i>Process Mining</i> ist „ein analytisches Vorgehen zur Analyse, Überwachung und Verbesserung von Prozessen, <mark>wie sie tatsächlich ablaufen</mark> und nicht wie man sie in Prozessmodellen annimmt“ (F.51; Celonis). <i>Schlüsselfertige Systeme</i> sind maßgeschneiderte Dienstleistungen, die ein Anbieter(konsortium) entwickelt und betreibt, z. B. Toll Collect, E-Rezept (F.52). Gemeinsam ist allen Produkten der MAT-Bezug (F.56).</p>
+
+<h3>3.9 Lebenszyklus: Invention – Innovation – Perfektion <span class="prio p2">Sollte</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.57</div>
+<p>Der Lebenszyklus neuer Produkte wird in die Phasen <b>Invention</b> (Erfindung, Entdeckung), <b>Innovation</b> (<mark>Ausbreitung</mark> einer Erfindung oder Neuerung) und <b>Perfektion</b> (Verbesserung der Neuerung im Detail) gegliedert.</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Phase</th><th>Vorlesung: MP3/DSL</th><th>Tutorium: KI</th></tr>
+<tr><td>Invention</td><td>MP3, um 1985, Fraunhofer IIS Erlangen (F.58)</td><td>1950er, General Problem Solver</td></tr>
+<tr><td>Innovation</td><td>MP3-Player verbreiten sich zuerst in USA und Japan</td><td>2000er, Deep Learning: Google Translate, Siri, Alexa</td></tr>
+<tr><td>Perfektion</td><td>DSL bis 1000 Mbit/s über Kupfer (F.59)</td><td>heute: autonomes Fahren, Diagnosen</td></tr>
+</table></div>
+<p><b>Szyperski-These:</b> Deutschland ist „weltklasse“ in Invention und Perfektion, wegen Unsicherheitsvermeidung und fehlender Wandelbereitschaft aber unterdurchschnittlich in der Innovation (F.57). Dazu passt F.60: Das Paradigma der digitalen Innovation verlangt Schnelligkeit, Co-Innovation mit Kunden und Lieferanten und agiles Vorgehen bottom-up, statt geplanter Top-down-Konzeption wie in der industriellen Fertigung. Top-100-Plattformen 2020: Amerika 66 % des Werts, Europa 3 % (F.61). Swanson: Organisatorische Innovation ist komplexer als technische oder soziale, weil beide Dimensionen gleichzeitig betroffen sind (F.62).</p>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Invention ≠ Innovation. Die Erfindung allein ist noch keine Innovation; Innovation heißt <b>Ausbreitung</b> am Markt.</p></div>
+<p><b>Qualifikationsorte</b> (F.63–68, überfliegen): Gymnasium, Berufsschulen (kein Beruf heißt „WI“), duale Hochschulen, HAW, Universitäten. Alleinstellungsmerkmale der Uni: Grundlagenforschung, Promotions- und Habilitationsrecht, Arbeitsmarktfähigkeit.</p>
+
+<h3>Selbsttest Kapitel 3</h3>
+<details class="quiz"><summary>Ist ein BPMN-Diagramm des Bestellprozesses ein Modell oder eine Methode?</summary><div class="ans"><p>Ein Modell: Es beschreibt auf Basis von Konstrukten (BPMN-Symbolen) einen relevanten Zusammenhang (F.8). Die Methode wäre die Anleitung, wie man solche Diagramme erstellt.</p></div></details>
+<details class="quiz"><summary>Wo werden Evaluationskriterien üblicherweise definiert?</summary><div class="ans"><p>Im Problemraum (F.25), zusammen mit der Problembeschreibung (F.7).</p></div></details>
+<details class="quiz"><summary>Formuliere je einen Ω- und einen λ-Satz zum Thema Technostress.</summary><div class="ans"><p>Ω: „Ständige Push-Benachrichtigungen erhöhen den wahrgenommenen digitalen Stress.“ λ: „Um digitalen Stress zu senken, sollte der Assistent nicht dringende Hinweise bündeln und zeitversetzt anzeigen.“</p></div></details>
+<details class="quiz"><summary>Was unterscheidet Low- und High-Fidelity-Prototypen?</summary><div class="ans"><p>Low-Fidelity dient der Ideengenerierung (Papier, Wireframe, früh, billig); High-Fidelity stellt Interaktivität, Inhalt und Visuelles in den Fokus, ist realistischer, aber aufwändiger (F.23).</p></div></details>
+</section>

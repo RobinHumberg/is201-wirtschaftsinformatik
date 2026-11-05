@@ -1,0 +1,998 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Crashkurs Wirtschaftsinformatik I</title><meta name="description" content="Kompaktskript Kapitel 3–6 plus Klausurteil für die IS-201-Klausur am 06.11.2026."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap"><style>/* Layout: margin-note study pages — ink-blue text on cool paper, highlighter marks, index-card boxes */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #eaedf2;
+  --fg: #172030;
+  --muted: #5a6476;
+  --line: #d3d8e1;
+  --accent: #2443b0;
+  --accent-soft: #e2e8fb;
+  --hl: #fff0a0;
+  --def: #2443b0; --def-bg: #edf1fd;
+  --ex: #1b7550; --ex-bg: #e8f5ee;
+  --exam: #9a5800; --exam-bg: #fff3dc;
+  --pit: #b1261d; --pit-bg: #fdeceb;
+  --deep: #6a4c9f; --deep-bg: #f1edf9;
+  --font-body: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-ui: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-cond: "IBM Plex Sans Condensed", "Arial Narrow", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e131b; --surface: #151b25; --surface-2: #1d2531; --fg: #e4e8ef; --muted: #98a2b3; --line: #2b3545;
+    --accent: #93abff; --accent-soft: #1d2848; --hl: #4d4312;
+    --def: #93abff; --def-bg: #172140; --ex: #63cf9f; --ex-bg: #10271d; --exam: #f0b25a; --exam-bg: #2c2210;
+    --pit: #ff8f86; --pit-bg: #371614; --deep: #bba4ee; --deep-bg: #221b33;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e131b; --surface: #151b25; --surface-2: #1d2531; --fg: #e4e8ef; --muted: #98a2b3; --line: #2b3545;
+  --accent: #93abff; --accent-soft: #1d2848; --hl: #4d4312;
+  --def: #93abff; --def-bg: #172140; --ex: #63cf9f; --ex-bg: #10271d; --exam: #f0b25a; --exam-bg: #2c2210;
+  --pit: #ff8f86; --pit-bg: #371614; --deep: #bba4ee; --deep-bg: #221b33;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+a { color: var(--accent); text-underline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+mark { background: var(--hl); color: inherit; padding: 0 .15em; border-radius: 2px; }
+h1, h2, h3, h4 { font-family: var(--font-ui); line-height: 1.25; text-wrap: balance; }
+h2 { font-size: 1.75rem; font-weight: 600; margin: 0 0 .6em; letter-spacing: -.01em; }
+h3 { font-size: 1.22rem; font-weight: 600; margin: 2.2em 0 .6em; }
+h4 { font-size: 1.02rem; font-weight: 600; margin: 1.6em 0 .4em; }
+p { margin: 0 0 .9em; }
+ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
+li { margin: .2em 0; }
+code { font-family: var(--font-mono); font-size: .88em; }
+
+.chap-no { display: block; font-family: var(--font-mono); font-size: .78rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .35em; }
+.lead { font-size: 1.12rem; color: var(--muted); }
+.goals { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: .9em 1.1em; margin: 1.2em 0 1.6em; font-family: var(--font-ui); font-size: .93rem; }
+.goals b { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.goals ul { margin: .4em 0 0; }
+
+/* index-card boxes */
+.box { border-left: 3px solid var(--c, var(--line)); background: var(--cb, var(--surface)); border-radius: 0 6px 6px 0; padding: .75em 1em .2em; margin: 1.1em 0; font-size: .97em; }
+.box-h { font-family: var(--font-ui); font-size: .74rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--c, var(--muted)); margin-bottom: .35em; }
+.box.def { --c: var(--def); --cb: var(--def-bg); }
+.box.ex { --c: var(--ex); --cb: var(--ex-bg); }
+.box.exam { --c: var(--exam); --cb: var(--exam-bg); }
+.box.pit { --c: var(--pit); --cb: var(--pit-bg); }
+.box.deep { --c: var(--deep); --cb: var(--deep-bg); }
+.box > :last-child { margin-bottom: .7em; }
+.src { font-family: var(--font-mono); font-size: .76rem; color: var(--muted); margin: .3em 0 .7em; }
+.src::before { content: "▸ "; }
+
+/* tables */
+.tbl-wrap { overflow-x: auto; margin: 1.1em 0; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.tbl { border-collapse: collapse; width: 100%; font-family: var(--font-ui); font-size: .86rem; line-height: 1.45; }
+.tbl th, .tbl td { text-align: left; vertical-align: top; padding: .5em .7em; border-bottom: 1px solid var(--line); }
+.tbl th { background: var(--surface-2); font-weight: 600; font-size: .8rem; }
+.tbl tr:last-child td { border-bottom: 0; }
+.tbl td, .tbl th { hyphens: auto; overflow-wrap: break-word; }
+.tbl td + td, .tbl th + th { border-left: 1px solid var(--line); }
+
+/* figures */
+.fig { margin: 1.6em 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 1em; overflow-x: auto; }
+.fig svg { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; color: var(--fg); font-family: var(--font-ui); }
+.fig figcaption { font-family: var(--font-ui); font-size: .84rem; color: var(--muted); margin-top: .7em; max-width: 70ch; }
+
+/* quiz + solutions */
+details.quiz, details.sol { border: 1px solid var(--line); background: var(--surface); border-radius: 6px; margin: .6em 0; }
+details.quiz > summary, details.sol > summary { cursor: pointer; padding: .7em 1em; font-family: var(--font-ui); font-size: .95rem; font-weight: 500; list-style: none; display: flex; gap: .7em; align-items: baseline; }
+details.quiz > summary::-webkit-details-marker, details.sol > summary::-webkit-details-marker { display: none; }
+details.quiz > summary::before, details.sol > summary::before { content: "+"; font-family: var(--font-mono); color: var(--accent); flex: none; width: 1ch; }
+details[open].quiz > summary::before, details[open].sol > summary::before { content: "−"; }
+details.quiz > summary:hover, details.sol > summary:hover { background: var(--surface-2); }
+.ans, .sol-body { padding: .3em 1.1em .6em 2.6em; border-top: 1px dashed var(--line); }
+.ans > :first-child, .sol-body > :first-child { margin-top: .8em; }
+
+/* shared top bar */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); font-family: var(--font-ui); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bg); }
+.topbar-in { display: flex; flex-wrap: wrap; gap: .6em 1.2em; align-items: center; padding-block: .6em; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.brand { font-weight: 600; font-size: .95rem; white-space: nowrap; }
+.brand small { font-family: var(--font-mono); font-weight: 400; color: var(--muted); font-size: .75rem; margin-left: .5em; }
+.spacer { flex: 1; }
+.btn { font: 500 .82rem var(--font-ui); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: .4em .8em; cursor: pointer; }
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.search { font: .85rem var(--font-ui); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 5px; padding: .4em .7em; width: 15em; max-width: 100%; }
+
+/* page with sidebar */
+.layout { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 0 3rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); max-width: 1320px; margin: 0 auto; }
+.side { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 58px); align-self: start; max-height: calc(100vh - 70px); overflow-y: auto; padding-block: 1.4rem 2rem; font-family: var(--font-ui); font-size: .84rem; }
+.side ol { list-style: none; padding: 0; margin: 0; }
+.side > nav > ol > li { margin: 0 0 .9em; }
+.side a { color: var(--fg); text-decoration: none; display: block; padding: .18em .5em; border-radius: 4px; }
+.side a:hover { background: var(--surface-2); }
+.side a.on { background: var(--accent-soft); color: var(--accent); }
+.side .t1 > a { font-weight: 600; }
+.side .t1 > a .n { font-family: var(--font-mono); color: var(--muted); font-weight: 400; margin-right: .4em; font-size: .78rem; }
+.side .sub { margin: .15em 0 0 .7em !important; border-left: 1px solid var(--line); padding-left: .3em !important; }
+.side .sub a { color: var(--muted); font-size: .8rem; }
+.main { min-width: 0; padding-block: 2rem 6rem; max-width: 780px; }
+.main section + section { margin-top: 5rem; padding-top: 3rem; border-top: 2px solid var(--line); }
+@media (max-width: 900px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .side { position: static; max-height: none; padding-bottom: 0; border-bottom: 1px solid var(--line); }
+  .side .sub { display: none; }
+  body { font-size: 16px; }
+}
+.hero { padding-block: 2.6rem 1rem; }
+.hero h1 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; letter-spacing: -.02em; margin: 0 0 .3em; }
+.hero p { color: var(--muted); max-width: 62ch; }
+.kicker { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+
+@media print {
+  :root, :root[data-theme="dark"] { color-scheme: light; }
+  @page { size: A4; margin: 14mm 14mm 16mm; }
+  body { font-size: 10pt; background: #fff; }
+  .topbar, .side, .btn, body::before { display: none !important; }
+  .layout { display: block; padding: 0; max-width: none; }
+  .main { max-width: none; padding: 0; }
+  .main section + section { margin-top: 0; padding-top: 0; border-top: 0; break-before: page; }
+  .box, .fig, details, .case, .tbl tr { break-inside: avoid; }
+  .tbl-wrap { overflow: visible; }
+  .tbl td, .tbl th { overflow-wrap: anywhere; }
+  h2, h3, h4 { break-after: avoid; }
+  details > summary::before { content: "" !important; width: 0 !important; }
+  a { color: inherit; }
+}
+
+.wrap { max-width: 840px; margin: 0 auto; padding: 1rem 16px 5rem; }
+.main section + section { margin-top: 4rem; padding-top: 2.5rem; border-top: 2px solid var(--line); }
+.hero h1 { font-size: clamp(2rem, 5vw, 2.9rem); }
+.prio { display: inline-block; font: 600 .66rem var(--font-ui); letter-spacing: .06em; text-transform: uppercase; padding: .15em .55em; border-radius: 3px; vertical-align: .2em; margin-left: .4em; border: 1px solid currentColor; }
+.prio.p1 { color: var(--pit); background: var(--pit-bg); }
+.prio.p2 { color: var(--exam); background: var(--exam-bg); }
+.prio.p3 { color: var(--muted); background: var(--surface-2); }
+.flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: .4em; margin: 1.1em 0; font-family: var(--font-ui); font-size: .86rem; }
+.flow .st { flex: 1 1 140px; background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--accent); border-radius: 6px; padding: .55em .7em; line-height: 1.4; }
+.flow .st b { display: block; margin-bottom: .2em; }
+.flow .ar { align-self: center; color: var(--accent); font-weight: 600; }
+.flow.small .st { flex-basis: 95px; font-size: .8rem; }
+.flow.v { flex-direction: column; }
+.flow.v .st { flex-basis: auto; }
+.flow.v .ar { align-self: flex-start; padding-left: 1.2em; font-size: .8rem; }
+.flow .st i { display: block; color: var(--muted); font-style: normal; margin-top: .25em; font-size: .92em; }
+.toc-static { font-family: var(--font-ui); }
+.toc-static li { margin: .35em 0; }
+.tbl.canvas td { text-align: center; vertical-align: middle; font-weight: 500; }
+.tbl.canvas small { display: block; color: var(--muted); font-weight: 400; }
+.tbl td:first-child, .tbl th:first-child { hyphens: manual; min-width: 7.5em; }
+@media print {
+  @page { size: A4; margin: 12mm 13mm 14mm; }
+  body { font-size: 9.4pt; }
+  .tbl td, .tbl th { overflow-wrap: break-word; }
+  .tbl td:first-child, .tbl th:first-child { overflow-wrap: normal; }
+  .wrap { max-width: none; padding: 0; }
+  .main section + section { margin-top: 0; padding-top: 0; border-top: 0; break-before: page; }
+  .flow .st, .flow { break-inside: avoid; }
+  .tbl tr:first-child { break-after: avoid; }
+  h4 { break-after: avoid; }
+  details.quiz > summary { padding: .4em .8em; }
+}
+</style></head><body><div class="wrap"><main class="main"><section class="intro" id="start">
+  <div class="hero">
+    <p class="kicker">IS 201 · Klausur am 06.11.2026 · open book · 90 Minuten</p>
+    <h1>Crashkurs Wirtschaftsinformatik I</h1>
+    <p>Kompaktfassung von Kapitel 3 bis 6 des Lernskripts plus Klausurteil. Enthalten ist nur, was in Altklausuren, Probeklausur und Tutorien tatsächlich gefragt wurde oder vom Lehrstuhl ausdrücklich betont wird. Jede Definition steht im Folienwortlaut mit Folienverweis (aufgedruckte Nummer), damit du sie im Ausdruck sofort wiederfindest.</p>
+  </div>
+
+  <h3>So ist die Klausur gebaut</h3>
+  <p>Seit 2025 gibt es <b>drei Pflichtaufgaben à 30 Punkte</b> in 90 Minuten, also eine Minute pro Punkt und 30 Minuten pro Aufgabe. Es gibt keine Wahlmöglichkeit mehr, eine Wissenslücke kostet deshalb bis zu ein Drittel der Note. Die Probeklausur 2026 mischt in jeder Aufgabe zwei bis drei Vorlesungen (zum Beispiel IS-Begriff + Nutzerrollen + Zielarten + Informationsbedarf in einer einzigen Klinikum-Aufgabe). Rechne also mit Fällen, nicht mit reinen Kapitelfragen.</p>
+  <p>In jeder bisherigen Prüfungsrunde kamen drei Blöcke vor: eine Aufgabe zu den <b>Gegenständen der WI</b> (Ist X ein IS? Systemeigenschaften, Komponenten der Informationsinfrastruktur), eine <b>Forschungsaufgabe</b> (Forschungsmodell oder gestaltungsorientierte Forschung) und eine Aufgabe zu <b>digitaler Transformation, Agilität oder Information</b>. Kapitel 1 und 2 hast du schon gelernt; die drei wichtigsten Schemata daraus stehen trotzdem noch einmal kompakt im Klausurteil (Abschnitt K.1), weil sie in fast jeder Klausur Punkte bringen.</p>
+
+  <div class="box exam"><div class="box-h">Antwortschema für jede Teilaufgabe</div>
+    <p><b>Fachbegriff → Definition (Folienwortlaut, kurz) → Anwendung auf den Fall → kurzes Fazit.</b> Die geforderte Anzahl („nennen Sie drei …“) exakt einhalten und nummerieren: Zusätzliche Punkte werden meist nicht gewertet, kosten aber Zeit. Nebensätze wie „… und nennen Sie je einen Vor- und Nachteil“ abhaken, sie kosten in der Probeklausur am häufigsten Punkte. Nach 30 Minuten zur nächsten Aufgabe wechseln.</p>
+  </div>
+
+  <h3>Lernplan bis Freitag</h3>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Wann</th><th>Was</th><th>Zeit</th></tr>
+    <tr><td><b>Heute (Mi)</b></td><td>Kapitel 3 (gestaltungsorientierte Forschung) und Kapitel 4 (Ziele, Information, Kommunikation). Kapitel 4 ist das prüfungsstärkste Kapitel dieses Teils, nimm dir dafür die meiste Zeit.</td><td>ca. 1,5 h + 2,5 h</td></tr>
+    <tr><td><b>Morgen (Do) Vormittag</b></td><td>Kapitel 5 (Mensch, Typisierung) und Kapitel 6 (Informationsinfrastruktur, digitale Transformation). Kapitel 6 ist praktisch sicher in der Klausur.</td><td>ca. 1,5 h + 2,5 h</td></tr>
+    <tr><td><b>Morgen (Do) Nachmittag</b></td><td>Klausurteil: K.1 wiederholen, K.2 durchgehen, dann <b>eine Klausur unter Zeitdruck schreiben</b> (Empfehlung: Probeklausur 2026, weil sie dem neuen Stil entspricht) und mit der Musterlösung in <code>03_Klausuren</code> vergleichen.</td><td>ca. 3 h</td></tr>
+    <tr><td><b>Abends</b></td><td>Registerfahnen in den Folienausdruck kleben (Liste in K.4) und dieses Skript ausdrucken.</td><td>30 min</td></tr>
+    <tr><td><b>Fr früh</b></td><td>Nur noch die Checkliste K.4 und die Klausurfokus-Kästen überfliegen.</td><td>20 min</td></tr>
+  </table></div>
+
+  <h3>Prioritäten</h3>
+  <p>Jeder Abschnitt trägt eine Markierung. <span class="prio p1">Muss</span> heißt: kam in Klausuren vor oder wurde im Tutorium als Klausuraufgabe geübt, das musst du anwenden können. <span class="prio p2">Sollte</span> heißt: plausibles Überraschungsthema, Definition und ein Beispiel reichen. <span class="prio p3">Überfliegen</span> heißt: einmal lesen, im Ernstfall in der Klausur nachschlagen.</p>
+  <div class="tbl-wrap"><table class="tbl">
+    <tr><th>Thema</th><th>Bisher geprüft</th><th>Prognose</th></tr>
+    <tr><td>Komponenten der Informationsinfrastruktur (V06)</td><td>3× (10–12 P.)</td><td><b>hoch</b></td></tr>
+    <tr><td>Daten – Information – Wissen (V04)</td><td>3×, einmal 30 P. allein</td><td><b>hoch</b></td></tr>
+    <tr><td>Digitale Transformation: Beschreibungsmodell, Disruption, Modelle, CDO (V06)</td><td>3× (bis 30 P.)</td><td><b>hoch</b> (Tutorium: „gesamter Folienstoff klausurrelevant“)</td></tr>
+    <tr><td>Agilität: Charakteristika, Vor-/Nachteile (V06)</td><td>2× (20–30 P.)</td><td><b>hoch</b></td></tr>
+    <tr><td>Digitale Plattformen, Netzwerkeffekte (V06, Zusatz-VL)</td><td>nie</td><td><b>hoch</b> (Airbnb-Aufgabe im Tutorium komplett gelöst)</td></tr>
+    <tr><td>Chancen/Risiken der Informationsproduktion; Informationsbedarf/-stand (V04)</td><td>3×</td><td>mittel</td></tr>
+    <tr><td>Gestaltungsorientierte Forschung: Artefakte, Problem-/Lösungsraum, Ω/λ (V03)</td><td>2× (30 P. und 8 P.)</td><td>mittel–hoch</td></tr>
+    <tr><td>Semiotik, Shannon, Kommunikationsstörungen (V04)</td><td>nie</td><td>mittel–hoch (Tutorium nennt es „Klausurfrage“)</td></tr>
+    <tr><td>Ziele, Zielarten, Zielbeziehungen (V04)</td><td>1× (Probe)</td><td>mittel</td></tr>
+    <tr><td>Nutzerschnittstelle: Norman, Gestaltgesetze, ISO 9241 (V05)</td><td>nie</td><td>mittel</td></tr>
+    <tr><td>Nutzerrollen, Persona, Nutzermitwirkung, Typisierung (V05)</td><td>1× (Rollen)</td><td>mittel</td></tr>
+    <tr><td>Praxisorientierung, Lebenszyklus, Vollautomation, Infrastruktur-Details</td><td>nie</td><td>niedrig–mittel</td></tr>
+  </table></div>
+  <p class="src">Quelle: Themen-Häufigkeitsmatrix und Themenprognose in 03_Klausuren</p>
+
+  <h3>Inhalt</h3>
+  <ol class="toc-static">
+    <li><a href="#k3">Kapitel 3 · Gestaltungsorientierte Forschung und Praxisorientierung</a></li>
+    <li><a href="#k4">Kapitel 4 · Zweck und Ziele – Information und Kommunikation</a></li>
+    <li><a href="#k5">Kapitel 5 · Mensch und Typisierung von Informationssystemen</a></li>
+    <li><a href="#k6">Kapitel 6 · Informationsinfrastruktur, Digitalisierung und digitale Transformation</a></li>
+    <li><a href="#kl">Klausurteil · Kernschemata K1/K2, alle Altklausuraufgaben mit Lösungsskizzen, Checkliste</a></li>
+  </ol>
+</section>
+
+<section class="chapter" id="k3">
+<span class="chap-no">Kapitel 3 · Vorlesung 3</span>
+<h2>Gestaltungsorientierte Forschung und Praxisorientierung</h2>
+<p class="lead">Die erste Hälfte (F.5–27) ist klausurrelevant und wurde im HWS 2025 Zweittermin mit 30 Punkten geprüft (Fall ShopFlow) und in der Probeklausur 2026 mit 8 Punkten. Die zweite Hälfte (Praxisorientierung, F.28–76) ist eher Nachschlagestoff; nur Relevanz vs. Stringenz und der Lebenszyklus lohnen sich wirklich.</p>
+
+<h3>3.1 Worum geht es? <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.5</div>
+<p>„Die gestaltungsorientierte Forschung in der Wirtschaftsinformatik zielt darauf ab, <mark>Artefakte zu konstruieren und Wissen zur Konstruktion von Artefakten bereitzustellen</mark>, um bestimmte Ziele zu erreichen.“</p></div>
+<p>Gestaltungsorientierte Forschung (engl. Design Science) liefert also zwei Ergebnisse: ein konkretes Artefakt und verallgemeinerbares Gestaltungswissen. Sie ist das Gegenstück zur verhaltensorientierten Forschung aus Kapitel 2, die Ursache-Wirkungs-Zusammenhänge erklärt. Beide „stehen in enger Beziehung zueinander und ergänzen sich“ (F.5). Diese „Doppelgesichtigkeit“ gilt als besondere Stärke der WI, weil sie eine theoriegeleitete Gestaltung von Artefakten ermöglicht. Die Verbindung zu Kapitel 2: Gestaltung folgt einer <b>Zweck-Mittel-Beziehung</b> (Technologie), Erklärung einer <b>Ursache-Wirkungs-Beziehung</b> (Theorie).</p>
+
+<h3>3.2 Problemraum und Lösungsraum <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.6–7</div>
+<p>„Der <b>Problemraum</b> umfasst die Menge aller spezifischen Probleme in einem bestimmten Gegenstandsbereich.“ „Der <b>Lösungsraum</b> enthält alle möglichen Lösungsansätze.“ „Die Projektion von Problem- auf Lösungsraum muss grundsätzlich immer <mark>evaluiert</mark> werden.“</p></div>
+<div class="flow">
+  <div class="st"><b>Problemraum</b>Problembeschreibung und Evaluationskriterien</div>
+  <div class="ar">⇄</div>
+  <div class="st"><b>Evaluation</b>Wie gut löst die Lösung das Problem?</div>
+  <div class="ar">⇄</div>
+  <div class="st"><b>Lösungsraum</b>Artefakte, Gestaltungsprinzipien und -theorien</div>
+</div>
+<p>Das Ziel des Paradigmas ist die „Bereitstellung innovativer Lösungen in Form konkreter Artefakte für reale Probleme in Wirtschaft und Gesellschaft“ (F.6). Ein Artefakt wird auf zwei Arten beurteilt: nach <b>technischen Merkmalen</b> (Präzision, Robustheit, Sicherheit, Verlässlichkeit, Schnelligkeit) und nach seinem <b>Beitrag zu ökonomischen Zielen</b> (Kosten, Nutzen, Produktivität) (F.6). Den Problemraum versteht und beschreibt man mit empirischen Methoden, den Lösungsraum entwickelt man mit Ingenieurmethoden (F.19, F.21).</p>
+<div class="box ex"><div class="box-h">Beispiel · so sieht eine Klausurantwort aus</div>
+<p><b>Problemraum:</b> Im Onlineshop brechen 70 % der Kundinnen den Bestellvorgang ab, weil der Checkout sechs Seiten lang ist (Problem + Ursache + Folge). Evaluationskriterien: Abbruchquote und Zeit bis zum Kaufabschluss (messbar).<br>
+<b>Lösungsraum:</b> Mögliche Artefakte sind ein Ein-Seiten-Checkout, ein Gast-Checkout oder eine Express-Zahlung. Leitendes Gestaltungsprinzip: „So wenige Eingaben wie möglich“. Die gewählte Lösung wird anhand der Kriterien aus dem Problemraum evaluiert, technisch (Ladezeit, Fehlerfreiheit) und ökonomisch (Umsatz, Conversion).</p></div>
+
+<h3>3.3 Artefakte und Artefakttypen <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.8</div>
+<p>„Artefakte sind <mark>konstruierte Dinge, die von Menschen geschaffen werden, um bestimmte Ziele zu erreichen</mark>.“</p></div>
+<p>Drei Merkmale stecken in der Definition: konstruiert (nicht natürlich), von Menschen geschaffen, zielgerichtet. Artefakte sind die Elemente des Lösungsraums (F.7) und keineswegs nur Software: Auch Begriffe, Modelle und Vorgehensweisen zählen dazu. Es gibt vier Typen (nach March &amp; Smith 1995):</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Typ</th><th>Definition (F.8, wörtlich)</th><th>Testfrage</th><th>BPMN-Beispiel (F.12)</th></tr>
+<tr><td><b>Konstrukte</b></td><td>„stellen das grundlegende Vokabular und die Symbole zur Definition von Problemen und Lösungen zur Verfügung“</td><td>Einzelner Begriff oder Symbol?</td><td>grafische Elemente (Kreis = Ereignis, Raute = Entscheidung)</td></tr>
+<tr><td><b>Modelle</b></td><td>„beschreiben auf Basis von Konstrukten relevante Zusammenhänge“</td><td>Zusammenhang, Ablauf, Struktur?</td><td>ein konkretes Prozessmodell</td></tr>
+<tr><td><b>Methoden</b></td><td>„beschreiben systematische, auf Regeln aufbauende Vorgehensweisen“</td><td>Schrittfolge „wie man vorgeht“?</td><td>Methode zur Erstellung von Prozessmodellen</td></tr>
+<tr><td><b>Instanziierungen</b></td><td>„stellen konkrete Repräsentationen dar“</td><td>Konkret ausführbar oder benutzbar?</td><td>softwarebasiertes Modellierungswerkzeug</td></tr>
+</table></div>
+<p><b>Merkhilfe:</b> Wörter → Sätze → Rezept → Gericht. Ein Forschungsmodell wie das der agilen Teams (Schmidt/Kude/Heinzl/Mithas 2014) ist übrigens ebenfalls ein Artefakt vom Typ <b>Modell</b> (T03 F.23).</p>
+<p><b>BPMN</b> (Business Process Model and Notation) ist „eine in der Praxis weit verbreitete grafische Modellierungssprache“ (F.12). Symbole, die du kennen solltest: Ereignis = Kreis, Aktivität = abgerundetes Rechteck, Entscheidungsoperator = Raute; Sonderereignisse Message (Kreis mit Brief), Error (Kreis mit Blitz, unterbricht den umgebenden Prozess) und Eskalation (Kreis mit Pfeilspitze) (F.10–11).</p>
+<div class="box pit"><div class="box-h">Typische Fehler</div>
+<p>Ein Prozessmodell ist ein <b>Modell</b>, keine Methode. Die Methode ist die Anleitung, wie man das Modell erstellt. Instanziierungen immer konkret benennen („die implementierte Empfehlungskomponente im Shop“), nicht abstrakt („eine Software“).</p></div>
+<div class="box exam"><div class="box-h">Klausurfokus · HWS25 Zweittermin A1a (16 P.)</div>
+<p>„Erläutern Sie den Begriff Artefakt und nennen Sie vier Artefakttypen mit je einem Beispiel aus dem Fall.“ Aufbau: Definition (F.8) und Einordnung als Element des Lösungsraums → Ziel des Artefakts im Fall in einem Satz → je Typ ein eigener Absatz mit Definition, Fallbeispiel und Begründung („… weil es eine regelbasierte Schrittfolge ist“).</p>
+<p><i>Baustein:</i> „Konstrukte stellen das grundlegende Vokabular und die Symbole bereit – im Fall z. B. die Begriffe ‚Warenkorb‘, ‚Abbruch‘, ‚Empfehlung‘. Modelle beschreiben auf Basis dieser Konstrukte relevante Zusammenhänge – z. B. ein BPMN-Modell des Bestellprozesses. Methoden beschreiben systematische, regelbasierte Vorgehensweisen – z. B. das Vorgehen (1) Daten erheben, (2) Abbruchstellen identifizieren, (3) Varianten im A/B-Test vergleichen. Instanziierungen sind konkrete Repräsentationen – hier die implementierte Checkout-Komponente im Shop.“</p></div>
+
+<h3>3.4 Gestaltungswissen: deskriptives (Ω) und präskriptives (λ) Wissen <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.13–14</div>
+<p>„Gestaltungswissen umfasst die <b>Beschreibung des Problems</b>, die <b>entworfene Lösung</b> und den <b>Evaluationsnachweis</b>.“ „Deskriptiv meint hier die <mark>Beschreibung von Kausalzusammenhängen</mark>“ (Ω-Wissen). „Präskriptives Wissen gibt eine <mark>konkrete Handlungsorientierung</mark> vor“ (λ-Wissen); es besteht aus konkreten Artefakten und abstrahierten Beschreibungen in Form von Gestaltungsprinzipien/-theorien.</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th></th><th>Deskriptiv (Ω)</th><th>Präskriptiv (λ)</th></tr>
+<tr><td>Inhalt</td><td>Kausalzusammenhänge</td><td>Handlungsorientierung</td></tr>
+<tr><td>Satzform</td><td>„X bewirkt Y“</td><td>„Um Y zu erreichen, tue/baue X“</td></tr>
+<tr><td>Ort</td><td>Problemraum</td><td>Lösungsraum</td></tr>
+<tr><td>Forschung</td><td>traditionell verhaltensorientiert</td><td>Fokus der gestaltungsorientierten Forschung</td></tr>
+<tr><td>Bezug zu Kapitel 1/2</td><td>Ursache-Wirkung, Theorie</td><td>Zweck-Mittel, Technologie</td></tr>
+<tr><td>Beispiel (T03)</td><td>80 % der Smartphone-Käufer kaufen binnen vier Wochen Zubehör.</td><td>Ein Empfehlungsmodul für Zubehör direkt nach dem Smartphone-Kauf.</td></tr>
+</table></div>
+<p>Die beiden Wissensarten wirken zusammen (F.15): existierendes Ω-Wissen wird verwendet und neues erzeugt (Problemraum), existierendes λ-Wissen wird verwendet und neues erzeugt (Lösungsraum). Kurz: Ω-Wissen begründet das Design, die Evaluation erzeugt wieder neues Ω-Wissen. <b>Eselsbrücke:</b> λ wie „Lösung“.</p>
+
+<h3>3.5 Prozessmodelle und DSRM <span class="prio p2">Sollte</span></h3>
+<p>Weil gestaltungsorientierte Projekte komplex sind, ist die Planung des Forschungsprozesses „besonders erfolgskritisch“ (F.16). Das Grundmuster hat drei Schritte: Exploration des Problemraums → Realisierung von Lösungen → Evaluierung der Lösung. Ausführlicher ist die <b>Design Science Research Methodik (DSRM)</b> nach Peffers et al. (2007) mit sechs Aktivitäten (F.17):</p>
+<div class="flow small">
+  <div class="st">1 Problem identifizieren, Motivation</div><div class="ar">→</div>
+  <div class="st">2 Ziele der Lösung definieren</div><div class="ar">→</div>
+  <div class="st">3 Design und Entwicklung</div><div class="ar">→</div>
+  <div class="st">4 Demonstration</div><div class="ar">→</div>
+  <div class="st">5 Evaluation</div><div class="ar">→</div>
+  <div class="st">6 Kommunikation</div>
+</div>
+<p>Von Evaluation (5) und Kommunikation (6) führen Iterationsschleifen zurück zu den Schritten 2 und 3. DSRM wurde noch nie einzeln gefragt, ist aber in Prognose-Klausur 4 eine 12-Punkte-Aufgabe („Strukturieren Sie das Projekt anhand der DSRM“). Dann einfach die sechs Schritte auf den Fall abbilden und in Schritt 3 die Artefakttypen und das Prototyping, in Schritt 5 die Evaluation einbauen.</p>
+
+<h3>3.6 Methoden, Prototyping und Evaluation <span class="prio p1">Muss</span></h3>
+<p>Gestaltungsorientierte Forschung „greift auf verschiedenste Forschungsmethoden zurück“, empirische und ingenieurwissenschaftliche, letztere „insbesondere im Lösungsraum“ (F.18).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Phase</th><th>Ziel</th><th>Methoden</th></tr>
+<tr><td>Problemraum (F.19)</td><td>„das zu lösende Problem zu verstehen und zu beschreiben“</td><td>qualitative und quantitative empirische Methoden; bei vielen Vorarbeiten eine Synopse (Literaturreview). Beispiel F.20: Synopse über 25 Jahre Guidance-Forschung → Taxonomie mit zehn Gestaltungsdimensionen.</td></tr>
+<tr><td>Lösungsraum (F.21)</td><td>„passende Lösungen zu entwickeln“</td><td>primär Ingenieurmethoden: Objektorientierung, Testverfahren, <b>Prototyping</b></td></tr>
+<tr><td>Evaluation (F.25–26)</td><td>„den Wert (value) eines Artefaktes zu ermitteln“</td><td>Befragungen und Interviews, Labor- und Feldexperimente</td></tr>
+</table></div>
+<div class="box def"><div class="box-h">Definition · Prototyp · V03 F.22</div>
+<p>„Ein Prototyp ist ein mit geringem Aufwand hergestelltes und einfach zu änderndes, <mark>ausführbares</mark> Modell der intendierten Lösung, das erprobt und beurteilt werden kann.“</p></div>
+<p>Merkmale: schnell und billig realisierbar; funktionales, ausführbares Modell wesentlicher Teile vor der vollständigen Implementierung; flexibel änderbar; bildet die Lösung nicht unbedingt vollständig ab; Kommunikationsmittel zwischen Gestalterinnen und Nutzerinnen; von allen Beteiligten beurteilbar.</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Low-Fidelity (F.23)</th><th>High-Fidelity (F.23)</th></tr>
+<tr><td>„dient der Generierung von Ideen für potenzielle Lösungsansätze“, im einfachsten Fall Papierprototyp oder Wireframe; früh, billig, viele Alternativen</td><td>„Interaktivität, Inhalt und visuelle Elemente stehen stärker im Fokus“; „viel realistischer, aber auch aufwändiger“; später, für realistische Evaluation</td></tr>
+</table></div>
+<div class="box def"><div class="box-h">Evaluation · V03 F.25–26</div>
+<p>„Ziel jeder Evaluationsstudie ist es, den Wert (value) eines Artefaktes zu ermitteln.“ Was „Wert“ bedeutet, präzisiert das Evaluationsziel. Die Evaluationskriterien werden „üblicherweise im Problemraum definiert“. Artefakte werden „oftmals in mehreren Iterationen und unter Verwendung unterschiedlicher Evaluationsmethoden bewertet“.</p></div>
+<p>Vorlesungsbeispiel Process Guidance (F.27): erst ein Laborexperiment mit Studierenden, dann ein Feldexperiment im Unternehmen; Ergebnis: positiver Effekt auf Prozesswissen und Leistungsfähigkeit.</p>
+<div class="box exam"><div class="box-h">Klausurfokus · „Wie kann die Lösung evaluiert werden?“ (Probeklausur A1c)</div>
+<p>(1) Ziel: Wert des Artefakts ermitteln, Wert durch Evaluationsziel präzisieren. (2) Zwei bis drei messbare Kriterien aus dem Problemraum, technisch und ökonomisch. (3) Quantitative Methode mit Ablauf: Labor- oder Feldexperiment mit Versuchs- und Kontrollgruppe und Vorher-Nachher-Messung, oder Befragung. (4) Qualitative Ergänzung: Interviews zu Gründen und Akzeptanz. (5) Hinweis auf Iterationen und Methodenmix (F.26).</p></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Tutoriumsaussage „Ein Prototyp ist ein nicht ausführbares Modell“ ist <b>falsch</b>: Laut F.22 ist er ausführbar. Ein reines Mock-up ist eher ein Low-Fidelity-Entwurf.</p></div>
+
+<h3>3.7 Praxis vs. Theorie, Relevanz vs. Stringenz <span class="prio p2">Sollte</span></h3>
+<p><b>Praxis</b> (griech. prattein = handeln) bezeichnet die Durchführung einer Tätigkeit, <b>Theorie</b> (griech. theorein = betrachten) ursprünglich die Betrachtung der Wahrheit von Aussagen durch reines Denken (F.30). „Theorien können Handlungsempfehlungen oder Prognosen für die Praxis geben, müssen sich aber nicht unmittelbar auf die Praxis übertragen lassen“ (F.31). Theorie und Praxis sind komplementär (F.32). Vorlesungsbeispiel Newton: Das Gravitationsgesetz erklärt Mondumlauf, Gezeiten und Raumfahrt; Unstimmigkeiten führten später zu Einsteins Relativitätstheorie (F.33–34).</p>
+<p><b>Technologie</b> ist „die Gesamtheit der anwendbaren und tatsächlich angewendeten Arbeits-, Entwicklungs-, Produktions- und Implementierungsverfahren der Technik“; Technologien sind „anwendungsbezogene Umformungen von Theorien“ (F.35).</p>
+<div class="box def"><div class="box-h">Definition · V03 F.36</div>
+<p>„Praxis fordert <b>Relevanz</b>, das heißt die praktische Bedeutung im Sinne von Tragweite, Wert oder Wichtigkeit des Ergebnisses.“ „Wissenschaftlerinnen orientieren sich an der rigorosen <b>Stringenz</b>, dem Ideal der formalen und methodischen Präzision.“</p></div>
+<p>Wo eine Forscherin sich positioniert, hängt ab von persönlichen Neigungen und Qualifikation, dem Abstraktionsniveau des Gegenstands und der herrschenden Lehrmeinung (F.36). Für die WI ergibt sich ein <b>zweidimensionales Entscheidungsproblem</b>: Weil die Praxis eine maßgebliche Konstituente ist, ist Relevanz unerlässlich; im Vergleich mit anderen Disziplinen braucht es aber auch deren methodische Standards. Fazit: Probleme aufgreifen, „die praxisrelevant und rigoros bearbeitet werden können“ (F.37). Eine technologieorientierte Forscherin gewichtet Relevanz stärker (Tutorium: wahr).</p>
+
+<h3>3.8 Praxisorientierung der WI <span class="prio p3">Überfliegen</span></h3>
+<p>„Für die Wirtschaftsinformatik ist eine ausgeprägte Praxisorientierung von hoher Bedeutung, da diese die <b>Basis ihrer Legitimation</b> ist“ (F.38). Belege: Bedarf seit den 1950ern; Verhältnis der Bachelorabschlüsse Informatik zu WI fiel von 3,5 : 1 (1980) auf 1,09 : 1 (2020); 149.000 offene IT-Stellen 2024 (F.39–40). Fachverbände: GI-Fachbereich WI (größter), WKWI (Professorinnen), AIS German Chapter, Wirtschaftsinformatik e. V. (F.41).</p>
+<p><b>Verbundforschung</b> (F.44–46): WI-Forschende bearbeiten in der Praxis beobachtete Probleme, deren Lösung die aktive Mitarbeit von Praktikern erfordert; gemeinsam von Unternehmen und öffentlicher Hand finanziert (Unternehmen tragen bis zu 80 %), z. B. M2OLIE oder Rettungsnetz 5G. Die Beteiligung ist ein „Indiz für das hohe Ausmaß ihrer Praxisorientierung“.</p>
+<p><b>WI-nahe Produkte:</b> <i>Unternehmenssoftware</i> ist „integrierte Standardsoftware für Unternehmen in Wirtschaft und Verwaltung, die betriebliche Aufgaben funktionsbezogen, funktionsübergreifend und organisationsübergreifend unterstützt“ (F.48; ERP, CRM, SCM …; Markt polypolistisch, >500 ERP-Anbieter in Deutschland). <i>Process Mining</i> ist „ein analytisches Vorgehen zur Analyse, Überwachung und Verbesserung von Prozessen, <mark>wie sie tatsächlich ablaufen</mark> und nicht wie man sie in Prozessmodellen annimmt“ (F.51; Celonis). <i>Schlüsselfertige Systeme</i> sind maßgeschneiderte Dienstleistungen, die ein Anbieter(konsortium) entwickelt und betreibt, z. B. Toll Collect, E-Rezept (F.52). Gemeinsam ist allen Produkten der MAT-Bezug (F.56).</p>
+
+<h3>3.9 Lebenszyklus: Invention – Innovation – Perfektion <span class="prio p2">Sollte</span></h3>
+<div class="box def"><div class="box-h">Definition · V03 F.57</div>
+<p>Der Lebenszyklus neuer Produkte wird in die Phasen <b>Invention</b> (Erfindung, Entdeckung), <b>Innovation</b> (<mark>Ausbreitung</mark> einer Erfindung oder Neuerung) und <b>Perfektion</b> (Verbesserung der Neuerung im Detail) gegliedert.</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Phase</th><th>Vorlesung: MP3/DSL</th><th>Tutorium: KI</th></tr>
+<tr><td>Invention</td><td>MP3, um 1985, Fraunhofer IIS Erlangen (F.58)</td><td>1950er, General Problem Solver</td></tr>
+<tr><td>Innovation</td><td>MP3-Player verbreiten sich zuerst in USA und Japan</td><td>2000er, Deep Learning: Google Translate, Siri, Alexa</td></tr>
+<tr><td>Perfektion</td><td>DSL bis 1000 Mbit/s über Kupfer (F.59)</td><td>heute: autonomes Fahren, Diagnosen</td></tr>
+</table></div>
+<p><b>Szyperski-These:</b> Deutschland ist „weltklasse“ in Invention und Perfektion, wegen Unsicherheitsvermeidung und fehlender Wandelbereitschaft aber unterdurchschnittlich in der Innovation (F.57). Dazu passt F.60: Das Paradigma der digitalen Innovation verlangt Schnelligkeit, Co-Innovation mit Kunden und Lieferanten und agiles Vorgehen bottom-up, statt geplanter Top-down-Konzeption wie in der industriellen Fertigung. Top-100-Plattformen 2020: Amerika 66 % des Werts, Europa 3 % (F.61). Swanson: Organisatorische Innovation ist komplexer als technische oder soziale, weil beide Dimensionen gleichzeitig betroffen sind (F.62).</p>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Invention ≠ Innovation. Die Erfindung allein ist noch keine Innovation; Innovation heißt <b>Ausbreitung</b> am Markt.</p></div>
+<p><b>Qualifikationsorte</b> (F.63–68, überfliegen): Gymnasium, Berufsschulen (kein Beruf heißt „WI“), duale Hochschulen, HAW, Universitäten. Alleinstellungsmerkmale der Uni: Grundlagenforschung, Promotions- und Habilitationsrecht, Arbeitsmarktfähigkeit.</p>
+
+<h3>Selbsttest Kapitel 3</h3>
+<details class="quiz"><summary>Ist ein BPMN-Diagramm des Bestellprozesses ein Modell oder eine Methode?</summary><div class="ans"><p>Ein Modell: Es beschreibt auf Basis von Konstrukten (BPMN-Symbolen) einen relevanten Zusammenhang (F.8). Die Methode wäre die Anleitung, wie man solche Diagramme erstellt.</p></div></details>
+<details class="quiz"><summary>Wo werden Evaluationskriterien üblicherweise definiert?</summary><div class="ans"><p>Im Problemraum (F.25), zusammen mit der Problembeschreibung (F.7).</p></div></details>
+<details class="quiz"><summary>Formuliere je einen Ω- und einen λ-Satz zum Thema Technostress.</summary><div class="ans"><p>Ω: „Ständige Push-Benachrichtigungen erhöhen den wahrgenommenen digitalen Stress.“ λ: „Um digitalen Stress zu senken, sollte der Assistent nicht dringende Hinweise bündeln und zeitversetzt anzeigen.“</p></div></details>
+<details class="quiz"><summary>Was unterscheidet Low- und High-Fidelity-Prototypen?</summary><div class="ans"><p>Low-Fidelity dient der Ideengenerierung (Papier, Wireframe, früh, billig); High-Fidelity stellt Interaktivität, Inhalt und Visuelles in den Fokus, ist realistischer, aber aufwändiger (F.23).</p></div></details>
+</section>
+
+<section class="chapter" id="k4">
+<span class="chap-no">Kapitel 4 · Vorlesung 4</span>
+<h2>Zweck und Ziele – Information und Kommunikation</h2>
+<p class="lead">Das wichtigste Kapitel dieses Teils. Daten/Information/Wissen kam in drei Klausuren vor (einmal mit 30 Punkten allein), Chancen und Risiken der Informationsproduktion zweimal mit 20–24 Punkten, Informationsbedarf/-stand zweimal. Zielarten und Zielbeziehungen waren in der Probeklausur. Semiotik wurde nie gefragt, im Tutorium aber ausdrücklich als „Klausurfrage“ betitelt.</p>
+
+<h3>4.1 Zweck und Ziel <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V04 F.6</div>
+<p><b>Zweck</b>: „was jemand oder etwas mit einer Handlung beabsichtigt, also das, was bewirkt bzw. erreicht werden soll.“<br>
+<b>Ziele</b> „sind Ergebnisse bewussten Handelns und beschreiben gewollte, zukünftige Zustände oder Wirkungen, die in einer bestimmten Zeit zu bestimmten Zuständen führen; sie sind also <mark>normative Aussagen</mark>.“</p></div>
+<p>Der Zweck ist die allgemeine Absicht („Wozu?“), das Ziel der konkrete, terminierte Soll-Zustand. Ziele lenken die Auswahl von Alternativen, koordinieren und kontrollieren die Aufgabenerfüllung und motivieren. <b>Zielelemente</b> (F.10): Zielinhalt, Zielmaßstab, Ausmaß der Zielerreichung, zeitlicher Bezug, personifizierte Verantwortung. Beispiel: Wartezeit (Inhalt) in Minuten bis Erstkontakt (Maßstab) auf höchstens 60 Minuten (Ausmaß) bis 31.12.2027 (Zeit), verantwortlich ist die Chefärztin.</p>
+
+<h3>4.2 Zielarten <span class="prio p1">Muss</span></h3>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Kriterium</th><th>Zielarten</th><th>Folie</th></tr>
+<tr><td>Wer setzt das Ziel?</td><td><b>Organisationsziele</b> (von zuständigen Stellen/Gremien, z. B. strategische IT-Ziele vom Top-Management) vs. <b>Individualziele</b> (von Personen mit fachlichem/persönlichem Interesse, z. B. Akzeptanzziele der Nutzerinnen)</td><td>F.7</td></tr>
+<tr><td>Inhalt</td><td><b>ökonomisch</b> (Produktivität, Wirtschaftlichkeit) vs. <b>nicht-ökonomisch</b> (Nachhaltigkeit, Zufriedenheit, Wohlbefinden; gewinnen an Bedeutung)</td><td>F.8</td></tr>
+<tr><td>Was vs. wie gut</td><td><b>Sachziel</b> (was das System leisten soll) vs. <b>Formalziel</b> (wie gut: Qualität, Zeit, Kosten, Sicherheit)</td><td>F.6, F.10</td></tr>
+<tr><td>Planungsebene</td><td><b>strategisch</b> → <b>administrativ</b> → <b>operativ</b></td><td>F.19</td></tr>
+</table></div>
+<p>Ein Zielsystem bewährt sich nur, wenn Organisations- und Individualziele nicht zu stark im Widerspruch stehen (F.7). Beispiel F.9: Geringe Nutzerakzeptanz (Individualziel) wirkt negativ auf Produktivität und Wirtschaftlichkeit (Organisationsziele); Personen mit Macht setzen sich durch, sachlich besser begründbare Ziele „bleiben auf der Strecke“. Die <b>Zielforschung</b> untersucht, welche Formalziele von Bedeutung sind und wie sie zusammenhängen; sie will der Praxis keine Ziele vorschreiben (F.10).</p>
+
+<h3>4.3 Formalziele: Prozess- und Produktqualität <span class="prio p2">Sollte</span></h3>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th colspan="2">Prozessqualität (F.13) – Entwicklung, Einführung, Nutzung</th></tr>
+<tr><td>Leistungsziele</td><td>Erbringung von (Zwischen-)Ergebnissen</td></tr>
+<tr><td>Terminziele</td><td>geplante Zeitpunkte/Zeiträume dafür</td></tr>
+<tr><td>Kostenziele</td><td>geplanter, bewerteter Verbrauch an Gütern und Dienstleistungen</td></tr>
+<tr><th colspan="2">Produktqualität (F.14) – das fertige System</th></tr>
+<tr><td>Nutzungsziele</td><td>Qualität der Benutzung → Gebrauchstauglichkeit</td></tr>
+<tr><td>Wartungsziele</td><td>Anpassung an veränderte Anforderungen → Wartbarkeit</td></tr>
+<tr><td>Rahmenziele</td><td>wirken auf alle anderen Formalziele, z. B. Innovations-, Automatisierungs-, Integrations-, Dialogisierungsgrad (F.15)</td></tr>
+</table></div>
+<p><b>Zielsystem nach Eller &amp; Riedl</b> (F.16, nach DeLone &amp; McLean): System-, Informations- und Servicequalität → Nutzerzufriedenheit und Nutzung → Wirksamkeit (zusammen mit den Sachzielen) → Wirtschaftlichkeit (zusammen mit den Kosten) → <b>Nachhaltigkeit</b>. Lesart: Nachhaltig erfolgreich ist ein IS nur, wenn es wirksam und wirtschaftlich ist.</p>
+<p><b>Ziele im Geschäftsprozessmanagement</b> (F.17): Durchlaufzeitverkürzung, Kostensenkung, Qualitätsverbesserung, Kundenorientierung (Resultat der drei ersten), Flexibilität.</p>
+<p><b>Ziele für die Informationsinfrastruktur</b> werden idealtypisch vom Top-Management strategisch gesetzt und top-down bis zur einzelnen Nutzerin „heruntergebrochen“; Rückmeldungen laufen bottom-up (IT-Controlling, Soll-Ist-Vergleich je Ebene, F.18–19). Die <b>sechs strategischen Ziele der II</b> (F.21–23):</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Ziel</th><th>Die II soll …</th></tr>
+<tr><td>Sicherheit</td><td>Bedrohungen so begegnen, dass Schäden vermieden, entstandene erkannt und ihre Auswirkungen verringert werden</td></tr>
+<tr><td>Produktivität</td><td>mengenmäßiger Ertrag im Verhältnis zum mengenmäßigen Einsatz (<b>Mengen</b>verhältnis)</td></tr>
+<tr><td>Wirtschaftlichkeit</td><td>Kosten- und Leistungssituation in einem bestimmten Verhältnis (<b>Wert</b>verhältnis)</td></tr>
+<tr><td>Anpassung (Flexibilität)</td><td>auf Änderungen des Aufgabensystems ohne grundlegende Änderungen der IS reagieren</td></tr>
+<tr><td>Durchdringung</td><td>das Aufgabensystem mehr oder weniger umfassend durch IS unterstützen</td></tr>
+<tr><td>Wirksamkeit (Effektivität)</td><td>Funktionen und Leistungen anbieten, unabhängig von Mitteleinsatz und Kosten</td></tr>
+</table></div>
+<p><b>Informationsfunktion</b>: Ihr Ziel ist, „zum richtigen Zeitpunkt die richtigen Informationen in der richtigen Menge am richtigen Ort in der erforderlichen Qualität“ bereitzustellen (F.25–27). Dieses Raster ist dein bestes Werkzeug für alle Chancen-und-Risiken-Fragen. <b>Wissensmanagement</b> ist „die unternehmerische Aufgabe der Entwicklung und Nutzung von Wissen in Organisationen“; an erster Stelle steht das Setzen von Wissenszielen (Probst, F.28).</p>
+
+<h3>4.4 Zielbeziehungen <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V04 F.29</div>
+<p><b>Komplementär:</b> Mit steigender Zielerreichung von Z1 steigt auch die von Z2. <b>Konfliktär:</b> Mit steigender Zielerreichung von Z1 sinkt die von Z2. <b>Indifferent:</b> Die Zielerreichung von Z2 bleibt unverändert. Realtypisch verändert sich der Charakter der Beziehung häufig.</p></div>
+<p>Vorlesungsbeispiel (F.30–32): Sicherheit (Z1) und Benutzerakzeptanz (Z2) im Online-Banking bilden eine umgekehrte U-Kurve. Links vom Hochpunkt sind sie komplementär (ein Login mit App-Freigabe schafft Vertrauen), rechts davon konfliktär (jede Eingabe in der App bestätigen zu müssen behindert die Aufgabenerfüllung).</p>
+<div class="box exam"><div class="box-h">Klausurfokus · Probeklausur A2b (10 P.)</div>
+<p>„Nennen Sie drei Ziele aus dem Fall, ordnen Sie jedes einer Zielart zu, und erläutern Sie an zwei Zielen eine komplementäre und an zwei anderen eine konfliktäre Beziehung.“ Ziele wörtlich aus dem Fall übernehmen, Zielart mit Kriterium nennen (Doppelzuordnung erlaubt: „kürzere Wartezeiten = Organisationsziel, nicht-ökonomisch, Formalziel“). Für die Beziehungen Definition F.29 + Wirkmechanismus im Fall.</p>
+<p><i>Baustein:</i> „Datensicherheit und kurze Wartezeiten stehen in konfliktärer Beziehung: Mit steigender Sicherheit (zusätzliche Anmeldung bei jedem Zugriff) sinkt die Schnelligkeit. Wie im Online-Banking-Beispiel (F.30–32) ist die Beziehung zunächst komplementär – eine einmalige Anmeldung schafft Vertrauen –, kippt aber rechts vom Hochpunkt in einen Konflikt. Komplementär sind dagegen weniger Medikationsfehler und höhere Patientenzufriedenheit …“</p></div>
+
+<h3>4.5 Sinnhafte Vollautomation <span class="prio p3">Überfliegen</span></h3>
+<p>Mertens formulierte 1995 die „sinnhafte Vollautomation“ als Langfristziel der WI. <b>Sinnhaft</b> ist ein Automationsschritt, wenn er „von der Allgemeinheit nach einer Lernfrist akzeptiert“ wird und sich „allenfalls Nostalgiker und Sonderlinge nach der personellen Lösung zurücksehnen“ (F.34). Pfad: technikzentrierte IS → menschenzugängliche IS → menschenähnliche Informationsverarbeitung → Vollautomation (F.35–36); die WI wird zur Automatisierungslehre. Generative KI betrifft gerade besser bezahlte Wissensberufe (~80 % der US-Beschäftigten bei ≥10 % ihrer Aufgaben, Eloundou et al., F.40). <b>Eversmanns drei Gegenargumente</b> (F.44–45): Ein vollautomatisiertes Unternehmen wäre (1) kein Unternehmen, sondern ein Automat, (2) könnte nicht dauerhaft Gewinn erzielen, (3) eine vollautomatisierte Volkswirtschaft käme mangels Beschäftigung und Kaufkraft zum Erliegen. Fazit: Die Automatisierungslehre muss multiperspektivisch sein (Psychologie, Soziologie, Philosophie, VWL, F.47).</p>
+
+<h3>4.6 Information nach Shannon <span class="prio p2">Sollte</span></h3>
+<div class="box def"><div class="box-h">Definition · V04 F.52–57</div>
+<p>„Die mathematische Theorie von Claude E. Shannon definiert Information als <mark>objektiv messbare Verringerung der Unsicherheit oder Entropie</mark>.“ „Die Bedeutung und der Kontext der Zeichen sind unerheblich.“</p></div>
+<p>Je unwahrscheinlicher ein Ereignis, desto mehr Information trägt es. Informationsgehalt eines Ereignisses: <b>I = log₂(1/p)</b> in Bit. Entropie (mittlerer Informationsgehalt): <b>H = Σ p · log₂(1/p)</b> (F.54–56).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Beispiel</th><th>Rechnung</th></tr>
+<tr><td>Faire Münze</td><td>log₂(1/0,5) = 1 Bit; eine Münze mit zwei gleichen Seiten liefert 0 Bit (F.53)</td></tr>
+<tr><td>p = 1/8</td><td>log₂ 8 = 3 Bit</td></tr>
+<tr><td>Entropie F.56: pₐ = 0,75, p_b = 0,25</td><td>0,75 · 0,415 + 0,25 · 2 ≈ 0,31 + 0,5 ≈ 0,81 Bit</td></tr>
+<tr><td>Warnmeldung (Prognoseaufgabe): 99 Tests, 1 echte Warnung</td><td>Test: log₂(1/0,99) ≈ 0,0145 Bit · echte Warnung: log₂(100) ≈ 6,64 Bit</td></tr>
+</table></div>
+<p>F.58: „PRÜFUNG BESTANDEN“ und „ARFGUND SEPÜNNBET“ enthalten nach Shannon exakt dieselbe Information. Darum ist Shannons Begriff für die WI weniger bedeutend als die pragmatische Ebene (F.70).</p>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>„Shannon berücksichtigt die Semantik“ ist falsch (T04). Den technischen Informationsbegriff nie mit dem WI-Informationsbegriff (Pragmatik) verwechseln.</p></div>
+
+<h3>4.7 Semiotik: Syntax, Semantik, Pragmatik <span class="prio p1">Muss</span></h3>
+<p>„Eine Möglichkeit der Abgrenzung von Zeichen, Daten und Information bietet die Zeichenlehre“ (Semiotik). Wird die Empfängerin einbezogen, kommen zur syntaktischen und semantischen die pragmatische Ebene hinzu (F.60–61).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Ebene</th><th>Beziehung (Morris, F.61)</th><th>Begriff</th><th>Ampel (F.64)</th></tr>
+<tr><td><b>Syntax</b></td><td>Zeichen untereinander</td><td>Zeichen</td><td>Rot / Gelb / Grün</td></tr>
+<tr><td><b>Semantik</b></td><td>Zeichen zu bezeichneten Objekten</td><td>Daten, Nachricht</td><td>Stopp! / Achtung! / Los!</td></tr>
+<tr><td><b>Pragmatik</b></td><td>Zeichen zu Kommunikationsteilnehmern</td><td>Information</td><td>stehen bleiben / bremsen / fahren</td></tr>
+</table></div>
+<div class="box def"><div class="box-h">Begriffskette · V04 F.62–65</div>
+<p><b>Zeichen</b> sind „etwas Sichtbares oder Hörbares, das etwas deutlich bzw. auf etwas aufmerksam macht“. Die Beziehung zwischen Zeichen und Gegenstand heißt Referenz, das referenzierte Objekt <b>Datum</b>. Die „Weitergabe von Bedeutung tragenden Zeichen oder Daten wird als <b>Nachricht</b> bezeichnet“. „Weitergegebene Daten in Form von Nachrichten werden zu <b>Informationen</b>, wenn sie auf der empfangenden Seite <mark>eine Handlung auslösen</mark> (Pragmatik).“ <b>Redundanz</b> ist der Teil einer Nachricht, der keine Information enthält.</p></div>
+<div class="box ex"><div class="box-h">Beispiel · Morse-„Klausurfrage“ (T04)</div>
+<p>„Syntaktisch besteht die Nachricht aus der Zeichenfolge · · · − − − · · · nach den Regeln des Morsealphabets. Semantisch referenziert sie ‚SOS‘ als internationalen Notruf und ist damit ein Datum bzw. eine Nachricht (F.63). Pragmatisch wird sie zur Information, wenn sie beim Empfänger die Handlung ‚Hilfe leisten‘ auslöst (F.64).“ Analog Rauchzeichen (F.66): 1/2/3 Wolken = Syntax, Zuordnung zu ACHTUNG/OK/GEFAHR = Semantik, Reaktion der Einwohner = Pragmatik.</p></div>
+
+<h3>4.8 Daten – Information – Wissen <span class="prio p1">Muss</span></h3>
+<p>Die drei Begriffe werden „oft fälschlich synonym verwendet“ (F.74). Die Wissenspyramide (F.78) ordnet sie: Zeichen → (Syntax) → Daten → (Semantik: Interpretation, Bedeutung) → Information → (Vernetzung mit Erfahrung) → Wissen als Basis für Handeln.</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Begriff</th><th>Definition (Folie)</th><th>Merkmale</th></tr>
+<tr><td><b>Daten</b></td><td>„Zuordnungen von Zeichen zu Objekten und Sachverhalten der Wirklichkeit“ (F.63); etwas Gegebenes – Fakten, Beobachtungen, Wahrnehmungen – ohne Kontext, Bedeutung, Absicht (F.74)</td><td>leicht erfassbar, speicherbar, übermittelbar (F.76); Beispiel: Münze zeigt „Kopf“</td></tr>
+<tr><td><b>Information</b></td><td>wird aus Daten gewonnen, die <b>Kontext, Relevanz und Zweckorientierung</b> aufweisen (F.76); löst beim Empfänger eine Handlung aus (F.64)</td><td><b>subjektbezogen</b> und <b>situativ</b>: „Es hängt von der Person und dem Kontext ab, ob es sich um Informationen oder Daten handelt“ (F.77)</td></tr>
+<tr><td><b>Wissen</b></td><td>„hilft, Informationen so zu beschaffen oder zu interpretieren, dass man Entscheidungen zur Lösung von Problemen treffen kann“; begleitet den Entscheidungsprozess auf einer Metaebene (F.81)</td><td><b>kumulativ</b> (F.79); entsteht durch Erfahrung und (Aus-)Bildung (F.87)</td></tr>
+</table></div>
+<p>Der Kreislauf (F.86): Wissen hilft, Daten in Information umzuwandeln, Entscheidungen vorzubereiten und Handlungen einzuleiten. Handlungen erzeugen neue Daten; bewährt sich etwas, erweitert sich das Wissen. Beispiel F.80: „Igecihergetnse“ (Zeichen) → „gleich regnet es“ (Daten) → Tropfen fallen gleich (Bedeutung) → Sie wollen gerade das Haus verlassen (Kontext → Information) → Sie wissen aus Erfahrung, dass Sie nass werden (Wissen) → Regenschirm (Aktion). Münzwette (F.82–83): Die Formel für Wahrscheinlichkeit und Erwartungswert ist Wissen; EW = 0,4 · 10 € + 0,6 · (−8 €) = −0,80 €, also Wette ablehnen.</p>
+<h4>Wissensarten (F.84–85)</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Art</th><th>Definition</th><th>Beispiel</th></tr>
+<tr><td>implizit</td><td>schwer formalisierbar, nur unvollkommen beschreib-, dokumentier- und kommunizierbar</td><td>Gespür einer erfahrenen Ärztin</td></tr>
+<tr><td>explizit</td><td>formalisierbar, beschreibbar, dokumentierbar, leicht kommunizierbar</td><td>Handbuch, Leitlinie, Datenbank</td></tr>
+<tr><td>deklarativ („wissen, dass“)</td><td>Inhalte, die sich auf Fakten beziehen und in Aussagesätzen beschrieben werden können</td><td>„Bangkok liegt 6 h vor MEZ“</td></tr>
+<tr><td>prozedural („wissen, wie“)</td><td>Handlungsabläufe oder Problemlösungsschritte; widersetzt sich häufig der sprachlichen Formulierung</td><td>Flug buchen, Radfahren, Code debuggen</td></tr>
+</table></div>
+<div class="box exam"><div class="box-h">Klausurfokus · HWS24 Erst A3 (30 P., Flugbuchung), HWS25 Erst A2d (15 P., ChatGPT), HWS25 Zweit A2c (6 P.)</div>
+<p><b>Schema:</b> (1) Begriffe werden oft synonym verwendet, Pyramide nennen. (2) Daten: Definition + drei konkrete Daten aus dem Fall zitieren + „ohne Zweck bleiben es Daten“. (3) Information: Kontext, Relevanz, Zweck des Falls benennen, die ausgelöste Handlung nennen, subjektbezogen. (4) Wissen: Metaebene, je ein deklaratives und prozedurales Beispiel, ggf. implizit/explizit. (5) Zusammenhang: Wissen nötig, um Daten zu Information zu machen; Handlung erzeugt neue Daten.</p>
+<p><i>Flug-Baustein:</i> „Die Angabe ‚978 €, 10.12.–18.12., Nonstop‘ ist zunächst ein Datum, eine Zuordnung von Zeichen zu einem Sachverhalt ohne Kontext und Absicht (F.63, F.74). Zur Information wird sie erst für den Doktoranden, der vom 11. bis 18.12. unter 1000 € nach Bangkok reisen will: Im Kontext seines Zwecks ist sie relevant und löst die Handlung ‚Buchen‘ aus (F.64, F.76). Dass ‚+1‘ Ankunft am Folgetag bedeutet und eine frühere Anreise eine zusätzliche Hotelnacht kostet, ist Wissen, mit dem er die Information interpretiert und entscheidet (F.81).“</p>
+<p><i>ChatGPT-Baustein:</i> Daten = Trainingstexte und Prompt (Daten sind Basis für das Training von KI, F.67). Information = die Antwort, sofern sie im Kontext der Aufgabe der Nutzerin relevant ist und eine Handlung auslöst. Deklaratives Wissen = Faktenaussagen, die die Nutzerin prüft und behält. Prozedurales Wissen = Lösungsschritte, die erst durch eigenes Anwenden und Bewährung zu Können werden (F.85–86).</p>
+<p><i>„Sind Daten und Informationen dasselbe?“</i> Klare These „Nein“, beide Definitionen, Kernunterschied Subjekt- und Kontextbezug (F.77: dieselbe Angabe ist für Nele Information, für Anna-Maria nur Daten), Fallbeispiel mit zwei Personen.</p></div>
+
+<h3>4.9 Daten als Gut: Chancen und Risiken der Informationsproduktion <span class="prio p1">Muss</span></h3>
+<p>In der WI gilt Information als Produktionsfaktor; „Daten sind Rohstoff für Informationsproduktion“ (F.67). Eigenschaften: ohne Abnutzung mehrfach verwendbar, beliebig reproduzierbar, Basis für KI-Training, leicht kopier- und transportierbar, Wert abhängig von der Verwendung, Missbrauch möglich, Lebenszyklus.</p>
+<div class="box def"><div class="box-h">Risikobegriffe · V04 F.68–69 – diese Fachbegriffe bringen die Punkte</div>
+<p><b>Informationsverluste</b> durch Löschen, Aggregation, Komprimierung. <b>Informationsüberlastung/-schock:</b> Mehr Datenangebot verschlechtert die kognitive Wahrnehmung. <b>Informationspathologien:</b> Mängel der Informationsproduktion – produzierbare Information wird nicht produziert, beschaffbare nicht beschafft, vorhandene falsch oder nicht verwendet. <b>Informationsverzerrung:</b> intrapersonelles, partielles, selektives Wahrnehmen und meist bewusstes Durchsetzen individueller Anschauungen. <b>Informationsmissbrauch:</b> Folge bewusster Verzerrung; <b>Fake News</b> sind „manipulativ verbreitete, vorgetäuschte Nachrichten, die sich viral verbreiten, um Desinformation zu praktizieren“. Außerdem <b>Verlust der Privatsphäre</b>.</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Chancen (Social Media / ChatGPT)</th><th>Risiken</th></tr>
+<tr><td>1. Größeres Informationsangebot: jede/r kann Sender sein, Daten beliebig reproduzierbar (F.67)</td><td>1. Fake News / Desinformation = Informationsmissbrauch (F.69)</td></tr>
+<tr><td>2. Echtzeit → richtiger Zeitpunkt (F.25)</td><td>2. Verlust der Privatsphäre: Tracking, sensible Daten im Prompt (F.69)</td></tr>
+<tr><td>3. Mobil, ortsunabhängig → richtiger Ort (F.25)</td><td>3. Informationsüberlastung (F.68)</td></tr>
+<tr><td>4. Personalisierung → richtige Information, richtige Menge (F.25)</td><td>4. Informationsverzerrung: Filterblase, Bias in Trainingsdaten (F.68)</td></tr>
+<tr><td>5. Verdichtung/Zusammenfassung gegen Überlastung (F.68)</td><td>5. Mangelnde Qualität, Halluzinationen → „erforderliche Qualität“ verfehlt (F.25)</td></tr>
+<tr><td>6. Sichtbare Nachfrage (Trends, Prompts) → passgenaues Angebot (F.102)</td><td>6. Informationspathologien (F.68)</td></tr>
+<tr><td>7. Niedrige Produktions- und Verbreitungskosten → Wirtschaftlichkeit</td><td>7. Informationsverluste durch Aggregation (F.68)</td></tr>
+<tr><td>8. Wissensaustausch, Externalisierung impliziten Wissens (F.84)</td><td>8. Semantische/pragmatische Missverständnisse (F.92)</td></tr>
+<tr><td>9. Übersetzung/Erklärung baut semantische Störungen ab (F.92)</td><td>9. Verlust eigenen prozeduralen Wissens (F.86–87)</td></tr>
+<tr><td>10. Rückfragen im Dialog klären pragmatische Störungen</td><td>10. Kommerzielle/Machtinteressen steuern das Angebot</td></tr>
+</table></div>
+<div class="box exam"><div class="box-h">Klausurfokus · HWS24 Zweit A3 (30 P., Social Media), HWS25 Zweit A2a+b (24 P., ChatGPT)</div>
+<p>Je Chance oder Risiko: Fachbegriff aus der Folie + Mechanismus + Fallbeispiel. Bei „führen Sie aus“ drei bis vier Sätze pro Punkt. <i>Baustein:</i> „Ein Risiko ist die Informationsverzerrung (F.68): Durch algorithmische Auswahl nimmt die Nutzerin nur einen selektiven Ausschnitt wahr, sodass …“</p></div>
+
+<h3>4.10 Kommunikation und Kommunikationsstörungen <span class="prio p2">Sollte</span></h3>
+<div class="box def"><div class="box-h">Definition · V04 F.88–89</div>
+<p>Kommunikation ist „die Beziehung, die zwischen Menschen, Lebewesen, maschinellen Systemen oder Geräten durch Austausch von Nachrichten entsteht“; sie ist „ein Prozess, mit dem ein Sender die Absicht verfolgt, einem Empfänger Information zur Verfügung zu stellen“.</p></div>
+<p>Information und Kommunikation sind zwei Aspekte desselben Phänomens: Information ist ohne Kommunikation nicht möglich, Kommunikation ohne Informationsabsicht unzweckmäßig (F.88). Formen (F.90): nach Beteiligten (Mensch-Mensch, Mensch-Maschine, Maschine-Maschine), nach Darstellung (Bild, Text, Sprache), nach Medium (elektronisch, schriftlich, mündlich, Vibration). Nonverbale Signale sind für die Interpretation wichtig (F.91).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Störungsebene (F.92–95)</th><th>Was passiert</th><th>Vorlesungsbeispiel</th><th>Gegenmaßnahme</th></tr>
+<tr><td>syntaktisch</td><td>Zeichen fehlerhaft kodiert oder im Kanal verändert</td><td>„Der gefangene Floh“</td><td>Prüfbits, Kodierungsstandard</td></tr>
+<tr><td>semantisch</td><td>Empfänger erkennt Informationsabsicht wegen begrifflicher Unschärfe nicht</td><td>„Habt Ihr nichts Wichtigeres zu tun?“</td><td>Begriffe definieren, Glossar</td></tr>
+<tr><td>pragmatisch</td><td>richtig verstanden, aber Handlung weicht von der erwarteten ab</td><td>„Doch schon, aber offensichtlich Ihr nicht …“</td><td>nachfragen, Absicht explizit machen</td></tr>
+</table></div>
+
+<h3>4.11 Informationsbedarf, -bedürfnis, -nachfrage, -angebot, -stand <span class="prio p1">Muss</span></h3>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Begriff</th><th>Definition</th><th>Merkpunkte</th></tr>
+<tr><td><b>Informationsbedarf</b> (F.98)</td><td>„Art, Menge und Beschaffenheit von Information, die zur Erfüllung einer Aufgabe benötigt wird“</td><td><b>objektiv</b>, aufgabenbezogen; Beispiel Rechnung: Empfänger, Steuernummer, Datum, Artikel, Mengen, Preise, MwSt. Je strukturierter die Aufgabe, desto leichter bestimmbar.</td></tr>
+<tr><td><b>Informationsbedürfnis</b> (F.100)</td><td>„wird durch Merkmale und Empfindungen des Menschen bestimmt, der als Aufgabenträger auftritt“</td><td><b>subjektiv</b>; kann über den Bedarf hinausgehen (Zahlungsmoral der Kundin) oder dahinter zurückbleiben (Einzelpreise uninteressant). Erhöht durch Motivation, Neugier, Unsicherheitsvermeidung; gesenkt durch Selbstsicherheit, Risikobereitschaft, Routine (F.103).</td></tr>
+<tr><td><b>Informationsnachfrage</b> (F.102)</td><td>„welche Information zur Aufgabenerfüllung in einer konkreten Handlungssituation nachgefragt wird“</td><td>meist <b>kleiner</b> als Bedarf und Bedürfnis, wegen Zeitrestriktionen, unklarem Bedarf, sequenzieller Suche bis zum befriedigenden Niveau. Bei gut strukturierten Aufgaben bestimmt v. a. der Bedarf, bei schwach strukturierten das Bedürfnis (F.103–104).</td></tr>
+<tr><td><b>Informationsangebot</b></td><td>die tatsächlich zur Verfügung gestellte Information</td><td>„Je besser das Angebot der Nachfrage entspricht, desto höher der Informationsstand“ (F.97)</td></tr>
+<tr><td><b>Informationsstand</b> (F.106)</td><td>„Schnittmenge von Informationsbedarf, -bedürfnis, -nachfrage, -angebot“</td><td>Gleichgewicht: Angebot = Nachfrage · <b>Defizit</b>: Nachfrage &gt; Angebot · <b>Überschuss</b>: Angebot &gt; Nachfrage</td></tr>
+</table></div>
+<figure class="fig"><svg viewBox="0 0 520 230" role="img" aria-label="Vier überlappende Mengen: Bedarf, Bedürfnis, Nachfrage, Angebot; Schnittmenge ist der Informationsstand">
+<g fill="none" stroke="currentColor" stroke-width="1.6">
+<ellipse cx="200" cy="95" rx="120" ry="70"/><ellipse cx="320" cy="95" rx="120" ry="70"/>
+<ellipse cx="260" cy="135" rx="80" ry="55" stroke-dasharray="5 4"/><ellipse cx="305" cy="150" rx="105" ry="55" stroke-width="2.4"/></g>
+<g font-size="13" fill="currentColor"><text x="95" y="60">Bedarf</text><text x="385" y="60">Bedürfnis</text><text x="200" y="200">Nachfrage</text><text x="375" y="208">Angebot</text>
+<text x="243" y="140" font-weight="600">Stand</text></g></svg>
+<figcaption>Vereinfachte Skizze nach V04 F.105: Der Informationsstand ist die Schnittmenge aller vier Mengen. Nachfrage ohne Angebot = Defizit, Angebot ohne Nachfrage = Überschuss.</figcaption></figure>
+<div class="box exam"><div class="box-h">Klausurfokus · Probeklausur A2c (12 P.), HWS24 Zweit A3c (10 P.)</div>
+<p>Zuerst die <b>Aufgabe</b> der Person präzise benennen, denn davon hängt der Bedarf ab. Dann je Begriff Definition + Fallbeleg. Beim Urteil je Informationsobjekt prüfen: nachgefragt? angeboten? Im Notaufnahme-Fall liegen <b>beide gleichzeitig</b> vor: Defizit bei der neuen Medikation (fehlt im System), Überschuss bei 200 alten Laborbefunden (Überlastung).</p>
+<p><i>Baustein:</i> „Der Informationsbedarf von Dr. Yilmaz ergibt sich aus ihrer Aufgabe, in wenigen Minuten ein Medikament sicher zu verabreichen: aktuelle Medikation, Allergien, relevante Vorerkrankungen, aktuelle Laborwerte (F.98). Ihr Bedürfnis ist subjektiv – Unsicherheitsvermeidung in der Nacht kann es erhöhen, Routine senken (F.103). Nachgefragt werden wegen der Zeitnot nur Medikationsplan, Allergien und jüngste Laborwerte (F.102). Der Informationsstand umfasst Medikationsplan und Allergien (F.106).“</p>
+<p>Für Social-Media-Varianten („Chancen zur Reduktion von Defiziten, Risiken der Vergrößerung“): Chancen = Angebot steigt, Nachfrage wird sichtbar, Echtzeit schließt Lücken, Rückfragen präzisieren; Risiken = Überlastung verdeckt das Passende, Filterblase, Fake News besetzen die Nachfrage mit falschem Angebot, Pathologien.</p></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>„Der Bedarf wird vom subjektiven Wissensstand abgeleitet“ ist falsch: Der Bedarf ist objektiv und aufgabenbezogen; subjektiv ist das Bedürfnis. Der Ausdruck „subjektiver Informationsbedarf“ ist laut F.100 ungenau.</p></div>
+
+<h3>Selbsttest Kapitel 4</h3>
+<details class="quiz"><summary>Warum ist Shannons Informationsbegriff für die WI weniger bedeutsam?</summary><div class="ans"><p>Er misst nur die Unwahrscheinlichkeit von Zeichen; Bedeutung und Kontext sind unerheblich (F.57). Die WI interessiert sich für die pragmatische Ebene, also ob Daten beim Empfänger eine Handlung auslösen (F.70).</p></div></details>
+<details class="quiz"><summary>Sicherheit und Benutzerakzeptanz: komplementär oder konfliktär?</summary><div class="ans"><p>Beides, je nach Niveau: umgekehrte U-Kurve. Bis zum Hochpunkt komplementär, danach konfliktär (F.30–32). Realtypisch ändert sich der Charakter der Beziehung (F.29).</p></div></details>
+<details class="quiz"><summary>Produktivität vs. Wirtschaftlichkeit der II?</summary><div class="ans"><p>Produktivität ist ein Mengenverhältnis (Ertrag zu Einsatz), Wirtschaftlichkeit ein Wertverhältnis (Kosten zu Leistung) (F.21–23).</p></div></details>
+<details class="quiz"><summary>Wann liegt ein Informationsdefizit vor?</summary><div class="ans"><p>Wenn die Informationsnachfrage größer ist als das Informationsangebot (F.106).</p></div></details>
+<details class="quiz"><summary>Ist „Radfahren können“ deklaratives oder prozedurales Wissen?</summary><div class="ans"><p>Prozedurales Wissen (Handlungsablauf, schwer sprachlich formulierbar) und zugleich weitgehend implizit (F.84–85).</p></div></details>
+</section>
+
+<section class="chapter" id="k5">
+<span class="chap-no">Kapitel 5 · Vorlesung 5</span>
+<h2>Mensch und Typisierung von Informationssystemen</h2>
+<p class="lead">Bisher nur einmal direkt geprüft (Nutzerrollen in der Probeklausur, 8 P.), aber mit eigener Lernziel-Folie und sehr gut fallbasiert abfragbar („Bewerten Sie die App-Oberfläche“). Lerne die Begriffe so, dass du sie auf eine App oder ein Portal anwenden kannst. Außerdem liefert V05 F.52 das Forschungsmodell agiler Teams, das im HWS25 Zweittermin 30 Punkte wert war.</p>
+
+<h3>5.1 Der Mensch im MAT-System, Nutzertypen <span class="prio p2">Sollte</span></h3>
+<p><b>Nutzerinnen</b> sind „Menschen, die zur Erfüllung betrieblicher Aufgaben IuK-Technik als Sachmittel verwenden“ (Kassiererin an der Kasse); bei <b>Anwenderinnen</b> bleibt die konkrete Rolle unbestimmt (F.5–6). Ziel der WI ist die menschengerechte Gestaltung von IS, interdisziplinär mit Psychologie, Informatik (Mensch-Computer-Interaktion) und Arbeitswissenschaft (Ergonomie) (F.6–7).</p>
+<div class="box def"><div class="box-h">Nutzertypen · V05 F.8–9</div>
+<p>„Mit der Bildung von Nutzertypen wird versucht, das Handeln einer Menge von Nutzerinnen, die sich bezüglich wesentlicher Merkmale nicht oder nur unwesentlich unterscheiden, zu erklären und zu prognostizieren, um die Gestaltung von IS daran auszurichten.“ Kernerkenntnis: <mark>„Es gibt die Nutzerin nicht.“</mark></p></div>
+<p>Nach persönlichen Fähigkeiten unterscheidet man geübte Nutzerin (Expertin), gelegentliche Nutzerin und naive Nutzerin, die wegen unregelmäßiger Nutzung Bedienungsdetails vergisst (F.9). Die D21-Studie (F.10) teilt die Bevölkerung in sieben Typen von Offlinerinnen (14 %, Ø 71 Jahre) bis Technik-Enthusiastinnen (5 %, Ø 36 Jahre) ein; nur zum Nachschlagen.</p>
+
+<h3>5.2 Nutzerschnittstelle <span class="prio p2">Sollte</span></h3>
+<div class="box def"><div class="box-h">Definition · V05 F.11, F.14</div>
+<p>„Die Nutzerschnittstelle (user interface) stellt die Hard- und Software eines IS dar, mit der ein Mensch in Interaktion treten und Handlungen auslösen kann.“ Sie bildet die <b>Interaktionsaufgabe</b> ab, die entsteht, wenn eine Sachaufgabe mit IuK-Technik im Dialog bearbeitet wird. <mark>„Die Sachaufgabe kann nur erfüllt werden, wenn die Interaktionsaufgabe bewältigt wird.“</mark></p></div>
+<p>Der Mensch hat dabei zwei Rollen: Sachbearbeiterin (Sachaufgabe) und Nutzerin eines Techniksystems (Interaktionsaufgabe). <b>Modalität</b> ist die Art des Kommunikationskanals (F.12–13): Eingabe durch Tippen, Zeigen, Berühren, Sprechen, Gestikulieren, Sehen; Ausgabe visuell, akustisch, haptisch. Die Schnittstelle soll den <b>mentalen Modellen</b> entsprechen, die sich Nutzerinnen „im Kopf“ entwickelt haben (F.15–16).</p>
+
+<h3>5.3 Gestaltungsprinzipien nach Norman <span class="prio p1">Muss</span></h3>
+<p>„Prinzipien stellen grundsätzliche Regeln zur Gestaltung von Nutzerschnittstellen auf der Basis ergonomischer Erkenntnisse bereit“ (F.17). Sechs Prinzipien:</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Prinzip</th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td>Ermöglichung (affordance)</td><td>Die Gestalt zeigt, was man damit tun kann</td><td>Button wirkt drückbar</td></tr>
+<tr><td>Sichtbarkeit (visibility)</td><td>Funktionen und Zustand sind sichtbar</td><td>Hauptaktion nicht im Untermenü verstecken</td></tr>
+<tr><td>Einschränkungen (constraints)</td><td>Unzulässiges wird verhindert</td><td>Datumsauswahl statt Freitext, ausgegraute Buttons</td></tr>
+<tr><td>Rückkoppelung (feedback)</td><td>sofortige Rückmeldung auf Aktionen</td><td>„Gespeichert“, Ladebalken</td></tr>
+<tr><td>Abbildungen (mapping)</td><td>natürliche Zuordnung von Bedienelement und Wirkung</td><td>Regler nach oben = lauter</td></tr>
+<tr><td>Durchgängigkeit (consistency)</td><td>Gleiches sieht gleich aus und wirkt gleich</td><td>„Speichern“ immer am selben Ort</td></tr>
+</table></div>
+<p><b>Grenzen von Gestaltungsregeln</b> (F.18–21): Aus den Prinzipien lassen sich nur vage konkrete Regeln ableiten, weil sich Nutzerinnen in Kenntnissen, Fähigkeiten, Fertigkeiten und Gewohnheiten unterscheiden und ihr Verhalten ändern. Gefordert ist daher <b>differenziell-dynamisches Gestalten</b>: differenziell = auf Unterschiede zwischen Nutzerinnen eingehen, dynamisch = auf die Veränderung jeder Einzelnen im Zeitablauf eingehen. Außerdem können andere Sachaufgaben andere Prinzipien verlangen (Groupware: Kooperation, gemeinsame Ziele hervorheben), und Regeln sind „nie vollständig, da sich die technischen Möglichkeiten weiterentwickeln“.</p>
+
+<h3>5.4 Gestaltpsychologie und Farben <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V05 F.22–23</div>
+<p>Gestaltpsychologie beschreibt „die menschliche Wahrnehmung als Fähigkeit, Strukturen und Ordnungsprinzipien in Sinneseindrücken auszumachen“. „Visuelle Objekte werden typischerweise nicht als Menge von Einzelobjekten wahrgenommen, sondern <mark>nach bestimmten Prinzipien zu Figuren zusammengesetzt</mark> erlebt.“</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Gestaltgesetz (F.24)</th><th>Aussage</th><th>Gestaltungsregel (F.25)</th></tr>
+<tr><td>Nähe</td><td>nahe beieinander liegende Elemente werden als Block empfunden</td><td>Zusammengehöriges nahe zusammen</td></tr>
+<tr><td>Symmetrie</td><td>verstärkt die Blockbildung</td><td>… und als symmetrische Figur anordnen</td></tr>
+<tr><td>Gleichartigkeit</td><td>gleich aussehende Elemente bilden „prägnante Figuren“</td><td>Informationen einer Gruppe möglichst ähnlich gestalten</td></tr>
+</table></div>
+<p>Nutzen: „übersichtliche, gut strukturierte Benutzungsschnittstellen, deren Informationen einfach aufgenommen werden können“ (F.25). <b>Farben</b> (F.26): Falscher oder übertriebener Einsatz kann die Benutzbarkeit nahezu unmöglich machen. Farbe nie als einzigen Informationsträger (4 % aller Menschen sind farbwahrnehmungsbeeinträchtigt; mehr als vier Farb-Bedeutungs-Kombinationen merkt man sich kaum), ausreichender Kontrast, bekannte Farbcodes verwenden.</p>
+<div class="box ex"><div class="box-h">Beispiel · Oberfläche bewerten</div>
+<p>„Nach dem Gestaltgesetz der Nähe werden nahe beieinander angeordnete Elemente als Block empfunden (F.24). In der App stehen Preis und Produktbild jedoch weit auseinander, sodass der Preis dem falschen Artikel zugeordnet werden kann. Zusammengehörige Informationen sollten nahe beieinander liegen und eine symmetrische Figur bilden (F.25). Zudem werden Pflichtfelder nur rot markiert; da Farbe nicht einziger Informationsträger sein darf (F.26), sollte zusätzlich ein Sternchen verwendet werden.“</p></div>
+
+<h3>5.5 ISO 9241: Dialoggrundsätze, Usability, User Experience <span class="prio p1">Muss</span></h3>
+<p>„Normen (lat. norma = Regel) beschreiben Handlungsanweisungen“ (F.27). <b>ISO 9241 Teil 10</b> nennt sieben Grundsätze der Dialoggestaltung; Merkhilfe <b>A-S-S-E-F-I-L</b>:</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Grundsatz</th><th>Kernidee</th><th>Verletzt, wenn …</th></tr>
+<tr><td>Aufgabenangemessenheit</td><td>unterstützt die Arbeitsaufgabe ohne unnötige Schritte</td><td>Umwege, Irrelevantes zuerst, Informationsflut</td></tr>
+<tr><td>Selbstbeschreibungsfähigkeit</td><td>jeder Schritt verständlich, Ort und Zustand klar</td><td>unklare Fehlermeldungen</td></tr>
+<tr><td>Steuerbarkeit</td><td>Nutzerin bestimmt Richtung und Tempo</td><td>kein Abbrechen/Zurück, erzwungene Unterbrechungen</td></tr>
+<tr><td>Erwartungskonformität</td><td>konsistent, entspricht Konventionen</td><td>Symbole und Abläufe anders als gewohnt</td></tr>
+<tr><td>Fehlertoleranz</td><td>Ergebnis trotz Fehleingabe mit minimalem Korrekturaufwand</td><td>kein Rückgängig</td></tr>
+<tr><td>Individualisierbarkeit</td><td>an Fähigkeiten und Vorlieben anpassbar</td><td>keine Einstellungen (Schriftgröße, Hinweise)</td></tr>
+<tr><td>Lernförderlichkeit</td><td>unterstützt das Erlernen</td><td>kein Onboarding</td></tr>
+</table></div>
+<p><b>Konflikte</b> (F.28): Mehr Steuerbarkeit senkt die Selbstbeschreibungsfähigkeit; je mehr individualisierbar, desto uneinheitlicher. Lösung: Hilfesysteme mit Laien- und Expertenmodus, also Rücksicht auf den Nutzertyp.</p>
+<div class="box def"><div class="box-h">Gebrauchstauglichkeit · ISO 9241-11 · V05 F.29</div>
+<p>„Die Gebrauchstauglichkeit (usability) bezeichnet das Ausmaß, in dem ein System, ein Produkt oder eine Dienstleistung durch <b>bestimmte Nutzerinnen</b> in einem <b>bestimmten Nutzungskontext</b> genutzt werden kann, um <b>bestimmte Ziele</b> <mark>effektiv, effizient und zufriedenstellend</mark> zu erreichen.“</p></div>
+<div class="box def"><div class="box-h">Nutzererlebnis · ISO 9241-210 · V05 F.30</div>
+<p>„Das Nutzererlebnis (user experience) beschreibt die Wahrnehmungen und Reaktionen einer Person, die sich bei der Nutzung oder der <mark>erwarteten</mark> Verwendung eines Produktes ergeben.“</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th></th><th>Usability (Teil 11)</th><th>User Experience (Teil 210)</th></tr>
+<tr><td>Fokus</td><td>Vermeidung negativer Erlebnisse</td><td>Gestaltung positiver Effekte</td></tr>
+<tr><td>Zeitraum</td><td>nur <b>während</b> der Nutzung</td><td><b>vor</b> (Erwartungen), <b>während</b>, <b>nach</b> (Verarbeitung, emotionale Bindung) der Nutzung</td></tr>
+<tr><td>Nutzen</td><td>Aufgabe ist erfüllbar</td><td>bindet Nutzerinnen an Produkte, stärkt die Marke (F.31)</td></tr>
+</table></div>
+<div class="box pit"><div class="box-h">Typischer Fehler</div><p>Usability = UX ist falsch. Usability ist ein Teil der UX. Bei der Definition die drei „bestimmten“ (Nutzerinnen, Kontext, Ziele) für den Fall konkret benennen, das bringt die Punkte.</p></div>
+
+<h3>5.6 Arbeitsplatzergonomie <span class="prio p3">Überfliegen</span></h3>
+<p>Ziel der Arbeitsplatzergonomie ist eine optimale Abstimmung von Arbeitsplatzbedingungen und Benutzeranforderungen, um Aufgabenerfüllung, Wohlbefinden, Motivation, Produktivität und Wirtschaftlichkeit zu steigern (F.33). Der Gestaltungsprozess beginnt mit einer Aufgabenanalyse und endet mit dem Technikbedarf (F.35); Durchschnittsmaße der Physiognomie sind unbefriedigend, man muss die Streuung berücksichtigen. Ursachen von Unbehagen: ungünstige Blickwinkel, Kontraste, falsche Tisch-/Stuhlhöhen, fehlende Bewegung (F.36). Häufig genutzte Sachmittel gehören in die optimale Reichweite; Sehentfernung optimal etwa 35–40 cm (F.37–38). Kurzzeitgedächtnis: 7 ± 2 Objekte für ca. 20 Sekunden, mehrere Bildschirme mildern das (F.39). Umgebung: visuell, thermisch, akustisch (F.40).</p>
+
+<h3>5.7 Nutzermitwirkung und Key User <span class="prio p2">Sollte</span></h3>
+<p>„Die Entwicklung und Einführung von IS ist ein Prozess, in dem professionelle Entwicklerinnen und potenzielle Nutzerinnen zusammenwirken“ (F.41).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th></th><th>Konsensorientierter Ansatz (F.42)</th><th>Gewerkschaftlicher Gegenmachtansatz (F.43)</th></tr>
+<tr><td>Annahme</td><td>Gestaltung nicht nur nach technischen Zielen; Beurteilung nach Funktionsweise bei bestimmten Nutzerinnen</td><td>Interessengegensatz zwischen technisch-betriebswirtschaftlichen und sozialen Zielen</td></tr>
+<tr><td>Mittel</td><td>Motivationsstrategien, akzeptanzfördernde Maßnahmen</td><td>bessere Arbeitsorganisation, „wirtschaftliche Demokratie“</td></tr>
+<tr><td>Entwicklerinnen</td><td>Beraterinnen und Vermittlerinnen</td><td>geben ihre Position auf, unterstützen im Hintergrund</td></tr>
+<tr><td>Macht</td><td><b>akzeptiert</b> die herrschenden Machtverhältnisse</td><td>Gegenmacht; laut VL „keine realitätsnahe Vorstellung“</td></tr>
+</table></div>
+<p><b>Dimensionen</b> der Mitwirkung (F.44): Ausprägung (bloße Information … bis Entwicklung durch die Nutzerinnen), Ebene (Arbeitsplatz → Gruppe → Abteilung → Unternehmen), Form (direkt vs. indirekt über Vertreterinnen), Phase. Instrumente: Fokusgruppen, Prototyping, Nutzerevaluation (F.45); Mitarbeitende brauchen Schulung, Hilfsmittel wie Referenzsysteme, Prototypen, Fragebögen, Checklisten, ggf. eine Mediatorin (F.46). <b>Key User</b> (F.47): erfahrene, technikaffine Mitarbeitende der Fachabteilungen mit Brückenfunktion zwischen Entwicklung und Nutzerinnen; wirken intensiv bei Konstruktion, Prototyping und Evaluation mit und übernehmen später Schulung und Betreuung.</p>
+
+<h3>5.8 Forschungsbeispiele: Scrum und das Modell agiler Teams <span class="prio p1">Muss</span></h3>
+<p>F.48–51 zeigen Wasserfall (Anforderungen → Design → Implementierung → Test → Deployment → Wartung) und Scrum (Product Owner, Product Backlog, Sprints von 1–4 Wochen, Daily Scrum, Review, Retrospektive, Inkrement; cross-funktionales Feature-Team). <b>F.52</b> ist das Forschungsmodell, das im HWS25 Zweittermin mit 30 Punkten geprüft wurde: Agile Techniken (Pair Programming, Code Review, Testing) → Shared Mental Models → Backup-Verhalten → Teamleistung; Aufgabenkomplexität moderiert, Teamgröße ist Kontrollvariable. Die vollständige Lösung steht im Klausurteil K.1. F.53–54 zeigen ein noch nie geprüftes Modell: Team Relationship Quality wirkt <b>umgekehrt U-förmig</b> auf die Softwarequalität (linearer Nutzen minus konvex steigende Kosten).</p>
+
+<h3>5.9 Digitaler Stress (Querbezug) <span class="prio p2">Sollte</span></h3>
+<p>Technostress hat keine eigene V05-Folie, ist aber negative Folge der Digitalisierung (V06 F.69, F.91) und war Fallthema der Probeklausur. Ursachen aus V05-Sicht: Die Interaktionsaufgabe belastet die Sachaufgabe (F.14), ISO-Grundsätze werden verletzt (F.27), der Nutzertyp wird ignoriert (F.8). Gegenmittel: differenziell-dynamische Gestaltung (F.18), Laien-/Expertenmodus (F.28), kontextbasierte Systeme (F.71), Nutzermitwirkung, Schulung, Key User (F.41–47).</p>
+
+<h3>5.10 Typisierung von IS: Überblick <span class="prio p2">Sollte</span></h3>
+<p>IS sind zentrales Erkenntnis- und Gestaltungsobjekt der WI; eine systematische Typisierung gibt es „nur in Ansätzen“ (F.57). Typisiert wird entlang der MAT-Strukturelemente <b>Mensch</b>, <b>Aufgabe</b>, <b>Technik</b> und ergänzend nach den <b>Phasen im Informationsverhalten</b> (F.58, F.90).</p>
+<h4>Typisierungsmerkmal Mensch</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Konzept</th><th>Definition</th></tr>
+<tr><td>Nutzergruppe im Namen (F.59)</td><td>z. B. EIS (Executive Information Systems) für Führungskräfte, Früherkennungs-/Frühwarnsysteme; IS für Kinder, Senioren, Sehbehinderte (F.60)</td></tr>
+<tr><td><b>Nutzerrollen</b> (F.61)</td><td>„Rollen definieren <mark>Aufgaben, Eigenschaften und Rechte</mark> einer Nutzerin in einem IS.“ Merkmale müssen nicht für jede Nutzerin einzeln festgelegt werden; Änderungen nur an der Rolle; eine Person kann mehrere Rollen haben. Beispiel F.62: Sachbearbeiterin sieht Stammdaten nur bis 5000 € Einkommen, Leiterin auch darüber.</td></tr>
+<tr><td>Nutzermodell (F.63)</td><td>orientiert sich an Berechtigungen und Eigenschaften (Motive, Präferenzen, Gewohnheiten, Wissen, Fähigkeiten); muss <b>im Voraus</b> festgelegt und in der Entwicklung berücksichtigt werden</td></tr>
+<tr><td><b>Persona</b> (F.64–67)</td><td>„ein <mark>imaginäres Modell einer Person</mark> mit konkreten Eigenschaften oder konkretem Nutzungsverhalten“. Vorgehen: Zweck → Nutzerkreis → 3–10 fiktive Personen → Anforderungsanalyse → Bedienungsszenarien. Grenze: angenommene, nicht reale Nutzerinnen; Repräsentativität schwierig.</td></tr>
+<tr><td>Nutzungskontext (F.68)</td><td>Örtlichkeit, verfügbare IT-Infrastruktur, Arbeitsaufgabe, situativer Kontext (kognitive und affektive Zustände)</td></tr>
+<tr><td>Nomadisierend vs. mobil (F.69)</td><td>nomadisierend: nutzt IS, die an verschiedenen Orten bereitstehen (mehrere Bankfilialen); mobil: hat eigene mobile Infrastruktur dabei</td></tr>
+<tr><td>Kontextbasierte Systeme (F.71)</td><td>berücksichtigen in Echtzeit individuelle Eigenschaften und kognitive/affektive Zustände wie Erfahrung, Gemütszustand, Müdigkeit</td></tr>
+</table></div>
+<div class="box exam"><div class="box-h">Klausurfokus · Probeklausur A2a: Nutzerrollen mit Vor- und Nachteil</div>
+<p>Definition F.61 → Rollen im Fall benennen und je Rolle Sichtbarkeit und Rechte festlegen (wie F.62) → Nutzen: Datenschutz, rollenspezifische Oberfläche (Aufgabenangemessenheit). <b>Vorteil:</b> zentrale Rechteverwaltung, Änderung nur an der Rolle. <b>Nachteil:</b> Rollen müssen im Voraus festgelegt werden (F.63) und sind starr in Ausnahmesituationen (nachts im Notfall liegt die benötigte Information außerhalb der Rolle). Lösung: Notfallzugriff mit Protokollierung.</p></div>
+<p><b>Persona vs. Rolle:</b> Die Rolle beschreibt Aufgaben und Rechte im System (technisch-organisatorisch), die Persona ist ein fiktives, lebendiges Nutzerbild für die Gestaltung (Motive, Gewohnheiten, Szenarien).</p>
+
+<h4>Typisierungsmerkmal Aufgabe (F.72–86)</h4>
+<p>Analog zur BWL unterscheidet man Aufgabenphase, Aufgabentyp und Aufgabenreichweite (F.72).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Merkmal</th><th>Ausprägungen</th></tr>
+<tr><td>Aufgabenphase (F.74–75)</td><td><b>Entwicklungsaufgaben</b> („stets Ausführungsaufgaben“, z. B. IS zur Anforderungserhebung, Testdatengenerierung) vs. <b>Nutzungsaufgaben</b> (Systemeinsatz; konkretisieren Ausführungs- und Führungsaufgaben)</td></tr>
+<tr><td>Aufgabentyp (F.76–77)</td><td><b>Ausführungsaufgaben:</b> Administrationssysteme (manuelle, zeitintensive Aufgaben, z. B. Lohnabrechnung) und Dispositionssysteme (operative Entscheidungen, lösen Folgeprozesse aus, z. B. automatische Nachbestellung). <b>Führungsaufgaben:</b> Planungssysteme (vorausschauend, aperiodisch, z. B. Budgetplanung) und Kontrollsysteme (rückschauend, Planabweichungen, z. B. Budgetkontrolle); Business Intelligence/Analytics</td></tr>
+<tr><td>Personelle Reichweite (F.79)</td><td>Individualaufgaben (Textverarbeitung) vs. Gruppenaufgaben (Kollaborationssysteme)</td></tr>
+<tr><td>Funktionale Reichweite (F.80–81)</td><td>funktionsbezogen vs. funktionsübergreifend; Funktionsmodell-Pyramide nach Mertens: unten operative Systeme der Funktionsbereiche, darüber Data Warehouse, Planungs- und Kontrollsysteme, Spitze Unternehmensgesamtplanung. <b>Horizontale Integration</b> entlang des Auftragsdurchlaufs (ERP: keine Mehrfacherfassung, keine Medienbrüche), <b>vertikale Integration</b> von operativen Daten zur Führungsinformation (Data Warehouse, Drill Down)</td></tr>
+<tr><td>Intra- vs. interorganisatorisch (F.82–83)</td><td>Reichen die Aufgaben über die Unternehmensgrenze hinaus, heißen sie <b>interorganisationale Systeme (IOS)</b>: SCM (zu Lieferanten), E-Procurement, CRM (zu Kunden); ERP ist intraorganisational</td></tr>
+<tr><td>Sektorale Reichweite (F.84–85)</td><td>sektorenspezifisch (Bank-, Verkehrs-, Handelsinformationssysteme) vs. sektorenneutral. <b>Handels-H-Modell</b> (Becker/Schütte) = Ordnungsrahmen/<b>Funktionsmodell</b>: links Beschaffung (Einkauf, Disposition, Wareneingang, Rechnungsprüfung, Kreditoren), Mitte Lager, rechts Distribution (Marketing, Verkauf, Warenausgang, Fakturierung, Debitoren), Dach Controlling/BI, Sockel Buchhaltung, Kostenrechnung, Personal</td></tr>
+<tr><td>Gesamtwirtschaftlich (F.86)</td><td>Einzelwirtschaft vs. Volkswirtschaft (Konjunkturprognosen); öffentliche Verwaltung = E-Government</td></tr>
+</table></div>
+<h4>Typisierungsmerkmal Technik (F.87–89)</h4>
+<p>Hardware (physisch: Ein-/Ausgabe, Prozessoren, Speicher, Netzwerk-Hardware) und Software (immateriell: Systemsoftware wie das Betriebssystem, darauf aufsetzend Anwendungssoftware). „Hardware setzt konkrete Aktionen um, die Software legt die Funktionen und Abläufe fest.“ Schalenmodell: Hardware innen, Anwendungssoftware außen.</p>
+<h4>Phasen im Informationsverhalten (F.90–95)</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Phase</th><th>Inhalt</th><th>Systeme, Merkpunkt</th></tr>
+<tr><td>1 Wahrnehmung</td><td>Aufspüren und Identifizieren von Information; „Aktivierung“ der Aufgabenträgerin</td><td>Suchmaschinen, BI-Systeme</td></tr>
+<tr><td>2 Sammlung</td><td>zweckorientierte Information auf elektronischen und nicht-elektronischen Medien sammeln</td><td>„Nicht alle Informationen sind als Daten gespeichert!“</td></tr>
+<tr><td>3 Strukturierung/Organisation</td><td>strukturieren, klassifizieren, indexieren, verknüpfen → Nutzung durch Dritte</td><td>Datenbank-, Archivsysteme</td></tr>
+<tr><td>4 Suche</td><td>Konversion von Daten in Information und Wiederauffinden</td><td>Info für A ist nicht zwingend Info für B</td></tr>
+<tr><td>5 Pflege</td><td>Aktualisierung und Dokumentation für die zukünftige Informationsproduktion</td><td>Datenqualität, Stammdatenmanagement</td></tr>
+</table></div>
+<div class="box exam"><div class="box-h">Klausurfokus · „Typisieren Sie System X“</div>
+<p>Einleitung: IS = MAT-System, Typisierung nach Mensch, Aufgabe, Technik und Informationsverhalten. Dann je Merkmal die zutreffende Ausprägung mit Begründung. Fazitsatz, z. B.: „X ist ein sektorenspezifisches, interorganisationales Nutzungssystem für dispositive Ausführungsaufgaben mit Rollenkonzept.“</p></div>
+<div class="box pit"><div class="box-h">Wahr/Falsch aus dem Tutorium</div>
+<p>Entwicklungsaufgaben sind stets Ausführungsaufgaben: <b>wahr</b>. Typisierung nur über Aufgabeneigenschaften: <b>falsch</b> (auch Mensch, Technik, Informationsverhalten). Handels-H-Modell ist ein Datenmodell: <b>falsch</b> (Funktionsmodell). Nomadisierend = mobil: <b>falsch</b>. Der konsensorientierte Ansatz stellt Machtverhältnisse in Frage: <b>falsch</b>.</p></div>
+
+<h3>Selbsttest Kapitel 5</h3>
+<details class="quiz"><summary>Nenne die sieben Grundsätze der ISO 9241 Teil 10.</summary><div class="ans"><p>Aufgabenangemessenheit, Selbstbeschreibungsfähigkeit, Steuerbarkeit, Erwartungskonformität, Fehlertoleranz, Individualisierbarkeit, Lernförderlichkeit.</p></div></details>
+<details class="quiz"><summary>Was bedeutet differenziell-dynamisches Gestalten?</summary><div class="ans"><p>Differenziell: auf Unterschiede zwischen Nutzerinnen eingehen; dynamisch: auf die Veränderung des Verhaltens jeder einzelnen Nutzerin im Zeitablauf eingehen (F.18).</p></div></details>
+<details class="quiz"><summary>Ist eine automatische Nachbestellung ein Administrations- oder Dispositionssystem?</summary><div class="ans"><p>Dispositionssystem: Es trifft operative Dispositionsentscheidungen und löst nachfolgende Geschäftsprozesse aus (F.76).</p></div></details>
+<details class="quiz"><summary>Worin unterscheiden sich Usability und UX zeitlich?</summary><div class="ans"><p>Usability betrifft nur die Nutzung selbst, UX die Phasen vor, während und nach der Nutzung (F.30–32).</p></div></details>
+</section>
+
+<section class="chapter" id="k6">
+<span class="chap-no">Kapitel 6 · Vorlesung 6 + Zusatzvorlesungen</span>
+<h2>Informationsinfrastruktur · Digitalisierung und digitale Transformation</h2>
+<p class="lead">Das Kapitel mit der höchsten Trefferquote. Die Komponenten der Informationsinfrastruktur kamen dreimal vor, die digitale Transformation dreimal (einmal 30 P. Spotify), Agilität zweimal mit 20–30 P. Das Tutorium hat ausdrücklich gesagt, dass der gesamte Folienstoff von V06 klausurrelevant ist, auch nicht besprochene Folien. Plattformen und Netzwerkeffekte wurden nie geprüft, aber im Tutorium komplett durchgerechnet.</p>
+
+<h3>Teil A · Informationsinfrastruktur</h3>
+
+<h3>6.1 Begriff und Abgrenzung <span class="prio p2">Sollte</span></h3>
+<p>Der Infrastrukturbegriff kommt aus der VWL (Jochimsen): „Gesamtheit der materiellen, institutionellen und personellen Grundlagen einer Volkswirtschaft“, die Integration und ein hohes Niveau der Wirtschaftsaktivitäten ermöglichen (F.7–9). Infrastruktur ist Grundlage der Produktion, i. d. R. nicht handelbar, erhöht den Output, unterliegt einheitlichen Regelwerken und ist nicht exklusiv.</p>
+<div class="box def"><div class="box-h">Informationsinfrastruktur · V06 F.14 · V01 F.30</div>
+<p>Systematisch: „die <mark>zur Deckung von Informationsnachfrage geschaffene und dafür genutzte Infrastruktur</mark>“ (V06 F.14). Ausführlich (V01 F.30): „Organisatorische Gesamtheiten von Informationssystemen in Wirtschaft und Verwaltung einschließlich aller Einrichtungen, Mittel und Maßnahmen, deren Verfügbarkeit und Anwendung Voraussetzung für Informationsproduktion und für Kommunikation im Unternehmen ist.“</p></div>
+<p>Wichtig: Die Informationsinfrastruktur (II) besteht <b>nicht nur aus Technik</b>, sondern auch aus personellen, organisatorischen, methodischen, rechtlichen und institutionellen Elementen. Sie ist also nicht dasselbe wie die <b>IT-Infrastruktur</b> (Hardware, Software, Netzwerke, Anlagen ohne Mitarbeitende und Prozesse, F.17). Gestaltet wird idealtypisch top-down, real oft bottom-up aus nicht immer passenden Teilen (F.15).</p>
+<p><b>Infrastruktur vs. Architektur</b> (F.12–13): „Architektur eines Objektsystems ist ein abstraktes Modell dieses Objektsystems, das seine Funktionen und Schnittstellen beschreibt und mehrere Ebenen umfasst.“ Sie dient Beschreibung, Gestaltung und Kommunikation. Kurz: Architektur = Bauplan (Modell), Infrastruktur = die reale, genutzte Grundlage inklusive Menschen und Regeln. „Meinen das Gleiche“ ist falsch.</p>
+
+<h3>6.2 Die sieben Komponenten <span class="prio p1">Muss</span></h3>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>#</th><th>Komponente</th><th>Kerndefinition (Folienwortlaut verkürzt)</th><th>Stichworte für den Fall</th></tr>
+<tr><td>1</td><td><b>Technische</b> (F.16–36)</td><td>alle Techniksysteme, die im Unternehmen für die Produktion von Information und Kommunikation verwendet werden</td><td>Rechenzentren, Server, Speicher (DAS/NAS/SAN), Netz, Virtualisierung, Cloud; Nicht-IuK-Technik: Strom, USV, Kühlung, Sensoren, Brandschutz</td></tr>
+<tr><td>2</td><td><b>Personelle</b> (F.37–40)</td><td>Anzahl, Wissen und Können, Fähigkeiten und Fertigkeiten aller an Informationsproduktion, -verteilung und -nutzung Beteiligten</td><td>Kern-/Misch-/Randberufe; Data Scientists; Fachkräftemangel; Humankapital</td></tr>
+<tr><td>3</td><td><b>Organisatorische</b> (F.41–47)</td><td>planmäßiges Ordnen, Gestalten und Erfüllen bzw. Nutzen aller Aufgaben, Kompetenzen, Ressourcen für Produktion und Weitergabe von Information</td><td>Aufbau-, Ablauf-, Projekt-, Gremienorganisation; ITIL-Problemprozess</td></tr>
+<tr><td>4</td><td><b>Räumliche</b> (F.48–51)</td><td>geografische Verteilung von Aufgaben, Kompetenzen und Ressourcen für Produktion und Weitergabe von Information</td><td>zentral/dezentral, Closed Shop, DevOps, Follow-the-Sun, Standort Rechenzentrum</td></tr>
+<tr><td>5</td><td><b>Methodische und Managementsysteme</b> (F.52–55)</td><td>alle Vorgehensweisen, Verfahren, Techniken zur (Weiter-)Entwicklung, zum Betrieb und zur Nutzung</td><td>CIO, COBIT, ITIL, Managementprinzipien</td></tr>
+<tr><td>6</td><td><b>Informations- und kommunikationsrechtliche</b> (F.56–58)</td><td>verfassungs-, verwaltungs-, privat- und handelsrechtliche Normen, die für Gestaltung und Nutzung der II von Bedeutung sind</td><td>Compliance, Datenschutz, Telemedienrecht, Informationsfreiheit, Softwarevertrag, Cybercrime</td></tr>
+<tr><td>7</td><td><b>Qualitätsinfrastruktur</b> (F.59–64)</td><td>Zusammenwirken von Akkreditierung, Zertifizierung, Normierung und Standardisierung des Mess- und Prüfwesens</td><td>BSI 100-1, ISO/IEC 25000, ISO 9000 ff., Zertifikate</td></tr>
+</table></div>
+<p>Die Komponenten sind <b>nicht überschneidungsfrei</b> (T06). Merkhilfe für die Reihenfolge: <b>T-P-O-R-M-R-Q</b> („Technik, Personal, Organisation, Raum, Methode, Recht, Qualität“).</p>
+<div class="box exam"><div class="box-h">Klausurfokus · HWS24 Erst A1b, HWS24 Zweit A2c, HWS25 Erst A3b (je 10–12 P.)</div>
+<p>„Welche Komponenten der II sind für YouTube/Instagram von Bedeutung? Beschreiben Sie vier und begründen Sie.“ Einleitungssatz (II deckt die Informationsnachfrage, sieben Komponenten, nicht nur Technik). Dann je Komponente (ca. 2,5 P.): Name → Definition → konkretes Element aus dem Fall → warum kritisch. <b>Sichere Wahl für Plattformen:</b> technisch, personell, rechtlich, organisatorisch. Reserve: Qualität, räumlich, methodisch.</p>
+<p><i>Baustein:</i> „Die technische Infrastruktur umfasst alle Techniksysteme, die im Unternehmen für die Produktion von Information und Kommunikation verwendet werden (F.16). Für YouTube ist sie zentral, weil Milliarden Videos weltweit gespeichert und ausfallsicher ausgeliefert werden müssen, was Rechenzentren, Speichersysteme sowie Nicht-IuK-Technik wie USV und Kühlung voraussetzt.“ – „Die personelle Infrastruktur umfasst Anzahl, Wissen und Können aller Beteiligten (F.37); YouTube braucht Datenwissenschaftlerinnen auf der obersten Stufe der Bedürfnispyramide (F.39), um den Empfehlungsalgorithmus zu entwickeln.“ – „Die rechtliche Infrastruktur umfasst die für die II bedeutsamen Rechtsnormen (F.56); für Instagram sind vor allem Datenschutz- und Telemedienrecht relevant (F.57), da personenbezogene Daten verarbeitet und Inhalte moderiert werden müssen.“</p>
+<p><b>Agile Variante (HWS25 Erst A3b, 12 P.):</b> drei Komponenten, die agile Projekte unterstützen: <i>organisatorisch</i> (cross-funktionale Teams, reine Projektorganisation statt Silos), <i>räumlich</i> (DevOps statt Closed Shop, Kollaborationstools, Follow-the-Sun), <i>personell</i> (Fähigkeiten zur Selbstorganisation, neue Rollen wie Product Owner und Scrum Master). Alternative: methodisch (Scrum, Servant Leadership).</p></div>
+
+<h3>6.3 Details der Komponenten <span class="prio p2">Sollte</span></h3>
+<h4>Technische Infrastruktur</h4>
+<p>IuK-Technik hat hohes Innovationspotenzial, physischen und zunehmend virtuellen Charakter und ist flexibel verwendbar (F.16). Zentrale Elemente sind Rechenzentren (Server, Mainframes, Speicher-/Backup-Systeme), dezentrale Elemente Arbeitsplatz- und Mobilsysteme, verbunden durch Datennetze (F.18). Speicher: DAS (direkt angeschlossen), NAS (am Netzwerk), SAN (eigenes Speichernetz) (F.20). <b>Virtualisierung</b> simuliert Hardwarefunktionen, sodass mehrere virtuelle Maschinen auf einem physischen System laufen; sie ist Grundlage des Cloud-Computing (F.21).</p>
+<p><b>Nicht-IuK-Technik</b> ist für den Produktionsbetrieb notwendig, aber selbst kein IT-System (F.22): Stromversorgung (Energiebedarf der Rechenzentren steigt progressiv, 10 → 16 Mrd. kWh/a in DE 2010–2020), USV und Notstromgeneratoren, Kühlung und Belüftung, Sensoren (Erschütterung, Brandfrüherkennung), Löschanlagen mit Argon-Gas (F.23–27). Abwärme-Problem (F.24): Rechenzentren im Rhein-Main-Gebiet könnten Frankfurt heizen, aber Fernwärmeverträge brauchen 30–50 Jahre Garantie, Rechenzentren leben nur 10–15 Jahre. <b>Schutz</b> = Vermeidung oder Verringerung von Bedrohung; <b>Sicherheit</b> = Zustand der Abwesenheit von Bedrohung (F.28); Objektsicherheit durch Schleusen, Chipkarten, Biometrie (F.29).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Carr (F.31)</th><th>Lewis (F.32)</th></tr>
+<tr><td>Rechenleistung kommt künftig „aus der Steckdose“ von Informationsfabriken wie Strom vom Energieversorger; unternehmensspezifische Technikinfrastrukturen verschwinden. Eigenbetrieb nur bei speziellen Bedürfnissen (Unabhängigkeit, Versorgungssicherheit, Flexibilität).</td><td>Nicht die Technik entscheidet über Eigen- oder Fremdbetrieb, sondern wie die darauf basierenden IS für <b>Wettbewerbsvorteile</b> genutzt werden. Beispiel SAP S/4HANA: on-premises lohnt sich, wenn eigene Anpassungen und Integration höhere Kosten kompensieren (F.33).</td></tr>
+</table></div>
+<p><b>On-Premises vs. On-Demand:</b> eigenes Rechenzentrum mit hohen Fixkosten, Kontrolle und Anpassbarkeit vs. Cloud mit variablen Kosten, Skalierbarkeit, aber Abhängigkeit und Datenschutzfragen. Cloud-Ausgaben haben etwa 2019/20 die Rechenzentrumsausgaben überholt; IaaS ersetzt interne Rechenzentrumsaufgaben (F.36). <b>Affordances</b> (F.34–35): „funktionale Variation von materiellen oder immateriellen Dingen in einem Umgebungskontext“, also der Nutzungscharakter eines Dings (Stuhl: sitzen oder draufsteigen; Social Media: Information oder Desinformation).</p>
+<div class="box ex"><div class="box-h">Zusatzvorlesung 2 · PORT29 Mannheim</div>
+<p>Geplantes KI-Großrechenzentrum in Mannheim-Neckarau (Atalanta + MVV): 100 % regenerativer Strom, Abwärme ins MVV-Fernwärmenetz, Anbindung an DE-CIX Frankfurt, PUE ≤ 1,1, Hybridkühlung. Bezüge: Nicht-IuK-Technik (F.22–26), Abwärmeproblem (F.24), Standortkriterien (F.51), Nachhaltigkeit als Wirkung der digitalen Transformation (F.91). Guter Fallaufhänger für „KI und Nachhaltigkeit“.</p></div>
+<h4>Personelle Infrastruktur</h4>
+<p>Nach IT-Bezug: Kernberufe (nur Entwicklung/Betrieb von IuK-Technik), Mischberufe (Technik und Anwendung), Randberufe (Anwendung) (F.37). Nach Informationsfunktion: Informationsfachkräfte, Infomediärin (hilft Kundinnen, Kontrolle über Information zu gewinnen), Datenwissenschaftlerin (F.38). <b>Bedürfnispyramide der Datenwissenschaften</b> (Rogati, F.39), von unten nach oben: Sammlung (Logging, Sensoren) → Bewegung/Speicherung (Pipelines, ETL) → Exploration/Transformation (Cleaning, Anomalieerkennung) → Aggregation/Anreicherung (Analytics, Metriken, Trainingsdaten) → Lernen/Optimierung (A/B-Tests, ML; Spitze KI/Deep Learning). Merksatz: Ohne saubere untere Stufen funktioniert keine KI (typischer Grund für gescheiterte KI-Pilotprojekte).</p>
+<h4>Organisatorische Infrastruktur</h4>
+<p><b>Aufbauorganisation</b>: Gliederung in Struktureinheiten und Stellen, sichtbar im Organigramm (F.42). <b>Ablauforganisation</b>: Aufgabenerfüllung in zeitlich-sachlicher Hinsicht, z. B. ITIL-Problemprozess: Vorfall → Problemidentifikation → bekannter Fehler? → klassifizieren → analysieren → Change/Lösung → schließen (F.43–44). <b>Projekt</b>: zielgerichtetes, zeitlich begrenztes, durch Größe, Komplexität, Neuartigkeit und Risiko herausragendes Vorhaben. Formen der Projektorganisation (F.45–46): Einfluss-Projektorganisation (Projektleiter als Stab ohne Weisungsrecht), Matrix (projektbezogen weisungsbefugt, Doppelunterstellung), reine Projektorganisation (eigene Einheit, volle Weisungsbefugnis). <b>Gremien</b>: Informationsaustausch, Beratung, Entscheidung (F.47).</p>
+<h4>Räumliche Infrastruktur</h4>
+<p>Zentral vs. dezentral. <b>Closed-Shop-Betrieb</b>: Entwicklerinnen haben keinen Zugang zum Rechenzentrum (F.48). <b>DevOps</b>: Zusammenarbeit von Entwicklung und Betrieb durch höhere organisatorische Integration; statt sequenzieller Übergaben (Business → Entwicklung → Test → Security → Betrieb) ein gemeinsamer Kreislauf (F.48–49). Präsenz ist dank Kollaborationstools nicht mehr nötig; <b>Follow-the-Sun</b> = Übergabe an die nächste Zeitzone, 24 h Entwicklung (F.50). Ein Rechenzentrum braucht keine Nähe zum Nutzer; Kriterien: Abstand zu Gefährdungen, leistungsfähige Basisinfrastruktur, Spezifikationen der Systeme (F.51).</p>
+<h4>Methodische Infrastruktur und Managementsysteme</h4>
+<p>Verantwortlich ist i. d. R. der <b>CIO</b>, die „ranghöchste Führungskraft von Informationsressourcen“ (F.52). Frameworks: <b>COBIT</b> (Management und Steuerung von Information; Domänen APO, BAI, DSS, MEA) (F.53) und <b>ITIL</b> (Referenzpraktiken für IT-Service-Management, weder organisations- noch technologiespezifisch) (F.54). Informationsmanagement betrachtet Informationsfunktion, IS und II. <b>Vier</b> Managementprinzipien (F.55): by objectives, by exceptions, by delegation, servant leadership.</p>
+<h4>Rechtliche Infrastruktur und Qualitätsinfrastruktur</h4>
+<p><b>Compliance</b> = Konformität mit Rechtsnormen, Regeln, Standards und Richtlinien (F.56). IT-relevante Rechtsgebiete: Informationsfreiheit, Datenschutz, Telemedien- und TK-Recht, digitaler Handel und Softwarevertragsrecht; dazu E-Government und Computerstrafrecht (F.57–58). <b>Standard</b>: allgemein akzeptiertes, nicht unbedingt durch eine Norm definiertes vorbildliches Niveau; ohne Norm ein De-facto-Standard (F.60). Beispiele: BSI-Standard 100-1 (IT-Sicherheit), ISO/IEC 25000 (Softwarebewertung), ISO 9000 ff. (Qualitätsmanagement, nicht IT-spezifisch) (F.61–63). <b>Zertifizierung</b> = Nachweis der Konformität mit Anforderungen; <b>Akkreditierung</b> = Bestätigung durch eine unabhängige dritte Stelle, dass eine Zertifizierungsstelle kompetent ist (F.64).</p>
+
+<h3>Teil B · Digitalisierung und digitale Transformation</h3>
+
+<h3>6.4 Begriffe <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Digitale Transformation · V06 F.72</div>
+<p>„Ein Prozess, der darauf abzielt, eine Organisation zu verbessern, indem <mark>wesentliche Änderungen ihrer Eigenschaften</mark> durch den Einsatz von IKT bewirkt werden.“ Das Wort „wesentlich“ entscheidet über den Neuigkeitsgehalt.</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Digitalisierung als … (F.75)</th><th>Definition</th><th>Beispiel</th></tr>
+<tr><td>Überführung analog → diskret (digitization)</td><td>„Überführung analoger in diskrete Werte, um eine elektronische Übertragung, Speicherung und Verarbeitung zu ermöglichen“</td><td>Papierrechnung wird PDF</td></tr>
+<tr><td>Einführung digitaler Technologien (digitalization)</td><td>„Einführung digitaler Technologien in Organisationen, um damit Ziele (z. B. Produktivität) positiv zu beeinflussen“</td><td>Einführung von S/4HANA</td></tr>
+<tr><td>Automatisierung</td><td>„Übertragung von Aufgaben, die bisher ein Mensch erledigt hat, auf elektronische Systeme“</td><td>automatische Rechnungsbuchung durch KI</td></tr>
+</table></div>
+<p>Negative Konsequenzen der Digitalisierung (F.69): Verlust der Privatsphäre, Technostress, Internet-/Smartphonesucht, Arbeitsplatzverlust, Verwundbarkeit, Cyberattacken. Gewinnbringender IKT-Einsatz ist nicht neu (ERP); neu ist die <b>Geschwindigkeit</b>, mit der disruptive Technologien ganze Branchen stören (Uber, Spotify, Netflix, Airbnb) (F.70–71). Problem des „fragwürdigen Neuigkeitsgrads“ (F.73–74): Auch eine ERP-Einführung wäre nach der Definition eine wesentliche Änderung, also digitale Transformation. <b>Cyberphysische Systeme</b> sind Verbünde aus Software-, mechanischen und elektronischen Komponenten, die über eine Dateninfrastruktur wie das Internet kommunizieren.</p>
+
+<h3>6.5 Das Beschreibungsmodell der digitalen Transformation <span class="prio p1">Muss</span></h3>
+<div class="flow v">
+  <div class="st"><b>1 · Verwendung digitaler Technologien</b>Welche Technologien sind in meiner Branche relevant? <i>SMACIT: Social, Mobile, Analytics, Cloud, Internet of Things; Technologiemanagement</i></div>
+  <div class="ar">↓ führt zu</div>
+  <div class="st"><b>2 · Disruption auf Märkten</b>Wie rasch und wie verändert sich das Wettbewerbsfeld? <i>neue Konkurrenten · veränderte Wertschöpfung · veränderte Kundenerwartungen und -verhalten · große Datenmengen</i></div>
+  <div class="ar">↓ erfordert</div>
+  <div class="st"><b>3 · Veränderung des Geschäftsmodells</b>Wie kann und soll ich reagieren? <i>Digital Business/Transformation Strategy · Struktur-, Ablauf-, Werte-, Kulturänderungen · Führung und Qualifikation</i></div>
+  <div class="ar">↓ resultiert in</div>
+  <div class="st"><b>4 · Wirkungen der digitalen Transformation</b>Welche positiven und negativen Wirkungen sind zu beachten? <i>+ Agilität, Entscheidungsqualität, Effizienz, Kundenzufriedenheit, Nachhaltigkeit · − Privatsphäre, Technostress, Abhängigkeit, Sicherheit, Unzufriedenheit</i></div>
+</div>
+<p class="src">V06 F.76; Pfeilbeschriftungen wörtlich von der Folie</p>
+<h4>Phase 1: Technologien (F.78–80)</h4>
+<p>SMACIT steht für Social, Mobile, Analytics, Cloud, Internet of Things. Das Erfolgspotenzial steigt, wenn Technologien <b>kombiniert</b> werden (z. B. KI auf Sensordaten plus Kundendaten aus Apps), aber auch Komplexität und Projektrisiko (F.78). Erfolgreiche Transformation ist untrennbar mit <b>Technologiemanagement</b> verbunden: Technologieentwicklung beobachten, Technologiebedarf bestimmen, Technologie im Unternehmen verbreiten (F.79–80).</p>
+<h4>Phase 2: Disruption (F.88–90)</h4>
+<div class="box def"><div class="box-h">Definition · V06 F.88</div>
+<p>Disruption ist ein „Vorgang, der <mark>innerhalb kurzer Zeit</mark> Angebot und Nachfrage auf einem Markt derart <mark>radikal</mark> verändert, dass etablierte Unternehmen ihr bisheriges Erfolgspotenzial <mark>teilweise und in manchen Fällen sogar gänzlich verlieren</mark>.“</p></div>
+<p>Effekte digitaler Technologien (F.89–90): (1) Austausch über Plattformen, weniger Informationsasymmetrie (Amazon); (2) Dienstleistung statt Produkt (Cloud statt eigener Server); (3) gesenkte Markteintrittsbarrieren, Information statt physischer Ressourcen (Uber, Airbnb); (4) Sensoren in Produkten (smarte Zahnbürste); (5) Nutzen/Mieten statt Besitzen, Fixkosten werden variabel (ShareNow, Spotify). <b>Ausmaß prüfen</b> anhand der drei Definitionsmerkmale: kurze Zeit? radikale Änderung von Angebot <i>und</i> Nachfrage? Wer verliert Erfolgspotenzial, teilweise oder gänzlich?</p>
+<h4>Phase 3: Geschäftsmodell und Strategie (F.81–87)</h4>
+<p>Ein <b>Geschäftsmodell</b> ist ein vereinfachendes <b>Abbild</b> (Ist, „Modell von etwas“) und <b>Vorbild</b> (Soll, „Modell für etwas“) dessen, wie ein Unternehmen Mehrwert für Kundinnen schafft und Ertrag erwirtschaftet; erst Ist erfassen, dann Soll entwickeln (F.81–82). Visualisiert mit dem <b>Business Model Canvas</b> (Osterwalder &amp; Pigneur, neun Felder, F.83–84):</p>
+<div class="tbl-wrap"><table class="tbl canvas">
+<tr><td rowspan="2">Schlüsselpartner<br><small>Key Partners</small></td><td>Schlüsselaktivitäten<br><small>Key Activities</small></td><td rowspan="2">Wertversprechen<br><small>Value Propositions</small></td><td>Kundenbeziehungen<br><small>Customer Relationships</small></td><td rowspan="2">Zielgruppen<br><small>Customer Segments</small></td></tr>
+<tr><td>Schlüsselressourcen<br><small>Key Resources</small></td><td>Vertriebskanäle<br><small>Channels</small></td></tr>
+<tr><td colspan="2">Kostenstruktur <small>Cost Structure</small></td><td colspan="3">Erlösquellen <small>Revenue Streams</small></td></tr>
+</table></div>
+<p><b>Digitale Geschäftsstrategie</b> = zukünftige Geschäftsmöglichkeiten und Plan, Ziele auf Basis digitaler Technologien zu erreichen („Wohin?“). <b>Digitale Transformationsstrategie</b> = Plan für das Management der Transformation und ihrer Konsequenzen („Wie dahin?“). In der deutschen Praxis oft zusammen „Digitalisierungsstrategie“ (F.85).</p>
+<p><b>Kritische Erfolgsfaktoren für Digitalisierungsstrategien</b> (Holotiuk &amp; Beimborn 2017, F.86–87) in acht Dimensionen; alle gelten als kritisch, auch die selten genannten:</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Dimension</th><th>Wichtigste Faktoren (Folienwortlaut)</th></tr>
+<tr><td>Sales and Customer Experience (am häufigsten)</td><td>Seamlessly integrated offline and online channels · Digitalization of customer interaction and products · Analytics to customize products · Customer integration with open innovation</td></tr>
+<tr><td>Organization</td><td>Agility to reallocate resources and reorganize rapidly · Change management for radical and rapid change · Multi-level and multi-speed organization · Organizational separation (Spin-off)</td></tr>
+<tr><td>Culture and Leadership</td><td>Create and foster digital mindset · Accept failure and encourage new · Innovation and adaptive culture · Rethinking of C-level roles (CDO, CIO)</td></tr>
+<tr><td>Capabilities and HR Competencies</td><td>Capability to reinvent value chain · Digital skills, know-how, and talent · Capability to design new business models</td></tr>
+<tr><td>Foresight and Vision</td><td>Establish a clear vision · Tight feedback loops · Foster faster innovation / rapid prototyping · Bold experimentation</td></tr>
+<tr><td>Data and IT</td><td>Use data and information from central source · Two-speed IT · Real-time and large-scale data processing · Modular IT platform</td></tr>
+<tr><td>Operations</td><td>Data-driven and digitally automated process · Blending human and digital resources</td></tr>
+<tr><td>Partners (am seltensten, nicht unwichtig)</td><td>Network effects with open systems and partner integration · External partners</td></tr>
+</table></div>
+<h4>Phase 4: Wirkungen (F.91–92)</h4>
+<p>Positiv: Agilität, Informations- und Entscheidungsqualität (KI), Effizienz von Prozessen (Process Mining), Kundenzufriedenheit, Nachhaltigkeit. Negativ: Verlust der Privatsphäre, Technostress, steigende Abhängigkeit von IKT, Sicherheitsprobleme (Integrität, Authentizität, Verbindlichkeit), Unzufriedenheit mit Anwendungssystemen. Wirkungen nicht nur auf Organisationsebene betrachten, sondern auch für Individuum und Gesellschaft (F.92).</p>
+<div class="box exam"><div class="box-h">Klausurfokus · HWS25 Erst A1 (30 P., Spotify)</div>
+<p>„Wenden Sie das Beschreibungsmodell auf Spotify an, alle vier Phasen, und argumentieren Sie, ob und in welchem Ausmaß Spotify den Musikmarkt disruptiert hat.“ Pro Phase Leitfrage + Fallbelege:</p>
+<p><b>Phase 1:</b> Social (geteilte Playlists, Wrapped), Mobile (App, Offline-Modus), Analytics (Discover Weekly: kollaboratives Filtern, NLP, Audioanalyse), Cloud (skalierbares Streaming), IoT (Spotify Connect auf Smart Speakern und im Auto); Kombination erhöht das Erfolgspotenzial. <b>Phase 2:</b> drei Definitionsmerkmale prüfen: In wenigen Jahren wurde das Angebot (Zugriff statt Besitz) und die Nachfrage (Freemium-Erwartung) radikal verändert. Ausmaß: CD- und Download-Handel verloren ihr Erfolgspotenzial weitgehend gänzlich, Labels nur teilweise (sie wurden Schlüsselpartner), Live-Musik und Vinyl bestehen fort. <b>Phase 3:</b> Business Model Canvas (Wertversprechen Zugriff auf Millionen Songs, Erlöse aus Abo und Werbung, Labels als Partner, Nutzerdaten als Ressource) + Strategie. <b>Phase 4:</b> positiv Kundenzufriedenheit durch Personalisierung, Effizienz; negativ Privatsphäre (Hördaten), geringe Vergütung von Künstlern, Abhängigkeit von der Plattform.</p>
+<p><i>Baustein:</i> „Die Verwendung von SMACIT-Technologien führt bei Spotify zu einer Disruption des Musikmarkts: Innerhalb weniger Jahre wurden Angebot und Nachfrage so radikal verändert, dass der physische Tonträgerhandel sein Erfolgspotenzial weitgehend gänzlich, die Labels es dagegen nur teilweise verloren (F.88). Diese Disruption erfordert eine Veränderung des Geschäftsmodells …“</p>
+<p><b>HWS24 Erst A2c (10 P.):</b> „Je ein kritischer Erfolgsfaktor aus fünf Dimensionen“: Dimension + Faktor im Folienwortlaut + Erläuterung + warum kritisch im Fall.</p></div>
+
+<h3>6.6 Referenz-, Reifegrad- und Vorgehensmodelle <span class="prio p1">Muss</span></h3>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Modell (F.93)</th><th>Definition</th><th>Leitfrage</th></tr>
+<tr><td>Referenzmodell</td><td>bildet einen gewollten/geplanten Zustand ab, an dem der gegenwärtige Zustand beurteilt werden kann</td><td>Was ist das Zielbild?</td></tr>
+<tr><td>Reifegradmodell</td><td>bildet den Zustand in mehreren geordneten Stufen ab; höherer Reifegrad = bessere Ausprägung der Qualitätsmerkmale</td><td>Wo stehen wir?</td></tr>
+<tr><td>Vorgehensmodell</td><td>idealtypischer Standardprozess zum Lösen eines Problems mit Tätigkeiten, Ergebnissen, Methoden, ggf. Rollen</td><td>Wie gehen wir vor?</td></tr>
+</table></div>
+<p><b>Appelfeller &amp; Feldmann (2018)</b> kombiniert alle drei (F.95–97): <b>10 Elemente</b> (Prozesse, Kundinnen, Lieferanten, Mitarbeiterinnen, Daten, Produkte und Dienstleistungen, Maschinen und Roboter, IT-Systeme, Vernetzung, Geschäftsmodell), je Element <b>4 Reifegrade</b> von „analog“ über zwei Zwischenstufen bis „volle Digitalisierung“, gemessen über gewichtete Kriterien (Ist-/Soll-Scoring, z. B. Ist 1,5 → Soll 3,1), und <b>5 Phasen</b>: (1) digitale Vision und Strategie definieren, (2) Ist-Zustand analysieren, (3) Ziel-Zustand festlegen, (4) PDCA-Zyklus, (5) Vision und Strategie reflektieren. Als Haus dargestellt: Dach Geschäftsmodell, Säulen Kunden, Lieferanten, Mitarbeiter, Produkte, Prozesse, Maschinen; Fundament Daten, Vernetzung, IT-Systeme. Weitere Modelle: Schallmo (Roadmap, fünf Phasen Digital Reality → Ambition → Potential → Fit → Implementation, F.99), Deloitte Digital Maturity Model (fünf Dimensionen, 179 Kriterien, F.101). Die Modellauswahl ist eine strategische Entscheidung (F.100).</p>
+<div class="box exam"><div class="box-h">Klausurfokus · Probeklausur A3b (10 P., IKEA)</div>
+<p>Drei Definitionen mit Leitfrage, Appelfeller &amp; Feldmann als Kombination (10 Elemente, 4 Reifegrade, 5 Phasen), dann zwei Elemente einem Reifegrad zuordnen mit mindestens zwei Fallfakten und Begründung, warum nicht höher oder niedriger. <i>Baustein:</i> „Das Element Kundinnen ordne ich der dritten Stufe zu: IKEA bindet Kundinnen über Online-Shop, App mit AR-Planung und Click &amp; Collect digital an. Volle Digitalisierung ist nicht erreicht, weil ein Großteil der Käufe weiterhin ohne digitale Identifikation im Einrichtungshaus erfolgt. Produkte und Dienstleistungen liegen auf Stufe 2, da Möbel physische, nicht vernetzte Produkte sind.“</p></div>
+
+<h3>6.7 CDO vs. CIO <span class="prio p1">Muss</span></h3>
+<p>Der <b>Chief Digital Officer</b> soll „den digitalen Wandel im Unternehmen planen und koordinieren“ (F.102). Der <b>CIO</b> ist die ranghöchste Führungskraft der Informationsressourcen (F.52); seine Rolle reicht von der strategischen C-Level-Managerin bis zur reinen Technikverantwortlichen für den IT-Betrieb mit primär Kostenzielen (F.103). Passender Erfolgsfaktor: „Rethinking of C-level roles (CDO, CIO)“.</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th></th><th>CIO</th><th>CDO</th></tr>
+<tr><td>Fokus</td><td>Informationsressourcen, IT-Betrieb, Sicherheit, Kosten</td><td>Transformation, Kunde, Geschäftsmodell, Kultur, bereichsübergreifend</td></tr>
+<tr><td>Pro CDO</td><td colspan="2">bündelt verstreute Initiativen, setzt ein Signal und Tempo, entlastet einen betriebsorientierten CIO</td></tr>
+<tr><td>Contra CDO</td><td colspan="2">Kompetenzkonflikte und Doppelstrukturen mit dem CIO, Gefahr eines „Digital-Silos“, Kosten; Alternative: CIO strategisch aufwerten; oft nur temporäre Rolle</td></tr>
+</table></div>
+
+<h3>6.8 Agilität <span class="prio p1">Muss</span></h3>
+<p>Agilität (lat. agilitas = Beweglichkeit) ist ein Managementkonzept, das u. a. auf dem Manifest der agilen Softwareentwicklung beruht und rasches, flexibles Reagieren auf Veränderung ermöglicht; seit den 2000ern (Scrum) auch in anderen Bereichen (F.104). Agilität ist zugleich <b>Zielzustand</b> (Wirkung, F.91) und <b>Erfolgsfaktor</b> (Dimension Organization, F.86).</p>
+<div class="box def"><div class="box-h">Die acht Charakteristika des Agilitätskonzepts · V06 F.105</div>
+<p>1 Kundenzentrierung · 2 iterative Produkt-/Dienstleistungsentwicklung · 3 mitarbeiterzentriertes Führungsverständnis · 4 Innovationsförderung · 5 Netzwerkbildung · 6 Fehlerkultur · 7 neue Arbeitsformen · 8 Transparenz und Dialogbereitschaft</p></div>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Merkmal</th><th>Traditionell (Wasserfall)</th><th>Agil (Scrum)</th></tr>
+<tr><td>Ablauf</td><td>sequenzielle Phasen mit Übergaben</td><td>iterativ-inkrementell in Sprints von 1–4 Wochen</td></tr>
+<tr><td>Anforderungen</td><td>vorab vollständig fixiert</td><td>veränderlich, Backlog wird repriorisiert</td></tr>
+<tr><td>Kunde</td><td>am Anfang und bei der Abnahme</td><td>kontinuierlich (Sprint Review)</td></tr>
+<tr><td>Team/Führung</td><td>Fachabteilungen, Projektleiter steuert</td><td>selbstorganisiert, cross-funktional, Servant Leadership</td></tr>
+<tr><td>Ergebnis</td><td>ein Release am Ende</td><td>früh lauffähige Inkremente</td></tr>
+</table></div>
+<p><b>Agiles Manifest</b> (2001): Individuen und Interaktionen vor Prozessen und Werkzeugen · funktionierende Software vor umfassender Dokumentation · Zusammenarbeit mit Kunden vor Vertragsverhandlung · Reagieren auf Veränderung vor Befolgen eines Plans. <b>Scrum-Rollen</b>: Product Owner, Scrum Master, Developers; Ereignisse: Sprint, Sprint Planning, Daily Scrum, Review, Retrospektive; Artefakte: Product Backlog, Sprint Backlog, Inkrement.</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Vorteile</th><th>Nachteile / Herausforderungen</th></tr>
+<tr><td>Flexibilität bei Änderungen · Kundennähe und -zufriedenheit durch frühes Feedback · schnellere Ergebnisse (MVP, Time-to-Market) · Qualität und geringeres Risiko durch kontinuierliches Testen · Motivation und Transparenz</td><td>eingeschränkte Planbarkeit von Kosten und Terminen (Festpreis schwierig) · hoher Abstimmungsaufwand, Kunde muss verfügbar sein · Abhängigkeit von der Teamkompetenz · Skalierung schwierig (SAFe, LeSS) · Kulturkonflikt mit Hierarchie · knappe Dokumentation (Problem bei Regulierung, z. B. Bankenaufsicht) · Scope Creep</td></tr>
+</table></div>
+<div class="box exam"><div class="box-h">Klausurfokus · HWS24 Erst A2 (20 P.), HWS25 Erst A3a+c (18 P.)</div>
+<p>„Fünf Charakteristika“: Begriffe aus F.105 wörtlich als Überschrift, je 1–2 Sätze Erklärung und ein Fallbeispiel. „Drei Merkmale vs. traditionell“: jeweils als Gegensatzpaar formulieren („statt sequenzieller Phasen …“). „Drei Vorteile, zwei Nachteile der Kundeninteraktion“: Vorteile frühes Feedback, Bedürfnisorientierung, Transparenz/Vertrauen; Nachteile Zeitaufwand des Kunden, Vertrags-/Planungsunsicherheit, Scope Creep.</p>
+<p><i>Baustein:</i> „Ein zentrales Merkmal ist die iterative Produktentwicklung (F.105): Statt wie im traditionellen Vorgehen erst nach Abschluss aller Phasen auszuliefern, erstellt das Team in zwei- bis vierwöchigen Sprints jeweils ein lauffähiges Inkrement, das der Kunde prüft. Änderungswünsche fließen in den nächsten Sprint ein.“</p></div>
+
+<h3>6.9 Multikanal, Omni-Channel, In-Store-Technologien <span class="prio p1">Muss</span></h3>
+<p>Kundinnen bevorzugen hybride Einkaufsmodelle und wollen Kontaktpunkte vor, während und nach dem Kauf frei wählen (F.106–107). <b>Kernsatz F.108:</b> Disruption im Handel bedeutet <mark>nicht nur den Wechsel von offline zu online, sondern insbesondere das Schaffen von Multikanalmöglichkeiten</mark>, weil das aus Kundensicht größtmögliche Flexibilität eröffnet und nutzenerhöhend wirkt. <b>In-Store-Technologien</b> unterstützen Kundinnen, während sie im Geschäft sind; Ziel ist eine bessere Customer Experience (F.109).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Kaufphase</th><th>Technologien (F.109–111)</th></tr>
+<tr><td>Vorkauf</td><td>Smart Shelves/Infoterminals (RFID, Beacons) · Smart Mirror, smarte Umkleide (Virtual Try-on, AR) · virtueller Einkaufsassistent (Chatbot) · <b>virtuelle Planung</b> (AR, ausdrücklich Ikea und Obi) · Location Based Services · Digital Signage</td></tr>
+<tr><td>Kauf</td><td>interaktives Schaufenster · Indoor-Navigation (Beacons) · smarte Einkaufswagen · automatisierter Zero-Touch-Checkout (Amazon Go)</td></tr>
+<tr><td>Nachkauf</td><td>virtueller Serviceassistent (Chatbot, interaktive Anleitung) · virtuelle Nachbetreuung</td></tr>
+<tr><td>alle Phasen</td><td>digitale Kundenkarte (NFC; verknüpft Online- und Offline-Profil)</td></tr>
+</table></div>
+<div class="box exam"><div class="box-h">Klausurfokus · Probeklausur A3a (12 P., IKEA)</div>
+<p>Aussage mit F.108 erklären, eine Kundin mit mindestens drei Kanälen durch die Customer Journey führen (Instagram-Inspiration → App mit AR-Planung → Einrichtungshaus → Click &amp; Collect → Chatbot bei der Montage) und jeder Phase eine Technologie mit Nutzen zuordnen: Vorkauf AR-Planung (virtuelle Planung, F.110), Kauf Self-Checkout oder Indoor-Navigation, Nachkauf virtueller Serviceassistent; IKEA Family als Loyalty-Karte über alle Phasen.</p></div>
+
+<h3>6.10 Digitale Plattformen und Netzwerkeffekte <span class="prio p1">Muss</span></h3>
+<div class="box def"><div class="box-h">Definition · V06 F.112</div>
+<p>Digitale Plattformen sind „online verfügbare Marktplätze, auf denen <mark>Angebot und Nachfrage aufeinandertreffen</mark>“; dabei werden Informationen ausgetauscht, Nutzungsrechte gewährt und/oder Eigentumsrechte übertragen.</p></div>
+<p>Drei Akteure: <b>Plattformanbieter</b>, <b>komplementäre Anbieter</b>, <b>Kunden</b>. Plattformen ermöglichen Transaktionen und Innovationen; vier von fünf scheitern (F.112).</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Begriff</th><th>Definition</th><th>Beispiel</th></tr>
+<tr><td>Direkter Netzwerkeffekt (F.113)</td><td>Nutzen für die einzelne Userin steigt mit der Gesamtzahl der Nutzer (gleiche Seite, same-side)</td><td>Facebook, WhatsApp</td></tr>
+<tr><td>Indirekter Netzwerkeffekt (F.113)</td><td>Nutzen einer Gruppe steigt mit der Verbreitung einer anderen, zusammenhängenden Gruppe/Technologie (cross-side)</td><td>Konsole ↔ Spiele; Gäste ↔ Gastgeber bei Airbnb</td></tr>
+<tr><td>Negativer Netzwerkeffekt (Zusatz-VL F.17)</td><td>mehr Teilnehmer senken den Nutzen</td><td>mehr Restaurants auf Lieferando = mehr Konkurrenz für das einzelne Restaurant; Überfüllung</td></tr>
+<tr><td>Transaktionsplattform (F.114)</td><td>Anbahnung und Abwicklung von Transaktionen</td><td>Airbnb, Lieferando</td></tr>
+<tr><td>Innovationsplattform (F.114)</td><td>zusätzlich Erweiterung/Verbesserung von Leistungskomponenten durch Dritte; braucht <b>Standards und offengelegte Schnittstellen</b></td><td>Android/Google Play (F.115), openIDEO (F.116)</td></tr>
+</table></div>
+<p><b>Zusatzvorlesung 1</b> (AI &amp; Digital Transformation): Digitale Transformation heißt, Produkte, Prozesse und Geschäft radikal mit digitaler Technologie zu verändern; Verschiebungen u. a. von Produkt- zu Kundenzentrierung, von plan-getrieben zu agil, von Wertschöpfungsketten zu Plattformen (Z1 F.3). Fallbeispiele Siemens, JP Morgan („Mobile first, digital everything“), Spotify (Hyper-Personalisierung, Data Flywheel) und Schneider Electric (EcoStruxure = IoT + KI + Cloud, Nachhaltigkeit). Gemeinsamkeit: digitale Plattformökosysteme im Kern. Plattformgrenzen: <b>äußere Grenze</b> (upstream, Abhängigkeit von externen Ressourcen wie LLM-Anbietern) und <b>innere Grenze</b> (downstream, Steuerung der Partner über Boundary Resources wie APIs/SDKs). Strategien gegen Abhängigkeit: Abmildern ohne Eigentum (Brokering), teilweise (Allianzen), vollständige Absorption (Übernahme, Insourcing) (Z1 F.18–19).</p>
+<div class="box exam"><div class="box-h">Klausurfokus · Tutorium 6 (Airbnb), Prognose Lieferando</div>
+<p>(1) Definition F.112 und Begründung, warum X eine Plattform ist (Angebot trifft Nachfrage, Plattform besitzt die Ressourcen nicht selbst). (2) Drei Akteure zuordnen: Airbnb = Anbieter, Gastgeber = komplementäre Anbieter, Reisende = Kunden. (3) Netzwerkeffekte: direkt (mehr Reisende → mehr Bewertungen → mehr Vertrauen für andere Reisende), indirekt (mehr Gastgeber → mehr Auswahl für Reisende und umgekehrt), auch negativ. (4) Typ: Transaktionsplattform; zur Innovationsplattform würde sie mit offenen Schnittstellen, über die Dritte Leistungen ergänzen. Optional Business Model Canvas.</p></div>
+
+<h3>Selbsttest Kapitel 6</h3>
+<details class="quiz"><summary>Nenne die sieben Komponenten der Informationsinfrastruktur.</summary><div class="ans"><p>Technische, personelle, organisatorische, räumliche, methodische Infrastruktur und Managementsysteme, informations- und kommunikationsrechtliche Infrastruktur, Qualitätsinfrastruktur (F.15).</p></div></details>
+<details class="quiz"><summary>Was unterscheidet Carr und Lewis?</summary><div class="ans"><p>Carr: Rechenleistung kommt wie Strom „aus der Steckdose“, eigene Infrastrukturen verschwinden. Lewis: Entscheidend ist, wie die IS für Wettbewerbsvorteile genutzt werden; deshalb lagern manche Unternehmen bewusst nicht aus (F.31–33).</p></div></details>
+<details class="quiz"><summary>Welche drei Merkmale enthält die Disruptions-Definition?</summary><div class="ans"><p>Kurze Zeit, radikale Veränderung von Angebot und Nachfrage, Verlust des Erfolgspotenzials etablierter Unternehmen (teilweise oder gänzlich) (F.88).</p></div></details>
+<details class="quiz"><summary>Ordne zu: PDF-Rechnung, S/4HANA-Einführung, KI bucht Rechnungen automatisch.</summary><div class="ans"><p>Überführung analog → diskret; Einführung digitaler Technologien; Automatisierung (F.75).</p></div></details>
+<details class="quiz"><summary>Wann wird eine Transaktionsplattform zur Innovationsplattform?</summary><div class="ans"><p>Wenn Dritte über Standards und offengelegte Schnittstellen Leistungskomponenten erweitern oder verbessern können (F.114).</p></div></details>
+</section>
+
+<section class="chapter" id="kl">
+<span class="chap-no">Klausurteil</span>
+<h2>Klausuraufgaben: Schemata, Lösungsskizzen, Checkliste</h2>
+<p class="lead">K.1 wiederholt die drei Schemata aus Kapitel 1 und 2, die in fast jeder Klausur Punkte bringen. K.2 zeigt alle 16 bisherigen Klausuraufgaben mit einer Lösungsskizze und dem passenden Abschnitt in diesem Skript. K.3 sagt, was am Freitag wahrscheinlich kommt, K.4 ist die Checkliste für den Klausurtag. Die ausführlichen Musterlösungen und vier Prognose-Klausuren mit Timer stehen in <code>03_Klausuren</code>.</p>
+
+<h3>K.1 Kernschemata aus Kapitel 1 und 2 <span class="prio p1">Muss</span></h3>
+<h4>„Ist X ein Informationssystem?“ (2,5–8 P., in vier von fünf Klausuren)</h4>
+<div class="box exam"><div class="box-h">Schema · V01 F.24–26</div>
+<p>(1) Definition: „Informationssysteme sind Mensch/Aufgabe/Technik-Systeme, kurz MAT-Systeme“; sie schließen die Weitergabe von Informationen ein (V01 F.24). (2) <b>Mensch</b> konkret: wer erfüllt als Aufgabenträger die Aufgabe? (3) <b>Aufgabe</b> konkret: Einzelproblem oder Problembereich in Wirtschaft und Gesellschaft. (4) <b>Technik</b> konkret: App, Server, Rechenzentrum, Algorithmen. (5) <b>Zusammenwirken</b>: wer gibt welche Information an wen weiter? (6) Abgrenzung: Die Software allein ist nur das <b>Anwendungssystem</b>, weil der Mensch nicht Teil davon ist (V01 F.26). (7) Fazit.</p>
+<p><i>Baustein:</i> „Bei ChatGPT erfüllt eine Studentin (Mensch) die Aufgabe, sich auf die Klausur vorzubereiten, mithilfe von App, Sprachmodell und Rechenzentrum (Technik). Sie stellt eine Frage, das Modell gibt eine Antwort zurück, die sie prüft und weiterverwendet. Damit liegt ein MAT-System und somit ein IS vor. Die ChatGPT-Software für sich genommen wäre nur das Anwendungssystem.“</p></div>
+<p>Die drei Erkenntnisobjekte der WI sind Informationssystem, Informationsinfrastruktur und Informationsfunktion; sie sind <b>nicht disjunkt</b> (V01 F.15). Die Informationsfunktion umfasst die betrieblichen Aufgaben, deren Zweck die Produktion von Information ist und deren Bereitstellung durch Kommunikation erfolgt (V01 F.32).</p>
+
+<h4>„Untersuchen Sie die Systemeigenschaften von X“ (5–10 P., dreimal in Folge)</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Eigenschaft (V01 F.20)</th><th>Definition</th><th>Beleg im Fall suchen</th></tr>
+<tr><td>offen (vs. geschlossen)</td><td>steht über seine Elemente mit der Umwelt in Beziehung</td><td>Schnittstellen: Upload, API, Werbekunden</td></tr>
+<tr><td>komplex (vs. einfach)</td><td>Anzahl der Elemente <b>und Beziehungen</b> (Beziehungsreichtum)</td><td>Millionen Nutzer, Follower-Netz</td></tr>
+<tr><td>kompliziert (vs. einfach)</td><td>Anzahl der Elemente <b>und ihre Verschiedenartigkeit</b></td><td>Creator, Zuschauer, Werbekunden, Server, Algorithmen</td></tr>
+<tr><td>dynamisch (vs. statisch)</td><td>Zustände von Elementen oder Beziehungen ändern sich im Zeitablauf</td><td>neue Inhalte, neue Follower, Updates</td></tr>
+<tr><td>zweck- <b>und</b> zielorientiert</td><td>Zweck = welche Aufgaben (Sachziel); Ziel = Güte der Erfüllung</td><td>Zweck: Videos teilen; Ziel: kurze Ladezeit, Werbeumsatz</td></tr>
+<tr><td>emergent (V01 F.17)</td><td>Eigenschaft ergibt sich erst aus den <b>Beziehungen</b> der Elemente, nicht aus einzelnen Elementen</td><td>Trends, Viralität, Antwortzeitverhalten; nicht emergent: Speicherkapazität</td></tr>
+</table></div>
+<p>Vorher kurz die Systemgrenze ziehen: System = „ganzheitlicher Zusammenhang von Elementen, die voneinander abhängig sind, ineinandergreifen oder zusammenwirken“, abgegrenzt von der Umwelt (V01 F.19).</p>
+
+<h4>Forschungsmodell: Variablentypen, Vorzeichen, „Was erklärt das Modell?“ (22–30 P.)</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Typ (V02 F.59)</th><th>Definition</th><th>Erkennen im Diagramm</th></tr>
+<tr><td>unabhängige Variable (UV)</td><td>ihr Einfluss auf die AV soll untersucht werden</td><td>nur ausgehende Pfeile, meist links</td></tr>
+<tr><td>abhängige Variable (AV)</td><td>ihre Abhängigkeit von der UV ist Gegenstand der Untersuchung</td><td>nur eingehende Pfeile, meist rechts</td></tr>
+<tr><td>Mediator</td><td>vermittelt den Einfluss der UV auf die AV; die UV wirkt nicht direkt</td><td>Kasten in der Kette, Pfeil hinein und hinaus</td></tr>
+<tr><td>Moderator</td><td>verändert den Einfluss der UV auf die AV</td><td><b>Pfeil endet auf einem Pfeil</b></td></tr>
+<tr><td>Kontrollvariable</td><td>nicht im Fokus, hat aber Einfluss auf die AV</td><td>oft gestrichelt, Pfeil direkt auf AV</td></tr>
+</table></div>
+<p><b>Vorzeichen</b> immer als „Je höher X, desto höher/niedriger Y, <i>weil</i> …“ formulieren. Beim Moderator: „Je höher Z, desto <b>stärker</b> (+) bzw. <b>schwächer</b> (−) wirkt X auf Y.“ Bei Mediation ist der indirekte Effekt das Produkt der Teilvorzeichen. Mediator mit zusätzlichem direktem Pfad UV → AV = partielle Mediation. Ein Gruppierungsrahmen („Markers of team adaptability“) ist keine Variable.</p>
+<p><b>„Was erklärt das Modell?“</b>: Erklärungsziel (AV) → Hauptpfad mit Mediatoren in Worten → Randbedingung (Moderator) → Kontrollvariable → zugrunde liegender Mechanismus → Einordnung als theoretische Forschung (Ursache-Wirkung, falsifizierbar, Prüfung per Befragung oder Experiment).</p>
+<div class="box ex"><div class="box-h">Lösung HWS25 Zweittermin A3 · Modell agiler Teams (V05 F.52, T02 F.28)</div>
+<p>Agile Techniques (Pair Programming, Code Review, Testing) = <b>UV</b>; Shared Mental Models = <b>Mediator</b>; Backup Behavior = <b>Mediator</b> (sequenzielle, vollständige Mediation, kein direkter Pfeil zur Leistung); Task Complexity = <b>Moderator</b> (Pfeil auf den Pfeil Backup → Performance); Team Size = <b>Kontrollvariable</b> (gestrichelt); Team Performance = <b>AV</b>. Vorzeichen alle (+): Gemeinsame Arbeit am Code schafft gemeinsames Verständnis; wer den Code der anderen kennt, kann einspringen; Einspringen gleicht Last aus und korrigiert Fehler. Komplexität verstärkt (+): Je komplexer die Aufgabe, desto wichtiger das Backup. Teamgröße plausibel (−) wegen Koordinationsaufwand. Das Modell erklärt, <b>wie und warum</b> agile Techniken die Teamleistung erhöhen: über die Anpassungsfähigkeit des Teams, besonders bei komplexen Aufgaben.</p></div>
+<div class="box ex"><div class="box-h">Lösung HWS24 Zweittermin A1 · MSI-Modell (V02 F.59–60)</div>
+<p>MSI in the Internet = UV; Perceived Ease of Use = Mediator (partiell, da H1 direkt); Use of the Internet for Information Search = AV; Age = Moderator (Pfeil auf H3); Qualification Level = Kontrollvariable (gestrichelt). H3 (+): je einfacher, desto mehr Nutzung (TAM). H4 vertretbar (+): Je älter, desto stärker hängt die Nutzung von der Einfachheit ab. Technologische Umformulierung: „Wie muss ein Informationssuchangebot gestaltet sein, damit ältere Verbraucherinnen das Internet häufiger zur Informationssuche nutzen?“</p></div>
+<div class="box exam"><div class="box-h">Theoretisch ↔ technologisch umformulieren (V02 F.18–29)</div>
+<p>Theoretische Aussagen sind Ursache-Wirkungs-Beziehungen, wahr oder falsch, falsifizierbar, empirisch geprüft. Technologische Aussagen sind <b>Zweck-Mittel-Beziehungen</b>, zweckmäßig oder unzweckmäßig, „ohne Ziele nicht möglich“, mit pragmatischem Wissenschaftsziel und Ingenieurmethoden. Umformulieren: Die bisherige AV wird zum Zweck, die UV/Mediatoren werden zu Gestaltungshebeln. Satzmuster: „Wie muss [Artefakt] gestaltet sein, damit [Zielgruppe] [Ziel] erreicht?“ Umgekehrt (theoretisch): „Welchen Einfluss hat [UV] auf [AV] – und warum?“ plus Hypothese „Je …, desto …“. Verbindung beider (HWS24 Erst A4c): erst Theorie prüfen, daraus Gestaltungsempfehlung ableiten (V01 F.81), Prototyp bauen und evaluieren, Ergebnis zurück in die Theorie. Gestaltung ohne Theorie wäre eine <b>Praxeologie</b> (V02 F.29).</p></div>
+
+<h4>Wissenschaftskriterien und Methoden (Probeklausur A1, 22 P.)</h4>
+<p><b>Wissenschaftskriterien</b> (V01 F.44–58): Überprüfbarkeit (an der Wirklichkeit als wahr/falsch entscheidbar), Ableitungsrichtigkeit (logisch korrekt aus Prämissen abgeleitet), Widerspruchsfreiheit, Systematisierbarkeit (nicht nur singuläre Aussagen, Begründungszusammenhang), dazu Verständlichkeit. <b>Normative Aussagen</b> („Jedes Unternehmen soll …“) sind Verhaltensanweisungen und keine wissenschaftlichen Aussagen (V01 F.45); Signalwörter: soll, sollte, muss. <b>Wahrheitstheorien</b> (V01 F.68–74): Korrespondenz (stimmt mit der Wirklichkeit überein, empirisch geprüft), Kohärenz (widerspruchsfrei zu einem Aussagensystem), Konsens (allgemein akzeptiert von sachkundigen Personen), pragmatisch (wahr ist, was erfolgreich ist). <b>Wissenschaftsziele</b>: Beschreibung, Erklärung (Erkenntnisgewinnung), Prognose, Gestaltung (Erkenntnisverwertung).</p>
+<p><b>Quantitativ</b> (Zahlen; Befragung, Labor-/Feldexperiment, Simulation, Metaanalyse) prüft Hypothesen an großen Stichproben, <b>qualitativ</b> (Texte; Fallstudie, Interviews mit Inhaltsanalyse, Synopse) erklärt das Warum und generiert Hypothesen; die Kombination liefert den höchsten Erkenntniswert (V02 F.56). Schema für „Schlagen Sie eine Methode vor“: Methode + Definition → Vorgehen in Schritten (Hypothese mit UV/AV, Messung z. B. validierter Fragebogen, Stichprobe/Design, Auswertung) → je ein fallbezogener Vor- und Nachteil → Beitrag einer qualitativen Methode.</p>
+
+<h3>K.2 Alle bisherigen Klausuraufgaben mit Lösungsskizze <span class="prio p1">Muss</span></h3>
+<p>Lies diese Tabellen mit Blick auf das Muster: Fast jede Teilaufgabe ist „Begriff erklären + auf Fall anwenden“. Die rechte Spalte nennt den Abschnitt in diesem Skript.</p>
+
+<h4>HWS 2024/25 Ersttermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a YouTube ein IS?</td><td>5</td><td>MAT: Creator/Zuschauer, Inhalte teilen/konsumieren, Plattform/Server/Algorithmen; Zusammenwirken; Anwendungssystem abgrenzen</td><td>K.1</td></tr>
+<tr><td>A1b Vier Komponenten der II</td><td>10</td><td>technisch (Rechenzentren, CDN), personell (Data Scientists, Moderation), rechtlich (Urheber-, Datenschutzrecht), organisatorisch (Moderations- und Uploadprozesse)</td><td>6.2</td></tr>
+<tr><td>A1c Systemeigenschaften</td><td>5</td><td>offen, komplex, kompliziert, dynamisch, zweck- und zielorientiert, Trends als emergent</td><td>K.1</td></tr>
+<tr><td>A1d Zwei Algorithmen</td><td>10</td><td>Empfehlungsalgorithmus (kollaboratives Filtern, Ziel Verweildauer/Werbung) und Suche/Ranking oder Trending; kaum Folienstoff, seit 2025 nicht mehr gefragt</td><td>–</td></tr>
+<tr><td>A2a Fünf Charakteristika agiler Verfahren</td><td>10</td><td>aus V06 F.105: Kundenzentrierung, iterative Entwicklung, mitarbeiterzentrierte Führung, Fehlerkultur, Transparenz; je Erklärung + Beispiel</td><td>6.8</td></tr>
+<tr><td>A2b Kundeninteraktion: 3 Vorteile, 2 Nachteile</td><td>10</td><td>+ frühes Feedback, Bedürfnisorientierung, Vertrauen/Transparenz; − Zeitaufwand des Kunden, Planungs-/Vertragsunsicherheit</td><td>6.8</td></tr>
+<tr><td>A2c Fünf kritische Erfolgsfaktoren</td><td>10</td><td>fünf verschiedene Dimensionen aus V06 F.86, Faktor im Wortlaut + Fallbezug</td><td>6.5</td></tr>
+<tr><td>A3 Daten, Information, Wissen (Flugbuchung)</td><td>30</td><td>Flugangaben = Daten; für den Doktoranden mit Zweck (11.–18.12., &lt;1000 €) Information, löst Buchung aus; Wissen = „+1“ verstehen, Hotelkosten einrechnen; deklarativ/prozedural</td><td>4.8</td></tr>
+<tr><td>A4a–c Theorie vs. Technologie</td><td>30</td><td>Argumente für technologisch (Zweck-Mittel, Artefakt, Zweckmäßigkeit), theoretische Umformulierung mit Hypothese, Verbindung beider</td><td>K.1</td></tr>
+</table></div>
+
+<h4>HWS 2024/25 Zweittermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a–d MSI-Forschungsmodell</td><td>30</td><td>Variablentypen, Vorzeichen H3/H4, was erklärt das Modell, technologische Umformulierung</td><td>K.1</td></tr>
+<tr><td>A2a–d Instagram (IS, Systemeigenschaften, 4 Komponenten, Algorithmen)</td><td>30</td><td>wie HWS24 Erst A1, nur mit Instagram</td><td>K.1, 6.2</td></tr>
+<tr><td>A3a Fünf Chancen sozialer Medien für die Informationsproduktion</td><td>10</td><td>größeres Angebot, Echtzeit, Ortsunabhängigkeit, Personalisierung, sichtbare Nachfrage (Raster „richtige Zeit/Menge/Ort/Qualität“)</td><td>4.9</td></tr>
+<tr><td>A3b Fünf Risiken</td><td>10</td><td>Fake News/Missbrauch, Überlastung, Verzerrung/Filterblase, Privatsphäre, Pathologien</td><td>4.9</td></tr>
+<tr><td>A3c Informationsdefizite: je 2 Chancen und Risiken</td><td>10</td><td>Chancen: Angebot steigt, Nachfrage wird sichtbar; Risiken: Überlastung verdeckt Passendes, Fake News besetzen Nachfrage</td><td>4.11</td></tr>
+</table></div>
+
+<h4>HWS 2025/26 Ersttermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1 Beschreibungsmodell der digitalen Transformation (Spotify)</td><td>30</td><td>vier Phasen mit Leitfrage; SMACIT; Disruption mit drei Definitionsmerkmalen und Ausmaß (Handel gänzlich, Labels teilweise); Canvas; Wirkungen ±</td><td>6.5</td></tr>
+<tr><td>A2b ChatGPT ein IS?</td><td>5</td><td>MAT mit konkretem Beispiel (Studentin, Klausurvorbereitung)</td><td>K.1</td></tr>
+<tr><td>A2c Systemeigenschaften ChatGPT</td><td>10</td><td>alle sechs mit Beispiel; Antwortqualität als emergent</td><td>K.1</td></tr>
+<tr><td>A2d Daten, Information, Wissen bei ChatGPT</td><td>15</td><td>Daten = Trainingstexte und Prompt; Information = Antwort mit Zweckbezug, löst Handlung aus; deklaratives und prozedurales Wissen</td><td>4.8</td></tr>
+<tr><td>A3a Drei Merkmale agil vs. traditionell</td><td>6</td><td>iterativ statt sequenziell, veränderliche statt fixierter Anforderungen, Kunde kontinuierlich eingebunden</td><td>6.8</td></tr>
+<tr><td>A3b Drei Komponenten der II für agile Projekte</td><td>12</td><td>organisatorisch, räumlich (DevOps, Follow-the-Sun), personell</td><td>6.2</td></tr>
+<tr><td>A3c Zwei Vorteile, zwei Herausforderungen agiler Methoden</td><td>12</td><td>Flexibilität, schnellere Ergebnisse; Planbarkeit, Kulturwandel/Skalierung</td><td>6.8</td></tr>
+</table></div>
+
+<h4>HWS 2025/26 Zweittermin</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a Artefakt + vier Artefakttypen (ShopFlow)</td><td>16</td><td>Definition V03 F.8; Konstrukte, Modelle, Methoden, Instanziierungen je mit Fallbeispiel und Begründung</td><td>3.3</td></tr>
+<tr><td>A1b Problem- und Lösungsraum, je zwei Aspekte</td><td>8</td><td>Problem + Ursache, Evaluationskriterien; Artefakt + Gestaltungsprinzip; Evaluation als Brücke</td><td>3.2</td></tr>
+<tr><td>A1c Deskriptiv vs. präskriptiv mit Beispiel</td><td>6</td><td>Ω = „X führt zu Y“, λ = „Um Y zu erreichen, baue X“</td><td>3.4</td></tr>
+<tr><td>A2a/b Je drei Chancen und Risiken von ChatGPT</td><td>24</td><td>je Fachbegriff + Mechanismus + Beispiel, 3–4 Sätze</td><td>4.9</td></tr>
+<tr><td>A2c Daten = Information?</td><td>6</td><td>Nein; Subjekt- und Kontextbezug; Beispiel mit zwei Personen</td><td>4.8</td></tr>
+<tr><td>A3a–c Forschungsmodell agiler Teams</td><td>30</td><td>siehe Lösung oben</td><td>K.1</td></tr>
+</table></div>
+
+<h4>Probeklausur 2026 (Tutorium) – neuer Stil</h4>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Aufgabe</th><th>P.</th><th>Lösungsskizze</th><th>Hier</th></tr>
+<tr><td>A1a Aussage der Geschäftsführerin anhand von drei Wissenschaftskriterien prüfen</td><td>10</td><td>Überprüfbarkeit, Widerspruchsfreiheit, Systematisierbarkeit; der zweite Satz ist eine <b>normative Aussage</b> („soll“) und damit nicht wissenschaftlich</td><td>K.1</td></tr>
+<tr><td>A1b Quantitative Methode zu digitalem Stress</td><td>12</td><td>Befragung mit validiertem Stressfragebogen oder Feldexperiment (Gruppe mit/ohne KI-Assistent); Vor-/Nachteil; qualitative Interviews ergänzen das Warum</td><td>K.1</td></tr>
+<tr><td>A1c Problem-/Lösungsraum, zwei Artefakttypen, Evaluation</td><td>8</td><td>Problem: Stress durch ständige Hinweise; Lösung z. B. Hinweisbündelung (Instanziierung) und Gestaltungsregeln (Methode); Evaluation per Experiment mit Stressmessung vorher/nachher</td><td>3.2–3.6</td></tr>
+<tr><td>A2a Notaufnahme-System ein IS? Nutzerrollen mit Vor-/Nachteil</td><td>8</td><td>MAT; Rollen Ärztin/Pflege/Verwaltung mit unterschiedlichen Rechten; + zentrale Rechteverwaltung, − starr im Notfall</td><td>K.1, 5.10</td></tr>
+<tr><td>A2b Drei Ziele + Zielart, komplementär und konfliktär</td><td>10</td><td>z. B. kürzere Wartezeiten, weniger Fehler, Datenschutz; Sicherheit vs. Schnelligkeit konfliktär</td><td>4.2, 4.4</td></tr>
+<tr><td>A2c Bedarf, Bedürfnis, Nachfrage, Stand; Defizit oder Überschuss</td><td>12</td><td>Aufgabe von Dr. Yilmaz benennen, vier Begriffe am Fall; <b>beides</b>: Defizit (neue Medikation), Überschuss (200 alte Befunde)</td><td>4.11</td></tr>
+<tr><td>A3a Disruption im Handel ist nicht nur offline → online (IKEA)</td><td>12</td><td>Multikanal (V06 F.108); Customer Journey; je Kaufphase eine Technologie, AR-Planung explizit auf der Folie</td><td>6.9</td></tr>
+<tr><td>A3b Referenz-/Reifegrad-/Vorgehensmodell; zwei Elemente einordnen</td><td>10</td><td>drei Definitionen; Appelfeller &amp; Feldmann; zwei Elemente mit Reifegrad und Begründung</td><td>6.6</td></tr>
+<tr><td>A3c CDO: Aufgabe, Abgrenzung CIO, Pro/Contra</td><td>8</td><td>CDO plant und koordiniert den Wandel; CIO verantwortet Informationsressourcen; pro Bündelung, contra Doppelstrukturen</td><td>6.7</td></tr>
+</table></div>
+
+<h3>K.3 Was am Freitag wahrscheinlich kommt <span class="prio p1">Muss</span></h3>
+<p>Mit großer Wahrscheinlichkeit wieder eine <b>Fall-Aufgabe zu den Gegenständen der WI</b> (IS? Systemeigenschaften? Komponenten der II?), eine <b>Forschungsaufgabe</b> (Forschungsmodell oder gestaltungsorientierte Forschung) und eine Aufgabe zu <b>digitaler Transformation, Plattformen oder Agilität</b>, wobei im neuen Stil Begriffe aus mehreren Vorlesungen in einer Aufgabe gemischt werden. Unter den nie geprüften Themen sind die stärksten Kandidaten <b>Semiotik</b> (4.7), <b>Plattformen und Netzwerkeffekte</b> (6.10) und die <b>Nutzerschnittstelle</b> mit Gestaltgesetzen und ISO 9241 (5.4–5.5).</p>
+<p>Die vier Prognose-Klausuren in <code>03_Klausuren</code> decken genau diese Kombinationen ab. Wenn du nur Zeit für eine hast, nimm <b>Prognose-Klausur 2</b> (Probeklausur-Stil: Wissenschaft + Ziele/Mensch + Plattformen/Transformation); als Ergänzung die Teilaufgaben zu Semiotik und Portal² aus Prognose-Klausur 3.</p>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Übungsaufgabe aus den Prognose-Klausuren</th><th>Trainiert</th></tr>
+<tr><td>P2 A2a: vier Ziele den Formalzielen zuordnen, strategisches Ziel der II</td><td>4.3</td></tr>
+<tr><td>P2 A2b: konsensorientiert vs. gewerkschaftlich, Dimensionen, Key User</td><td>5.7</td></tr>
+<tr><td>P2 A2c: Gebrauchstauglichkeit vs. UX, drei ISO-Grundsätze am Terminal</td><td>5.5</td></tr>
+<tr><td>P2 A3: Lieferando als Plattform, Netzwerkeffekte, Beschreibungsmodell, Transaktions- vs. Innovationsplattform</td><td>6.5, 6.10</td></tr>
+<tr><td>P3 A1: Shannon rechnen (Warnmeldung), Semiotik am Cell Broadcast, Kommunikationsstörungen</td><td>4.6, 4.7, 4.10</td></tr>
+<tr><td>P3 A2: Gestaltgesetze, Norman, Personae, Typisierung nach Aufgabe (Portal²)</td><td>5.3–5.4, 5.10</td></tr>
+<tr><td>P3 A3: Vollautomation, Nicht-IuK-Technik, Carr vs. Lewis, Bedürfnispyramide</td><td>4.5, 6.3</td></tr>
+<tr><td>P4 A2: Process Mining, Relevanz vs. Stringenz, DSRM, Lebenszyklus</td><td>3.5–3.9</td></tr>
+<tr><td>P4 A3: drei Bedeutungen von Digitalisierung, BTP als Plattform, äußere/innere Grenze</td><td>6.4, 6.10</td></tr>
+</table></div>
+
+<h3>K.4 Checkliste für den Klausurtag</h3>
+<h4>Registerfahnen in den Folienausdruck</h4>
+<p>V01 F.20 (Systemeigenschaften), F.24 (MAT), F.30 (II) · V02 F.59 (Variablentypen) · V03 F.6–8 (Problem-/Lösungsraum, Artefakte), F.14 (Ω/λ) · V04 F.29 (Zielbeziehungen), F.60–64 (Semiotik), F.74–86 (Daten/Information/Wissen), F.97–106 (Informationsbedarf bis -stand) · V05 F.24 (Gestaltgesetze), F.27–29 (ISO 9241), F.61 (Rollen) · V06 F.15 (sieben Komponenten), F.76 (Beschreibungsmodell), F.86 (Erfolgsfaktoren), F.93–96 (Modelle), F.105 (Agilität), F.108–111 (Handel), F.112–114 (Plattformen).</p>
+<h4>In der Klausur</h4>
+<ol>
+<li><b>Lesezeit nutzen:</b> Zu jeder Teilaufgabe die passende Folie aufschlagen und die Reihenfolge festlegen; leichte Punkte zuerst.</li>
+<li><b>Eine Minute pro Punkt.</b> Nach 30 Minuten zur nächsten Aufgabe wechseln, Lücken am Ende füllen.</li>
+<li><b>Schema</b> für jede Teilaufgabe: Fachbegriff → Definition mit Folienbegriff → Fallbezug → Fazit.</li>
+<li><b>Anzahl exakt einhalten</b> und nummerieren („drei Chancen“ = genau drei, sauber getrennt).</li>
+<li><b>Nebensätze abhaken:</b> „je ein Vor- und Nachteil“, „begründen Sie“, „beurteilen Sie“ kosten die meisten Punkte.</li>
+<li><b>Fachbegriffe der Folie verwenden</b> (Informationsverzerrung statt „einseitige Infos“, komplementär statt „passen zusammen“).</li>
+<li><b>Fünf Minuten am Ende</b> für die Kontrolle, ob jede Teilfrage beantwortet ist.</li>
+</ol>
+<div class="box pit"><div class="box-h">Die zehn häufigsten Verwechslungen</div>
+<p>(1) IS ≠ Anwendungssystem. (2) komplex (Beziehungen) ≠ kompliziert (Verschiedenartigkeit). (3) Moderator (Pfeil auf Pfeil) ≠ Mediator (in der Kette). (4) Prozessmodell = Modell, nicht Methode. (5) Prototyp ist ausführbar. (6) Informationsbedarf objektiv, Bedürfnis subjektiv. (7) Shannon ignoriert Bedeutung. (8) Usability ≠ UX. (9) Informationsinfrastruktur ≠ IT-Infrastruktur, ≠ Architektur. (10) Invention ≠ Innovation (Ausbreitung).</p></div>
+</section>
+</main></div></body></html>
